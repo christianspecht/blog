@@ -39,7 +39,7 @@ blog.enabled = True
 #  and you set blog_path to "/blog" your full blog URL would be
 #  "http://www.yoursite.com/~ryan/blog"
 #  Leave blank "" to set to the root of site_url
-blog.path = "/blog"
+blog.path = ""
 
 ## blog_name -- Your Blog's name.
 # This is used repeatedly in default blog templates
