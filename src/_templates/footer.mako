@@ -11,8 +11,11 @@
     </div>
     <div class="grid_4" id="credits">
       <p>
-        Copyright ${datetime.datetime.now().year}
+        Copyright 2012-${datetime.datetime.now().year}
         ${bf.config.site.author}
+      </p>
+      <p>
+        <a href="${bf.util.site_path_helper(bf.config.blog.path,'imprint')}">Imprint / Impressum und Datenschutzhinweis</a>
       </p>
       <p>
         Powered by <a href="http://www.blogofile.com">Blogofile</a>
