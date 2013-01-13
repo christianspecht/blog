@@ -10,6 +10,26 @@
 	</ul>
   </section>
   <section>
+	<h1 class="post_header_gradient theme_font">Links</h1>
+	<ul>
+		<li>
+			<a href="http://stackoverflow.com/users/6884/">
+				<img src="http://stackoverflow.com/users/flair/6884.png" width="208" height="58" alt="profile for Christian Specht at Stack Overflow, Q&A for professional and enthusiast programmers" title="profile for Christian Specht at Stack Overflow, Q&A for professional and enthusiast programmers"/>
+			</a>
+		</li>
+		<li>
+			<a href="https://bitbucket.org/christianspecht">
+				<img src="${bf.util.site_path_helper(bf.config.blog.path,'img/bitbucket.png')}" alt="my Bitbucket page" title="my Bitbucket page"/>
+			</a>
+		</li>
+		<li>
+			<a href="https://www.ohloh.net/accounts/131837?ref=Detailed">
+				<img alt="Ohloh profile for Christian Specht" title="Ohloh profile for Christian Specht" height="35" src="https://www.ohloh.net/accounts/131837/widgets/account_detailed.gif" width="191" />
+			</a>
+		</li>
+	</ul>
+  </section>
+  <section>
     <h1 class="post_header_gradient theme_font">Latest Posts</h1>
     <ul>
       % for post in bf.config.blog.iter_posts_published(5):
