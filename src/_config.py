@@ -60,6 +60,13 @@ blog.timezone = "Europe/Berlin"
 ## TODO: move to plugin/filter?
 blog.googleanlytics_id = "UA-XXXXX-X"
 
+# enable custom blog index (index.html.mako in root folder)
+blog.custom_index = True
+
+# enable excerpts
+blog.post_excerpts.enabled = True
+blog.post_excerpts.word_length = 25
+
 ## Markdown extensions
 ## These are turned off by default, but turned on
 ## to show examples in /blog/2009/07/24/post-2/
