@@ -8,6 +8,9 @@
            category_links.append(category.name)
        else:
            category_links.append("<a href='%s'>%s</a>" % (category.path, category.name))
+ 
+import locale
+locale.setlocale(locale.LC_ALL, 'english')
 %>
 
 <article>
@@ -15,7 +18,7 @@
     <header>
       <div id="${post.slug}"></div>
       <h2 class="blog_post_title"><a href="${post.permapath()}" rel="bookmark" title="Permanent Link to ${post.title}">${post.title}</a></h2>
-      <p><small><span class="blog_post_date">${post.date.strftime("%B %d, %Y at %I:%M %p")}</span> | categories: 
+      <p><small><span class="blog_post_date">${post.date.strftime("%b %d %Y, %H:%M:%S")}</span> | categories: 
         <span class="blog_post_categories">${", ".join(category_links)}</span>
         % if bf.config.blog.disqus.enabled:
         | <a href="${post.permalink}#disqus_thread">View Comments</a>
