@@ -69,17 +69,19 @@
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
               <li class="nav-header">Projects</li>
-              <li><a href="#" rel="tooltip" title="first tooltip">Link</a></li>
-              <li><a href="#" rel="tooltip" title="second tooltip">Link</a></li>
-              <li><a href="#" rel="tooltip" title="third tooltip">Link</a></li>
+              <li><a href="${bf.util.site_path_helper('bitbucket-backup')}" rel="tooltip" title="A backup tool which clones all your Bitbucket repositories to your local machine">Bitbucket Backup</a></li>
+              <li><a href="${bf.util.site_path_helper('missilesharp')}" rel="tooltip" title=".NET library to control an USB Missile Launcher">MissileSharp</a></li>
+              <li><a href="${bf.util.site_path_helper('recordset-net')}" rel="tooltip" title="Converts .NET POCOs to ADODB.Recordsets">Recordset.Net</a></li>
+              <li><a href="${bf.util.site_path_helper('roboshell-backup')}" rel="tooltip" title="A simple personal backup tool, using RoboCopy and written in Windows Powershell">RoboShell Backup</a></li>
+              <li><a href="${bf.util.site_path_helper('vba-helpers')}" rel="tooltip" title="A collection of useful VBA functions">VBA Helpers</a></li>
             </ul>
           </div><!--/.well -->
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
               <li class="nav-header">Links</li>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
+              <li><a href="http://stackoverflow.com/users/6884/" rel="tooltip" title="profile for Christian Specht at Stack Overflow, Q&A for professional and enthusiast programmers"><img src="http://stackoverflow.com/users/flair/6884.png" width="208" height="58" alt="profile for Christian Specht at Stack Overflow, Q&A for professional and enthusiast programmers" title="profile for Christian Specht at Stack Overflow, Q&A for professional and enthusiast programmers"/></a></li>
+              <li><a href="https://bitbucket.org/christianspecht" rel="tooltip" title="my Bitbucket profile"><img src="${bf.util.site_path_helper('img/bitbucket.png')}" alt="my Bitbucket profile" title="my Bitbucket profile"/></a></li>
+              <li><a href="https://www.ohloh.net/accounts/131837?ref=Detailed" rel="toolip" title="Ohloh profile for Christian Specht"><img alt="Ohloh profile for Christian Specht" title="Ohloh profile for Christian Specht" height="35" src="https://www.ohloh.net/accounts/131837/widgets/account_detailed.gif" width="191" /></a></li>
             </ul>
           </div><!--/.well -->
           <div class="well sidebar-nav">
