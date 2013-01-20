@@ -1,11 +1,17 @@
 <%inherit file="_templates/site.mako" />
           <div class="hero-unit">
+            <div class="row">
+                <div class="span3">
+                    <img src="http://www.gravatar.com/avatar/6f807629c5f3765f28c61b1271552dc9?s=128" />
+                </div>
+                <div class="span9">
 <%self:filter chain="markdown">
 
 TODO: intro text
 
 </%self:filter>
-
+                </div>
+            </div>
           </div>
 
 <%
