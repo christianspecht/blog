@@ -48,15 +48,12 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="#">Project name</a>
+          <a class="brand" href="${bf.util.site_path_helper()}">${bf.config.blog.name}</a>
           <div class="nav-collapse collapse">
-            <p class="navbar-text pull-right">
-              Logged in as <a href="#" class="navbar-link">Username</a>
-            </p>
             <ul class="nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li><a href="${bf.util.site_path_helper()}">Home</a></li>
+              <li><a href="${bf.util.site_path_helper(bf.config.blog.path,'archive')}">Archive</a></li>
+              <li><a href="#">Projects</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
