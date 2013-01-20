@@ -1,37 +1,110 @@
 <%inherit file="base.mako" />
-<!doctype html>
-<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
-<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
-<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
-<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-${self.head()}
-</head>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Bootstrap, from Twitter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="${bf.util.site_path_helper('css/bootstrap.min.css')}" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+      .sidebar-nav {
+        padding: 9px 0;
+      }
+    </style>
+    <link href="${bf.util.site_path_helper('css/bootstrap-responsive.min.css')}" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://www.gravatar.com/avatar/6f807629c5f3765f28c61b1271552dc9?s=144">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://www.gravatar.com/avatar/6f807629c5f3765f28c61b1271552dc9?s=114">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://www.gravatar.com/avatar/6f807629c5f3765f28c61b1271552dc9?s=72">
+                    <link rel="apple-touch-icon-precomposed" href="http://www.gravatar.com/avatar/6f807629c5f3765f28c61b1271552dc9?s=57">
+                                   <link rel="shortcut icon" href="http://www.gravatar.com/avatar/6f807629c5f3765f28c61b1271552dc9?s=32">
+  </head>
+
   <body>
-    <div id="container" class="container container_12">
-      <div id="main" role="main">
-        <div id="main_block">
-          ${self.header()}
-          <div id="prose_block" class="grid_8">
-            ${next.body()}
-          </div>
-          <div id="sidebar" class="grid_4">
-            ${self.sidebar()}
-          </div>
-          <div class="clear"></div>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="#">Project name</a>
+          <div class="nav-collapse collapse">
+            <p class="navbar-text pull-right">
+              Logged in as <a href="#" class="navbar-link">Username</a>
+            </p>
+            <ul class="nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
         </div>
       </div>
-      ${self.footer()}
     </div>
-    ${self.body_scripts()}
+
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span9">
+          ${next.body()}
+        </div><!--/span-->
+        <div class="span3">
+          <div class="well sidebar-nav">
+            <ul class="nav nav-list">
+              <li class="nav-header">Projects</li>
+              <li><a href="#" rel="tooltip" title="first tooltip">Link</a></li>
+              <li><a href="#" rel="tooltip" title="second tooltip">Link</a></li>
+              <li><a href="#" rel="tooltip" title="third tooltip">Link</a></li>
+            </ul>
+          </div><!--/.well -->
+          <div class="well sidebar-nav">
+            <ul class="nav nav-list">
+              <li class="nav-header">Links</li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+            </ul>
+          </div><!--/.well -->
+          <div class="well sidebar-nav">
+            <ul class="nav nav-list">
+              <li class="nav-header">Recent Posts</li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+            </ul>
+          </div><!--/.well -->
+        </div><!--/span-->
+      </div><!--/row-->
+
+      <hr>
+
+      <footer>
+        <p>&copy; Company 2012</p>
+      </footer>
+
+    </div><!--/.fluid-container-->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="${bf.util.site_path_helper('js/jquery.js')}"></script>
+    <script src="${bf.util.site_path_helper('js/bootstrap.min.js')}"></script>
+
   </body>
 </html>
-<%def name="head()"><%include file="head.mako" /></%def>
-<%def name="header()"><%include file="header.mako" /></%def>
-<%def name="sidebar()"><%include file="sidebar.mako" /></%def>
-<%def name="footer()"><%include file="footer.mako" /></%def>
-<%def name="body_scripts()"><%include file="body_scripts.mako" /></%def>
