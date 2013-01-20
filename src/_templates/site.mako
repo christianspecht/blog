@@ -3,10 +3,14 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Bootstrap, from Twitter</title>
+    <title>${bf.config.blog.name}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="${bf.config.blog.description}">
+%if bf.config.site.author:
+    <meta name="author" content="${bf.config.site.author}">
+%endif
+    <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="${bf.util.site_path_helper(bf.config.blog.path,'/feed')}" />
+    <link rel="alternate" type="application/atom+xml" title="Atom 1.0" href="${bf.util.site_path_helper(bf.config.blog.path,'/feed/atom')}" />
 
     <!-- Le styles -->
     <link href="${bf.util.site_path_helper('css/bootstrap.min.css')}" rel="stylesheet">
