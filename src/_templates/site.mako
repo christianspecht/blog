@@ -95,7 +95,26 @@
       <hr>
 
       <footer>
-        <p>&copy; Company 2012</p>
+        <div class="row">
+            <div class="span8">
+                <p>
+                    <% import datetime %>
+                    Copyright 2012-${datetime.datetime.now().year}
+                    ${bf.config.site.author}
+                </p>
+                <p>
+                    <a href="${bf.util.site_path_helper(bf.config.blog.path,'imprint')}">Imprint / Impressum und Datenschutzhinweis</a>
+                </p>
+            </div>
+            <div class="span4">
+                <p>
+                    Powered by <a href="http://www.blogofile.com">Blogofile</a>
+                </p>
+                <p>
+                    <a href="${bf.util.site_path_helper(bf.config.blog.path,'feed','index.xml')}">RSS</a>
+                </p>
+            </div>
+        </div>
       </footer>
 
     </div><!--/.fluid-container-->
