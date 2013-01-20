@@ -23,7 +23,7 @@ locale.setlocale(locale.LC_ALL, 'english')
             <div class="span4">
               <h4><a href="${post.path}">${post.title}</a></h4>
               <p>${post.excerpt} ...</p>
-              <p>${post.date.strftime("%b %d %Y")} | ${", ".join(category_links)}</p>
+              <p><small>${post.date.strftime("%b %d %Y")} | ${", ".join(category_links)}</small></p>
             </div><!--/span-->
 % endfor
           </div><!--/row-->
@@ -37,7 +37,7 @@ locale.setlocale(locale.LC_ALL, 'english')
             <div class="span4">
               <h4><a href="${post.path}">${post.title}</a></h4>
               <p>${post.excerpt} ...</p>
-              <p>${post.date.strftime("%b %d %Y")} | ${", ".join(category_links)}</p>
+              <p><small>${post.date.strftime("%b %d %Y")} | ${", ".join(category_links)}</small></p>
             </div><!--/span-->
 % endfor
           </div><!--/row-->
