@@ -87,9 +87,9 @@
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
               <li class="nav-header">Recent Posts</li>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
+              % for post in bf.config.blog.iter_posts_published(5):
+              <li><a href="${post.path}">${post.title}</a></li>
+              % endfor
             </ul>
           </div><!--/.well -->
         </div><!--/span-->
