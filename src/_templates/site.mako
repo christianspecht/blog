@@ -119,7 +119,8 @@
             </div>
             <div class="span4">
                 <p>
-                    Powered by <a href="http://www.blogofile.com">Blogofile</a>
+                    Powered by <a href="http://www.blogofile.com">Blogofile</a>. Built with <a href="http://twitter.github.com/bootstrap/">Bootstrap</a>.<br/>
+                    <a href="http://bootswatch.com/cosmo/">Cosmo</a> theme by <a href="http://bootswatch.com">bootswatch.com</a>.
                 </p>
                 <p>
                     <a href="${bf.util.site_path_helper(bf.config.blog.path,'feed','index.xml')}">RSS</a>
