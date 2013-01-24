@@ -2,7 +2,7 @@
           <div class="hero-unit">
             <div class="row">
                 <div class="span3">
-                    <img src="http://www.gravatar.com/avatar/6f807629c5f3765f28c61b1271552dc9?s=128" class="img-rounded" />
+                    <img src="http://www.gravatar.com/avatar/6f807629c5f3765f28c61b1271552dc9?s=180" class="img-rounded" />
                 </div>
                 <div class="span9">
 <%self:filter chain="markdown">
