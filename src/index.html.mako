@@ -31,6 +31,7 @@ locale.setlocale(locale.LC_ALL, 'english')
               <p>${post.excerpt} ...</p>
               <p><small>${post.date.strftime("%b %d %Y")} | ${", ".join(category_links)}</small></p>
             </div><!--/span-->
+            <div class="row-fluid visible-phone spacer25"></div>
 % endfor
           </div><!--/row-->
           <div class="row-fluid hidden-phone spacer50"></div>
@@ -46,5 +47,6 @@ locale.setlocale(locale.LC_ALL, 'english')
               <p>${post.excerpt} ...</p>
               <p><small>${post.date.strftime("%b %d %Y")} | ${", ".join(category_links)}</small></p>
             </div><!--/span-->
+            <div class="row-fluid visible-phone spacer25"></div>
 % endfor
           </div><!--/row-->

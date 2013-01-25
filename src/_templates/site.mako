@@ -22,6 +22,9 @@
       .sidebar-nav {
         padding: 9px 0;
       }
+      .spacer25 {
+        height: 25px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block;
+      }
       .spacer50 {
         height: 50px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block;
       }
