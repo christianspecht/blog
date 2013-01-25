@@ -33,6 +33,7 @@ locale.setlocale(locale.LC_ALL, 'english')
             </div><!--/span-->
 % endfor
           </div><!--/row-->
+          <div class="row-fluid hidden-phone spacer50"></div>
           <div class="row-fluid">
 % for post in bf.config.blog.posts[3:6]:
 <% 

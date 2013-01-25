@@ -22,6 +22,9 @@
       .sidebar-nav {
         padding: 9px 0;
       }
+      .spacer50 {
+        height: 50px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block;
+      }
     </style>
     <link href="${bf.util.site_path_helper('css/bootstrap-responsive.min.css')}" rel="stylesheet">
 
