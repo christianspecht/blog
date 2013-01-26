@@ -1,4 +1,8 @@
-# How to build
+This is the source code of [christianspecht.de](http://christianspecht.de), built with [Blogofile](http://www.blogofile.com/).
+
+---
+
+#### How to build
 
 Prerequisites:
 
