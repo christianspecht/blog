@@ -6,12 +6,18 @@
 % endif
   <hr class="interblog" />
 % endfor
-% if prev_link:
- <a href="${prev_link}">« Previous Page</a>
+% if prev_link or next_link:
+  <ul class="pager">
 % endif
-% if prev_link and next_link:
-  --  
+% if prev_link:
+    <li><a href="${prev_link}">&larr; Older</a></li>
 % endif
 % if next_link:
- <a href="${next_link}">Next Page »</a>
+    <li><a href="${next_link}">Newer &rarr;</a></li>
 % endif
+% if prev_link or next_link:
+  </ul>
+% endif
+
+
+
