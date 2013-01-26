@@ -92,6 +92,14 @@
           </div><!--/.well -->
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
+              <li class="nav-header">Recent Posts</li>
+              % for post in bf.config.blog.iter_posts_published(5):
+              <li><a href="${post.path}">${post.title}</a></li>
+              % endfor
+            </ul>
+          </div><!--/.well -->
+          <div class="well sidebar-nav">
+            <ul class="nav nav-list">
               <li class="nav-header">Archives</li>
                 % for link, name, num_posts in bf.config.blog.archive_links:
                 <li><a href="${bf.util.site_path_helper(bf.config.blog.path,link)}/1">${name}&nbsp;(${num_posts})</a></li>
@@ -100,10 +108,10 @@
           </div><!--/.well -->
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
-              <li class="nav-header">Recent Posts</li>
-              % for post in bf.config.blog.iter_posts_published(5):
-              <li><a href="${post.path}">${post.title}</a></li>
-              % endfor
+              <li class="nav-header">Categories</li>
+                % for category, num_posts in bf.config.blog.all_categories:
+                <li><a href="${category.path}">${category}&nbsp;(${num_posts})</a></li>
+                % endfor
             </ul>
           </div><!--/.well -->
         </div><!--/span-->
