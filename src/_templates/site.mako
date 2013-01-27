@@ -59,7 +59,7 @@
             <ul class="nav">
               <li><a href="${bf.util.site_path_helper()}"><i class="icon-home icon-white"></i> Home</a></li>
               <li><a href="${bf.util.site_path_helper(bf.config.blog.path,'archive')}"><i class="icon-calendar icon-white"></i> Archive</a></li>
-              <li><a href="#"><i class="icon-wrench icon-white"></i> Projects</a></li>
+              <!--<li><a href="#"><i class="icon-wrench icon-white"></i> Projects</a></li>-->
             </ul>
           </div><!--/.nav-collapse -->
         </div>
