@@ -60,6 +60,7 @@
               <li><a href="${bf.util.site_path_helper()}"><i class="icon-home icon-white"></i> Home</a></li>
               <li><a href="${bf.util.site_path_helper(bf.config.blog.path,'archive')}"><i class="icon-calendar icon-white"></i> Archive</a></li>
               <!--<li><a href="#"><i class="icon-wrench icon-white"></i> Projects</a></li>-->
+              <li><a href="${bf.util.site_path_helper(bf.config.blog.path,'feed','index.xml')}"><i class="icon-signal icon-white"></i> RSS Feed</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -126,8 +127,7 @@
                     <% import datetime %>
                     Copyright 2012-${datetime.datetime.now().year}
                     ${bf.config.site.author}
-                </p>
-                <p>
+                    <br/>
                     <a href="${bf.util.site_path_helper(bf.config.blog.path,'imprint')}">Imprint / Impressum und Datenschutzhinweis</a>
                 </p>
             </div>
@@ -135,9 +135,6 @@
                 <p>
                     Powered by <a href="http://www.blogofile.com">Blogofile</a>. Built with <a href="http://twitter.github.com/bootstrap/">Bootstrap</a>.<br/>
                     <a href="http://bootswatch.com/cosmo/">Cosmo</a> theme by <a href="http://bootswatch.com">bootswatch.com</a>.
-                </p>
-                <p>
-                    <a href="${bf.util.site_path_helper(bf.config.blog.path,'feed','index.xml')}">RSS</a>
                 </p>
             </div>
         </div>
