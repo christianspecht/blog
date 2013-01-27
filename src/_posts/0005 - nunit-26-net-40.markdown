@@ -15,9 +15,9 @@ GUI runner:
 
 I spent a few minutes staring at the screen and wondering if I made a mistake somethere.
 
-It couldn’t be the test class, because the test class was VERY simple:
+It couldn’t be the test class, because the test class was **very** simple:
 
-$$code(lang=c#)
+$$code(lang=c#, linenums=true)
 [TestFixture]
 public class SomeTest
 {
@@ -31,7 +31,7 @@ $$/code
 
 After a while, I opened the config files of one of the runners (`nunit.exe.config` for `nunit.exe`) and found this at the beginning:
 
-$$code(lang=xml)
+$$code(lang=xml, linenums=true)
 <?xml version="1.0" encoding="utf-8"?>
 <configuration>
     <!--
@@ -51,9 +51,9 @@ $$/code
 
 Apparently NUnit was running on .NET 2.0 (or 3.5, see the screenshot from the console runner above), so it wasn’t able to open my .NET 4.0 test assembly.
 
-So the solution is to comment out the first `supportedRuntime` line in the config files of every runner you need:
+So the solution is to comment out the first `supportedRuntime` line (line 3 in this example) in the config files of every runner you need:
 
-$$code(lang=xml)
+$$code(lang=xml, linenums=true)
 <startup useLegacyV2RuntimeActivationPolicy="true">
     <!-- Comment out the next line to force use of .NET 4.0 -->
     <!-- <supportedRuntime version="v2.0.50727" /> -->
