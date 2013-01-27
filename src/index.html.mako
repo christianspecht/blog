@@ -14,6 +14,7 @@ TODO: intro text
             </div>
           </div>
 
+          <h3>Recent Posts:</h3>
 <%
 import locale
 locale.setlocale(locale.LC_ALL, 'english')
