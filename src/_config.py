@@ -65,7 +65,7 @@ blog.custom_index = True
 
 # enable excerpts
 blog.post_excerpts.enabled = True
-blog.post_excerpts.word_length = 25
+blog.post_excerpts.word_length = 35
 
 ## Markdown extensions
 ## These are turned off by default, but turned on
