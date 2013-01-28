@@ -5,10 +5,11 @@
                     <img src="http://www.gravatar.com/avatar/6f807629c5f3765f28c61b1271552dc9?s=140" class="img-rounded" />
                 </div>
                 <div class="span9">
+<% import datetime %>
 <%self:filter chain="markdown">
 
 My name is Christian Specht, and this is my personal site.  
-I'm a software developer from Kerpen, Germany (near Cologne) with about 10 years experience. Check out my open source projects!
+I'm a software developer from Kerpen, Germany (near Cologne) with about ${datetime.datetime.now().year - 2003} years experience. Check out my open source projects!
 
 </%self:filter>
                 </div>
