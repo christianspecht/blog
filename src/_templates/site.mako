@@ -9,8 +9,8 @@
 %if bf.config.site.author:
     <meta name="author" content="${bf.config.site.author}">
 %endif
-    <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="${bf.util.site_path_helper(bf.config.blog.path,'/feed')}" />
-    <link rel="alternate" type="application/atom+xml" title="Atom 1.0" href="${bf.util.site_path_helper(bf.config.blog.path,'/feed/atom')}" />
+    <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://feeds.feedburner.com/ChristianSpecht" />
+    <link rel="alternate" type="application/atom+xml" title="Atom 1.0" href="http://feeds.feedburner.com/ChristianSpecht" />
 
     <!-- Le styles -->
     <link href="${bf.util.site_path_helper('css/bootstrap.min.css')}" rel="stylesheet">
@@ -60,7 +60,7 @@
               <li><a href="${bf.util.site_path_helper()}"><i class="icon-home icon-white"></i> Home</a></li>
               <li><a href="${bf.util.site_path_helper(bf.config.blog.path,'archive')}"><i class="icon-calendar icon-white"></i> Archive</a></li>
               <!--<li><a href="#"><i class="icon-wrench icon-white"></i> Projects</a></li>-->
-              <li><a href="${bf.util.site_path_helper(bf.config.blog.path,'feed','index.xml')}"><i class="icon-signal icon-white"></i> RSS Feed</a></li>
+              <li><a href="http://feeds.feedburner.com/ChristianSpecht"><i class="icon-signal icon-white"></i> RSS Feed</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
