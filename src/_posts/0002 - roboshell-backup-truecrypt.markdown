@@ -1,7 +1,8 @@
 ---
-title: RoboShell Backup 1.1 now with TrueCrypt integration
+title: RoboShell Backup 1.1 - now with TrueCrypt integration
 date: 2012/04/30 22:44:40
 categories: Backup, RoboShell Backup, TrueCrypt
+permalink: /2012/04/30/roboshell-backup-1-1-now-with-truecrypt-integration
 ---
 
 I just published [RoboShell Backup](http://christianspecht.de/roboshell-backup) 1.1.  
