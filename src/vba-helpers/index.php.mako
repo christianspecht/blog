@@ -1,12 +1,3 @@
-<%inherit file="_templates/site.mako" />
+<%inherit file="_templates/projectpage.mako" />
 <%def name="title()">VBA Helpers</%def>
-<article>
-
-<?php
-
-include_once "../php/md-include.php";
-echo GetMarkdown("https://bitbucket.org/christianspecht/vba-helpers/raw/tip/readme-full.md");
-
-?>
-
-</article>
+<%def name="markdownurl()">https://bitbucket.org/christianspecht/vba-helpers/raw/tip/readme-full.md</%def>
