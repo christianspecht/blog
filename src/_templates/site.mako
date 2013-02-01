@@ -92,7 +92,7 @@
               <li class="nav-header">Links</li>
               <li><a href="http://stackoverflow.com/users/6884/" rel="tooltip" title="profile for Christian Specht at Stack Overflow, Q&A for professional and enthusiast programmers"><img src="http://stackoverflow.com/users/flair/6884.png" width="208" height="58" alt="profile for Christian Specht at Stack Overflow, Q&A for professional and enthusiast programmers" title="profile for Christian Specht at Stack Overflow, Q&A for professional and enthusiast programmers"/></a></li>
               <li><a href="https://bitbucket.org/christianspecht" rel="tooltip" title="my Bitbucket profile"><img src="${bf.util.site_path_helper('img/bitbucket.png')}" alt="my Bitbucket profile" title="my Bitbucket profile"/></a></li>
-              <li><a href="https://www.ohloh.net/accounts/131837?ref=Detailed" rel="toolip" title="Ohloh profile for Christian Specht"><img alt="Ohloh profile for Christian Specht" title="Ohloh profile for Christian Specht" height="35" src="https://www.ohloh.net/accounts/131837/widgets/account_detailed.gif" width="191" /></a></li>
+              <li><a href="https://www.ohloh.net/accounts/131837?ref=Detailed" rel="tooltip" title="Ohloh profile for Christian Specht"><img alt="Ohloh profile for Christian Specht" title="Ohloh profile for Christian Specht" height="35" src="https://www.ohloh.net/accounts/131837/widgets/account_detailed.gif" width="191" /></a></li>
             </ul>
           </div><!--/.well -->
           <div class="well sidebar-nav">
