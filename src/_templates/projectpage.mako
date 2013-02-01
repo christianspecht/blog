@@ -6,6 +6,8 @@ ${next.title()}
 no title
 %endif
 </%def>
+<h1>${self.title()}</h1>
+<p>&nbsp;</p>
 %if hasattr(next, 'markdownurl'):
 <?php
 include_once "../php/md-include.php";
