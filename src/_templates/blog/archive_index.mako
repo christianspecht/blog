@@ -1,4 +1,5 @@
 <%inherit file="bf_base_template" />
+<%def name="title()">Archive</%def> 
 % for posts in month_posts:
 <h3>${posts[0].date.strftime("%B %Y")}</h3>
 <ul>

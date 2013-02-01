@@ -1,4 +1,5 @@
 ﻿<%inherit file="_templates/site.mako" />
+<%def name="title()">Imprint / Impressum und Datenschutzhinweis</%def>
 <article>
 <%self:filter chain="markdown">
 

@@ -1,4 +1,5 @@
 <%inherit file="_templates/site.mako" />
+<%def name="title()">Bitbucket Backup</%def>
 <article>
 
 <?php

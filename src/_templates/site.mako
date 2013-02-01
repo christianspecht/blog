@@ -3,7 +3,11 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+%if hasattr(next, 'title'):
+    <title>${next.title()} - ${bf.config.blog.name}</title>
+%else:
     <title>${bf.config.blog.name}</title>
+%endif
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="${bf.config.blog.description}">
 %if bf.config.site.author:
