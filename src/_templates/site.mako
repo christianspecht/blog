@@ -64,7 +64,7 @@
               <li><a href="${bf.util.site_path_helper()}"><i class="icon-home icon-white"></i> Home</a></li>
               <li><a href="${bf.util.site_path_helper(bf.config.blog.path,'archive')}"><i class="icon-calendar icon-white"></i> Archive</a></li>
               <!--<li><a href="#"><i class="icon-wrench icon-white"></i> Projects</a></li>-->
-              <li><a href="http://feeds.feedburner.com/ChristianSpecht"><i class="icon-signal icon-white"></i> RSS Feed</a></li>
+              <li><a href="http://feeds.feedburner.com/ChristianSpecht"><img src="${bf.util.site_path_helper('img/feed.png')}"> RSS Feed</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
