@@ -1,8 +1,7 @@
 ---
 title: How to display Markdown files from other sites in WordPress
-date: 2012/02/09 20:53:40
+date: 2012/03/09 20:53:40
 categories: Markdown,PHP,WordPress
-permalink: /2012/03/09/how-to-display-markdown-files-from-other-sites-in-wordpress
 ---
 
 When I created the pages for my existing projects on this blog, I decided that I'd prefer to directly display the content of the readme files from [Bitbucket](https://bitbucket.org/) (where all of my projects are hosted), instead of just copying the content.
