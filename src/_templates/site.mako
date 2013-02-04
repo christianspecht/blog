@@ -107,27 +107,7 @@
             <ul class="nav nav-list">
               <li class="nav-header">Archives</li>
                 % for link, name, num_posts in bf.config.blog.archive_links:
-                <%
-                    if name.startswith('Januar'):
-                        month=name.replace('Januar','January')
-                    elif name.startswith('Februar'):
-                        month=name.replace('Februar','February')
-                    # omit March because the German name makes Blogofile/Mako crash, because it contains an umlaut
-                    # (there will never be posts in March anyway, because they make Blogofile/Mako crash, too)
-                    elif name.startswith('Mai'):
-                        month=name.replace('Mai','May')
-                    elif name.startswith('Juni'):
-                        month=name.replace('Juni','June')
-                    elif name.startswith('Juli'):
-                        month=name.replace('Juli','July')
-                    elif name.startswith('Oktober'):
-                        month=name.replace('Oktober','October')
-                    elif name.startswith('Dezember'):
-                        month=name.replace('Dezember','December')
-                    else:
-                        month=name
-                %>
-                <li><a href="${bf.util.site_path_helper(bf.config.blog.path,link)}/1">${month}&nbsp;(${num_posts})</a></li>
+                <li><a href="${bf.util.site_path_helper(bf.config.blog.path,link)}/1">${name}&nbsp;(${num_posts})</a></li>
                 % endfor
             </ul>
           </div><!--/.well -->
