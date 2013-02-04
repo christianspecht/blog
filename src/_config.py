@@ -76,3 +76,8 @@ filters.markdown.extensions.footnotes.enabled = True
 filters.markdown.extensions.fenced_code.enabled = True
 filters.markdown.extensions.headerid.enabled = True
 filters.markdown.extensions.tables.enabled = True
+
+## set locale to English before build
+def pre_build():
+    import locale
+    locale.setlocale(locale.LC_ALL, 'english')

@@ -17,10 +17,6 @@ I'm a software developer from Kerpen, Germany (near Cologne) with about ${dateti
           </div>
 
           <h3>Recent Posts:</h3>
-<%
-import locale
-locale.setlocale(locale.LC_ALL, 'english')
-%>
 
           <div class="row-fluid">
 % for post in bf.config.blog.posts[0:3]:

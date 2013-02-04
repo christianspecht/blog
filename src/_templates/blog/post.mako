@@ -8,9 +8,6 @@
            category_links.append(category.name)
        else:
            category_links.append("<a href='%s'>%s</a>" % (category.path, category.name))
- 
-import locale
-locale.setlocale(locale.LC_ALL, 'english')
 %>
 
 <article>
