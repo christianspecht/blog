@@ -21,8 +21,11 @@ A few notes:
 
 **Converting the old blog posts from WordPress:**  
 Blogofile even offers a [converter script](http://docs.blogofile.com/en/latest/migrating_blogs.html#posts), but I had only a few posts, so I didn't bother playing around with the script and just converted the posts by hand.  
-I found [a bug](https://github.com/EnigmaCurry/blogofile/issues/141) while converting, which made me unable to set the date of any blog post to March (no matter which year).  
-So I had to ["re-schedule" one post from last year's March to February instead](https://bitbucket.org/christianspecht/blog/commits/7d679e36cdf960596c477435f758a184fdda3e8f), and fake the original WordPress URL by [setting the permalink field of that post](https://bitbucket.org/christianspecht/blog/commits/c5246607b5f6c5b46be8f70aa4480dfee8c12d37).
+<del>I found [a bug](https://github.com/EnigmaCurry/blogofile/issues/141) while converting, which made me unable to set the date of any blog post to March (no matter which year).  
+So I had to ["re-schedule" one post from last year's March to February instead](https://bitbucket.org/christianspecht/blog/commits/7d679e36cdf960596c477435f758a184fdda3e8f), and fake the original WordPress URL by [setting the permalink field of that post](https://bitbucket.org/christianspecht/blog/commits/c5246607b5f6c5b46be8f70aa4480dfee8c12d37).</del>  
+*EDIT (Feb 04 2013):  
+I just discovered that setting the post date to March **does** work when you set the locale to English in the `pre_build` hook. Thanks to Peter Zsoldos for [pointing me to the `pre_build` solution](https://groups.google.com/forum/#!msg/blogofile-discuss/1qTU4nkBUuU/yj33kxCnd4YJ).  
+Apparently the bug was caused by the German word for March ("März") containing an [umlaut](http://en.wikipedia.org/wiki/Germanic_umlaut). By setting the locale to English right at the beginning, no evil umlauts were used and the problem disappeared (at least for me - it would still occur for people trying to blog with Blogofile in German).*
 
 **Templates/Themes:**  
 There are no ready-made templates for Blogofile (or at least I didn't find any), so I had to build my own using [Twitter Bootstrap](http://twitter.github.com/bootstrap/) (which I had heard of, but never used before). The layout is based on the ["Fluid layout" example](http://twitter.github.com/bootstrap/examples/fluid.html) (I only moved the sidebar to the right), and I used one of the great free themes from [Bootswatch](http://bootswatch.com/) to make the site look less "bootstrappy".
