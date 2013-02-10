@@ -5,7 +5,24 @@
 
 <div class="row-fluid spacer25"></div>
 <p><%self:filter chain="markdown">
-TODO: intro text
+Like many other software developers, I create small tools and tryout projects in my spare time, because:
+
+1. I need a tool to do a specific task, and I can't find an existing tool that exactly fits my needs.
+2. I want to play around with a new technology, and the best way to learn is [learning by doing](http://norvig.com/21-days.html).
+
+I have been creating these projects for years, but didn't ever publish one until 2011. Most of them were either not in a state to be published, or not of any practical use. Or both.
+
+Then I kept seeing more and more people showing off professional looking projects in their blogs and Stack Overflow profiles, and one day I thought: I can do this, too!  
+I'm not looking for work...but if I were, having actual projects viewable online [beats any traditional resume](https://twitter.com/jeresig/status/33968704983138304).
+
+So in 2011 I decided that from now on, I would create my future personal projects in a more "polished" form and publish them all.  
+In other words, each project should:
+
+- be of practical use / solve a specific problem
+- make use of some libraries/tools/technologies that I'm not familiar with, but want to learn
+- have full documentation, installers and source code available online
+
+Here is a list of everything I created in my spare time since then, in chronologial order (oldest first):
 </%self:filter></p>
 <div class="row-fluid spacer25"></div>
 

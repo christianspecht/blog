@@ -62,7 +62,7 @@
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li><a href="${bf.util.site_path_helper()}"><i class="icon-home icon-white"></i> Home</a></li>
-              <!--<li><a href="${bf.util.site_path_helper(bf.config.blog.path,'projects')}"><i class="icon-wrench icon-white"></i> Projects</a></li>-->
+              <li><a href="${bf.util.site_path_helper(bf.config.blog.path,'projects')}"><i class="icon-wrench icon-white"></i> Projects</a></li>
               <li><a href="${bf.util.site_path_helper(bf.config.blog.path,'archive')}"><i class="icon-calendar icon-white"></i> Archive</a></li>
               <li><a href="http://feeds.feedburner.com/ChristianSpecht"><img src="${bf.util.site_path_helper('img/feed.png')}"> RSS Feed</a></li>
             </ul>

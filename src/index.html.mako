@@ -9,7 +9,7 @@
 <%self:filter chain="markdown">
 
 My name is Christian Specht, and this is my personal site.  
-I'm a software developer from Kerpen, Germany (near Cologne) with about ${datetime.datetime.now().year - 2003} years experience. Check out my open source projects!
+I'm a software developer from Kerpen, Germany (near Cologne) with about ${datetime.datetime.now().year - 2003} years experience. Check out my [projects](${bf.util.site_path_helper(bf.config.blog.path,'projects')})!
 
 </%self:filter>
                 </div>
