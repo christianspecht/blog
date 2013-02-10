@@ -153,3 +153,5 @@ Migrate existing WordPress site/blog to a static site generator *(I decided to u
         
     </div><!--/row-->
 </div><!--/container-fluid-->
+
+<div class="row-fluid visible-phone spacer25"></div>
