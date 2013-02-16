@@ -13,7 +13,7 @@ Like many other software developers, I create small tools and tryout projects in
 I have been creating these projects for years, but didn't ever publish one until 2011. Most of them were either not in a state to be published, or not of any practical use. Or both.
 
 Then I kept seeing more and more people showing off professional looking projects in their blogs and Stack Overflow profiles, and one day I thought: I can do this, too!  
-I'm not looking for work...but if I were, having actual projects viewable online [beats any traditional resume](https://twitter.com/jeresig/status/33968704983138304).
+Even though I'm not looking for work - if I were, having actual projects viewable online [can't hurt](https://twitter.com/jeresig/status/33968704983138304).
 
 So in 2011 I decided that from now on, I would create my future personal projects in a more "polished" form and publish them all.  
 In other words, each project should:
@@ -55,7 +55,7 @@ A tool to automate creating local backups of all my private and public [Bitbucke
 
 - Calling [Bitbucket's API](https://api.bitbucket.org/) with [RestSharp](http://restsharp.org/) and [Json.NET](http://json.codeplex.com/)
 - Cloning/pulling [Mercurial](http://mercurial.selenic.com/) and [Git](http://git-scm.com/) repositories with C#
-- Dependency injection with [Ninject](http://ninject.org/)
+- Dependency Injection with [Ninject](http://ninject.org/)
 - Setting assembly version from build script with [MSBuild Community Tasks](https://github.com/loresoft/msbuildtasks)
             </%self:filter>
         </div><!--/span-->
@@ -123,7 +123,7 @@ A library to send commands to an [USB Missile Launcher](http://www.dreamcheeky.c
             <h2><a href="${bf.util.site_path_helper('vba-helpers')}"><img src="https://bitbucket.org/christianspecht/vba-helpers/raw/tip/img/logo35x35.png" class="img-polaroid" /> VBA Helpers</a></h2>
             <%self:filter chain="markdown">
 **What I needed:**  
-A reusable library of VBA helper functions, to avoid having slight variations of the same functions duplicated in several projects.
+A reusable library of VBA helper functions, to avoid having slight variations of the same functions duplicated across several projects.
 
 **What I learned:**
 
@@ -145,9 +145,9 @@ Migrate existing WordPress site/blog to a static site generator *(I decided to u
 
 **What I learned:**
 
-- [Setting up a new site](${bf.util.site_path_helper('2013/01/29/switched-from-wordpress-to-blogofile')}) with [Blogofile](http://blogofile.com/) *([&rarr; source code](https://bitbucket.org/christianspecht/blog))*
+- [Setting up a new site](${bf.util.site_path_helper('2013/01/29/switched-from-wordpress-to-blogofile')}) with [Blogofile](http://blogofile.com/) *(source code [here](https://bitbucket.org/christianspecht/blog))*
 - Creating a responsive HTML template with [Twitter Bootstrap](http://twitter.github.com/bootstrap/)
-- Writing custom [Mako](http://www.makotemplates.org/) templates with [Python](http://www.python.org/)
+- Writing custom [Mako](http://www.makotemplates.org/) templates in [Python](http://www.python.org/)
             </%self:filter>
         </div><!--/span-->
         
