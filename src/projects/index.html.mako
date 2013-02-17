@@ -148,6 +148,7 @@ Migrate existing WordPress site/blog to a static site generator *(I decided to u
 - [Setting up a new site](${bf.util.site_path_helper('2013/01/29/switched-from-wordpress-to-blogofile')}) with [Blogofile](http://blogofile.com/) *(source code [here](https://bitbucket.org/christianspecht/blog))*
 - Creating a responsive HTML template with [Twitter Bootstrap](http://twitter.github.com/bootstrap/)
 - Writing custom [Mako](http://www.makotemplates.org/) templates in [Python](http://www.python.org/)
+- Displaying [Markdown files from my Bitbucket projects (again)](${bf.util.site_path_helper('2013/02/17/how-to-display-markdown-files-from-other-sites-this-time-in-blogofile/')})
             </%self:filter>
         </div><!--/span-->
         
