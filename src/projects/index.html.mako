@@ -3,7 +3,7 @@
 
 <h1>${self.title()}</h1>
 
-<div class="row-fluid spacer25"></div>
+<div class="row spacer25"></div>
 <p><%self:filter chain="markdown">
 Like many other software developers, I create small tools and tryout projects in my spare time, because:
 
@@ -24,12 +24,12 @@ In other words, each project should:
 
 Here is a list of everything I created in my spare time since then, in chronologial order (oldest first):
 </%self:filter></p>
-<div class="row-fluid spacer25"></div>
+<div class="row spacer25"></div>
 
-<div class="container-fluid">
-    <div class="row-fluid">
+<div class="container">
+    <div class="row">
     
-        <div class="span6">
+        <div class="span4">
           <h2><a href="${bf.util.site_path_helper('roboshell-backup')}"><img src="https://bitbucket.org/christianspecht/roboshell-backup/raw/tip/img/head35x35.png" class="img-polaroid" /> RoboShell Backup</a></h2>
           <%self:filter chain="markdown">
 **What I needed:**  
@@ -43,9 +43,9 @@ Convert existing batch files for [Robocopy](http://en.wikipedia.org/wiki/Robocop
           </%self:filter>
         </div><!--/span-->
         
-        <div class="row-fluid visible-phone spacer25"></div>
+        <div class="row visible-phone spacer25"></div>
         
-        <div class="span6">
+        <div class="span4">
             <h2><a href="${bf.util.site_path_helper('bitbucket-backup')}"><img src="https://bitbucket.org/christianspecht/bitbucket-backup/raw/tip/img/logo35x35.png" class="img-polaroid" /> Bitbucket Backup</a></h2>
             <%self:filter chain="markdown">
 **What I needed:**  
@@ -62,11 +62,11 @@ A tool to automate creating local backups of all my private and public [Bitbucke
         
     </div><!--/row-->
     
-    <div class="row-fluid spacer25"></div>
+    <div class="row spacer25"></div>
     
-    <div class="row-fluid">
+    <div class="row">
     
-        <div class="span6">
+        <div class="span4">
             <h2><a href="${bf.util.site_path_helper('recordset-net')}"><img src="https://bitbucket.org/christianspecht/recordset.net/raw/tip/img/logo35x35.png" class="img-polaroid" /> Recordset.Net</a></h2>
             <%self:filter chain="markdown">
 **What I needed:**  
@@ -80,9 +80,9 @@ A library to convert .NET POCOs into `ADODB.Recordsets`, in order to gradually m
             </%self:filter>
         </div><!--/span-->
         
-        <div class="row-fluid visible-phone spacer25"></div>
+        <div class="row visible-phone spacer25"></div>
         
-        <div class="span6">
+        <div class="span4">
             <h2><a href="${bf.util.site_path_helper()}"><img src="${bf.util.site_path_helper('img/site2012.png')}" class="img-polaroid" /> This site (2012)</a></h2>
             <%self:filter chain="markdown">
 **What I needed:**  
@@ -97,11 +97,11 @@ A web site to feature my projects and *(maybe)* a blog. I registered the domain 
         
     </div><!--/row-->
     
-    <div class="row-fluid spacer25"></div>
+    <div class="row spacer25"></div>
     
-    <div class="row-fluid">
+    <div class="row">
      
-        <div class="span6">
+        <div class="span4">
             <h2><a href="${bf.util.site_path_helper('missilesharp')}"><img src="https://bitbucket.org/christianspecht/missilesharp/raw/tip/img/logo35x35.png" class="img-polaroid" /> MissileSharp</a></h2>
             <%self:filter chain="markdown">
 **What I needed:**  
@@ -117,9 +117,9 @@ A library to send commands to an [USB Missile Launcher](http://www.dreamcheeky.c
             </%self:filter>
         </div><!--/span-->
         
-        <div class="row-fluid visible-phone spacer25"></div>
+        <div class="row visible-phone spacer25"></div>
         
-        <div class="span6">
+        <div class="span4">
             <h2><a href="${bf.util.site_path_helper('vba-helpers')}"><img src="https://bitbucket.org/christianspecht/vba-helpers/raw/tip/img/logo35x35.png" class="img-polaroid" /> VBA Helpers</a></h2>
             <%self:filter chain="markdown">
 **What I needed:**  
@@ -133,11 +133,11 @@ A reusable library of VBA helper functions, to avoid having slight variations of
         
     </div><!--/row-->
 
-    <div class="row-fluid spacer25"></div>
+    <div class="row spacer25"></div>
     
-    <div class="row-fluid">
+    <div class="row">
      
-        <div class="span6">
+        <div class="span4">
             <h2><a href="${bf.util.site_path_helper()}"><img src="${bf.util.site_path_helper('img/site2013.png')}" class="img-polaroid" /> This site (2013)</a></h2>
             <%self:filter chain="markdown">
 **What I needed:**  
@@ -153,6 +153,6 @@ Migrate existing WordPress site/blog to a static site generator *(I decided to u
         </div><!--/span-->
         
     </div><!--/row-->
-</div><!--/container-fluid-->
+</div><!--/container-->
 
-<div class="row-fluid visible-phone spacer25"></div>
+<div class="row visible-phone spacer25"></div>
