@@ -1,19 +1,11 @@
 <%inherit file="_templates/site.mako" />
           <div class="hero-unit">
-            <div class="media">
-                <div class="pull-left">
-                    <img src="http://www.gravatar.com/avatar/6f807629c5f3765f28c61b1271552dc9?s=140" class="img-rounded media-object" />
-                </div>
-                <div class="media-body">
-<% import datetime %>
 <%self:filter chain="markdown">
 
 My name is Christian Specht, and this is my personal site.  
-I'm a software developer from Kerpen, Germany (near Cologne) and I've been doing this for about ${datetime.datetime.now().year - 2003} years now. Check out [my projects](${bf.util.site_path_helper(bf.config.blog.path,'projects')})!
+I'm a software developer and I use this site to feature [my projects](${bf.util.site_path_helper(bf.config.blog.path,'projects')}) and (occasionally) [some blogging](${bf.util.site_path_helper(bf.config.blog.path,'archive')}).
 
 </%self:filter>
-                </div>
-            </div>
           </div>
 
           <h3>Recent Posts:</h3>

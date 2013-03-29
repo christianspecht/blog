@@ -79,6 +79,26 @@
         <div class="span3">
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
+              <li class="nav-header">About me</li>
+              <% import datetime %>
+              <li class="media">
+                <img class="pull-left media-object img-rounded" src="http://www.gravatar.com/avatar/6f807629c5f3765f28c61b1271552dc9?s=60" />
+                <div class="media-body">
+                  <small>
+                    <a href="${bf.util.site_path_helper(bf.config.blog.path,'imprint')}">Contact</a><br>
+                    <!--<a href="#">CV</a>-->
+                  </small>
+                </div>
+              </li>
+              <li>
+                <small>
+                  Developer for about ${datetime.datetime.now().year - 2003} years, living in Kerpen, Germany (near Cologne). Working as an in-house developer <i>(VBA/T-SQL/C#)</i> and DBA at a mid-sized manufacturing company in Cologne.
+                </small>
+              </li>
+            </ul>
+          </div><!--/.well -->
+          <div class="well sidebar-nav">
+            <ul class="nav nav-list">
               <li class="nav-header">Projects</li>
               <li><a href="${bf.util.site_path_helper('bitbucket-backup')}" rel="tooltip" title="A backup tool which clones all your Bitbucket repositories to your local machine">Bitbucket Backup</a></li>
               <li><a href="${bf.util.site_path_helper('missilesharp')}" rel="tooltip" title=".NET library to control an USB Missile Launcher">MissileSharp</a></li>
