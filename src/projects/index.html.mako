@@ -9,9 +9,9 @@ Like many other developers, I have been creating small tools and tryout projects
 
 After seeing more and more people linking their personal GitHub/Bitbucket/CodePlex projects in their blogs and Stack Overflow profiles, I thought: I can do this, too! After all, having actual projects viewable online [can't hurt](https://twitter.com/jeresig/status/33968704983138304).
 
-The projects listed here were created either because of an actual problem that I had *(for example, [taking backups](${bf.util.site_path_helper('roboshell-backup')}))* or just because I found something cool that I wanted to play around with *(for example, [controlling an USB Missile Launcher](${bf.util.site_path_helper('missilesharp')}))*.  
+The projects listed here were created either because of an actual problem that I had *(like [taking backups of my personal stuff](${bf.util.site_path_helper('roboshell-backup')}))* or just because I found something cool that I wanted to play around with *(like [controlling an USB Missile Launcher](${bf.util.site_path_helper('missilesharp')}))*.  
 
-I also try to use some new libraries/tools/technologies in each project that I'm not familiar with, for learning purposes. And I've seen too many projects that look interesting, but lack even the simplest "how to get started" example...so I always create full documentation, installers etc. for my projects whenever possible.
+I also try to use some new libraries/tools/technologies in each project that I'm not familiar with, for [learning purposes](http://norvig.com/21-days.html). And I've seen too many projects that look interesting, but [lack even the simplest "how to get started" example](http://www.codinghorror.com/blog/2007/01/if-it-isnt-documented-it-doesnt-exist.html)...so I always create full documentation, installers etc. for my projects whenever possible.
 
 Here is everything I created so far, in chronologial order (oldest first):
 </%self:filter></p>
@@ -40,7 +40,7 @@ Convert existing batch files for [Robocopy](http://en.wikipedia.org/wiki/Robocop
             <h2><a href="${bf.util.site_path_helper('bitbucket-backup')}"><img src="https://bitbucket.org/christianspecht/bitbucket-backup/raw/tip/img/logo35x35.png" class="img-polaroid" /> Bitbucket Backup</a></h2>
             <%self:filter chain="markdown">
 **What I needed:**  
-A tool to automate creating local backups of all my private and public [Bitbucket](https://bitbucket.org) repositories, running without user interaction after being set up once.
+Automate creating local backups of all my private and public [Bitbucket](https://bitbucket.org) repositories, running without user interaction after being set up once.
   
 **What I learned:**
 
@@ -61,13 +61,13 @@ A tool to automate creating local backups of all my private and public [Bitbucke
             <h2><a href="${bf.util.site_path_helper('recordset-net')}"><img src="https://bitbucket.org/christianspecht/recordset.net/raw/tip/img/logo35x35.png" class="img-polaroid" /> Recordset.Net</a></h2>
             <%self:filter chain="markdown">
 **What I needed:**  
-A library to convert .NET POCOs into `ADODB.Recordsets`, in order to gradually migrate existing MS Access applications to .NET *(Access client needs to read data coming from .NET)*.
+Convert .NET POCOs into `ADODB.Recordsets`, in order to gradually migrate existing MS Access applications to .NET *(Access client needs to read data coming from .NET)*.
 
 **What I learned:**
 
 - Reflection basics
 - Writing unit tests with [xUnit.net](http://xunit.codeplex.com/)
-- Creating a [NuGet package](https://nuget.org/) (and [testing it on the preview site](${bf.util.site_path_helper('2012/05/28/how-to-test-nuget-packages-without-polluting-the-nuget-package-listings')}))
+- Creating a [NuGet package](https://nuget.org/packages/Recordset.Net) (and [testing it on the preview site](${bf.util.site_path_helper('2012/05/28/how-to-test-nuget-packages-without-polluting-the-nuget-package-listings')}))
             </%self:filter>
         </div><!--/span-->
         
@@ -96,7 +96,7 @@ A web site to feature my projects and *(maybe)* a blog. I registered the domain 
             <h2><a href="${bf.util.site_path_helper('missilesharp')}"><img src="https://bitbucket.org/christianspecht/missilesharp/raw/tip/img/logo35x35.png" class="img-polaroid" /> MissileSharp</a></h2>
             <%self:filter chain="markdown">
 **What I needed:**  
-A library to send commands to an [USB Missile Launcher](http://www.dreamcheeky.com/thunder-missile-launcher) from my own code, without using the control software that came with it.
+Send commands to an [USB Missile Launcher](http://www.dreamcheeky.com/thunder-missile-launcher) from my own code, without using the control software that came with it.
 
 **What I learned:**
 
