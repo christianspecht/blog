@@ -70,4 +70,4 @@ Depending on your habits, this may be okay for you. After all, you can just use 
 
 But I am so used to pressing F5...I literally **never** used the button at all.  
 So I kept on searching for a better solution, and I actually found one that works better for me.  
-More about that in the next post.
+More about that in [the next post](http://christianspecht.de/2013/04/16/excluding-integration-tests-in-nunit-s-gui-part-2-specifying-a-fixture/).
