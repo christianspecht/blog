@@ -41,3 +41,19 @@ I'm a software developer and I use this site to feature [my projects](${bf.util.
             <div class="row visible-phone spacer25"></div>
 % endfor
           </div><!--/row-->
+          <div class="row hidden-phone spacer50"></div>
+          <div class="row">
+% for post in bf.config.blog.posts[6:9]:
+<% 
+   category_links = []
+   for category in post.categories:
+           category_links.append("<a href='%s'>%s</a>" % (category.path, category.name))
+%>
+            <div class="span3">
+              <h4><a href="${post.path}">${post.title}</a></h4>
+              <p>${post.excerpt} ...</p>
+              <p><small>${post.date.strftime("%b %d %Y")} | ${", ".join(category_links)}</small></p>
+            </div><!--/span-->
+            <div class="row visible-phone spacer25"></div>
+% endfor
+          </div><!--/row-->
