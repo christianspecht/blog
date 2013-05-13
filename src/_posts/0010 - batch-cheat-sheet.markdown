@@ -77,3 +77,23 @@ In other words, `%PATH%` will **only** contain `c:\foo` afterwards.
 
 Beware: you won't notice the difference as long as you only need files from `c:\foo`.  
 But as soon as you need some other command-line tool like `git` or `hg` *(or some Windows helper like `regsvr32.exe`)*, your batch file won't find them anymore because you just deleted their locations from the `%PATH%`.
+
+
+## Variables are global in nested batch file calls
+
+Take a look at these two batch files:
+
+**batch1.bat**:
+
+	set var=foo
+	call batch2.bat
+	echo %var%
+
+**batch2.bat**:
+
+	set var=bar
+
+The first batch file calls the second one, so variables with the same name are shared between the two.
+
+This means that the last line in the first batch file (`echo %var%`) will output `bar` and not `foo` !
+
