@@ -47,7 +47,7 @@ But this will come later - in this post, I'll just [assemble the Basic Weather S
 
 ---
 
-### Construction / Software
+## Construction / Software
 
 There's not much to say about the actual construction - I blindly followed [the instructions](http://www.tinkerforge.com/en/doc/Kits/WeatherStation/Construction_Basic.html#starter-kit-weather-station-construction-basic).
 
@@ -105,7 +105,7 @@ And there it is:
 
 ---
 
-### Adding Wi-Fi
+## Adding Wi-Fi
 
 I'm going to put the Weather Station on my terrace and I don't have Ethernet there, so it needs a Wi-Fi connection.
 
@@ -124,7 +124,7 @@ The construction was simple. I still had some spare mounting kit parts, so I jus
 
 ---
 
-### Changing the software
+## Changing the software
 
 After [configuring the Wi-Fi Extension](http://www.tinkerforge.com/en/doc/Hardware/Master_Extensions/WIFI_Extension.html#wifi-configuration) and connecting it to my home network, I tried to get the demo app from above to run again.
 
@@ -147,7 +147,7 @@ That's enough to get it to work:
 
 ---
 
-### Conclusion
+## Conclusion
 
 That was the first part. As I said before, I'm planning to control the Weather Station with a [Raspberry PI](http://www.raspberrypi.org/).  
 It's already ordered, and in the second part, I will connect it to the Weather Station.
