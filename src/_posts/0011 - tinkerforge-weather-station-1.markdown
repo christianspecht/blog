@@ -150,7 +150,7 @@ That's enough to get it to work:
 ## Conclusion
 
 That was the first part. As I said before, I'm planning to control the Weather Station with a [Raspberry PI](http://www.raspberrypi.org/).  
-It's already ordered, and in the second part, I will connect it to the Weather Station.
+It's already ordered, and in [the second part](/2013/08/15/tinkerforge-weather-station-part-2-connecting-to-a-raspberry-pi/), I will connect it to the Weather Station.
 
 
 	
