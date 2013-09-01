@@ -13,16 +13,56 @@ The projects listed here were created either because of an actual problem that I
 
 I also try to use some new libraries/tools/technologies in each project that I'm not familiar with, for [learning purposes](http://norvig.com/21-days.html). And I've seen too many projects that look interesting, but [lack even the simplest "how to get started" example](http://www.codinghorror.com/blog/2007/01/if-it-isnt-documented-it-doesnt-exist.html)...so I always create full documentation, installers etc. for my projects whenever possible.
 
-Here is everything I created so far, in chronologial order (oldest first):
+Here is everything I created so far, in reverse chronologial order (newest first):
 </%self:filter></p>
 <div class="row spacer25"></div>
 
 <div class="container">
-    <div class="row">
+
+<% projects = { 'empty': empty, 'rsb': roboshellbackup, 'bbb': bitbucketbackup, 'rsn': recordsetnet, 'site12': site2012, 'mss': missilesharp, 'vbah': vbahelpers, 'site13': site2013 } %>
+
+## IMPORTANT: the total number of items in the next line MUST be even - if it's odd, put one item named 'empty' at the end!
+% for project in ['site13', 'vbah', 'mss', 'site12', 'rsn', 'bbb', 'rsb', 'empty']:
+
+    %if loop.even:
     
-        <div class="span4">
-          <h2><a href="${bf.util.site_path_helper('roboshell-backup')}"><img src="https://bitbucket.org/christianspecht/roboshell-backup/raw/tip/img/head35x35.png" class="img-polaroid" /> RoboShell Backup</a></h2>
-          <%self:filter chain="markdown">
+        <div class="row">
+        
+            <div class="span4">
+                ${projects[project]()}
+            </div><!--/span-->
+            
+            <div class="row visible-phone spacer25"></div>
+            
+    %else:
+    
+            <div class="span4">
+                ${projects[project]()}
+            </div><!--/span-->
+            
+        </div><!--/row-->
+        
+        <div class="row spacer25"></div>
+        
+    %endif
+    
+%endfor
+    
+</div><!--/container-->
+
+<div class="row visible-phone spacer25"></div>
+
+
+## EMPTY TEMPLATE (filler when the number of projects is odd)
+    <%def name="empty()">
+        &nbsp;
+    </%def>
+
+
+## ROBOSHELL BACKUP
+    <%def name="roboshellbackup()">
+        <h2><a href="${bf.util.site_path_helper('roboshell-backup')}"><img src="https://bitbucket.org/christianspecht/roboshell-backup/raw/tip/img/head35x35.png" class="img-polaroid" /> RoboShell Backup</a></h2>
+        <%self:filter chain="markdown">
 **What I needed:**  
 Convert existing batch files for [Robocopy](http://en.wikipedia.org/wiki/Robocopy) backups (*computer&rarr;NAS* and *NAS&rarr;USB disk*) to a more comfortable tool, with all settings in a config file.
 
@@ -31,12 +71,12 @@ Convert existing batch files for [Robocopy](http://en.wikipedia.org/wiki/Robocop
 - [Windows PowerShell](http://en.wikipedia.org/wiki/Windows_PowerShell) basics
 - Building a setup with [WiX](http://wixtoolset.org/)
 - Using [TrueCrypt](http://www.truecrypt.org/) and [integrating it into RoboShell Backup](${bf.util.site_path_helper('2012/04/30/roboshell-backup-1-1-now-with-truecrypt-integration')})
-          </%self:filter>
-        </div><!--/span-->
-        
-        <div class="row visible-phone spacer25"></div>
-        
-        <div class="span4">
+        </%self:filter>
+    </%def>
+
+
+## BITBUCKET BACKUP
+    <%def name="bitbucketbackup()">
             <h2><a href="${bf.util.site_path_helper('bitbucket-backup')}"><img src="https://bitbucket.org/christianspecht/bitbucket-backup/raw/tip/img/logo35x35.png" class="img-polaroid" /> Bitbucket Backup</a></h2>
             <%self:filter chain="markdown">
 **What I needed:**  
@@ -49,15 +89,11 @@ Automate creating local backups of all my private and public [Bitbucket](https:/
 - Dependency Injection with [Ninject](http://ninject.org/)
 - Setting assembly version from build script with [MSBuild Community Tasks](https://github.com/loresoft/msbuildtasks)
             </%self:filter>
-        </div><!--/span-->
-        
-    </div><!--/row-->
-    
-    <div class="row spacer25"></div>
-    
-    <div class="row">
-    
-        <div class="span4">
+    </%def>
+
+
+## RECORDSET.NET
+    <%def name="recordsetnet()">
             <h2><a href="${bf.util.site_path_helper('recordset-net')}"><img src="https://bitbucket.org/christianspecht/recordset.net/raw/tip/img/logo35x35.png" class="img-polaroid" /> Recordset.Net</a></h2>
             <%self:filter chain="markdown">
 **What I needed:**  
@@ -69,11 +105,11 @@ Convert .NET POCOs into `ADODB.Recordsets`, in order to gradually migrate existi
 - Writing unit tests with [xUnit.net](http://xunit.codeplex.com/)
 - Creating a [NuGet package](https://nuget.org/packages/Recordset.Net) (and [testing it on the preview site](${bf.util.site_path_helper('2012/05/28/how-to-test-nuget-packages-without-polluting-the-nuget-package-listings')}))
             </%self:filter>
-        </div><!--/span-->
-        
-        <div class="row visible-phone spacer25"></div>
-        
-        <div class="span4">
+    </%def>
+
+ 
+## SITE 2012
+    <%def name="site2012()">
             <h2><a href="${bf.util.site_path_helper()}"><img src="${bf.util.site_path_helper('img/site2012.png')}" class="img-polaroid" /> This site (2012)</a></h2>
             <%self:filter chain="markdown">
 **What I needed:**  
@@ -84,15 +120,11 @@ A web site to feature my projects and *(maybe)* a blog. I registered the domain 
 - Setting up [WordPress](http://wordpress.org/) on rented webspace
 - Displaying [Markdown files from my Bitbucket projects in WordPress](${bf.util.site_path_helper('2012/03/09/how-to-display-markdown-files-from-other-sites-in-wordpress')})
             </%self:filter>
-        </div><!--/span-->
-        
-    </div><!--/row-->
-    
-    <div class="row spacer25"></div>
-    
-    <div class="row">
-     
-        <div class="span4">
+    </%def>
+
+ 
+## MISSILESHARP
+    <%def name="missilesharp()">
             <h2><a href="${bf.util.site_path_helper('missilesharp')}"><img src="https://bitbucket.org/christianspecht/missilesharp/raw/tip/img/logo35x35.png" class="img-polaroid" /> MissileSharp</a></h2>
             <%self:filter chain="markdown">
 **What I needed:**  
@@ -106,11 +138,11 @@ Send commands to an [USB Missile Launcher](http://www.dreamcheeky.com/thunder-mi
 - More unit testing, this time with [NUnit](http://nunit.org/) and [Moq](http://code.google.com/p/moq/)
 - Building a [ClickOnce](http://msdn.microsoft.com/en-us/library/t71a733d.aspx) installer
             </%self:filter>
-        </div><!--/span-->
-        
-        <div class="row visible-phone spacer25"></div>
-        
-        <div class="span4">
+    </%def>
+
+ 
+## VBA HELPERS
+    <%def name="vbahelpers()">
             <h2><a href="${bf.util.site_path_helper('vba-helpers')}"><img src="https://bitbucket.org/christianspecht/vba-helpers/raw/tip/img/logo35x35.png" class="img-polaroid" /> VBA Helpers</a></h2>
             <%self:filter chain="markdown">
 **What I needed:**  
@@ -120,15 +152,11 @@ A reusable library of VBA helper functions, to avoid having slight variations of
 
 - Unit testing in VBA with [AccUnit](http://accunit.access-codelib.net/) and [SimplyVBUnit](http://sourceforge.net/projects/simplyvbunit/)
             </%self:filter>
-        </div><!--/span-->
-        
-    </div><!--/row-->
+    </%def>
 
-    <div class="row spacer25"></div>
-    
-    <div class="row">
-     
-        <div class="span4">
+ 
+## SITE 2013
+    <%def name="site2013()">
             <h2><a href="${bf.util.site_path_helper()}"><img src="${bf.util.site_path_helper('img/site2013.png')}" class="img-polaroid" /> This site (2013)</a></h2>
             <%self:filter chain="markdown">
 **What I needed:**  
@@ -141,9 +169,6 @@ Migrate existing WordPress site/blog to a static site generator *(I decided to u
 - Writing custom [Mako](http://www.makotemplates.org/) templates in [Python](http://www.python.org/)
 - Displaying [Markdown files from my Bitbucket projects (again)](${bf.util.site_path_helper('2013/02/17/how-to-display-markdown-files-from-other-sites-this-time-in-blogofile/')})
             </%self:filter>
-        </div><!--/span-->
-        
-    </div><!--/row-->
-</div><!--/container-->
+    </%def>
 
-<div class="row visible-phone spacer25"></div>
+
