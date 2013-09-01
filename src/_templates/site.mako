@@ -85,14 +85,14 @@
                 <img class="pull-left media-object img-rounded" src="http://www.gravatar.com/avatar/6f807629c5f3765f28c61b1271552dc9?s=60" />
                 <div class="media-body">
                   <small>
-                    <a href="${bf.util.site_path_helper(bf.config.blog.path,'imprint')}">Contact</a><br>
-                    <!--<a href="#">CV</a>-->
+                    <a href="http://careers.stackoverflow.com/christianspecht" target="_blank">CV</a><br>
+                    <a href="${bf.util.site_path_helper(bf.config.blog.path,'imprint')}">Contact</a>
                   </small>
                 </div>
               </li>
               <li>
                 <small>
-                  Developer for about ${datetime.datetime.now().year - 2003} years, living in Kerpen, Germany (near Cologne). Working as an in-house developer <i>(VBA/T-SQL/C#)</i> and DBA at a mid-sized manufacturing company in Cologne.
+                  Developer for about ${datetime.datetime.now().year - 2003} years, living in Kerpen, Germany (near Cologne). Working as an in-house developer <i>(VBA/T-SQL/C#)</i> and DBA at <a href="http://www.weinor.de">weinor</a>, a mid-sized manufacturing company in Cologne.
                 </small>
               </li>
             </ul>
