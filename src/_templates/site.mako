@@ -104,7 +104,7 @@
               <li><a href="${bf.util.site_path_helper('missilesharp')}" rel="tooltip" title=".NET library to control an USB Missile Launcher">MissileSharp</a></li>
               <li><a href="${bf.util.site_path_helper('recordset-net')}" rel="tooltip" title="Converts .NET POCOs to ADODB.Recordsets">Recordset.Net</a></li>
               <li><a href="${bf.util.site_path_helper('roboshell-backup')}" rel="tooltip" title="A simple personal backup tool, using RoboCopy and written in Windows Powershell">RoboShell Backup</a></li>
-              <li><a href="${bf.util.site_path_helper('tasko')}" rel="tooltip" title="A simple mobile to-do list app with a server backend">Tasko</a></li>
+              <li><a href="${bf.util.site_path_helper('tasko')}" rel="tooltip" title="Simple to-do list app for your own server (with Android client)">Tasko</a></li>
               <li><a href="${bf.util.site_path_helper('vba-helpers')}" rel="tooltip" title="A collection of useful VBA functions">VBA Helpers</a></li>
             </ul>
           </div><!--/.well -->
