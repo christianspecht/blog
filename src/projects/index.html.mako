@@ -168,6 +168,7 @@ Migrate existing WordPress site/blog to a static site generator *(I decided to u
 - Creating a responsive HTML template with [Twitter Bootstrap](http://twitter.github.com/bootstrap/)
 - Writing custom [Mako](http://www.makotemplates.org/) templates in [Python](http://www.python.org/)
 - Displaying [Markdown files from my Bitbucket projects (again)](${bf.util.site_path_helper('2013/02/17/how-to-display-markdown-files-from-other-sites-this-time-in-blogofile/')})
+- Automating FTP uploads with [WinSCP](http://winscp.net/)
             </%self:filter>
     </%def>
 

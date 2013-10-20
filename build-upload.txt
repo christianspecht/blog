@@ -1,0 +1,8 @@
+option batch abort
+option confirm off
+
+open blog
+synchronize remote -delete "%uploadpath%"
+
+close
+exit
