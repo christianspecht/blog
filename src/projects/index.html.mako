@@ -19,10 +19,10 @@ Here is everything I created so far, in reverse chronologial order (newest first
 
 <div class="container">
 
-<% projects = { 'empty': empty, 'rsb': roboshellbackup, 'bbb': bitbucketbackup, 'rsn': recordsetnet, 'site12': site2012, 'mss': missilesharp, 'vbah': vbahelpers, 'site13': site2013 } %>
+<% projects = { 'empty': empty, 'rsb': roboshellbackup, 'bbb': bitbucketbackup, 'rsn': recordsetnet, 'site12': site2012, 'mss': missilesharp, 'vbah': vbahelpers, 'site13': site2013, 'tasko': tasko } %>
 
 ## IMPORTANT: the total number of items in the next line MUST be even - if it's odd, put one item named 'empty' at the end!
-% for project in ['site13', 'vbah', 'mss', 'site12', 'rsn', 'bbb', 'rsb', 'empty']:
+% for project in ['tasko', 'site13', 'vbah', 'mss', 'site12', 'rsn', 'bbb', 'rsb']:
 
     %if loop.even:
     
@@ -169,6 +169,22 @@ Migrate existing WordPress site/blog to a static site generator *(I decided to u
 - Writing custom [Mako](http://www.makotemplates.org/) templates in [Python](http://www.python.org/)
 - Displaying [Markdown files from my Bitbucket projects (again)](${bf.util.site_path_helper('2013/02/17/how-to-display-markdown-files-from-other-sites-this-time-in-blogofile/')})
 - Automating FTP uploads with [WinSCP](http://winscp.net/)
+            </%self:filter>
+    </%def>
+
+
+## TASKO
+    <%def name="tasko()">
+            <h2><a href="${bf.util.site_path_helper('tasko')}"><img src="https://bitbucket.org/christianspecht/tasko/raw/tip/img/logo35x35.png" class="img-polaroid" /> Tasko</a></h2>
+            <%self:filter chain="markdown">
+**What I needed:**  
+A ToDo app for my Android phone. I could have used an existing one, but decided to write one myself for learning purposes (mobile app with web service backend)
+
+**What I learned:**
+
+- Creating a web service with [ASP.NET Web API](http://www.asp.net/web-api) *(and [Basic Authentication](/2013/08/02/basic-authentication-in-asp-net-web-api/))* and hosting it on [AppHarbor](https://appharbor.com/)
+- Using a [NoSQL database](http://en.wikipedia.org/wiki/NoSQL), in this case [RavenDB](http://ravendb.net/)
+- Writing a native [Android](http://www.android.com/) app
             </%self:filter>
     </%def>
 
