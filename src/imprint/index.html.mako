@@ -6,7 +6,7 @@
 Imprint / Impressum und Datenschutzhinweis
 ===
 
-<iframe name="imprint" src="http://imp.christianspecht.de/" frameborder="0" width="300" height="100"></iframe>
+<iframe name="imprint" src="http://imp.christianspecht.de/" frameborder="0" width="300" height="150"></iframe>
 
 
 Datenschutzhinweis:
