@@ -4,6 +4,17 @@ date: 2012/05/28 18:10:42
 categories: .NET, NuGet, Visual Studio
 ---
 
+> ### Update (Nov 14 2013):
+
+> **I just noticed that the [preview.nuget.org](https://preview.nuget.org) site mentioned in this post is gone. It was replaced by [staging.nuget.org](http://staging.nuget.org/) in April 2013.**  
+*(read [this post](http://blog.nuget.org/20130419/goodbye-preview.html) on the NuGet blog for more information)*
+
+> &nbsp;
+
+> **The information below is still valid...you just have to use [http://staging.nuget.org/](http://staging.nuget.org/) instead of [http://preview.nuget.org/](http://preview.nuget.org/) !**
+
+---
+
 I just published [my first NuGet package](https://nuget.org/packages/Recordset.Net) a few days ago.
  
 The [documentation about creating and publishing packages](http://docs.nuget.org/docs/creating-packages/creating-and-publishing-a-package) is good, but I didn’t feel comfortable with releasing my package into the wild without testing it myself a few times (read: install the published package in a project on my machine to see if everything is the way I wanted).
