@@ -1,11 +1,9 @@
-<%inherit file="_templates/site.mako" />
+---
+layout: default
+---
           <div class="hero-unit">
-<%self:filter chain="markdown">
-
-My name is Christian Specht, and this is my personal site.  
-I'm a software developer and I use this site to feature [my projects](${bf.util.site_path_helper(bf.config.blog.path,'projects')}) and (occasionally) [some blogging](${bf.util.site_path_helper(bf.config.blog.path,'archive')}).
-
-</%self:filter>
+            My name is Christian Specht, and this is my personal site.<br>
+            I'm a software developer and I use this site to feature <a href="/projects">my projects</a> and (occasionally) <a href="/archive">some blogging</a>.
           </div>
 
           <h3>Recent Posts:</h3>
