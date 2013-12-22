@@ -1,3 +1,1 @@
-blogofile build -s src
-
-blogofile serve -s src
+jekyll serve
