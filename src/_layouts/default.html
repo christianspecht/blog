@@ -1,23 +1,16 @@
-<%inherit file="base.mako" />
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
-%if hasattr(next, 'title'):
-    <title>${next.title()} - ${bf.config.blog.name}</title>
-%else:
-    <title>${bf.config.blog.name}</title>
-%endif
+    <title>{{ site.authorname }} - {{ page.title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="${bf.config.blog.description}">
-%if bf.config.site.author:
-    <meta name="author" content="${bf.config.site.author}">
-%endif
+    <meta name="description" content="Personal site of Christian Specht, software developer from Kerpen, Germany.">
+    <meta name="author" content="{{ site.authorname }}">
     <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://feeds.feedburner.com/ChristianSpecht" />
     <link rel="alternate" type="application/atom+xml" title="Atom 1.0" href="http://feeds.feedburner.com/ChristianSpecht" />
 
     <!-- Le styles -->
-    <link href="${bf.util.site_path_helper('css/bootstrap.min.css')}" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
     <style type="text/css">
       body {
         padding-top: 60px;
@@ -33,7 +26,7 @@
         height: 50px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block;
       }
     </style>
-    <link href="${bf.util.site_path_helper('css/bootstrap-responsive.min.css')}" rel="stylesheet">
+    <link href="/css/bootstrap-responsive.min.css" rel="stylesheet">
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -41,11 +34,11 @@
     <![endif]-->
 
     <!-- Fav and touch icons -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://www.gravatar.com/avatar/6f807629c5f3765f28c61b1271552dc9?s=144">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://www.gravatar.com/avatar/6f807629c5f3765f28c61b1271552dc9?s=114">
-      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://www.gravatar.com/avatar/6f807629c5f3765f28c61b1271552dc9?s=72">
-                    <link rel="apple-touch-icon-precomposed" href="http://www.gravatar.com/avatar/6f807629c5f3765f28c61b1271552dc9?s=57">
-                                   <link rel="shortcut icon" href="http://www.gravatar.com/avatar/6f807629c5f3765f28c61b1271552dc9?s=32">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ site.gravatar_url }}144">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ site.gravatar_url }}114">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ site.gravatar_url }}72">
+                    <link rel="apple-touch-icon-precomposed" href="{{ site.gravatar_url }}57">
+                                   <link rel="shortcut icon" href="{{ site.gravatar_url }}32">
   </head>
 
   <body>
@@ -58,13 +51,13 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="${bf.util.site_path_helper()}">${bf.config.blog.name}</a>
+          <a class="brand" href="/">{{ site.authorname }}</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li><a href="${bf.util.site_path_helper()}"><i class="icon-home icon-white"></i> Home</a></li>
-              <li><a href="${bf.util.site_path_helper(bf.config.blog.path,'projects')}"><i class="icon-wrench icon-white"></i> Projects</a></li>
-              <li><a href="${bf.util.site_path_helper(bf.config.blog.path,'archive')}"><i class="icon-calendar icon-white"></i> Archive</a></li>
-              <li><a href="http://feeds.feedburner.com/ChristianSpecht"><img src="${bf.util.site_path_helper('img/feed.png')}"> RSS Feed</a></li>
+              <li><a href="/"><i class="icon-home icon-white"></i> Home</a></li>
+              <li><a href="/projects"><i class="icon-wrench icon-white"></i> Projects</a></li>
+              <li><a href="/archive"><i class="icon-calendar icon-white"></i> Archive</a></li>
+              <li><a href="http://feeds.feedburner.com/ChristianSpecht"><img src="/img/feed.png"> RSS Feed</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -74,7 +67,7 @@
     <div class="container">
       <div class="row">
         <div class="span9">
-          ${next.body()}
+          {{ content }}
         </div><!--/span-->
         <div class="span3">
           <div class="well sidebar-nav">
@@ -82,11 +75,11 @@
               <li class="nav-header">About me</li>
               <% import datetime %>
               <li class="media">
-                <img class="pull-left media-object img-rounded" src="http://www.gravatar.com/avatar/6f807629c5f3765f28c61b1271552dc9?s=60" />
+                <img class="pull-left media-object img-rounded" src="{{ site.gravatar_url }}60" />
                 <div class="media-body">
                   <small>
                     <a href="http://careers.stackoverflow.com/christianspecht" target="_blank">CV</a><br>
-                    <a href="${bf.util.site_path_helper(bf.config.blog.path,'imprint')}">Contact</a>
+                    <a href="/imprint">Contact</a>
                   </small>
                 </div>
               </li>
@@ -100,20 +93,20 @@
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
               <li class="nav-header">Projects</li>
-              <li><a href="${bf.util.site_path_helper('bitbucket-backup')}" rel="tooltip" title="A backup tool which clones all your Bitbucket repositories to your local machine">Bitbucket Backup</a></li>
-              <li><a href="${bf.util.site_path_helper('missilesharp')}" rel="tooltip" title=".NET library to control an USB Missile Launcher">MissileSharp</a></li>
-              <li><a href="${bf.util.site_path_helper('recordset-net')}" rel="tooltip" title="Converts .NET POCOs to ADODB.Recordsets">Recordset.Net</a></li>
-              <li><a href="${bf.util.site_path_helper('roboshell-backup')}" rel="tooltip" title="A simple personal backup tool, using RoboCopy and written in Windows Powershell">RoboShell Backup</a></li>
-              <li><a href="${bf.util.site_path_helper('simpleleague')}" rel="tooltip" title="Minimalistic tool to display tabular league data (results, rankings etc.) in existing websites.">SimpleLeague</a></li>
-              <li><a href="${bf.util.site_path_helper('tasko')}" rel="tooltip" title="Simple to-do list app for your own server (with Android client)">Tasko</a></li>
-              <li><a href="${bf.util.site_path_helper('vba-helpers')}" rel="tooltip" title="A collection of useful VBA functions">VBA Helpers</a></li>
+              <li><a href="/bitbucket-backup" rel="tooltip" title="A backup tool which clones all your Bitbucket repositories to your local machine">Bitbucket Backup</a></li>
+              <li><a href="/missilesharp" rel="tooltip" title=".NET library to control an USB Missile Launcher">MissileSharp</a></li>
+              <li><a href="/recordset-net" rel="tooltip" title="Converts .NET POCOs to ADODB.Recordsets">Recordset.Net</a></li>
+              <li><a href="/roboshell-backup" rel="tooltip" title="A simple personal backup tool, using RoboCopy and written in Windows Powershell">RoboShell Backup</a></li>
+              <li><a href="/simpleleague" rel="tooltip" title="Minimalistic tool to display tabular league data (results, rankings etc.) in existing websites.">SimpleLeague</a></li>
+              <li><a href="/tasko" rel="tooltip" title="Simple to-do list app for your own server (with Android client)">Tasko</a></li>
+              <li><a href="/vba-helpers" rel="tooltip" title="A collection of useful VBA functions">VBA Helpers</a></li>
             </ul>
           </div><!--/.well -->
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
               <li class="nav-header">Links</li>
               <li><a href="http://stackoverflow.com/users/6884/" rel="tooltip" title="profile for Christian Specht at Stack Overflow, Q&A for professional and enthusiast programmers"><img src="http://stackoverflow.com/users/flair/6884.png" width="208" height="58" alt="profile for Christian Specht at Stack Overflow, Q&A for professional and enthusiast programmers" title="profile for Christian Specht at Stack Overflow, Q&A for professional and enthusiast programmers"/></a></li>
-              <li><a href="https://bitbucket.org/christianspecht" rel="tooltip" title="my Bitbucket profile"><img src="${bf.util.site_path_helper('img/bitbucket.png')}" alt="my Bitbucket profile" title="my Bitbucket profile"/></a></li>
+              <li><a href="https://bitbucket.org/christianspecht" rel="tooltip" title="my Bitbucket profile"><img src="/img/bitbucket.png" alt="my Bitbucket profile" title="my Bitbucket profile"/></a></li>
               <li><a href="https://www.ohloh.net/accounts/131837?ref=Detailed" rel="tooltip" title="Ohloh profile for Christian Specht"><img alt="Ohloh profile for Christian Specht" title="Ohloh profile for Christian Specht" height="35" src="http://www.ohloh.net/accounts/131837/widgets/account_detailed.gif" width="191" /></a></li>
             </ul>
           </div><!--/.well -->
@@ -152,9 +145,9 @@
                 <p>
                     <% import datetime %>
                     Copyright 2012-${datetime.datetime.now().year}
-                    ${bf.config.site.author}
+                    {{ site.authorname}}
                     <br/>
-                    <a href="${bf.util.site_path_helper(bf.config.blog.path,'imprint')}">Imprint / Impressum und Datenschutzhinweis</a>
+                    <a href="/imprint">Imprint / Impressum und Datenschutzhinweis</a>
                 </p>
             </div>
             <div class="span4">
@@ -171,8 +164,8 @@
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="${bf.util.site_path_helper('js/jquery.js')}"></script>
-    <script src="${bf.util.site_path_helper('js/bootstrap.min.js')}"></script>
+    <script src="/js/jquery.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
     <script type="text/javascript">
 
       var _gaq = _gaq || [];
