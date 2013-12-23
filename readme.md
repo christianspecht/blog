@@ -1,17 +1,16 @@
-This is the source code of [christianspecht.de](http://christianspecht.de), built with [Blogofile](http://www.blogofile.com/).
+This is the source code of [christianspecht.de](http://christianspecht.de), built with [Jekyll](http://jekyllrb.com/).
 
 ---
 
 #### How to build
 
-Prerequisites:
+Prerequisites *(on Windows)*:
 
-- Python 2.7.x ([download](http://www.python.org/download/releases/2.7.3/))
-- Setuptools ([download](http://pypi.python.org/pypi/setuptools#downloads))
-- lxml (*needed for excerpts*, [installation notes](http://lxml.de/installation.html#installation), [Windows binary downloads](http://www.lfd.uci.edu/~gohlke/pythonlibs/#lxml))
+- Ruby >= 1.9.3 and Bundler *(both via [RailsInstaller](http://railsinstaller.org/en))*
+- `bundle update`
 
 Run `build.bat`.  
-This will build the site and run the local server *(the site is at [http://localhost:8080/](http://localhost:8080/))*
+This will build the site and run the local server *(the site is at [http://localhost:4000/](http://localhost:4000/))*
 
 ---
 
