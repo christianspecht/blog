@@ -51,7 +51,7 @@ Now, I can display my Bitbucket readme files, or other Markdown files from anoth
 	[readme-md]https://bitbucket.org/christianspecht/bitbucket-backup/raw/tip/readme-full.md[/readme-md]  
 
 That's it!  
-You can see it in action in any of the "projects" links on this site, for example [here](http://christianspecht.de/bitbucket-backup) (with exactly the readme file from the above example).
+You can see it in action in any of the "projects" links on this site, for example [here](/bitbucket-backup) (with exactly the readme file from the above example).
 
 **Disclaimer:**  
 I'm completely new to WordPress, and the last time I used PHP must have been around 2004.  
