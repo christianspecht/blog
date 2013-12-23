@@ -112,9 +112,9 @@
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
               <li class="nav-header">Recent Posts</li>
-              % for post in bf.config.blog.iter_posts_published(5):
-              <li><a href="${post.path}">${post.title}</a></li>
-              % endfor
+              {% for post in site.posts limit: 5 %}
+              <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+              {% endfor %}
             </ul>
           </div><!--/.well -->
           <div class="well sidebar-nav">
