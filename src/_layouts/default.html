@@ -127,10 +127,17 @@
           </div><!--/.well -->
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
-              <li class="nav-header">Categories</li>
-                % for category, num_posts in bf.config.blog.all_categories:
-                <li><a href="${category.path}">${category}&nbsp;(${num_posts})</a></li>
-                % endfor
+              <li class="nav-header">Tags</li>
+                {% capture tags %}
+                  {% for tag in site.tags %}
+                    {{ tag[0] }}#{{ tag[1].size}}
+                  {% endfor %}
+                {% endcapture %}
+                {% assign sortedtags = tags | split:' ' | sort %}
+                {% for tag in sortedtags %}
+                    {% assign tagitems = tag | split: '#' %}
+                    <li><a href="/tags/#{{ tagitems[0] }}">{{ tagitems[0] }} ({{ tagitems[1] }})</a></li>
+                {% endfor %}
             </ul>
           </div><!--/.well -->
         </div><!--/span-->
