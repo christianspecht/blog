@@ -5,10 +5,13 @@ title: Archive
 
 <h1>{{ page.title }}</h1>
 <p>&nbsp;</p>
-<ul>
-  {% for post in site.posts %}
-    <li>
-      {% include postlistitem.html %}
-    </li>
-  {% endfor %}
-</ul>
+{% for post in site.posts %}
+    {% capture currentyear %}{{post.date | date: "%B %Y"}}{% endcapture %}
+    {% if currentyear != year %}
+      {% unless forloop.first %}</ul>{% endunless %}
+      <h3>{{ currentyear }}</h3>
+      <ul>
+      {% capture year %}{{currentyear}}{% endcapture %} 
+    {% endif %}
+        <li>{% include postlistitem.html %}</li>
+{% endfor %}
