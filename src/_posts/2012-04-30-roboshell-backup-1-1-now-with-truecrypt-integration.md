@@ -2,7 +2,7 @@
 layout: post
 title: RoboShell Backup 1.1 - now with TrueCrypt integration
 date: 2012/04/30 22:44:40
-tags: [Backup, RoboShell Backup, TrueCrypt]
+tags: [backup, roboshell-backup, truecrypt]
 ---
 
 I just published [RoboShell Backup](/roboshell-backup) 1.1.  
