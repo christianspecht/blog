@@ -6,12 +6,12 @@ title: Archive
 <h1>{{ page.title }}</h1>
 <p>&nbsp;</p>
 {% for post in site.posts %}
-    {% capture currentyear %}{{post.date | date: "%B %Y"}}{% endcapture %}
+    {% assign currentyear = post.date | date: "%B %Y" %}
     {% if currentyear != year %}
       {% unless forloop.first %}</ul>{% endunless %}
       <h3>{{ currentyear }}</h3>
       <ul>
-      {% capture year %}{{currentyear}}{% endcapture %} 
+      {% assign year = currentyear %} 
     {% endif %}
         <li>{% include postlistitem.html %}</li>
 {% endfor %}
