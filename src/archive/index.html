@@ -9,7 +9,7 @@ title: Archive
     {% assign currentyear = post.date | date: "%B %Y" %}
     {% if currentyear != year %}
       {% unless forloop.first %}</ul>{% endunless %}
-      <h3>{{ currentyear }}</h3>
+      <h3 id={{ post.date | date:"%Y-%m" }}>{{ currentyear }}</h3>
       <ul>
       {% assign year = currentyear %} 
     {% endif %}

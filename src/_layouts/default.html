@@ -120,9 +120,16 @@
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
               <li class="nav-header">Archives</li>
-                % for link, name, num_posts in bf.config.blog.archive_links:
-                <li><a href="${bf.util.site_path_helper(bf.config.blog.path,link)}/1">${name}&nbsp;(${num_posts})</a></li>
-                % endfor
+                {% assign counter = 0 %}
+                {% for post in site.posts %}
+                  {% assign thismonth = post.date | date: "%B %Y" %}
+                  {% assign prevmonth = post.previous.date | date: "%B %Y" %}
+                  {% assign counter = counter | plus: 1 %}
+                  {% if thismonth != prevmonth %}
+                    <li><a href="/archive/#{{ post.date | date:"%Y-%m" }}">{{ thismonth }} ({{ counter }})</a></li>
+                    {% assign counter = 0 %}
+                  {% endif %}
+                {% endfor %}
             </ul>
           </div><!--/.well -->
           <div class="well sidebar-nav">
