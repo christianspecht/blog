@@ -1,0 +1,22 @@
+- name: Bitbucket Backup
+  url: /bitbucket-backup/
+  logo: https://bitbucket.org/christianspecht/bitbucket-backup/raw/tip/img/logo35x35.png
+  whatineeded: Automate creating local backups of all my private and public <a href="https://bitbucket.org">Bitbucket</a> repositories, running without user interaction after being set up once.
+  whatilearned:
+    - Calling <a href="https://api.bitbucket.org/">Bitbucket's API</a> with <a href="http://restsharp.org/">RestSharp</a> and <a href="http://json.codeplex.com/">Json.NET</a>
+    - Cloning/pulling <a href="http://mercurial.selenic.com/">Mercurial</a> and <a href="http://git-scm.com/">Git</a> repositories with C#
+    - Dependency Injection with <a href="http://ninject.org/">Ninject</a>
+    - Setting assembly version from build script with <a href="https://github.com/loresoft/msbuildtasks">MSBuild Community Tasks</a>
+
+- name: RoboShell Backup
+  url: /roboshell-backup/
+  logo: https://bitbucket.org/christianspecht/roboshell-backup/raw/tip/img/head35x35.png
+  whatineeded: Convert existing batch files for <a href="http://en.wikipedia.org/wiki/Robocopy">Robocopy</a> backups (<i>computer&rarr;NAS</i> and <i>NAS&rarr;USB disk</i>) to a more comfortable tool, with all settings in a config file.
+  whatilearned:
+    - <a href="http://en.wikipedia.org/wiki/Windows_PowerShell">Windows PowerShell</a> basics
+    - <a href="http://wixtoolset.org/">Building a setup with WiX</a>
+    - Using <a href="http://www.truecrypt.org/">TrueCrypt</a> and <a href="/2012/04/30/roboshell-backup-1-1-now-with-truecrypt-integration">integrating it into RoboShell Backup</a>
+
+# Uncomment the following line to get an additional list item (when the number of items above is odd)
+#- name :
+ 
