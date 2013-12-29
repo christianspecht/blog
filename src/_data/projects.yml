@@ -1,3 +1,67 @@
+- name: SimpleLeague
+  url: /simpleleague/
+  logo: https://bitbucket.org/christianspecht/simpleleague/raw/tip/img/logo35x35.png
+  whatineeded: Insert database-driven HTML tables with results and rankings into an existing site created with a CMS <em>(in a minimalistic way, i.e. without creating a full-blown plugin for the CMS)</em>
+  whatilearned:
+    - Modern/object-oriented <a href="http://php.net/">PHP</a> <em>(the last time I used PHP was nearly 10 years ago)</em>
+    - Loading data from a <a href="http://www.mysql.com/">MySQL</a> database with <a href="http://php.net/manual/en/book.pdo.php">PDO</a>
+    - Using the <a href="https://github.com/bobthecow/mustache.php">PHP implementation</a> of <a href="http://mustache.github.io/">Mustache</a> for templates
+
+- name: Tasko
+  url: /tasko/
+  logo: https://bitbucket.org/christianspecht/tasko/raw/tip/img/logo35x35.png
+  whatineeded: A ToDo app for my Android phone. I could have used an existing one, but decided to write one myself for learning purposes (mobile app with web service backend)
+  whatilearned:
+    - Creating a web service with <a href="http://www.asp.net/web-api">ASP.NET Web API</a> <em>(and <a href="/2013/08/02/basic-authentication-in-asp-net-web-api/">Basic Authentication</a>)</em> and hosting it on <a href="https://appharbor.com/">AppHarbor</a>
+    - Using a <a href="http://en.wikipedia.org/wiki/NoSQL">NoSQL database</a>, in this case <a href="http://ravendb.net/">RavenDB</a>
+    - Writing a native <a href="http://www.android.com/">Android</a> app
+
+- name: This site (2013)
+  url: /
+  logo: /img/site2013.png
+  whatineeded: Migrate existing WordPress site/blog to a static site generator <em>(I decided to use <a href="http://blogofile.com/">Blogofile</a>, but I <a href="http://octopress.org/">evaluated</a> <a href="http://getpelican.com/">others</a> as well)</em>.
+  whatilearned:
+    - <a href="/2013/01/29/switched-from-wordpress-to-blogofile">Setting up a new site</a> with <a href="http://blogofile.com/">Blogofile</a> <em>(source code <a href="https://bitbucket.org/christianspecht/blog">here</a>)</em>
+    - Creating a responsive HTML template with <a href="http://getbootstrap.com/">Twitter Bootstrap</a>
+    - Writing custom <a href="http://www.makotemplates.org/">Mako</a> templates in <a href="http://www.python.org/">Python</a>
+    - Displaying <a href="/2013/02/17/how-to-display-markdown-files-from-other-sites-this-time-in-blogofile">Markdown files from my Bitbucket projects (again)</a>
+    - Automating FTP uploads with <a href="http://winscp.net/">WinSCP</a>
+
+- name: VBA Helpers
+  url: /vba-helpers/
+  logo: https://bitbucket.org/christianspecht/vba-helpers/raw/tip/img/logo35x35.png
+  whatineeded: A reusable library of VBA helper functions, to avoid having slight variations of the same functions duplicated across several projects.
+  whatilearned:
+    - Unit testing in VBA with <a href="http://accunit.access-codelib.net/">AccUnit</a> and <a href="http://sourceforge.net/projects/simplyvbunit/">SimplyVBUnit</a>
+
+- name: MissileSharp
+  url: /missilesharp/
+  logo: https://bitbucket.org/christianspecht/missilesharp/raw/tip/img/logo35x35.png
+  whatineeded: Send commands to an <a href="http://www.dreamcheeky.com/thunder-missile-launcher">USB Missile Launcher</a> from my own code, without using the control software that came with it.
+  whatilearned:
+    - Communicating with an USB device with <a href="https://github.com/mikeobrien/HidLibrary">Hid Library</a>
+    - Building a WPF app <em>(the <a href="/missilesharp/#launcher">MissileSharp Launcher</a>)</em> with MVVM and <a href="http://mahapps.com/MahApps.Metro/">MahApps.Metro</a>
+    - More Dependency Injection, this time with <a href="http://autofac.org">Autofac</a>
+    - More unit testing, this time with <a href="http://nunit.org/">NUnit</a> and <a href="http://code.google.com/p/moq/">Moq</a>
+    - Building a <a href="http://msdn.microsoft.com/en-us/library/t71a733d.aspx">ClickOnce</a> installer
+
+- name: This site (2012)
+  url: /
+  logo: /img/site2012.png
+  whatineeded: A web site to feature my projects and <em>(maybe)</em> a blog. I registered the domain years ago, but never had a site until then.
+  whatilearned:
+    - Setting up <a href="http://wordpress.org/">WordPress</a> on rented webspace
+    - Displaying <a href="/2012/03/09/how-to-display-markdown-files-from-other-sites-in-wordpress">Markdown files from my Bitbucket projects in WordPress</a>
+
+- name: Recordset.Net
+  url: /recordset-net/
+  logo: https://bitbucket.org/christianspecht/recordset.net/raw/tip/img/logo35x35.png
+  whatineeded: Convert .NET POCOs into <code>ADODB.Recordsets</code>, in order to gradually migrate existing MS Access applications to .NET <em>(Access client needs to read data coming from .NET)</em>.
+  whatilearned:
+    - Reflection basics
+    - Writing unit tests with <a href="http://xunit.codeplex.com/">xUnit.net</a>
+    - Creating a <a href="https://nuget.org/packages/Recordset.Net">NuGet package</a> (and <a href="/2012/05/28/how-to-test-nuget-packages-without-polluting-the-nuget-package-listings">testing it on the preview site</a>
+
 - name: Bitbucket Backup
   url: /bitbucket-backup/
   logo: https://bitbucket.org/christianspecht/bitbucket-backup/raw/tip/img/logo35x35.png
@@ -11,12 +75,12 @@
 - name: RoboShell Backup
   url: /roboshell-backup/
   logo: https://bitbucket.org/christianspecht/roboshell-backup/raw/tip/img/head35x35.png
-  whatineeded: Convert existing batch files for <a href="http://en.wikipedia.org/wiki/Robocopy">Robocopy</a> backups (<i>computer&rarr;NAS</i> and <i>NAS&rarr;USB disk</i>) to a more comfortable tool, with all settings in a config file.
+  whatineeded: Convert existing batch files for <a href="http://en.wikipedia.org/wiki/Robocopy">Robocopy</a> backups (<em>computer&rarr;NAS</em> and <em>NAS&rarr;USB disk</em>) to a more comfortable tool, with all settings in a config file.
   whatilearned:
     - <a href="http://en.wikipedia.org/wiki/Windows_PowerShell">Windows PowerShell</a> basics
     - <a href="http://wixtoolset.org/">Building a setup with WiX</a>
     - Using <a href="http://www.truecrypt.org/">TrueCrypt</a> and <a href="/2012/04/30/roboshell-backup-1-1-now-with-truecrypt-integration">integrating it into RoboShell Backup</a>
 
 # Uncomment the following line to get an additional list item (when the number of items above is odd)
-#- name :
+- name :
  
