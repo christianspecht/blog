@@ -1,0 +1,9 @@
+        <div class="span4">
+        {% if project.name %}<h2><a href="{{ project.url }}"><img src="{{ project.logo }}" class="img-polaroid" /> {{ project.name }}</a></h2>
+        <p><strong>What I needed:</strong><br>{{ project.whatineeded }}</p>
+        <p><strong>What I learned:</strong><ul>
+          {% for item in project.whatilearned %}
+          <li>{{ item }}</li>
+          {% endfor %}
+        </ul></p>{% endif %}
+        </div><!--/span-->
