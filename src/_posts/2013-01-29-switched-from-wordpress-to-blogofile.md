@@ -1,7 +1,8 @@
 ---
+layout: post
 title: Switched from WordPress to Blogofile
 date: 2013/01/29 22:13:00
-categories: WordPress, Blogofile
+tags: [wordpress, blogofile]
 ---
 
 Like many other developers did before me, I just switched this site from WordPress to a static site generator ([Blogofile](http://www.blogofile.com/) in my case).  

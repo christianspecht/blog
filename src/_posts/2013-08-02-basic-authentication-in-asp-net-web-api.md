@@ -1,7 +1,8 @@
 ---
+layout: post
 title: Basic Authentication in ASP.NET Web API
 date: 2013/08/02 01:51:00
-categories: .NET, Web API, Authentication
+tags: [.net, web-api, authentication]
 ---
 
 For my current project [Tasko](/tasko), I'm writing a service backend in [ASP.NET Web API](http://www.asp.net/web-api) at the moment.
@@ -65,15 +66,11 @@ So I took a second look at [the examples from the official Web API site](http://
 
 So for [this HTTP Module](https://bitbucket.org/christianspecht/tasko/src/87defb080d0e8e503304ac91104e2d85ebb3a94f/src/Tasko.Server/BasicAuthHttpModule.cs?at=default), it's:
 
-$$code(lang=xml)
-
-<system.webServer>
-    <modules>
-        <add name="BasicAuthHttpModule"
-        type="Tasko.Server.BasicAuthHttpModule, Tasko.Server"/>
-    </modules>
-
-$$/code
+    <system.webServer>
+        <modules>
+            <add name="BasicAuthHttpModule"
+            type="Tasko.Server.BasicAuthHttpModule, Tasko.Server"/>
+        </modules>
 
 What happened then was exactly the opposite from the result of the first try: authentication worked on AppHarbor, but not on my local machine.  
 This would make it difficult to test authentication locally, but I could have lived with that for now.
