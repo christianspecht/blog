@@ -5,5 +5,9 @@ permalink: pretty
 markdown: rdiscount
 
 # Blog settings
+name: Christian Specht
 authorname: Christian Specht
+description: Personal site of Christian Specht, software developer from Kerpen, Germany.
+url: http://christianspecht.de
 gravatar_url: http://www.gravatar.com/avatar/6f807629c5f3765f28c61b1271552dc9?s=
+
