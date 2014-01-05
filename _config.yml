@@ -11,3 +11,5 @@ description: Personal site of Christian Specht, software developer from Kerpen, 
 url: http://christianspecht.de
 gravatar_url: http://www.gravatar.com/avatar/6f807629c5f3765f28c61b1271552dc9?s=
 
+# production mode (will be overwritten by _config_dev.yml in dev mode)
+environment: prod

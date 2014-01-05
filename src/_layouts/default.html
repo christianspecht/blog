@@ -178,6 +178,7 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="/js/jquery.js"></script>
     <script src="/js/bootstrap.min.js"></script>
+    {% if site.environment == "prod" %}
     <script type="text/javascript">
 
       var _gaq = _gaq || [];
@@ -191,5 +192,6 @@
       })();
 
     </script>
+    {% endif %}
   </body>
 </html>
