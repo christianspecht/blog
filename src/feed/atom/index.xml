@@ -24,7 +24,7 @@ layout: nil
       <name>{{ site.authorname }}</name>
       <uri>{{ site.url }}</uri>
     </author>
-    <content type="html">{{ post.content | xml_escape }}</content>
+    <content type="html">{{ post.content | replace: site.feed_linkurl_find, site.feed_linkurl_replace | replace: site.feed_imgurl_find, site.feed_imgurl_replace | xml_escape }}</content>
   </entry>
   {% endfor %}
  
