@@ -6,7 +6,7 @@ tags: [electronics, tinkerforge, weather-station]
 ---
 
 This is my first "real" try to write software for an electronic device.  
-Actually, I already [controlled an USB Missile Launcher](/missilesharp). But I didn't really interact much with the hardware then, I just bought a shrink-wrapped device and figured out how to send the right commands to the USB port. So I don't know if this really counts as "electronics".
+Actually, I already [controlled an USB Missile Launcher](/missilesharp/). But I didn't really interact much with the hardware then, I just bought a shrink-wrapped device and figured out how to send the right commands to the USB port. So I don't know if this really counts as "electronics".
 
 I was already longer interested to do something "real" with electronics/hardware, but I wasn't sure how to get started.  
 For example, I looked at the [Arduino](http://www.arduino.cc/) first *(I even pre-ordered the ["Arduino in Action" book](http://www.manning.com/mevans/) from Manning)*. The whole platform looks interesting, but as I have absolutely **no** electronics/hardware experience at all, fuddling with LEDs, resistors etc. sounds hard/complicated to me.

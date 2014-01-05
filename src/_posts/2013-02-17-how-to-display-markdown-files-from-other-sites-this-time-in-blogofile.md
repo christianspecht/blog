@@ -5,9 +5,9 @@ date: 2013/02/17 22:51:00
 tags: [markdown, blogofile, php]
 ---
 
-This is a follow-up to [How to display Markdown files from other sites in WordPress](http://christianspecht.de/2012/03/09/how-to-display-markdown-files-from-other-sites-in-wordpress).
+This is a follow-up to [How to display Markdown files from other sites in WordPress](http://christianspecht.de/2012/03/09/how-to-display-markdown-files-from-other-sites-in-wordpress/).
 
-When I [migrated this site from WordPress to Blogofile](http://christianspecht.de/2013/01/29/switched-from-wordpress-to-blogofile), I had the same problem again: How do I display Markdown files from external URLs on Blogofile pages?
+When I [migrated this site from WordPress to Blogofile](http://christianspecht.de/2013/01/29/switched-from-wordpress-to-blogofile/), I had the same problem again: How do I display Markdown files from external URLs on Blogofile pages?
 
 Based on the previous solution I found for WordPress, I found a similar one that works **for me**.
 
@@ -54,4 +54,4 @@ The rest of the template looks exactly like a normal Mako template (`<%inherit f
 When compiling, Blogofile creates the page as usual, only that it has the above PHP code as the content, which will be executed by the web server on each request.
 
 Again, you can see it in action on all the project pages.  
-(example: [raw Markdown file](https://bitbucket.org/christianspecht/bitbucket-backup/raw/tip/readme-full.md) &rarr; [final project page](http://christianspecht.de/bitbucket-backup))
+(example: [raw Markdown file](https://bitbucket.org/christianspecht/bitbucket-backup/raw/tip/readme-full.md) &rarr; [final project page](http://christianspecht.de/bitbucket-backup/))

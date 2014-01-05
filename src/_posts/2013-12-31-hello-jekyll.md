@@ -6,7 +6,7 @@ tags: [jekyll, blogofile, markdown]
 ---
 
 I migrated this site again...this time to [Jekyll](http://jekyllrb.com).  
-Why again? When I [migrated from WordPress to Blogofile](/2013/01/29/switched-from-wordpress-to-blogofile) in the beginning of 2013, I evaluated other static site generators *([Octopress](http://octopress.org/) and [Pelican](http://getpelican.com/))* as well, before settling on [Blogofile](http://blogofile.com). I knew at the time that Jekyll existed and that Octopress is based on it, but I didn't take a closer look.
+Why again? When I [migrated from WordPress to Blogofile](/2013/01/29/switched-from-wordpress-to-blogofile/) in the beginning of 2013, I evaluated other static site generators *([Octopress](http://octopress.org/) and [Pelican](http://getpelican.com/))* as well, before settling on [Blogofile](http://blogofile.com). I knew at the time that Jekyll existed and that Octopress is based on it, but I didn't take a closer look.
 
 After reading a few recent posts by other people who migrated to Jekyll, I became interested in Jekyll again. Originally I just started to convert my site to Jekyll to see how it works and how it's different/similar to Blogofile, but in the end I converted the complete site and decided to stay with Jekyll.
 

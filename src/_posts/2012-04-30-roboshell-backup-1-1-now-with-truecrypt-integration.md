@@ -5,7 +5,7 @@ date: 2012/04/30 22:44:40
 tags: [backup, roboshell-backup, truecrypt]
 ---
 
-I just published [RoboShell Backup](/roboshell-backup) 1.1.  
+I just published [RoboShell Backup](/roboshell-backup/) 1.1.  
 Apart from minor and cosmetical changes (nicer-looking setup, more documentation), there is one "big" new feature:
 RoboShell Backup now supports writing to USB drives encrypted with [TrueCrypt](http://www.truecrypt.org/).
  
