@@ -22,7 +22,7 @@
   whatineeded: Migrate existing WordPress site/blog to a static site generator <em>(I decided to use <a href="http://blogofile.com/">Blogofile</a> first, later switched to <a href="http://jekyllrb.com/">Jekyll</a>)</em>.
   whatilearned:
     - <a href="/2013/01/29/switched-from-wordpress-to-blogofile/">Setting up a new site with Blogofile</a>, and later <a href="/2013/12/31/hello-jekyll/">converting it to Jekyll</a> <em>(source code <a href="https://bitbucket.org/christianspecht/blog">here</a>)</em>
-    - Creating a responsive HTML template with <a href="http://getbootstrap.com/">Twitter Bootstrap</a>
+    - Creating a responsive HTML template with <a href="http://getbootstrap.com/">Bootstrap</a>
     - Writing custom <a href="http://www.makotemplates.org/">Mako</a> <em>(for Blogofile)</em> and <a href="http://wiki.shopify.com/Liquid">Liquid</a> <em>(for Jekyll)</em> templates
     - Displaying <a href="/2013/02/17/how-to-display-markdown-files-from-other-sites-this-time-in-blogofile/">Markdown files from my Bitbucket projects (again)</a>...and <a href="https://bitbucket.org/christianspecht/blog/commits/fc681c28835657accc3efd0d94fb4f1cbbd0c710">again in Jekyll</a>
     - Automating FTP uploads with <a href="http://winscp.net/">WinSCP</a>
