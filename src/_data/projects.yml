@@ -74,7 +74,7 @@
 
 - name: RoboShell Backup
   url: /roboshell-backup/
-  logo: https://bitbucket.org/christianspecht/roboshell-backup/raw/tip/img/head35x35.png
+  logo: https://bitbucket.org/christianspecht/roboshell-backup/raw/tip/img/logo35x35.png
   whatineeded: Convert existing batch files for <a href="http://en.wikipedia.org/wiki/Robocopy">Robocopy</a> backups (<em>computer&rarr;NAS</em> and <em>NAS&rarr;USB disk</em>) to a more comfortable tool, with all settings in a config file.
   whatilearned:
     - <a href="http://en.wikipedia.org/wiki/Windows_PowerShell">Windows PowerShell</a> basics
