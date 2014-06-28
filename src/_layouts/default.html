@@ -118,11 +118,11 @@
               <li class="nav-header">Archives</li>
                 {% assign counter = 0 %}
                 {% for post in site.posts %}
-                  {% assign thismonth = post.date | date: "%B %Y" %}
-                  {% assign prevmonth = post.previous.date | date: "%B %Y" %}
+                  {% assign thisyear = post.date | date: "%Y" %}
+                  {% assign prevyear = post.previous.date | date: "%Y" %}
                   {% assign counter = counter | plus: 1 %}
-                  {% if thismonth != prevmonth %}
-                    <li><a href="/archive/#{{ post.date | date:"%Y-%m" }}">{{ thismonth }} ({{ counter }})</a></li>
+                  {% if thisyear != prevyear %}
+                    <li><a href="/archive/#{{ post.date | date:"%Y" }}">{{ thisyear }} ({{ counter }})</a></li>
                     {% assign counter = 0 %}
                   {% endif %}
                 {% endfor %}
