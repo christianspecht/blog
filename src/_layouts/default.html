@@ -11,22 +11,8 @@
 
     <!-- Le styles -->
     <link href="{% if site.environment == "prod" %}//maxcdn.bootstrapcdn.com/bootswatch/2.2.2/cosmo/bootstrap.min.css{% else %}/css/bootstrap.min.css{% endif %}" rel="stylesheet">
-    <style type="text/css">
-      body {
-        padding-top: 60px;
-        padding-bottom: 40px;
-      }
-      .sidebar-nav {
-        padding: 9px 0;
-      }
-      .spacer25 {
-        height: 25px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block;
-      }
-      .spacer50 {
-        height: 50px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block;
-      }
-    </style>
     <link href="{% if site.environment == "prod" %}//maxcdn.bootstrapcdn.com/bootstrap/2.2.2/css/bootstrap-responsive.min.css{% else %}/css/bootstrap-responsive.min.css{% endif %}" rel="stylesheet">
+    <link href="/css/cs.css" rel="stylesheet">
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
