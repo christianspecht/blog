@@ -14,4 +14,5 @@ title: Archive
       {% assign year = currentyear %} 
     {% endif %}
         <li>{% include postlistitem.html %}</li>
+    {% if forloop.last %}</ul>{% endif %}
 {% endfor %}
