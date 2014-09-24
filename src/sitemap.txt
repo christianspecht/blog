@@ -1,0 +1,10 @@
+---
+layout: none
+---
+
+/archive/
+/projects/
+/tags/
+{% for project in site.data.sidebarprojects %}{{ project.url }}
+{% endfor %}{% for post in site.posts %}{{ post.url }}
+{% endfor %}
