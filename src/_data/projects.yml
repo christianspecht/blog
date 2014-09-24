@@ -60,7 +60,7 @@
   whatilearned:
     - Reflection basics
     - Writing unit tests with <a href="http://xunit.codeplex.com/">xUnit.net</a>
-    - Creating a <a href="https://nuget.org/packages/Recordset.Net">NuGet package</a> (and <a href="/2012/05/28/how-to-test-nuget-packages-without-polluting-the-nuget-package-listings/">testing it on the preview site</a>
+    - Creating a <a href="https://nuget.org/packages/Recordset.Net">NuGet package</a> (and <a href="/2012/05/28/how-to-test-nuget-packages-without-polluting-the-nuget-package-listings/">testing it on the preview site</a>)
 
 - name: Bitbucket Backup
   url: /bitbucket-backup/
