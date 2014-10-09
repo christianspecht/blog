@@ -1,0 +1,12 @@
+---
+layout: none
+---
+
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
+{% include sitemapxml.html url="/archive/" %}
+{% include sitemapxml.html url="/projects/" %}
+{% include sitemapxml.html url="/tags/" %}
+{% for project in site.data.sidebarprojects %}{% include sitemapxml.html url=project.url %}
+{% endfor %}{% for post in site.posts %}{% include sitemapxml.html url=post.url %}
+{% endfor %}</urlset>
