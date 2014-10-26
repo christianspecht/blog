@@ -12,15 +12,18 @@ include_once "markdown.php";
 
 function GetMarkdown($url, $title) {
 
-    // time (in minutes) how long a cached file is valid
-    $cachetime = 5; // 10 * 60; 
+    // time (in seconds) how long a cached file is valid
+    $cachetime = 10 * 60 * 60; 
     
-    // name of the cache file: /php/cache/Project-Name.html
-    $cachefile = __DIR__ . "/cache/" . str_replace(" ", "-", $title) . ".html";
-    echo "<!-- $cachefile -->";
+    // name of the cache file: /php/cache/project-name.html
+    $cachefile = __DIR__ . "/cache/" . str_replace(" ", "-", strtolower($title)) . ".html";
     
-    // TODO: load content from cache file if it already exists
-    
+    // load content from cache file if it already exists
+    if (file_exists($cachefile) && time() - $cachetime < filemtime($cachefile)) {
+        $result = file_get_contents($cachefile);
+        $result = "\r\n<!-- cached " . date('Y/m/d H:i:s') . " -->\r\n" . $result;
+        return $result;
+    }
     
     $result = @file_get_contents($url);
 
@@ -31,7 +34,6 @@ function GetMarkdown($url, $title) {
     else
     {
         $md = Markdown($result);
-        $md = "\r\n<!-- cached " . date('Y/m/d H:i:s') . " -->\r\n" . $md;
         
         $cached = fopen($cachefile, 'w');
         fwrite($cached, $md);
