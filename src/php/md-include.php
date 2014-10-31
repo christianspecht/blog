@@ -69,7 +69,7 @@ function GetMarkdown($url, $title) {
                $image->setAttribute('src', $img);
         }
         
-        $html = $doc->saveHTML();
+        $html = preg_replace('/^<!DOCTYPE.+?>/', '', str_replace( array('<html>', '</html>', '<body>', '</body>'), array('', '', '', ''), $doc->saveHTML()));
         
         $cached = fopen($cachefile, 'w');
         fwrite($cached, $html);
