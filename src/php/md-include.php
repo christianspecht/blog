@@ -10,6 +10,29 @@
 
 include_once 'markdown.php';
 
+function ConvertImage($file) 
+{
+    $ext = pathinfo($file, PATHINFO_EXTENSION);
+    $mime = '';
+    
+    switch($ext) {
+        case 'jpg':
+            $mime ='jpeg';
+            break;
+        case 'gif':
+        case 'png':
+            $mime = $ext;
+            break;
+    }
+
+    if ($mime != '') {
+        $contents = file_get_contents($file);
+        $base64 = base64_encode($contents); 
+        return ('data:image/' . $mime . ';base64,' . $base64);
+    }
+
+}
+
 function GetMarkdown($url, $title) {
 
     // time (in seconds) how long a cached file is valid
@@ -42,7 +65,7 @@ function GetMarkdown($url, $title) {
 
         foreach ($images as $image) {
                $img = $image->getAttribute('src');
-               $img .= '?x=1';
+               $img = ConvertImage($img);
                $image->setAttribute('src', $img);
         }
         
