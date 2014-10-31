@@ -21,7 +21,7 @@ function GetMarkdown($url, $title) {
     // load content from cache file if it already exists
     if (file_exists($cachefile) && time() - $cachetime < filemtime($cachefile)) {
         $result = file_get_contents($cachefile);
-        $result .= PHP_EOL . '<!-- cached ' . date('Y/m/d H:i:s') . ' -->' . PHP_EOL;
+        $result = PHP_EOL . '<!-- cached ' . date('Y/m/d H:i:s') . ' -->' . PHP_EOL . $result;
         return $result;
     }
     
