@@ -36,7 +36,7 @@ function ConvertImage($file)
 function GetMarkdown($url, $title) {
 
     // time (in seconds) how long a cached file is valid
-    $cachetime = 10 * 60 * 60; 
+    $cachetime = 24 * 60 * 60; 
     
     // name of the cache file: /php/cache/project-name.html
     $cachefile = __DIR__ . '/cache/' . str_replace(' ', '-', strtolower($title)) . '.html';
