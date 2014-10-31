@@ -35,6 +35,19 @@ function GetMarkdown($url, $title) {
     {
         $html = Markdown($result);
         
+        // replace image URLs
+        $doc = new DOMDocument();
+        @$doc->loadHTML($html);
+        $images = $doc->getElementsByTagName('img');
+
+        foreach ($images as $image) {
+               $img = $image->getAttribute('src');
+               $img .= '?x=1';
+               $image->setAttribute('src', $img);
+        }
+        
+        $html = $doc->saveHTML();
+        
         $cached = fopen($cachefile, 'w');
         fwrite($cached, $html);
         fclose($cached);
