@@ -44,7 +44,6 @@ function GetMarkdown($url, $title) {
     // load content from cache file if it already exists
     if (file_exists($cachefile) && time() - $cachetime < filemtime($cachefile)) {
         $result = file_get_contents($cachefile);
-        $result = PHP_EOL . '<!-- cached ' . date('Y/m/d H:i:s') . ' -->' . PHP_EOL . $result;
         return $result;
     }
     
@@ -70,6 +69,7 @@ function GetMarkdown($url, $title) {
         }
         
         $html = preg_replace('/^<!DOCTYPE.+?>/', '', str_replace( array('<html>', '</html>', '<body>', '</body>'), array('', '', '', ''), $doc->saveHTML()));
+        $html = '<!-- cached ' . date('Y/m/d H:i:s') . ' -->' . PHP_EOL . $html;
         
         $cached = fopen($cachefile, 'w');
         fwrite($cached, $html);
