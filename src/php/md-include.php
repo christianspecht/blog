@@ -10,27 +10,14 @@
 
 include_once 'markdown.php';
 
-function ConvertImage($file) 
-{
-    $ext = pathinfo($file, PATHINFO_EXTENSION);
-    $mime = '';
+function DownloadImage($url, $filename) {
+
+    $newfilename = $filename . '-' . basename($url); // doesn't work if the page contains two image files from different URLs, but with the same name!
+    $newfile = __DIR__ . '/cache/' . $newfilename;
+    $newurl = '/php/cache/' . $newfilename;
     
-    switch($ext) {
-        case 'jpg':
-            $mime ='jpeg';
-            break;
-        case 'gif':
-        case 'png':
-            $mime = $ext;
-            break;
-    }
-
-    if ($mime != '') {
-        $contents = file_get_contents($file);
-        $base64 = base64_encode($contents); 
-        return ('data:image/' . $mime . ';base64,' . $base64);
-    }
-
+    copy($url, $newfile);
+    return $newurl;
 }
 
 function GetMarkdown($url, $title) {
@@ -39,7 +26,8 @@ function GetMarkdown($url, $title) {
     $cachetime = 24 * 60 * 60; 
     
     // name of the cache file: /php/cache/project-name.html
-    $cachefile = __DIR__ . '/cache/' . str_replace(' ', '-', strtolower($title)) . '.html';
+    $filename = str_replace(' ', '-', strtolower($title));
+    $cachefile = __DIR__ . '/cache/' . $filename . '.html';
     
     // load content from cache file if it already exists
     if (file_exists($cachefile) && time() - $cachetime < filemtime($cachefile)) {
@@ -64,7 +52,7 @@ function GetMarkdown($url, $title) {
 
         foreach ($images as $image) {
                $img = $image->getAttribute('src');
-               $img = ConvertImage($img);
+               $img = DownloadImage($img, $filename);
                $image->setAttribute('src', $img);
         }
         
