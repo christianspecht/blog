@@ -1,12 +1,3 @@
-- name: SimpleLeague
-  url: /simpleleague/
-  logo: /php/cache/simpleleague-logo128x128.png
-  whatineeded: Insert database-driven HTML tables with results and rankings into an existing site created with a CMS <em>(in a minimalistic way, i.e. without creating a full-blown plugin for the CMS)</em>
-  whatilearned:
-    - Modern/object-oriented <a href="http://php.net/">PHP</a> <em>(the last time I used PHP was nearly 10 years ago)</em>
-    - Loading data from a <a href="http://www.mysql.com/">MySQL</a> database with <a href="http://php.net/manual/en/book.pdo.php">PDO</a>
-    - Using the <a href="https://github.com/bobthecow/mustache.php">PHP implementation</a> of <a href="http://mustache.github.io/">Mustache</a> for templates
-
 - name: Tasko
   url: /tasko/
   logo: /php/cache/tasko-logo128x128.png
@@ -16,6 +7,27 @@
     - Using a <a href="http://en.wikipedia.org/wiki/NoSQL">NoSQL database</a>, in this case <a href="http://ravendb.net/">RavenDB</a>
     - Writing a native <a href="http://www.android.com/">Android</a> app
 
+- name: Two complex Jekyll sites
+  url: #
+  logo: /img/jekyll-logo.png
+  whatineeded: Converted one site <em>(originally built with a CMS)</em> to <a href="http://jekyllrb.com/">Jekyll</a> and created another one from scratch.<br>Both sites (and their source code) are private, but I wrote multiple blog posts about what I did with Jekyll, <strong>all without using plugins</strong>.
+  whatilearned:
+    - Generating image galleries (<a href="/2014/03/08/generating-an-image-gallery-with-jekyll-and-lightbox2/">first approach</a> / <a href="/2014/08/22/jekyll-lightbox2-image-gallery-another-approach/">second approach</a>)
+    - <a href="/2014/06/18/building-a-pseudo-dynamic-tree-menu-with-jekyll/">Building a dynamic tree menu</a>
+    - <a href="/2014/09/15/easy-meta-redirects-with-jekyll/">Doing meta redirects</a>
+    - <a href="/2014/10/25/separate-pages-per-tag-category-with-jekyll-without-plugins/">Generating a separate tag page per tag</a>
+
+- name: SimpleLeague
+  url: /simpleleague/
+  logo: /php/cache/simpleleague-logo128x128.png
+  whatineeded: Insert database-driven HTML tables with results and rankings into an existing site created with a CMS <em>(in a minimalistic way, i.e. without creating a full-blown plugin for the CMS)</em>
+  whatilearned:
+    - Modern/object-oriented <a href="http://php.net/">PHP</a> <em>(the last time I used PHP was nearly 10 years ago)</em>
+    - Loading data from a <a href="http://www.mysql.com/">MySQL</a> database with <a href="http://php.net/manual/en/book.pdo.php">PDO</a>
+    - Using the <a href="https://github.com/bobthecow/mustache.php">PHP implementation</a> of <a href="http://mustache.github.io/">Mustache</a> for templates
+    - Loading <a href="/2014/11/23/using-jquery-to-integrate-simpleleague-tables-into-jekyll-sites/">SimpleLeague tables into a Jekyll site</a> with <a href="http://jquery.com/">jQuery</a>
+
+
 - name: This site (2013)
   url: /
   logo: /img/site2013.png
@@ -24,7 +36,7 @@
     - <a href="/2013/01/29/switched-from-wordpress-to-blogofile/">Setting up a new site with Blogofile</a>, and later <a href="/2013/12/31/hello-jekyll/">converting it to Jekyll</a> <em>(source code <a href="https://bitbucket.org/christianspecht/blog">here</a>)</em>
     - Creating a responsive HTML template with <a href="http://getbootstrap.com/">Bootstrap</a>
     - Writing custom <a href="http://www.makotemplates.org/">Mako</a> <em>(for Blogofile)</em> and <a href="http://wiki.shopify.com/Liquid">Liquid</a> <em>(for Jekyll)</em> templates
-    - Displaying <a href="/2013/02/17/how-to-display-markdown-files-from-other-sites-this-time-in-blogofile/">Markdown files from my Bitbucket projects (again)</a>...and <a href="https://bitbucket.org/christianspecht/blog/commits/fc681c28835657accc3efd0d94fb4f1cbbd0c710">again in Jekyll</a>
+    - Displaying <a href="/2013/02/17/how-to-display-markdown-files-from-other-sites-this-time-in-blogofile/">Markdown files from my Bitbucket projects (again)</a>...and <a href="https://bitbucket.org/christianspecht/blog/commits/fc681c28835657accc3efd0d94fb4f1cbbd0c710">again in Jekyll</a> (<a href="http://localhost:4000/2014/11/09/how-to-display-markdown-files-from-other-sites-now-with-caching/">with caching</a>)
     - Automating FTP uploads with <a href="http://winscp.net/">WinSCP</a>
 
 - name: VBA Helpers
@@ -82,5 +94,5 @@
     - Using <a href="http://www.truecrypt.org/">TrueCrypt</a> and <a href="/2012/04/30/roboshell-backup-1-1-now-with-truecrypt-integration/">integrating it into RoboShell Backup</a>
 
 # Uncomment the following line to get an additional list item (when the number of items above is odd)
-- name :
+#- name :
  
