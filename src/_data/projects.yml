@@ -1,6 +1,6 @@
 - name: SimpleLeague
   url: /simpleleague/
-  logo: https://bitbucket.org/christianspecht/simpleleague/raw/tip/img/logo35x35.png
+  logo: /php/cache/simpleleague-logo128x128.png
   whatineeded: Insert database-driven HTML tables with results and rankings into an existing site created with a CMS <em>(in a minimalistic way, i.e. without creating a full-blown plugin for the CMS)</em>
   whatilearned:
     - Modern/object-oriented <a href="http://php.net/">PHP</a> <em>(the last time I used PHP was nearly 10 years ago)</em>
@@ -9,7 +9,7 @@
 
 - name: Tasko
   url: /tasko/
-  logo: https://bitbucket.org/christianspecht/tasko/raw/tip/img/logo35x35.png
+  logo: /php/cache/tasko-logo128x128.png
   whatineeded: A ToDo app for my Android phone. I could have used an existing one, but decided to write one myself for learning purposes (mobile app with web service backend)
   whatilearned:
     - Creating a web service with <a href="http://www.asp.net/web-api">ASP.NET Web API</a> <em>(and <a href="/2013/08/02/basic-authentication-in-asp-net-web-api/">Basic Authentication</a>)</em> and hosting it on <a href="https://appharbor.com/">AppHarbor</a>
@@ -29,14 +29,14 @@
 
 - name: VBA Helpers
   url: /vba-helpers/
-  logo: https://bitbucket.org/christianspecht/vba-helpers/raw/tip/img/logo35x35.png
+  logo: /php/cache/vba-helpers-logo128x128.png
   whatineeded: A reusable library of VBA helper functions, to avoid having slight variations of the same functions duplicated across several projects.
   whatilearned:
     - Unit testing in VBA with <a href="http://accunit.access-codelib.net/">AccUnit</a> and <a href="http://sourceforge.net/projects/simplyvbunit/">SimplyVBUnit</a>
 
 - name: MissileSharp
   url: /missilesharp/
-  logo: https://bitbucket.org/christianspecht/missilesharp/raw/tip/img/logo35x35.png
+  logo: /php/cache/missilesharp-logo128x128.png
   whatineeded: Send commands to an <a href="http://www.dreamcheeky.com/thunder-missile-launcher">USB Missile Launcher</a> from my own code, without using the control software that came with it.
   whatilearned:
     - Communicating with an USB device with <a href="https://github.com/mikeobrien/HidLibrary">Hid Library</a>
@@ -55,7 +55,7 @@
 
 - name: Recordset.Net
   url: /recordset-net/
-  logo: https://bitbucket.org/christianspecht/recordset.net/raw/tip/img/logo35x35.png
+  logo: /php/cache/recordset.net-logo128x128.png
   whatineeded: Convert .NET POCOs into <code>ADODB.Recordsets</code>, in order to gradually migrate existing MS Access applications to .NET <em>(Access client needs to read data coming from .NET)</em>.
   whatilearned:
     - Reflection basics
@@ -64,7 +64,7 @@
 
 - name: Bitbucket Backup
   url: /bitbucket-backup/
-  logo: https://bitbucket.org/christianspecht/bitbucket-backup/raw/tip/img/logo35x35.png
+  logo: /php/cache/bitbucket-backup-logo128x128.png
   whatineeded: Automate creating local backups of all my private and public <a href="https://bitbucket.org">Bitbucket</a> repositories, running without user interaction after being set up once.
   whatilearned:
     - Calling <a href="https://api.bitbucket.org/">Bitbucket's API</a> with <a href="http://restsharp.org/">RestSharp</a> and <a href="http://json.codeplex.com/">Json.NET</a>
@@ -74,7 +74,7 @@
 
 - name: RoboShell Backup
   url: /roboshell-backup/
-  logo: https://bitbucket.org/christianspecht/roboshell-backup/raw/tip/img/logo35x35.png
+  logo: /php/cache/roboshell-backup-logo128x128.png
   whatineeded: Convert existing batch files for <a href="http://en.wikipedia.org/wiki/Robocopy">Robocopy</a> backups (<em>computer&rarr;NAS</em> and <em>NAS&rarr;USB disk</em>) to a more comfortable tool, with all settings in a config file.
   whatilearned:
     - <a href="http://en.wikipedia.org/wiki/Windows_PowerShell">Windows PowerShell</a> basics
