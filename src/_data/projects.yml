@@ -10,7 +10,7 @@
 - name: Two complex Jekyll sites
   url: #
   logo: /img/jekyll-logo.png
-  whatineeded: Converted one site <em>(originally built with a CMS)</em> to <a href="http://jekyllrb.com/">Jekyll</a> and created another one from scratch.<br>Both sites (and their source code) are private, but I wrote multiple blog posts about what I did with Jekyll, <strong>all without using plugins</strong>.
+  whatineeded: Convert one site <em>(originally built with a CMS)</em> to <a href="http://jekyllrb.com/">Jekyll</a> and create another one from scratch.<br><em>(Both sites and their source code are private, but I wrote multiple blog posts about what I did with Jekyll, <u>all without using plugins</u>)</em>
   whatilearned:
     - Generating image galleries (<a href="/2014/03/08/generating-an-image-gallery-with-jekyll-and-lightbox2/">first approach</a> / <a href="/2014/08/22/jekyll-lightbox2-image-gallery-another-approach/">second approach</a>)
     - <a href="/2014/06/18/building-a-pseudo-dynamic-tree-menu-with-jekyll/">Building a dynamic tree menu</a>
@@ -36,7 +36,7 @@
     - <a href="/2013/01/29/switched-from-wordpress-to-blogofile/">Setting up a new site with Blogofile</a>, and later <a href="/2013/12/31/hello-jekyll/">converting it to Jekyll</a> <em>(source code <a href="https://bitbucket.org/christianspecht/blog">here</a>)</em>
     - Creating a responsive HTML template with <a href="http://getbootstrap.com/">Bootstrap</a>
     - Writing custom <a href="http://www.makotemplates.org/">Mako</a> <em>(for Blogofile)</em> and <a href="http://wiki.shopify.com/Liquid">Liquid</a> <em>(for Jekyll)</em> templates
-    - Displaying <a href="/2013/02/17/how-to-display-markdown-files-from-other-sites-this-time-in-blogofile/">Markdown files from my Bitbucket projects (again)</a>...and <a href="https://bitbucket.org/christianspecht/blog/commits/fc681c28835657accc3efd0d94fb4f1cbbd0c710">again in Jekyll</a> (<a href="http://localhost:4000/2014/11/09/how-to-display-markdown-files-from-other-sites-now-with-caching/">with caching</a>)
+    - Displaying <a href="/2013/02/17/how-to-display-markdown-files-from-other-sites-this-time-in-blogofile/">Markdown files from my Bitbucket projects (again)</a>...and <a href="https://bitbucket.org/christianspecht/blog/commits/fc681c28835657accc3efd0d94fb4f1cbbd0c710">again in Jekyll</a> (<a href="/2014/11/09/how-to-display-markdown-files-from-other-sites-now-with-caching/">with caching</a>)
     - Automating FTP uploads with <a href="http://winscp.net/">WinSCP</a>
 
 - name: VBA Helpers
