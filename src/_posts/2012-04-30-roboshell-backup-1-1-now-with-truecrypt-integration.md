@@ -5,6 +5,20 @@ date: 2012/04/30 22:44:40
 tags: [backup, roboshell-backup, truecrypt]
 ---
 
+> ### Update (Mar 04 2015):
+> 
+> **Development of TrueCrypt [stopped in May 2014](http://en.wikipedia.org/wiki/TrueCrypt#End_of_life_announcement). The only version still available on the [official TrueCrypt website](http://truecrypt.sourceforge.net/) *(version 7.2)* supports *de*cryption only, therefore it's not suited for usage with RoboShell Backup.**
+>
+> &nbsp;
+>
+> **For more information about TrueCrypt's current status as well as an article about whether it's still secure *(it is!)*, and to download TrueCrypt 7.1a *(the version RoboShell Backup's integration was developed and tested with)*, see the [TrueCrypt Final Release Repository](https://www.grc.com/misc/truecrypt/truecrypt.htm).**
+>
+> &nbsp;
+>
+> **Everything else on this page is still valid, except for the links to [truecrypt.org](http://www.truecrypt.org/).**
+
+---
+
 I just published [RoboShell Backup](/roboshell-backup/) 1.1.  
 Apart from minor and cosmetical changes (nicer-looking setup, more documentation), there is one "big" new feature:
 RoboShell Backup now supports writing to USB drives encrypted with [TrueCrypt](http://www.truecrypt.org/).
