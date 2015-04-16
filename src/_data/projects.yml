@@ -16,6 +16,7 @@
     - <a href="/2014/06/18/building-a-pseudo-dynamic-tree-menu-with-jekyll/">Building a dynamic tree menu</a>
     - <a href="/2014/09/15/easy-meta-redirects-with-jekyll/">Doing meta redirects</a>
     - <a href="/2014/10/25/separate-pages-per-tag-category-with-jekyll-without-plugins/">Generating a separate tag page per tag</a>
+    - <a href="/2015/04/16/generating-sitemap-xml-in-jekyll-without-using-plugins/">Creating <code>sitemap.xml</code> files</a>
 
 - name: SimpleLeague
   url: /simpleleague/
