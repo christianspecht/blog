@@ -3,7 +3,7 @@
   logo: /php/cache/tasko-logo128x128.png
   whatineeded: A ToDo app for my Android phone. I could have used an existing one, but decided to write one myself for learning purposes (mobile app with web service backend)
   whatilearned:
-    - Creating a web service with <a href="http://www.asp.net/web-api">ASP.NET Web API</a> <em>(and <a href="/2013/08/02/basic-authentication-in-asp-net-web-api/">Basic Authentication</a>)</em> and hosting it on <a href="https://appharbor.com/">AppHarbor</a>
+    - Creating a web service with <a href="http://www.asp.net/web-api">ASP.NET Web API</a> <em>(and <a href="/2013/08/02/basic-authentication-in-asp-net-web-api/">Basic Authentication</a>, but I later <a href="https://bitbucket.org/christianspecht/tasko/commits/a6002d771c33ce23c62f16aa116262bcdb351c55">switched to token-based authentication</a>)</em> and hosting it on <a href="https://appharbor.com/">AppHarbor</a>
     - Using a <a href="http://en.wikipedia.org/wiki/NoSQL">NoSQL database</a>, in this case <a href="http://ravendb.net/">RavenDB</a>
     - Writing a native <a href="http://www.android.com/">Android</a> app
 
