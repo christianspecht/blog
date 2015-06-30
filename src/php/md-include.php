@@ -13,8 +13,8 @@ include_once 'markdown.php';
 function DownloadImage($url, $filename) {
 
     $newfilename = $filename . '-' . basename($url); // doesn't work if the page contains two image files from different URLs, but with the same name!
-    $newfile = __DIR__ . '/cache/' . $newfilename;
-    $newurl = '/php/cache/' . $newfilename;
+    $newfile = __DIR__ . '/cache/img/' . $newfilename;
+    $newurl = '/php/cache/img/' . $newfilename;
     
     copy($url, $newfile);
     return $newurl;
