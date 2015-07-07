@@ -2,7 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.name }}</title>
+    {% if page.redirect %}<meta http-equiv="refresh" content="0; URL={{ page.redirect }}">
+    {% endif %}<title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.name }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="{{ site.description }}">
     <meta name="author" content="{{ site.authorname }}">
@@ -54,6 +55,7 @@
     <div class="container">
       <div class="row">
         <div class="span9">
+          {% if page.redirect %}<h3>Redirecting to <a href="{{ page.redirect }}">{{ page.redirect }}</a> ...</h3>{% endif %}
           {{ content }}
         </div><!--/span-->
 
