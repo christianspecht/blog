@@ -84,7 +84,8 @@
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
               <li class="nav-header">Projects</li>
-              {% for project in site.data.sidebarprojects %}
+              {% assign projects = site.data.projects | where: 'sidebar', 1 | sort: 'name' %}
+              {% for project in projects %}
               <li><a href="{{ project.url }}" rel="tooltip" title="{{ project.desc }}">{{ project.name }}</a></li>
               {% endfor %}
             </ul>
