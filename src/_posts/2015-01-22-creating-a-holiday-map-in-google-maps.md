@@ -99,7 +99,8 @@ So the files for the icons need to be named `holidaymap-marker1.png`, `holidayma
 
 In this example, I will use these images:
 
-![Marker 1](/img/holidaymap-marker1.png)&nbsp;&nbsp;![Marker 2](/img/holidaymap-marker2.png)
+![Marker 1](/img/holidaymap-marker1.png)
+![Marker 2](/img/holidaymap-marker2.png)
 
 With the example data from above, the finished map with custom markers will look like this:
 
