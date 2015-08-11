@@ -4,6 +4,7 @@ title: Building a pseudo-dynamic tree menu with Jekyll
 date: 2014/06/18 00:40:00
 tags:
 - jekyll
+codeproject: 1
 ---
 
 I'm in the process of moving an existing site to [Jekyll](http://jekyllrb.com/). The existing site was built with a CMS, which generates a dynamic tree menu.  

@@ -4,6 +4,7 @@ title: Generating sitemap.xml in Jekyll, without using plugins
 date: 2015/04/16 21:16:00
 tags:
 - jekyll
+codeproject: 1
 ---
 
 After my blog was already online for a while, I discovered [Google Webmaster Tools](http://www.google.com/webmasters/tools/) and [sitemaps](https://support.google.com/webmasters/answer/183668?hl=en) while reading about the SEO basics.

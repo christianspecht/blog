@@ -6,6 +6,7 @@ tags:
 - jekyll
 - image-gallery
 - lightbox2
+codeproject: 1
 ---
 
 For a Jekyll-powered site that I'm building, I needed an image gallery. I browsed the ["Sites built with Jekyll" list](https://github.com/jekyll/jekyll/wiki/Sites) in Jekyll's GitHub wiki to see how others do galleries with Jekyll, but I didn't find a site that used any kind of "real" image gallery *(besides stuff like just showing thumbnails from Flickr and then linking directly to Flickr to display the actual image, which is not what I wanted)*.

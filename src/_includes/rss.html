@@ -8,6 +8,7 @@
     <language>en-us</language>
     <pubDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
     <lastBuildDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}</lastBuildDate>
+    {% if include.additional %}{{ include.additional }}{% endif %}
 
     {% for post in include.posts limit: include.limit %}
     <item>
