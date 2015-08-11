@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ site.name }}</title>
+    <link>{{ site.url }}</link>
+    <atom:link href="{{ site.url }}{{ include.feedurl }}" rel="self" type="application/rss+xml" />
+    <description>{{ site.description }}</description>
+    <language>en-us</language>
+    <pubDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
+    <lastBuildDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}</lastBuildDate>
+
+    {% for post in include.posts limit: include.limit %}
+    <item>
+      <title>{{ post.title }}</title>
+      <link>{{ site.url }}{{ post.url }}</link>
+      <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
+      <author>{{ site.authorname }}</author>
+      <guid>{{ site.url }}{{ post.id }}</guid>
+      <description>{{ post.content | replace: site.feed_linkurl_find, site.feed_linkurl_replace | replace: site.feed_imgurl_find, site.feed_imgurl_replace | xml_escape }}</description>
+    </item>
+    {% endfor %}
+
+  </channel> 
+</rss>
