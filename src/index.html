@@ -6,6 +6,23 @@ layout: default
             I'm a software developer and I use this site to feature <a href="/projects/">my projects</a> and (occasionally) <a href="/archive/">some blogging</a>.
           </div>
 
+          <h3>Featured Projects:</h3>
+
+          <div class="row">
+{% assign projects = site.data.projects | where: 'featured', 1 %}
+{% for project in projects limit: 3 %}
+            <div class="span3">
+              <h4><a href="{{ project.url }}"><img src="{{ project.logo }}" width="64" height="64" /> {{ project.name }}</a></h4>
+              <p>{{ project.desc }}</p>
+            </div><!--/span-->
+            <div class="row visible-phone spacer25"></div>
+{% endfor %}
+          </div><!--/row-->
+
+          <div class="row hidden-phone spacer25"></div>
+          <a href="/projects/">&rarr; all projects</a>
+          <div class="row spacer50"></div>
+
           <h3>Recent Posts:</h3>
 
           <div class="row">
@@ -19,15 +36,9 @@ layout: default
 {% include indexpostitem.html %}
 {% endfor %}
           </div><!--/row-->
-          <div class="row hidden-phone spacer50"></div>
-          <div class="row">
-{% for post in site.posts limit: 3 offset: 6 %}
-{% include indexpostitem.html %}
-{% endfor %}
-          </div><!--/row-->
 
           <div class="row hidden-phone spacer50"></div>
           <div class="row visible-phone spacer25"></div>
 
-          <a href="/archive/">more posts</a>
+          <a href="/archive/">&rarr; all posts</a>
 
