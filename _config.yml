@@ -14,6 +14,10 @@ gravatar_url: http://www.gravatar.com/avatar/6f807629c5f3765f28c61b1271552dc9?s=
 # production mode (will be overwritten by _config_dev.yml in dev mode)
 environment: prod
 
+# feed URLs
+rss_url: /feed/index.xml
+atom_url: /feed/atom/index.xml
+
 # URL replacements for feeds
 feed_linkurl_find: href="/
 feed_linkurl_replace: href="http://christianspecht.de/

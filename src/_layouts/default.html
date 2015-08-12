@@ -8,8 +8,8 @@
     <meta name="description" content="{{ site.description }}">
     <meta name="author" content="{{ site.authorname }}">
     {% if page.noindex %}<meta name="robots" content="noindex">{% endif %}
-    <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://feeds.feedburner.com/ChristianSpecht" />
-    <link rel="alternate" type="application/atom+xml" title="Atom 1.0" href="http://feeds.feedburner.com/ChristianSpecht" />
+    <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="{{ site.rss_url }}" />
+    <link rel="alternate" type="application/atom+xml" title="Atom 1.0" href="{{ site.atom_url }}" />
 
     <!-- Le styles -->
     <link href="{% if site.environment == "prod" %}//maxcdn.bootstrapcdn.com/bootswatch/2.2.2/cosmo/bootstrap.min.css{% else %}/css/bootstrap.min.css{% endif %}" rel="stylesheet">
@@ -45,7 +45,7 @@
               <li><a href="/"><i class="icon-home icon-white"></i> Home</a></li>
               <li><a href="/projects/"><i class="icon-wrench icon-white"></i> Projects</a></li>
               <li><a href="/archive/"><i class="icon-calendar icon-white"></i> Archive</a></li>
-              <li><a href="http://feeds.feedburner.com/ChristianSpecht"><img src="/img/feed.png"> Feed</a></li>
+              <li><a href="/feed/"><img src="/img/feed.png"> Feed</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
