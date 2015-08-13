@@ -3,10 +3,10 @@ layout: default
 ---
           <div class="hero-unit">
             My name is Christian Specht, and this is my personal site.<br>
-            I'm a software developer and I use this site to feature <a href="/projects/">my projects</a> and (occasionally) <a href="/archive/">some blogging</a>.
+            I'm a software developer and I use this site to feature <a href="#projects">my projects</a> and (occasionally) <a href="#posts">some blogging</a>.
           </div>
 
-          <h3>Featured Projects:</h3>
+          <h3 id="projects">Featured Projects:</h3>
 
           <div class="row">
 {% assign projects = site.data.projects | where: 'featured', 1 %}
@@ -23,7 +23,7 @@ layout: default
           <a href="/projects/">&rarr; all projects</a>
           <div class="row spacer50"></div>
 
-          <h3>Recent Posts:</h3>
+          <h3 id="posts">Recent Posts:</h3>
 
           <div class="row">
 {% for post in site.posts limit: 3 %}
