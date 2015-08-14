@@ -7,6 +7,7 @@ layout: none
 {% include sitemapxml.html url="/archive/" %}
 {% include sitemapxml.html url="/projects/" %}
 {% include sitemapxml.html url="/tags/" %}
-{% for project in site.data.sidebarprojects %}{% include sitemapxml.html url=project.url %}
+{% include sitemapxml.html url="/feed/" %}
+{% assign projects = site.data.projects | where: 'sidebar', 1 | sort: 'name' %}{% for project in projects %}{% include sitemapxml.html url=project.url %}
 {% endfor %}{% for post in site.posts %}{% include sitemapxml.html url=post.url %}
 {% endfor %}</urlset>
