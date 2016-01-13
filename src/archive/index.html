@@ -15,4 +15,9 @@ title: Archive
     {% endif %}
         <li>{% include postlistitem.html %}</li>
     {% if forloop.last %}</ul>{% endif %}
+    {% assign postnum = forloop.length %}
 {% endfor %}
+
+<p>&nbsp;</p>
+<p><i>Total number of posts: {{ postnum }}</i></p>
+
