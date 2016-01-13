@@ -121,6 +121,3 @@
     - <a href="http://wixtoolset.org/">Building a setup with WiX</a>
     - Using <a href="http://en.wikipedia.org/wiki/TrueCrypt">TrueCrypt</a> and <a href="/2012/04/30/roboshell-backup-1-1-now-with-truecrypt-integration/">integrating it into RoboShell Backup</a>
 
-# Uncomment the following line to get an additional list item (when the number of items above is odd)
-#- name :
- 

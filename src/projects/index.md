@@ -24,18 +24,22 @@ Here is everything I created so far, in reverse chronologial order (newest first
 {% assign loopindex = forloop.index | modulo:2 %}
 {% if loopindex == 1 %}
     <div class="row">
-    
+    {% assign lastloop = 1 %}
 {% include projectdetails.html %}
-
         <div class="row visible-phone spacer25"></div>
 {% else %}
 {% include projectdetails.html %}
-
+    {% assign lastloop = 2 %}
     </div><!--/row-->
-
     <div class="row spacer25"></div>
 {% endif %}
 {% endfor %}
+
+{% if lastloop == 1 %}
+    </div><!--/row-->
+    <div class="row spacer25"></div>  
+{% endif %}
+
 </div><!--/container-->
 
 <div class="row visible-phone spacer25"></div>
