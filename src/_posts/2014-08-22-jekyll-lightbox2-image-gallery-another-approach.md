@@ -4,7 +4,6 @@ title: Jekyll / Lightbox2 image gallery, another approach
 date: 2014/08/22 22:43:00
 tags:
 - jekyll
-- image-gallery
 - lightbox2
 codeproject: 1
 ---

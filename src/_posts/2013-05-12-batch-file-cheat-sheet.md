@@ -2,7 +2,7 @@
 layout: post
 title: Batch File Cheat Sheet
 date: 2013/05/12 23:45:00
-tags: [command-line, batch-files]
+tags: [command-line]
 ---
 
 Recently, I had some tasks at work that required me to write a lot of batch files.  

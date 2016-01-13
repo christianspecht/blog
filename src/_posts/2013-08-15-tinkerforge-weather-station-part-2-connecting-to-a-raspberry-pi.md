@@ -2,7 +2,7 @@
 layout: post
 title: Tinkerforge Weather Station, part 2 - Connecting to a Raspberry PI
 date: 2013/08/15 22:16:00
-tags: [electronics, tinkerforge, weather-station, raspberry-pi]
+tags: [hardware, raspberry-pi]
 ---
 
 This is the second part of me playing around with the [Weather Station Starter Kit](http://www.tinkerforge.com/en/doc/Kits/WeatherStation/WeatherStation.html) from [Tinkerforge](http://www.tinkerforge.com).  

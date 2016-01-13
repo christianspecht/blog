@@ -2,7 +2,7 @@
 layout: post
 title: Bitbucket Backup has 50 followers on Bitbucket!
 date: 2012/05/01 22:01:00
-tags: [backup, bitbucket, bitbucket-backup]
+tags: [backup, bitbucket-backup, source-control]
 ---
 
 As of today, [Bitbucket Backup](http://christianspecht.de/bitbucket-backup/) has hit the 50 follower mark on Bitbucket:

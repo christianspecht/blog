@@ -2,7 +2,7 @@
 layout: post
 title: Excel found unreadable content (when exporting a Reporting Services report)
 date: 2014/01/14 00:16:00
-tags: [sql-server, reporting-services, excel, wtf]
+tags: [sql-server, excel, wtf]
 ---
 
 A few days ago, I ran into a strange bug in SQL Server Reporting Services 2012.  

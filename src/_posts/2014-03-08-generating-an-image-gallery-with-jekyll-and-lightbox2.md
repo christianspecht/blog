@@ -4,7 +4,6 @@ title: Generating an image gallery with Jekyll and Lightbox2
 date: 2014/03/08 19:04:00
 tags: 
 - jekyll
-- image-gallery
 - lightbox2
 codeproject: 1
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Printing existing PDF files with MS Access and SumatraPDF
 date: 2013/09/26 18:03:00
-tags: [ms-access, vba, printing]
+tags: [ms-access, vba]
 ---
 
 **To make things clear from the beginning:  

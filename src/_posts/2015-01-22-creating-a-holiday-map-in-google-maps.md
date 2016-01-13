@@ -4,7 +4,6 @@ title: "Creating a 'holiday map' in Google Maps"
 date: 2015/01/22 17:43:00
 tags:
 - html
-- google-maps-api
 ---
 
 I recently read a book where one of the characters loved travelling. Each time he was able to spare some money *(and vacation days)*, he travelled to a country where he never had been before.  
