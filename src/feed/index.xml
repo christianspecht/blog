@@ -2,4 +2,4 @@
 layout: nil
 ---
 
-{% include rss.html feedurl='/feed/index.xml' posts=site.posts limit=10 %}
+{% include rss.html feedurl='/feed/index.xml' posts=site.posts limit=15 %}
