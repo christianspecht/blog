@@ -4,7 +4,7 @@ title: "My home backup strategy, part 1: the basics"
 date: 2015/11/01 17:50:00
 tags:
 - backup
-- batch-files
+- command-line
 - roboshell-backup
 codeproject: 1
 ---
