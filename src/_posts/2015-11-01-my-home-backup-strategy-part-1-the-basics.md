@@ -169,4 +169,4 @@ One of them is at home, and the other one is in my desk at work. Every now and t
 
 This is the basic setup that I'm using.
 
-Of course I'm actually backing up more than just the data from the devices we have at home, but I'll come to that in the next post, which will be about making offline backups of cloud services.
+Of course I'm actually backing up more than just the data from the devices we have at home, but I'll come to that in [the next post]({% post_url 2016-01-17-my-home-backup-strategy-part-2-online-services %}), which will be about making offline backups of cloud services.
