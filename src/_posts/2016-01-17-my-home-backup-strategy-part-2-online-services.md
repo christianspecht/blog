@@ -25,7 +25,6 @@ Here are the online services which I'm using (and actually backing up):
 
 ---
 
-<div id="email"></div>
 ## Email
 
 At the moment I'm using Gmail for all my mails, but the following applies to all email providers with IMAP support.

@@ -9,8 +9,7 @@ In [the first part of this post](http://christianspecht.de/2013/04/09/excluding-
 
 So I looked for a better solution, and after reading the [GUI's command line options](http://www.nunit.org/index.php?p=guiCommandLine&r=2.6.2) again, I found out that you can tell the GUI to load only certain test classes or namespaces from the test assembly:
 
-> **Specifying an Assembly and a Fixture**
-
+> **Specifying an Assembly and a Fixture**  
 > [...]   
 The name specified after the **/fixture** option may be that of a TestFixture class, or a namespace. If a namespace is given, then all fixtures under that namespace are loaded.
 

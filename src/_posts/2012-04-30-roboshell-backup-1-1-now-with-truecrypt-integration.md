@@ -29,8 +29,8 @@ I read about it in Scott Hanselman's [A basic non-cloud-based personal backup st
 
 So I decided to try TrueCrypt, and I was sold on it when I read this (emphasis by me):
 
-> *I forgot my password - is there any way ('backdoor') to recover the files from my TrueCrypt volume?*
-
+> *I forgot my password - is there any way ('backdoor') to recover the files from my TrueCrypt volume?*  
+> &nbsp;  
 > *TrueCrypt does not allow recovery of any encrypted data without knowing the correct password or key. We cannot recover your data because we do not know and cannot determine the password you chose or the key you generated using TrueCrypt. The only way to recover your files is to try to "crack" the password or the key, but it could take thousands or millions of years (depending on the length and quality of the password or keyfiles, on the software/hardware performance, algorithms, and other factors).* ***If you find this hard to believe, consider the fact that even the FBI was not able to decrypt a TrueCrypt volume after a year of trying.***
 
 Source: [TrueCrypt FAQ](http://www.truecrypt.org/faq)

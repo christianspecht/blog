@@ -6,12 +6,10 @@ tags: [.net, nuget, visual-studio]
 ---
 
 > ### Update (Nov 14 2013):
-
+>
 > **I just noticed that the [preview.nuget.org](https://preview.nuget.org) site mentioned in this post is gone. It was replaced by [staging.nuget.org](http://staging.nuget.org/) in April 2013.**  
-*(read [this post](http://blog.nuget.org/20130419/goodbye-preview.html) on the NuGet blog for more information)*
-
-> &nbsp;
-
+*(read [this post](http://blog.nuget.org/20130419/goodbye-preview.html) on the NuGet blog for more information)*  
+> &nbsp;  
 > **The information below is still valid...you just have to use [http://staging.nuget.org/](http://staging.nuget.org/) instead of [http://preview.nuget.org/](http://preview.nuget.org/) !**
 
 ---

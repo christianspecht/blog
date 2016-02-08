@@ -21,8 +21,8 @@ So I looked further and found alternatives that sounded easier to start with, fo
 	
 	> **No detailed knowledge in electronics necessary**  
 	> The realization of a project with Tinkerforge is possible without troubles. You simply pick the required modules and connect them together with each other. There is no other electronics knowledge and no soldering needed.  
-	>(...)
-
+	>(...)  
+	&nbsp;  
 	> **Intuitive API**  
 	> The Tinkerforge API offers intuitive functions, that simplify the programming. For example: It is possible to set the velocity of a motor in meters per second with a call of setVelocity() or to read out a temperature in degree Celsius (°C) with getTemperature().
 
@@ -36,7 +36,6 @@ Then Tinkerforge [announced a new starter kit](http://www.tinkerforge.com/en/blo
 Quote from the blog post:
 
 > Points of criticism for the old Starter Kit were the missing description of applications, assembly instructions and documentation. We want to counteract these points with a whole series of Starter Kits. The new Starter Kits will always have a specific application as well as instructions for assembly and for the usage of all of our supported programming languages.  
-
 > The Idea is, that you can finish a whole project with the software and hardware as it is provided by the kit. It will however always be possible to add a whole range of modifications, extensions and improvements, so that the fun of tinkering doesn’t come short.
 
 That sounded exactly like what I needed to get started, so I took advantage of the initial promotional discount and purchased a [Weather Station Starter Kit](http://www.tinkerforge.com/en/doc/Kits/WeatherStation/WeatherStation.html).
