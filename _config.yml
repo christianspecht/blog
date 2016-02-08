@@ -2,7 +2,7 @@
 destination: _site
 source: src
 permalink: pretty
-markdown: rdiscount
+markdown: kramdown
 
 # Blog settings
 name: Christian Specht
