@@ -1,5 +1,5 @@
 ---
-layout: nil
+layout: null
 ---
 
 {% assign tmpposts = site.posts | where: 'codeproject', 1  %}{% include rss.html feedurl='/feed/codeproject/index.xml' posts=tmpposts limit=100 additional='<category>CodeProject</category>' %}
