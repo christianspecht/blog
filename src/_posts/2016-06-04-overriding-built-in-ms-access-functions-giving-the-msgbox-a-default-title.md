@@ -53,9 +53,19 @@ You can see it when you right-click `MsgBox` somewhere in your code and click on
 ![MsgBox definition](/img/ms-access-msgbox3.png)
 
 
-Now you just need to set the app title like this:
+---
+
+## Setting the title
+
+Now you just need to set the app title once, if your application doesn't have one yet.  
+The [MSDN page about the `AppTitle` property](https://msdn.microsoft.com/en-us/library/office/ff821127.aspx) describes multiple ways how to do this (manually or by code).
+
+In case the `AppTitle` property already exists in your app, you can just overwrite it with a one-liner:
 
     CurrentDb.Properties("AppTitle")= "New Title"
+
+If it doesn't, there's also example code on the bottom of [this MSDN page](https://msdn.microsoft.com/en-us/library/office/ff197957.aspx) which creates the property if it's missing.
+
     
 With the app title set, the message box will now look like this, without having to fill the `Title` parameter:
 
@@ -65,15 +75,9 @@ With the app title set, the message box will now look like this, without having 
 ![MsgBox with automatic title](/img/ms-access-msgbox4.png)
 
 
----
+Note that there's no error handling in the `MsgBox` function shown above, i.e. it will crash when your app title is not set.
 
-## This won't work when your app title is not set.
-
-Without an app title set in Access, `CurrentDb.Properties("AppTitle")` doesn't even exist, and you can't catch that via `Nz`, `Is Nothing` etc. at runtime.
-
-The only way I know of is looping `CurrentDb.Properties` and check each property whether its name is `AppTitle`, but I don't like the idea of doing this each and every time I'm displaying a `MsgBox`.
-
-That's why I just left the code as shown above (without any checking) because I control the app and I *know* the app title is set.
+It would be possible to avoid this by catching error number 3270 or by looping `CurrentDb.Properties` and checking each property whether its name is `AppTitle`, but for me that's not necessary, because I control the app and I *know* the title is set.
 
 ---
 
