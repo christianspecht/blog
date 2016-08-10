@@ -22,3 +22,9 @@ layout: default
     </div>
   </div>
 </article>
+
+<hr>
+
+<div>
+  <small>{% if page.previous %}<a href="{{ page.previous.url }}">&larr;&nbsp;{{ page.previous.title }}</a>{% endif %} {% if page.next && page.previous %}| {% endif %}{% if page.next %}<a href="{{ page.next.url }}">{{ page.next.title }}&nbsp;&rarr;</a>{% endif %}</small>
+</div>
