@@ -18,7 +18,7 @@
   whatineeded: Convert one site <em>(originally built with a CMS)</em> to <a href="http://jekyllrb.com/">Jekyll</a> and create another one from scratch.<br><em>(Both sites and their source code are private, but I wrote multiple blog posts about what I did with Jekyll, <u>all without using plugins</u>)</em>
   whatilearned:
     - Generating image galleries (<a href="/2014/03/08/generating-an-image-gallery-with-jekyll-and-lightbox2/">first approach</a> / <a href="/2014/08/22/jekyll-lightbox2-image-gallery-another-approach/">second approach</a>)
-    - <a href="/2014/06/18/building-a-pseudo-dynamic-tree-menu-with-jekyll/">Building a dynamic tree menu</a>
+    - <a href="/2014/06/18/building-a-pseudo-dynamic-tree-menu-with-jekyll/">Building a dynamic tree menu</a> and <a href="/2016/10/09/jekyll-dynamic-tree-menu-show-the-whole-menu-at-once/">showing all menu items at once on a single page</a>
     - <a href="/2014/09/15/easy-meta-redirects-with-jekyll/">Doing meta redirects</a>
     - <a href="/2014/10/25/separate-pages-per-tag-category-with-jekyll-without-plugins/">Generating a separate tag page per tag</a>
     - <a href="/2015/04/16/generating-sitemap-xml-in-jekyll-without-using-plugins/">Creating <code>sitemap.xml</code> files</a>
