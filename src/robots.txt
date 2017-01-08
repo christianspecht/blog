@@ -9,3 +9,4 @@ Disallow: /imprint/
 Disallow: /php/
 Allow: /php/cache/img/
 Sitemap: {{ site.url }}/sitemap.xml
+Host: {{ site.url }}
