@@ -28,8 +28,8 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
     <link rel="alternate" type="application/atom+xml" title="Atom 1.0" href="{{ site.atom_url }}" />
 
     <!-- Le styles -->
-    <link href="{% if site.environment == "prod" %}//maxcdn.bootstrapcdn.com/bootswatch/2.2.2/cosmo/bootstrap.min.css{% else %}/css/bootstrap.min.css{% endif %}" rel="stylesheet">
-    <link href="{% if site.environment == "prod" %}//maxcdn.bootstrapcdn.com/bootstrap/2.2.2/css/bootstrap-responsive.min.css{% else %}/css/bootstrap-responsive.min.css{% endif %}" rel="stylesheet">
+    <link href="{% if site.environment == "prod" %}//maxcdn.bootstrapcdn.com/bootswatch/2.2.2/cosmo/bootstrap.min.css{% else %}/css/bootstrap.min.css{% endif %}" rel="stylesheet" integrity="sha384-hWFyiOm6yfLPdkBIx2OrXIu00ZfDQPcDs/h9BW3TiU5YJx8y3l3BWnRU1nHnHzT3" crossorigin="anonymous">
+    <link href="{% if site.environment == "prod" %}//maxcdn.bootstrapcdn.com/bootstrap/2.2.2/css/bootstrap-responsive.min.css{% else %}/css/bootstrap-responsive.min.css{% endif %}" rel="stylesheet" integrity="sha384-DV4R8fXDhaIrZAo7O/9Lk1Mbw6AKv07qQAPZmHicyZhH0nMN988SzOkF+IcW/kh5" crossorigin="anonymous">
     <link href="/css/cs.css" rel="stylesheet">
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -182,8 +182,8 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="{% if site.environment == "prod" %}//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js{% else %}/js/jquery.js{% endif %}"></script>
-    <script src="{% if site.environment == "prod" %}//maxcdn.bootstrapcdn.com/bootstrap/2.2.2/js/bootstrap.min.js{% else %}/js/bootstrap.min.js{% endif %}"></script>
+    <script src="{% if site.environment == "prod" %}//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js{% else %}/js/jquery.min.js{% endif %}" integrity="sha384-BkWAgv8HDTu8UDLHg8FGQ4Amozh54n6GcgAPw+IrCejmyJcZhgbi6wL5wNh8Rmca" crossorigin="anonymous"></script>
+    <script src="{% if site.environment == "prod" %}//maxcdn.bootstrapcdn.com/bootstrap/2.2.2/js/bootstrap.min.js{% else %}/js/bootstrap.min.js{% endif %}" integrity="sha384-e0kRLAUzZF/GpUULwXoniNHgUSfqSx0Xg5mdnYeD4W3PGOPxsX8j6pPeCGxWp0Ul" crossorigin="anonymous"></script>
     {% if site.environment == "prod" %}
     <script type="text/javascript">
 
