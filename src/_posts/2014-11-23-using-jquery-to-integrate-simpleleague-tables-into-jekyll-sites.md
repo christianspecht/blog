@@ -4,7 +4,7 @@ title: Using jQuery to integrate SimpleLeague tables into Jekyll sites
 date: 2014/11/23 18:41:00
 tags:
 - jekyll
-- jquery
+- web
 - simpleleague
 ---
 
