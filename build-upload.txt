@@ -1,4 +1,5 @@
-option batch abort
+option batch continue
+option reconnecttime off
 option confirm off
 
 open blog
