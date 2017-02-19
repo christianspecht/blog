@@ -26,7 +26,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
     {% if page.noindex %}<meta name="robots" content="noindex">{% endif %}
     <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="{{ site.rss_url }}" />
     <link rel="alternate" type="application/atom+xml" title="Atom 1.0" href="{{ site.atom_url }}" />
-
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
     <!-- Le styles -->
     <link href="{% if site.environment == "prod" %}//maxcdn.bootstrapcdn.com/bootswatch/2.2.2/cosmo/bootstrap.min.css{% else %}/css/bootstrap.min.css{% endif %}" rel="stylesheet" integrity="sha384-hWFyiOm6yfLPdkBIx2OrXIu00ZfDQPcDs/h9BW3TiU5YJx8y3l3BWnRU1nHnHzT3" crossorigin="anonymous">
     <link href="{% if site.environment == "prod" %}//maxcdn.bootstrapcdn.com/bootstrap/2.2.2/css/bootstrap-responsive.min.css{% else %}/css/bootstrap-responsive.min.css{% endif %}" rel="stylesheet" integrity="sha384-DV4R8fXDhaIrZAo7O/9Lk1Mbw6AKv07qQAPZmHicyZhH0nMN988SzOkF+IcW/kh5" crossorigin="anonymous">
