@@ -18,19 +18,19 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    {% if page.redirect %}<meta http-equiv="refresh" content="0; URL={{ page.redirect }}">
+    {% if page.redirect %}<meta http-equiv="refresh" content="0; URL={{ site.url }}{{ page.redirect }}">
     {% endif %}<title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.name }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="{{ site.description }}">
     <meta name="author" content="{{ site.authorname }}">
     {% if page.noindex %}<meta name="robots" content="noindex">{% endif %}
-    <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="{{ site.rss_url }}" />
-    <link rel="alternate" type="application/atom+xml" title="Atom 1.0" href="{{ site.atom_url }}" />
+    <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="{{ site.url }}{{ site.rss_url }}" />
+    <link rel="alternate" type="application/atom+xml" title="Atom 1.0" href="{{ site.url }}{{ site.atom_url }}" />
     <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
     <!-- Le styles -->
-    <link href="{% if site.environment == "prod" %}//maxcdn.bootstrapcdn.com/bootswatch/2.2.2/cosmo/bootstrap.min.css{% else %}/css/bootstrap.min.css{% endif %}" rel="stylesheet" integrity="sha384-hWFyiOm6yfLPdkBIx2OrXIu00ZfDQPcDs/h9BW3TiU5YJx8y3l3BWnRU1nHnHzT3" crossorigin="anonymous">
-    <link href="{% if site.environment == "prod" %}//maxcdn.bootstrapcdn.com/bootstrap/2.2.2/css/bootstrap-responsive.min.css{% else %}/css/bootstrap-responsive.min.css{% endif %}" rel="stylesheet" integrity="sha384-DV4R8fXDhaIrZAo7O/9Lk1Mbw6AKv07qQAPZmHicyZhH0nMN988SzOkF+IcW/kh5" crossorigin="anonymous">
-    <link href="/css/cs.css" rel="stylesheet">
+    <link href="{% if site.environment == "prod" %}//maxcdn.bootstrapcdn.com/bootswatch/2.2.2/cosmo/bootstrap.min.css{% else %}{{ site.url }}/css/bootstrap.min.css{% endif %}" rel="stylesheet" integrity="sha384-hWFyiOm6yfLPdkBIx2OrXIu00ZfDQPcDs/h9BW3TiU5YJx8y3l3BWnRU1nHnHzT3" crossorigin="anonymous">
+    <link href="{% if site.environment == "prod" %}//maxcdn.bootstrapcdn.com/bootstrap/2.2.2/css/bootstrap-responsive.min.css{% else %}{{ site.url }}/css/bootstrap-responsive.min.css{% endif %}" rel="stylesheet" integrity="sha384-DV4R8fXDhaIrZAo7O/9Lk1Mbw6AKv07qQAPZmHicyZhH0nMN988SzOkF+IcW/kh5" crossorigin="anonymous">
+    <link href="{{ site.url }}/css/cs.css" rel="stylesheet">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -43,7 +43,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ site.gravatar_url }}114">
       <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ site.gravatar_url }}72">
                     <link rel="apple-touch-icon-precomposed" href="{{ site.gravatar_url }}57">
-                                   <link rel="shortcut icon" href="/favicon.ico">
+                                   <link rel="shortcut icon" href="{{ site.url }}/favicon.ico">
   </head>
 
   <body>
@@ -56,13 +56,13 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="/">{{ site.name }}</a>
+          <a class="brand" href="{{ site.url }}/">{{ site.name }}</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li><a href="/"><i class="fa fa-home"></i> Home</a></li>
-              <li><a href="/projects/"><i class="fa fa-wrench"></i> Projects</a></li>
-              <li><a href="/archive/"><i class="fa fa-calendar"></i> Archive</a></li>
-              <li><a href="/feed/"><i class="fa fa-rss"></i> Feed</a></li>
+              <li><a href="{{ site.url }}/"><i class="fa fa-home"></i> Home</a></li>
+              <li><a href="{{ site.url }}/projects/"><i class="fa fa-wrench"></i> Projects</a></li>
+              <li><a href="{{ site.url }}/archive/"><i class="fa fa-calendar"></i> Archive</a></li>
+              <li><a href="{{ site.url }}/feed/"><i class="fa fa-rss"></i> Feed</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -87,7 +87,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
                 <div class="media-body">
                   <small>
                     <a href="https://stackoverflow.com/cv/christianspecht" target="_blank">CV</a><br>
-                    <a href="/imprint/">Contact</a>
+                    <a href="{{ site.url }}/imprint/">Contact</a>
                   </small>
                 </div>
               </li>
@@ -124,7 +124,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
             <ul class="nav nav-list">
               <li class="nav-header">Recent Posts</li>
               {% for post in site.posts limit: 5 %}
-              <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+              <li><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></li>
               {% endfor %}
             </ul>
           </div><!--/.well -->
@@ -137,7 +137,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
                   {% assign prevyear = post.previous.date | date: "%Y" %}
                   {% assign counter = counter | plus: 1 %}
                   {% if thisyear != prevyear %}
-                    <li><a href="/archive/#{{ post.date | date:"%Y" }}">{{ thisyear }} ({{ counter }})</a></li>
+                    <li><a href="{{ site.url }}/archive/#{{ post.date | date:"%Y" }}">{{ thisyear }} ({{ counter }})</a></li>
                     {% assign counter = 0 %}
                   {% endif %}
                 {% endfor %}
@@ -154,7 +154,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
                 {% assign sortedtags = tags | split:' ' | sort %}
                 {% for tag in sortedtags %}
                     {% assign tagitems = tag | split: '#' %}
-                    <li><a href="/tags/#{{ tagitems[0] }}">{{ tagitems[0] }} ({{ tagitems[1] }})</a></li>
+                    <li><a href="{{ site.url }}/tags/#{{ tagitems[0] }}">{{ tagitems[0] }} ({{ tagitems[1] }})</a></li>
                 {% endfor %}
             </ul>
           </div><!--/.well -->
@@ -170,7 +170,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
                     Copyright 2012-{{ site.time | date: "%Y" }}
                     {{ site.authorname}}
                     <br/>
-                    <a href="/imprint/">Imprint / Impressum und Datenschutzhinweis</a>
+                    <a href="{{ site.url }}/imprint/">Imprint / Impressum und Datenschutzhinweis</a>
                 </p>
             </div>
             <div class="span4">
@@ -187,8 +187,8 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="{% if site.environment == "prod" %}//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js{% else %}/js/jquery.min.js{% endif %}" integrity="sha384-BkWAgv8HDTu8UDLHg8FGQ4Amozh54n6GcgAPw+IrCejmyJcZhgbi6wL5wNh8Rmca" crossorigin="anonymous"></script>
-    <script src="{% if site.environment == "prod" %}//maxcdn.bootstrapcdn.com/bootstrap/2.2.2/js/bootstrap.min.js{% else %}/js/bootstrap.min.js{% endif %}" integrity="sha384-e0kRLAUzZF/GpUULwXoniNHgUSfqSx0Xg5mdnYeD4W3PGOPxsX8j6pPeCGxWp0Ul" crossorigin="anonymous"></script>
+    <script src="{% if site.environment == "prod" %}//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js{% else %}{{ site.url }}/js/jquery.min.js{% endif %}" integrity="sha384-BkWAgv8HDTu8UDLHg8FGQ4Amozh54n6GcgAPw+IrCejmyJcZhgbi6wL5wNh8Rmca" crossorigin="anonymous"></script>
+    <script src="{% if site.environment == "prod" %}//maxcdn.bootstrapcdn.com/bootstrap/2.2.2/js/bootstrap.min.js{% else %}{{ site.url }}/js/bootstrap.min.js{% endif %}" integrity="sha384-e0kRLAUzZF/GpUULwXoniNHgUSfqSx0Xg5mdnYeD4W3PGOPxsX8j6pPeCGxWp0Ul" crossorigin="anonymous"></script>
     {% if site.environment == "prod" %}
     <script type="text/javascript">
 
