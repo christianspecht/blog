@@ -3,3 +3,21 @@ RewriteBase /
 RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
 RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
 ErrorDocument 404 /404/index.html
+
+# Caching
+
+#never
+<filesMatch ".(php)$">
+Header unset Cache-Control
+</filesMatch>
+
+# one hour
+<filesMatch ".(html)$">
+Header set Cache-Control "max-age=3600, public"
+</filesMatch>
+
+# one week
+<filesMatch ".(css|js|png|jpg|ico|svg)$">
+Header set Cache-Control "max-age=604800, public"
+</filesMatch>
+
