@@ -131,31 +131,29 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
               <li class="nav-header">Archives</li>
-                {% assign counter = 0 %}
-                {% for post in site.posts %}
-                  {% assign thisyear = post.date | date: "%Y" %}
-                  {% assign prevyear = post.previous.date | date: "%Y" %}
-                  {% assign counter = counter | plus: 1 %}
-                  {% if thisyear != prevyear %}
+{% assign counter = 0 %}
+{% for post in site.posts %}
+{% assign thisyear = post.date | date: "%Y" %}{% assign prevyear = post.previous.date | date: "%Y" %}{% assign counter = counter | plus: 1 %}
+{% if thisyear != prevyear %}
                     <li><a href="/archive/#{{ post.date | date:"%Y" }}">{{ thisyear }} ({{ counter }})</a></li>
-                    {% assign counter = 0 %}
-                  {% endif %}
-                {% endfor %}
+{% assign counter = 0 %}
+{% endif %}
+{% endfor %}
             </ul>
           </div><!--/.well -->
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
               <li class="nav-header">Tags</li>
-                {% capture tags %}
-                  {% for tag in site.tags %}
-                    {{ tag[0] }}#{{ tag[1].size}}
-                  {% endfor %}
-                {% endcapture %}
-                {% assign sortedtags = tags | split:' ' | sort %}
-                {% for tag in sortedtags %}
-                    {% assign tagitems = tag | split: '#' %}
+{% capture tags %}
+  {% for tag in site.tags %}
+    {{ tag[0] }}#{{ tag[1].size}}
+  {% endfor %}
+{% endcapture %}
+{% assign sortedtags = tags | split:' ' | sort %}
+{% for tag in sortedtags %}
+    {% assign tagitems = tag | split: '#' %}
                     <li><a href="/tags/#{{ tagitems[0] }}">{{ tagitems[0] }} ({{ tagitems[1] }})</a></li>
-                {% endfor %}
+{% endfor %}
             </ul>
           </div><!--/.well -->
         </div><!--/span-->
