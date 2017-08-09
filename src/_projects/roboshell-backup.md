@@ -5,7 +5,7 @@ site: /roboshell-backup/
 logo: /php/cache/img/roboshell-backup-logo128x128.png
 desc: A simple personal backup tool, using RoboCopy and written in Windows Powershell
 sidebar: 1
-featured: 1
+featured: 0
 ---
 
 #### What I needed:
@@ -16,4 +16,4 @@ Convert existing batch files for [Robocopy](http://en.wikipedia.org/wiki/Robocop
 
 - [Windows PowerShell](http://en.wikipedia.org/wiki/Windows_PowerShell) basics
 - [Building a setup with WiX](http://wixtoolset.org/)
-- Using [TrueCrypt](http://en.wikipedia.org/wiki/TrueCrypt) and [integrating it into RoboShell Backup](/2012/04/30/roboshell-backup-1-1-now-with-truecrypt-integration/)
+- Using [TrueCrypt](http://en.wikipedia.org/wiki/TrueCrypt) and [integrating it into RoboShell Backup]({% post_url 2012-04-30-roboshell-backup-1-1-now-with-truecrypt-integration %})

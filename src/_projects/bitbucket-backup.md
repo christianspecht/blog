@@ -14,7 +14,7 @@ Automate creating local backups of all my private and public [Bitbucket](https:/
 
 #### What I learned:
 
-- Calling [Bitbucket's API](https://api.bitbucket.org/) with [RestSharp](http://restsharp.org/) and [Json.NET](http://json.codeplex.com/)
+- Calling [Bitbucket's API](https://api.bitbucket.org/) with [RestSharp](http://restsharp.org/) and [Json.NET](http://www.newtonsoft.com/json)
 - Cloning/pulling [Mercurial](https://www.mercurial-scm.org/) and [Git](http://git-scm.com/) repositories with C#
 - Dependency Injection with [Ninject](http://ninject.org/)
 - Setting assembly version from build script with [MSBuild Community Tasks](https://github.com/loresoft/msbuildtasks)
