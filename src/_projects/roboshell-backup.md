@@ -8,11 +8,11 @@ sidebar: 1
 featured: 0
 ---
 
-#### What I needed:
+**What I needed:**
 
 Convert existing batch files for [Robocopy](http://en.wikipedia.org/wiki/Robocopy) backups (*computer→NAS* and *NAS→USB disk*) to a more comfortable tool, with all settings in a config file.
 
-#### What I learned:
+**What I learned:**
 
 - [Windows PowerShell](http://en.wikipedia.org/wiki/Windows_PowerShell) basics
 - [Building a setup with WiX](http://wixtoolset.org/)

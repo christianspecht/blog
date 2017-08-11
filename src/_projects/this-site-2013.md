@@ -7,11 +7,11 @@ sidebar: 0
 featured: 0
 ---
 
-#### What I needed:
+**What I needed:**
 
 Migrate existing WordPress site/blog to a static site generator *(I decided to use [Blogofile](http://blogofile.com/) first, later switched to [Jekyll](http://jekyllrb.com/))*.
 
-#### What I learned:
+**What I learned:**
 
 - [Setting up a new site with Blogofile]({% post_url 2013-01-29-switched-from-wordpress-to-blogofile %}), and later [converting it to Jekyll]({% post_url 2013-12-31-hello-jekyll %}) *(source code [here](https://bitbucket.org/christianspecht/blog))*
 - Creating a responsive HTML template with [Bootstrap](http://getbootstrap.com/)

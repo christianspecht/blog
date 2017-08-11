@@ -8,11 +8,11 @@ sidebar: 1
 featured: 1
 ---
 
-#### What I needed:
+**What I needed:**
 
 Send commands to an [USB Missile Launcher](http://www.dreamcheeky.com/thunder-missile-launcher) from my own code, without using the control software that came with it.
 
-#### What I learned:
+**What I learned:**
 
 - Communicating with an USB device with [Hid Library](https://github.com/mikeobrien/HidLibrary)
 - Building a WPF app *(the [MissileSharp Launcher](/missilesharp/#launcher))* with MVVM and [MahApps.Metro](http://mahapps.com/MahApps.Metro/)

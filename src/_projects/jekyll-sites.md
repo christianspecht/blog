@@ -7,12 +7,12 @@ sidebar: 0
 featured: 0
 ---
 
-#### What I needed:
+**What I needed:**
 
 Convert one site *(originally built with a CMS)* to [Jekyll](http://jekyllrb.com/) and create another one from scratch.  
 *(Both sites and their source code are private, but I wrote multiple blog posts about what I did with Jekyll, <u>all without using plugins</u>)*
 
-#### What I learned:
+**What I learned:**
 
 - Generating image galleries ([first approach]({% post_url 2014-03-08-generating-an-image-gallery-with-jekyll-and-lightbox2 %}) / [second approach]({% post_url 2014-08-22-jekyll-lightbox2-image-gallery-another-approach %}))
 - [Building a dynamic tree menu]({% post_url 2014-06-13-building-a-pseudo-dynamic-tree-menu-with-jekyll %}) and [showing all menu items at once on a single page]({% post_url 2016-10-09-jekyll-dynamic-tree-menu-show-the-whole-menu-at-once %})

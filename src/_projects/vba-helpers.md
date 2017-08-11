@@ -8,10 +8,10 @@ sidebar: 1
 featured: 0
 ---
 
-#### What I needed:
+**What I needed:**
 
 A reusable library of VBA helper functions, to avoid having slight variations of the same functions duplicated across several projects.
 
-#### What I learned:
+**What I learned:**
 
 - Unit testing in VBA with [AccUnit](http://accunit.access-codelib.net) and [SimplyVBUnit](http://sourceforge.net/projects/simplyvbunit/)

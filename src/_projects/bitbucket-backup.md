@@ -8,11 +8,11 @@ sidebar: 1
 featured: 1
 ---
 
-#### What I needed:
+**What I needed:**
 
 Automate creating local backups of all my private and public [Bitbucket](https://bitbucket.org) repositories, running without user interaction after being set up once.
 
-#### What I learned:
+**What I learned:**
 
 - Calling [Bitbucket's API](https://api.bitbucket.org/) with [RestSharp](http://restsharp.org/) and [Json.NET](http://www.newtonsoft.com/json)
 - Cloning/pulling [Mercurial](https://www.mercurial-scm.org/) and [Git](http://git-scm.com/) repositories with C#

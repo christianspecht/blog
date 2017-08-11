@@ -8,11 +8,11 @@ sidebar: 1
 featured: 1
 ---
 
-#### What I needed:
+**What I needed:**
 
 Insert database-driven HTML tables with results and rankings into an existing site created with a CMS *(in a minimalistic way, i.e. without creating a full-blown plugin for the CMS)*
 
-#### What I learned:
+**What I learned:**
 
 - Modern/object-oriented [PHP](http://php.net/) *(the last time I used PHP was nearly 10 years ago)*
 - Loading data from a [MySQL](http://www.mysql.com/) database with [PDO](http://php.net/manual/en/book.pdo.php)

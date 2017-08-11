@@ -8,11 +8,11 @@ sidebar: 1
 featured: 0
 ---
 
-#### What I needed:
+**What I needed:**
 
 Convert .NET POCOs into `ADODB.Recordsets`, in order to gradually migrate existing MS Access applications to .NET *(Access client needs to read data coming from .NET)*.
 
-#### What I learned:
+**What I learned:**
 
 - Reflection basics
 - Writing unit tests with [xUnit.net](https://xunit.github.io/)
