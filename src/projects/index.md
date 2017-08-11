@@ -1,6 +1,7 @@
 ---
 layout: default 
 title: Projects
+permalink: /projects/index.html
 ---
 
 <h1>{{ page.title }}</h1>
