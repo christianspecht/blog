@@ -1,6 +1,7 @@
 ---
 layout: default 
 title: Projects
+permalink: /projects/index.html
 ---
 
 <h1>{{ page.title }}</h1>
@@ -16,7 +17,8 @@ Here is everything I created so far, in reverse chronologial order (newest first
 <div class="row spacer25"></div>
 
 <div class="container">
-{% for project in site.data.projects %}
+{% assign projects = site.projects | sort: 'order' | reverse %}
+{% for project in projects %}
 {% assign loopindex = forloop.index | modulo:2 %}
 {% if loopindex == 1 %}
     <div class="row">

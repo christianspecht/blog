@@ -9,10 +9,10 @@ layout: default
           <h3 id="projects">Featured Projects:</h3>
 
           <div class="row">
-{% assign projects = site.data.projects | where: 'featured', 1 %}
+{% assign projects = site.projects | where: 'featured', 1 | sort: 'order' | reverse %}
 {% for project in projects limit: 3 %}
             <div class="span3">
-              <h4><a href="{{ project.url }}"><img src="{{ project.logo }}" width="64" height="64" /> {{ project.name }}</a></h4>
+              <h4><a href="{{ project.site }}"><img src="{{ project.logo }}" width="64" height="64" /> {{ project.name }}</a></h4>
               <p>{{ project.desc }}</p>
             </div><!--/span-->
             <div class="row visible-phone spacer25"></div>
