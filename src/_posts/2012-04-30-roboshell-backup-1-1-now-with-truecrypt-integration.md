@@ -19,6 +19,15 @@ tags: [backup, roboshell-backup, truecrypt]
 
 ---
 
+> ### Second Update (Jan 07 2017):
+>
+> **RoboShell Backup now supports encryption via [VeraCrypt](https://en.wikipedia.org/wiki/VeraCrypt) as well.  
+> VeraCrypt is a fork of the last TrueCrypt version with additional security fixes.**
+>
+> **[Read the updated instructions for VeraCrypt]({% post_url 2018-01-07-veracrypt-integration-for-roboshell-backup %}).**
+
+---
+
 I just published [RoboShell Backup](/roboshell-backup/) 1.1.  
 Apart from minor and cosmetical changes (nicer-looking setup, more documentation), there is one "big" new feature:
 RoboShell Backup now supports writing to USB drives encrypted with [TrueCrypt](http://www.truecrypt.org/).
