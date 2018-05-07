@@ -5,7 +5,6 @@ layout: null
 # www.google.com/support/webmasters/bin/answer.py?hl=en&answer=156449
 
 User-agent: *
-Disallow: /imprint/
 Disallow: /php/
 Allow: /php/cache/img/
 Sitemap: {{ site.url }}/sitemap.xml
