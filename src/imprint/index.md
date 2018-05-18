@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Imprint / Impressum und Datenschutzhinweis
+title: Imprint / Impressum
 noindex: 1
 ---
 
