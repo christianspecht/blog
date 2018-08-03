@@ -11,7 +11,7 @@ featured: 1
 **What I needed:**
 
 An improved version of [Bitbucket Backup](/bitbucket-backup/), a previous tool of mine.  
-Bitbucket Backup supports Bitbucket only, and I needed something to backup my GitHub repos. There were some more reasons, all of them together made me decide to start a new project from scratch.
+Bitbucket Backup supports Bitbucket only, and I needed something to backup my GitHub repos. [There were some more reasons]({% post_url 2018-08-01-goodbye-bitbucket-backup-hello-scm-backup %}), all of them together made me decide to start a new project from scratch.
 
 **What I learned:**
 
