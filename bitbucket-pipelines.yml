@@ -1,0 +1,20 @@
+options:
+  max-time: 4
+pipelines:
+  default:
+    - step:
+        name: Jekyll Build
+        image: jekyll/builder:3.2.1
+        script:
+            - chmod +x ci-build.sh
+            - ./ci-build.sh
+        artifacts:
+          - build/**
+    - step:
+        name: Deploy
+        deployment: production
+        image: alpine
+        script:
+            - apk update && apk add openssh rsync
+            - rsync -rSlh --stats build/ $user_host:$webpath/tar
+            - ssh -o StrictHostKeyChecking=yes $user_host 'bash -s' -- < ci-deploy.sh $webpath
