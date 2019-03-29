@@ -5,7 +5,7 @@ date: 2014/08/22 22:43:00
 tags:
 - jekyll
 - web
-codeproject: 1
+externalfeeds: 1
 ---
 
 In one of my recent posts, I showed [how to build an image gallery with Jekyll and Lightbox2]({% post_url 2014-03-08-generating-an-image-gallery-with-jekyll-and-lightbox2 %}).

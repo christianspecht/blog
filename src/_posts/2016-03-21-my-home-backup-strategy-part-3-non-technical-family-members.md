@@ -5,7 +5,7 @@ date: 2016/03/21 19:48:00
 tags:
 - backup
 - command-line
-codeproject: 1
+externalfeeds: 1
 ---
 
 I'm the only person in my extended family who works in IT, so I'm obviously "good with computers"...which means I'm implicitly responsible for other people's computers as well.  

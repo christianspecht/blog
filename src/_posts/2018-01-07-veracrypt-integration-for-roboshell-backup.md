@@ -5,7 +5,7 @@ date: 2018/01/07 16:25:00
 tags:
 - backup
 - roboshell-backup
-codeproject: 0
+externalfeeds: 0
 ---
 
 Before TrueCrypt development ceased in 2014, I [added support for TrueCrypt encryption]({% post_url 2012-04-30-roboshell-backup-1-1-now-with-truecrypt-integration %}) to [RoboShell Backup](/roboshell-backup/).  

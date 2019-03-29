@@ -6,7 +6,7 @@ tags:
 - jekyll
 - php
 - web
-codeproject: 1
+externalfeeds: 1
 ---
 
 Why this combination?  

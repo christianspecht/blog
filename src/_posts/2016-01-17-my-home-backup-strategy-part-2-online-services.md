@@ -7,7 +7,7 @@ tags:
 - bitbucket-backup
 - roboshell-backup
 - source-control
-codeproject: 1
+externalfeeds: 1
 ---
 
 In the [first part of this post]({% post_url 2015-11-01-my-home-backup-strategy-part-1-the-basics %}), I described my basic home backup strategy, i.e. how I'm making backups of the important data on all computers, smartphones and other devices at home.

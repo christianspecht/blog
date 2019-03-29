@@ -5,7 +5,7 @@ date: 2017/08/18 15:23:00
 tags:
 - command-line
 - source-control
-codeproject: 1
+externalfeeds: 1
 ---
 
 For my [current hobby project](http://scm-backup.org), I'm using Git and GitHub regularly for the first time.

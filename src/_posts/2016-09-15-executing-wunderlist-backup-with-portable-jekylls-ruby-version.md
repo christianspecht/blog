@@ -6,7 +6,7 @@ tags:
 - backup
 - jekyll
 - ruby
-codeproject: 1
+externalfeeds: 1
 ---
 
 Just a few months ago,  I posted [the last part of my "backup" series]({% post_url 2016-03-21-my-home-backup-strategy-part-3-non-technical-family-members %}). At the bottom I mentioned that I'm evaluating [Wunderlist](https://www.wunderlist.com) and that I need to take backups of it, should I really use it.

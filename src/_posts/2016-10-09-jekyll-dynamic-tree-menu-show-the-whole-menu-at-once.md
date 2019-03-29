@@ -4,7 +4,7 @@ title: "Jekyll dynamic tree menu: show the whole menu at once"
 date: 2016/10/09 17:14:00
 tags:
 - jekyll
-codeproject: 1
+externalfeeds: 1
 ---
 
 Over two years ago, I wrote a blog post about [building a dynamic tree menu with Jekyll]({% post_url 2014-06-13-building-a-pseudo-dynamic-tree-menu-with-jekyll %}).

@@ -5,7 +5,7 @@ date: 2017/11/29 18:03:00
 tags:
 - .net
 - visual-studio
-codeproject: 1
+externalfeeds: 1
 ---
 
 When you're starting a project using a technology which is still in alpha/beta status, sometimes things break.  
