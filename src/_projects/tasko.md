@@ -4,7 +4,7 @@ name: Tasko
 site: /tasko/
 logo: /php/cache/img/tasko-logo128x128.png
 desc: Simple to-do list app for your own server (with Android client)
-sidebar: 1
+sidebar: 0
 featured: 0
 ---
 
