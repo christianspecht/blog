@@ -20,3 +20,4 @@ An informational website for an annual garage sale in my home town. Requirements
 - Building a static [Jekyll](http://jekyllrb.com/) site with dynamic PHP parts, and [running it locally under XAMPP]({% post_url 2017-10-04-running-a-combined-jekyll-php-site-on-xampp %})
 - [Implementing](https://stackoverflow.com/a/44202971/6884) and [troubleshooting](https://stackoverflow.com/a/43955343/6884) a PayPal "Pay now" button
 - Creating files for the Google map *(based on [this one]({% post_url 2015-01-22-creating-a-holiday-map-in-google-maps %}))* and the address list with [Mustache.php](https://github.com/bobthecow/mustache.php)
+- Creating [a map for printing with custom map tiles]({% post_url 2019-08-29-creating-a-map-with-markers-for-printing-with-bigger-fonts %}) with [OpenLayers](https://openlayers.org/) and [Maperitive](http://maperitive.net/)
