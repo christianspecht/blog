@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Creating a map with markers for printing...with bigger fonts!"
-date: 2019/08/29 21:00:00 +02:00:00
+date: 2019/08/29 21:00:00
 tags:
 - command-line
 - maps

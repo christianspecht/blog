@@ -3,6 +3,7 @@ destination: _site
 source: src
 permalink: pretty
 markdown: kramdown
+timezone: "Europe/Berlin"
 
 # Blog settings
 name: Christian Specht
