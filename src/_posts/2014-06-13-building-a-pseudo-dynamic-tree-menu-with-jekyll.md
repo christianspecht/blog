@@ -307,5 +307,5 @@ I'm not sure if this is the best solution SEO-wise, but it's good enough for me 
 
 ## Example code
 
-You can find a complete code example [on Bitbucket](https://bitbucket.org/christianspecht/code-examples/src/tip/jekyll-dynamic-menu/).  
+You can find a complete code example [on Bitbucket](https://github.com/christianspecht/code-examples/tree/master/jekyll-dynamic-menu).  
 Usually I would ignore the folder with the generated site, but in this case I committed it as well, so you can see the result without having to build first.

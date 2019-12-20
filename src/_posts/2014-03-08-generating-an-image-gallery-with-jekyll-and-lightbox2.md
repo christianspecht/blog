@@ -22,7 +22,7 @@ With FancyBox, I had some problems with the relative paths to the "helper images
 
 The actual site for which I created this gallery is private (as well as its source code), so I can't show it here.  
 Instead, I built a small example site *(with Jekyll's standard template and the [example images that come with Lightbox2](http://lokeshdhakar.com/projects/lightbox2/#examples))* and put the source code on Bitbucket.  
-You can view [the source code here](https://bitbucket.org/christianspecht/code-examples/src/tip/jekyll-gallery-example/) and [the finished site here](http://jekyll-gallery-example.christianspecht.de/galleries/).
+You can view [the source code here](https://github.com/christianspecht/code-examples/tree/master/jekyll-gallery-example) and [the finished site here](http://jekyll-gallery-example.christianspecht.de/galleries/).
 
 ---
 
@@ -31,7 +31,7 @@ You can view [the source code here](https://bitbucket.org/christianspecht/code-e
 First, I created one [data file](http://jekyllrb.com/docs/datafiles/) to hold all images of all image galleries.  
 In my first draft I had one data file per gallery, but in the end I went with *one* single file for everything, because that makes it easier to display a list of all available galleries.
 
-[My data file](https://bitbucket.org/christianspecht/code-examples/src/tip/jekyll-gallery-example/_data/galleries.yml) looks like this:
+[My data file](https://github.com/christianspecht/code-examples/blob/master/jekyll-gallery-example/_data/galleries.yml) looks like this:
 
 	- id: gallery1
 	  description: This is the first gallery
@@ -73,7 +73,7 @@ Since all galleries are inside the same data file, creating the list of gallerie
 {% endraw %}
 
 This just loops through the list of galleries, displays the `description` value and links to a sub-folder with the name of the `id` value.  
-[The file](https://bitbucket.org/christianspecht/code-examples/raw/tip/jekyll-gallery-example/galleries/index.md) is a Markdown file, so creating the list of links in Markdown is sufficient.
+[The file](https://raw.githubusercontent.com/christianspecht/code-examples/master/jekyll-gallery-example/galleries/index.md) is a Markdown file, so creating the list of links in Markdown is sufficient.
 
 ---
 
@@ -102,7 +102,7 @@ It's still necessary to create a HTML or Markdown file for the actual URL of eac
 - The line `layout: gallery` points to the layout file that I'll explain next, the one that does all the work.
 - The line `galleryid: gallery1` refers to the `id` in the YAML data file, so the layout file knows that it needs to load the pictures of the gallery "gallery1".
 
-This is how the [layout file](https://bitbucket.org/christianspecht/code-examples/src/tip/jekyll-gallery-example/_layouts/gallery.html) looks like:
+This is how the [layout file](https://github.com/christianspecht/code-examples/blob/master/jekyll-gallery-example/_layouts/gallery.html) looks like:
 
 {% raw %}
 	---
@@ -141,7 +141,7 @@ Then, it loops through the images in the gallery and creates the necessary "Ligh
 
 ### The result
 
-In the end, this gallery *(from the first part of the [data file](https://bitbucket.org/christianspecht/code-examples/src/tip/jekyll-gallery-example/_data/galleries.yml))*:
+In the end, this gallery *(from the first part of the [data file](https://github.com/christianspecht/code-examples/blob/master/jekyll-gallery-example/_data/galleries.yml))*:
 
 	- id: gallery1
 	  description: This is the first gallery
@@ -191,10 +191,10 @@ In the end, this gallery *(from the first part of the [data file](https://bitbuc
 
 Now that all the plumbing is done, adding a new gallery page is very simple:
 
-- [Add a new gallery with a list of images to the YAML data file](https://bitbucket.org/christianspecht/code-examples/commits/d2e8838fbf8de9d72c6f7dbc5a7320be2acb337c#chg-jekyll-gallery-example/src/_data/galleries.yml)
-- [Create a new index page with minimal YAML front-matter for the new gallery](https://bitbucket.org/christianspecht/code-examples/src/tip/jekyll-gallery-example/galleries/anothergallery/index.html)
+- [Add a new gallery with a list of images to the YAML data file](https://github.com/christianspecht/code-examples/commit/3f1c3e391aa020e25074e0fba26e252d77d42372#diff-dd1ef69ddaa136c1c3248bce618e1bb2)
+- [Create a new index page with minimal YAML front-matter for the new gallery](https://github.com/christianspecht/code-examples/blob/master/jekyll-gallery-example/galleries/anothergallery/index.html)
 - Add new images  
-  *(note: in the commit linked above, I didn't add any images because they were already there, as I [committed them together with the Lightbox2 download](https://bitbucket.org/christianspecht/code-examples/commits/546861b353037b4c149ff31373fe49f2ef027155), where they came from)*
+  *(note: in the commit linked above, I didn't add any images because they were already there, as I [committed them together with the Lightbox2 download](https://github.com/christianspecht/code-examples/commit/812f4e2bc6138aa82a0a1b1c27402427d1b5540c), where they came from)*
 
 That's already enough to add [this gallery](http://jekyll-gallery-example.christianspecht.de/galleries/anothergallery/) to [the site](http://jekyll-gallery-example.christianspecht.de/).
 

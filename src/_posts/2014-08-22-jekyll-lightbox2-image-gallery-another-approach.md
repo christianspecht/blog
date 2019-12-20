@@ -10,7 +10,7 @@ codeproject: 1
 
 In one of my recent posts, I showed [how to build an image gallery with Jekyll and Lightbox2]({% post_url 2014-03-08-generating-an-image-gallery-with-jekyll-and-lightbox2 %}).
 
-The gallery featured there consists of [one index page](http://jekyll-gallery-example.christianspecht.de/galleries/) and [multiple](http://jekyll-gallery-example.christianspecht.de/galleries/gallery1/) [subpages](http://jekyll-gallery-example.christianspecht.de/galleries/anothergallery/), and all the content was dynamically generated out of [a YAML data file](https://bitbucket.org/christianspecht/code-examples/src/e2bf82b87bc2f12cf09baea9443b2195b83ffb46/jekyll-gallery-example/_data/galleries.yml?at=default).
+The gallery featured there consists of [one index page](http://jekyll-gallery-example.christianspecht.de/galleries/) and [multiple](http://jekyll-gallery-example.christianspecht.de/galleries/gallery1/) [subpages](http://jekyll-gallery-example.christianspecht.de/galleries/anothergallery/), and all the content was dynamically generated out of [a YAML data file](https://github.com/christianspecht/code-examples/blob/585b93bb34e0fa4c5c7d95f0152f891ebcfb0c12/jekyll-gallery-example/_data/galleries.yml).
 
 Now I'm building another site with Jekyll, and I needed a slightly different kind of image gallery there:
 
@@ -56,7 +56,7 @@ This time, I need **only** jQuery and Lightbox2...in other words, just these thr
 	<script src="/js/lightbox-2.6.min.js"></script>
 	<link href="/css/lightbox.css" rel="stylesheet" />
 
-It doesn't make sense at all to create a special layout file for just these three lines, so I put them into an [include file](https://bitbucket.org/christianspecht/code-examples/src/tip/jekyll-gallery-example/_includes/galheader.html) instead, which I can load with:
+It doesn't make sense at all to create a special layout file for just these three lines, so I put them into an [include file](https://github.com/christianspecht/code-examples/blob/master/jekyll-gallery-example/_includes/galheader.html) instead, which I can load with:
 
 {% raw %}
 	{% include galheader.html %}
@@ -70,7 +70,7 @@ As already mentioned in the introduction, I needed two different "modes" how to 
 0. Display a single image
 0. Display the complete gallery
 
-I'm using [another include file](https://bitbucket.org/christianspecht/code-examples/src/tip/jekyll-gallery-example/_includes/gal.html) for this, with the following code:
+I'm using [another include file](https://github.com/christianspecht/code-examples/blob/master/jekyll-gallery-example/_includes/gal.html) for this, with the following code:
 
 {% raw %}
 
@@ -175,5 +175,5 @@ This will be rendered to the following HTML *(just the part with the galleries)*
 
 ## Example code
 
-A complete example project is [here on Bitbucket](https://bitbucket.org/christianspecht/code-examples/src/tip/jekyll-gallery-example/), and [the finished](http://jekyll-gallery-example.christianspecht.de/gallery-text1/) [gallery pages](http://jekyll-gallery-example.christianspecht.de/gallery-text2/) are online as well, as a part of the example site from the [first blog post]({% post_url 2014-03-08-generating-an-image-gallery-with-jekyll-and-lightbox2 %}).
+A complete example project is [here on Bitbucket](https://github.com/christianspecht/code-examples/tree/master/jekyll-gallery-example), and [the finished](http://jekyll-gallery-example.christianspecht.de/gallery-text1/) [gallery pages](http://jekyll-gallery-example.christianspecht.de/gallery-text2/) are online as well, as a part of the example site from the [first blog post]({% post_url 2014-03-08-generating-an-image-gallery-with-jekyll-and-lightbox2 %}).
 
