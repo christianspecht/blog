@@ -1,6 +1,6 @@
 ---
 layout: projectpage
 title: SimpleLeague
-markdownurl: https://bitbucket.org/christianspecht/simpleleague/raw/tip/readme-full.md
+markdownurl: https://raw.githubusercontent.com/christianspecht/simpleleague/master/readme-full.md
 permalink: /simpleleague/
 ---
