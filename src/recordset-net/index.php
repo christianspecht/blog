@@ -1,6 +1,6 @@
 ---
 layout: projectpage
 title: Recordset.Net
-markdownurl: https://bitbucket.org/christianspecht/recordset.net/raw/tip/readme-full.md
+markdownurl: https://raw.githubusercontent.com/christianspecht/recordset.net/master/readme-full.md
 permalink: /recordset-net/
 ---
