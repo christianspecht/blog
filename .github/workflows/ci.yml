@@ -37,5 +37,5 @@ jobs:
         username: ${{ secrets.USERNAME }}
         key: ${{ secrets.KEY }}
         script: |
-          rsync -rSlh --stats build/ ${{ secrets.USER }}@${{ secrets.HOST }}:${{ secrets.WEBPATH }}/tar
-          ssh -o StrictHostKeyChecking=yes ${{ secrets.USER }}@${{ secrets.HOST }} 'bash -s' -- < ci-deploy.sh ${{ secrets.WEBPATH }}
+          rsync -rSlh --stats build/ ${{ secrets.USERNAME }}@${{ secrets.HOST }}:${{ secrets.WEBPATH }}/tar
+          ssh -o StrictHostKeyChecking=yes ${{ secrets.USERNAME }}@${{ secrets.HOST }} 'bash -s' -- < ci-deploy.sh ${{ secrets.WEBPATH }}
