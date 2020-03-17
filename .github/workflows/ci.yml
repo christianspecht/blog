@@ -30,4 +30,12 @@ jobs:
     - uses: actions/download-artifact@v1
       with:
         name: build
- 
+    - name: Run deploy script
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.KEY }}
+        script: |
+          rsync -rSlh --stats build/ ${{ secrets.USER }}@${{ secrets.HOST }}:${{ secrets.WEBPATH }}/tar
+          ssh -o StrictHostKeyChecking=yes ${{ secrets.USER }}@${{ secrets.HOST }} 'bash -s' -- < ci-deploy.sh ${{ secrets.WEBPATH }}
