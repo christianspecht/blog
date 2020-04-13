@@ -30,15 +30,14 @@ jobs:
     - uses: actions/download-artifact@v1
       with:
         name: build
+    - name: "Prepare SSH key and known hosts"
+      # https://github.com/symfony/cli/issues/227#issuecomment-601680974
+      run: |
+        mkdir -p ~/.ssh
+        echo "${{ secrets.KEY }}" > ~/.ssh/id_rsa
+        chmod 600 ~/.ssh/id_rsa
+        ssh-keyscan ${{ secrets.HOST }} >> ~/.ssh/known_hosts
     - name: Run deploy script
-      uses: appleboy/ssh-action@master
-      with:
-        host: ${{ secrets.HOST }}
-        username: ${{ secrets.USERNAME }}
-        key: ${{ secrets.KEY }}
-        port: ${{ secrets.PORT }}
-        script_stop: true
-        script: |
-          ls -al
-          rsync -rSlh --stats build/ ${{ secrets.USERNAME }}@${{ secrets.HOST }}:${{ secrets.WEBPATH }}/tar
-          ssh -o StrictHostKeyChecking=yes ${{ secrets.USERNAME }}@${{ secrets.HOST }} 'bash -s' -- < ci-deploy.sh ${{ secrets.WEBPATH }}
+      run: |
+        rsync -rSlh --stats build/ ${{ secrets.USERNAME }}@${{ secrets.HOST }}:${{ secrets.WEBPATH }}/tar
+        ssh -o StrictHostKeyChecking=yes ${{ secrets.USERNAME }}@${{ secrets.HOST }} 'bash -s' -- < build/ci-deploy.sh ${{ secrets.WEBPATH }}
