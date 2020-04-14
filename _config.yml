@@ -4,6 +4,7 @@ source: src
 permalink: pretty
 markdown: kramdown
 timezone: "Europe/Berlin"
+commitid: abcdefghijklmn
 
 # Blog settings
 name: Christian Specht
