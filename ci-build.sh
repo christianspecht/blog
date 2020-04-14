@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "commitid: $GITHUB_SHA" > _config-github.yml
+echo "commitid: $1" > _config-github.yml
 jekyll build  --config _config.yml,_config-github.yml
 if [ $? -ne 0 ]
 then
