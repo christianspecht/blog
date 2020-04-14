@@ -5,6 +5,7 @@ permalink: pretty
 markdown: kramdown
 timezone: "Europe/Berlin"
 commitid: abcdefghijklmn
+buildnumber: 123
 
 # Blog settings
 name: Christian Specht
