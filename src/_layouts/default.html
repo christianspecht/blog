@@ -31,7 +31,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
     <link href="/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <link href="/css/bootstrap-responsive.min.css" rel="stylesheet" crossorigin="anonymous">
     <link href="/css/cs.css" rel="stylesheet">
-    <link href="/css/font-awesome.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link {% if site.environment == "dev" %}href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0="{% else %}href="/css/font-awesome.min.css"{% endif %} rel="stylesheet" crossorigin="anonymous">
 
     <!-- Fav and touch icons -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/avatar144.jpeg">
@@ -180,9 +180,9 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="/js/jquery.min.js" crossorigin="anonymous"></script>
-    <script src="/js/bootstrap.min.js" crossorigin="anonymous"></script>
     {% if site.environment == "prod" %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.1/jquery.min.js" integrity="sha256-oTBTRyGdZzzJcxcklCSOVXzo7Mr2WvmVwHydfa7UR10=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.2.2/bootstrap.min.js" integrity="sha256-NMW3sFhkBQMiShGs2eXt16PRHW3RodBenLlxhV55iEk=" crossorigin="anonymous"></script>
     <script type="text/javascript">
 
       var _gaq = _gaq || [];
@@ -198,6 +198,9 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
       })();
 
     </script>
+    {% else %}
+    <script src="/js/jquery.min.js" crossorigin="anonymous"></script>
+    <script src="/js/bootstrap.min.js" crossorigin="anonymous"></script>
     {% endif %}
   </body>
 </html>
