@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "Creating a map with markers for printing...with bigger fonts!"
+title: "Creating custom OpenStreetMap tiles for my own tile server"
 date: 2019/08/29 21:00:00
 tags:
 - command-line
 - maps
 - web
-codeproject: 1
+codeproject: 0
 ---
 
 Once a year, I need to create a printable map with markers.
