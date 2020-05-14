@@ -57,6 +57,7 @@ This was pretty straightforward, except that GH Actions doesn't just let you spe
 
 I didn't want to script the installation of Jekyll on that machine manually, so I googled for examples with the `jekyll/builder` Docker image and found the solution in [GH Actions' starter workflows repository](https://github.com/actions/starter-workflows/blob/8beb802437927d71bbb91605d15491672edf222a/ci/jekyll.yml):
 
+{% raw %}
     steps:
     - uses: actions/checkout@v2
     - name: Build the site in the jekyll/builder container
@@ -64,13 +65,16 @@ I didn't want to script the installation of Jekyll on that machine manually, so 
         docker run \
         -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
         jekyll/builder:latest /bin/bash -c "chmod 777 /srv/jekyll && jekyll build --future"
+{% endraw %}
         
 I just needed to add the call to `ci-build.sh` and select the correct Jekyll version, so I changed the `docker run` lines like this:
 
+{% raw %}
       run: |
         docker run \
         -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
         jekyll/builder:3.2.1 /bin/bash -c "chmod +x ci-build.sh && ./ci-build.sh"
+{% endraw %}
 
 *(note: 3.2.1 is the correct Jekyll version **for me**, because it matches the portable Jekyll version I'm using locally on my Windows machine, see the explanation in [the first post]({% post_url 2020-02-26-setting-up-ci-for-this-site-with-bitbucket-pipelines-and-ssh %}))*
 
@@ -88,6 +92,7 @@ I tried all of them, but couldn't get anything to work, I always got "Host key v
 
 Finally I [found this solution](https://github.com/symfony/cli/issues/227#issuecomment-601680974):
 
+{% raw %}
     - name: "Prepare SSH key and known hosts"
       run: |
         mkdir -p ~/.ssh
@@ -95,9 +100,11 @@ Finally I [found this solution](https://github.com/symfony/cli/issues/227#issuec
         chmod 600 ~/.ssh/id_rsa
         ssh-keyscan github.com >> ~/.ssh/known_hosts
         ssh-keyscan git.eu.s5y.io >> ~/.ssh/known_hosts
+{% endraw %}
 
 I had tried other similar "manual" solutions that saved the key in a file and executed `ssh-keyscan`...but the syntax and/or the commands were always slightly different, and this one did finally work for me. Here are my modified steps based on this:
 
+{% raw %}
     - name: "Prepare SSH key and known hosts"
       run: |
         mkdir -p ~/.ssh
@@ -108,7 +115,8 @@ I had tried other similar "manual" solutions that saved the key in a file and ex
       run: |
         rsync -rSlh --stats build/ ${{ secrets.USERNAME }}@${{ secrets.HOST }}:${{ secrets.WEBPATH }}/tar
         ssh -o StrictHostKeyChecking=yes ${{ secrets.USERNAME }}@${{ secrets.HOST }} 'bash -s' -- < build/ci-deploy.sh ${{ secrets.WEBPATH }}
-        
+{% endraw %}
+
 Of course, some variables must be saved in the repo's secrets (`https://github.com/USER/REPO/settings/secrets`):
 
 ![secrets](/img/gh-actions-secrets.png)
@@ -124,6 +132,7 @@ Of course, some variables must be saved in the repo's secrets (`https://github.c
 
 So that was it - here's [the complete working `ci.yml`](https://github.com/christianspecht/blog/blob/51f41fbdcf5d5a5f12e10e539fce66745c644fae/.github/workflows/ci.yml):
 
+{% raw %}
     name: Jekyll site CI
 
     on:
@@ -165,6 +174,7 @@ So that was it - here's [the complete working `ci.yml`](https://github.com/chris
           run: |
             rsync -rSlh --stats build/ ${{ secrets.USERNAME }}@${{ secrets.HOST }}:${{ secrets.WEBPATH }}/tar
             ssh -o StrictHostKeyChecking=yes ${{ secrets.USERNAME }}@${{ secrets.HOST }} 'bash -s' -- < build/ci-deploy.sh ${{ secrets.WEBPATH }}
+{% endraw %}
 
 ---
 
