@@ -276,7 +276,7 @@ I know this, because I made the same mistake. I just wanted to run a small examp
 What I didn't take into account was the fact that this particular PHP page had YAML front-matter, so it was processed by Jekyll when building the site.
 
 Jekyll replaced `{% raw %}{{planet}}{% endraw %}` by an empty string, because it didn't have a variable named `planet`.  
-When Mustache finally executed, the template "Hello " didn't contain any variables anymore, so Mustache didn't do anything nothing and "Hello " was displayed.
+When Mustache finally executed, the template "Hello " didn't contain any variables anymore, so Mustache didn't do anything and "Hello " was displayed.
 
 This whole problem just goes away when you load the templates at runtime from external files.  
 Because of this, and to be able to render templates with the absolute minimum amount of code possible, I created this helper function:
