@@ -1,27 +1,17 @@
-This is the source code of [christianspecht.de](http://christianspecht.de), built with [Jekyll](http://jekyllrb.com/).
+This is the source code of [christianspecht.de](https://christianspecht.de), built with [Jekyll](https://jekyllrb.com/).
+
+It's mostly a "regular" Jekyll site, but it contains [some PHP parts](https://github.com/christianspecht/blog/tree/master/src/php) ([more details](https://christianspecht.de/2014/11/09/how-to-display-markdown-files-from-other-sites-now-with-caching/)), which is the reason why I'm hosting it on my own webspace instead of Github Pages.
 
 ---
 
-#### How to build
+## How to deploy
 
-Prerequisites *(on Windows)*:
-
-- Ruby >= 1.9.3 and Bundler *(both via [RailsInstaller](http://railsinstaller.org/en))*
-- `bundle update`
-
-Run `build.bat`.  
-This will build the site and run the local server *(the site is at [http://localhost:4000/](http://localhost:4000/))*
+Each push to `master` auto-deploys via [GitHub Actions](https://github.com/christianspecht/blog/actions) ![Jekyll site CI](https://github.com/christianspecht/blog/workflows/Jekyll%20site%20CI/badge.svg)  
+([more on this](https://christianspecht.de/2020/05/03/building-and-deploying-a-jekyll-site-via-github-actions/))
 
 ---
 
-#### How to upload
+## Local build *(on Windows)*
 
-Prerequisites:
+Via `build.bat` - expects a local Jekyll installation, for example [Portable Jekyll](https://github.com/madhur/PortableJekyll)
 
-- WinSCP, portable version ([download](http://winscp.net/eng/download.php))
-
-Run `build-upload.bat`.  
-This will build the site and upload it to the server via FTP.
-
-The script expects the `WinSCP.com` in the parent folder.  
-WinSCP needs to be [pre-configured with a session/site](http://winscp.net/eng/docs/session_configuration#site) named `blog` with the correct server/user/password.

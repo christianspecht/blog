@@ -51,7 +51,7 @@ And the actual page which includes the sitemap:
 	{% endraw %}
 
 
-As a reminder, here's [the data file with the menu items](https://bitbucket.org/christianspecht/code-examples/src/tip/jekyll-dynamic-menu/src/_data/menu.yml?at=default&fileviewer=file-view-default) again:
+As a reminder, here's [the data file with the menu items](https://github.com/christianspecht/code-examples/blob/master/jekyll-dynamic-menu/src/_data/menu.yml) again:
 
 `_data/menu.yml`
 
@@ -95,5 +95,5 @@ All this together will output the following HTML:
 
 ## Complete example code
 
-I already put the example code into [this repository](https://bitbucket.org/christianspecht/code-examples/src/tip/jekyll-dynamic-menu/) when I created the first blog post.  
+I already put the example code into [this repository](https://github.com/christianspecht/code-examples/tree/master/jekyll-dynamic-menu) when I created the first blog post.  
 I just updated it, so this sitemap is in there as well now.

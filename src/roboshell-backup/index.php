@@ -1,6 +1,6 @@
 ---
 layout: projectpage
 title: RoboShell Backup
-markdownurl: https://bitbucket.org/christianspecht/roboshell-backup/raw/tip/readme-full.md
+markdownurl: https://raw.githubusercontent.com/christianspecht/roboshell-backup/master/readme-full.md
 permalink: /roboshell-backup/
 ---

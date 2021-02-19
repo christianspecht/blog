@@ -1,6 +1,6 @@
 ---
 layout: projectpage
 title: Tasko
-markdownurl: https://bitbucket.org/christianspecht/tasko/raw/tip/readme-full.md
+markdownurl: https://raw.githubusercontent.com/christianspecht/tasko/master/readme-full.md
 permalink: /tasko/
 ---
