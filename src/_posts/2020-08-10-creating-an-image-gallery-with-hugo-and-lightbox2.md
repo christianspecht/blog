@@ -5,7 +5,7 @@ date: 2020/08/10 23:00:00
 tags:
 - hugo
 - web
-codeproject: 1
+externalfeeds: 1
 ---
 
 In the last few years, I built multiple static sites with Jekyll. Altogether, I'm happy with Jekyll, but there are a few things that could be better, with the build duration being on top of the list.

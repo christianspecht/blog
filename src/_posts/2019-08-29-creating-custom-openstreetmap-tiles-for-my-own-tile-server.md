@@ -6,7 +6,7 @@ tags:
 - command-line
 - maps
 - web
-codeproject: 0
+externalfeeds: 0
 ---
 
 Once a year, I need to create a printable map with markers.

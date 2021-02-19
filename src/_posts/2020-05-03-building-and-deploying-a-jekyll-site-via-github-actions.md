@@ -6,7 +6,7 @@ tags:
 - ci
 - jekyll
 - ssh
-codeproject: 1
+externalfeeds: 1
 ---
 
 Until now, the source code of my blog was on Bitbucket, and on each commit the site was build with Jekyll and then deployed via `rsync` over SSH to my webspace, all with Bitbucket Pipelines.
