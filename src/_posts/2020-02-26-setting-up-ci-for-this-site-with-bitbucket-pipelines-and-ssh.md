@@ -6,7 +6,7 @@ tags:
 - ci
 - jekyll
 - ssh
-codeproject: 1
+externalfeeds: 1
 ---
 
 After years of executing a "build and upload per FTP" batch on my machine, I now have a [GitHub Pages](https://pages.github.com/)-like experience when updating this site.  

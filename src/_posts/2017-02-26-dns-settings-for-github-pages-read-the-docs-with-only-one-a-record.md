@@ -4,7 +4,7 @@ title: "DNS settings for GitHub Pages/Read the Docs, with only one A record"
 date: 2017/02/26 18:09:00
 tags:
 - web
-codeproject: 1
+externalfeeds: 1
 ---
 
 Recently I set up a new website for [a new project of mine](http://scm-backup.org). I wanted to use [GitHub Pages](https://pages.github.com/) for the website and [Read the Docs](https://readthedocs.org/) for the documentation, both with the same custom domain *(and a subdomain of that custom domain)*:

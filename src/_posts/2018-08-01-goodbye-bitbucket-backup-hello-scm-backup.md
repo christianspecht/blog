@@ -6,7 +6,7 @@ tags:
 - backup
 - bitbucket-backup
 - source-control
-codeproject: 0
+externalfeeds: 0
 ---
 
 Almost 7 years after the first public release, I'm retiring my most successful open source project so far:  

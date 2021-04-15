@@ -6,7 +6,7 @@ tags:
 - command-line
 - source-control
 - ssh
-codeproject: 1
+externalfeeds: 1
 ---
 
 For my [current hobby project](http://scm-backup.org), I'm using Git and GitHub regularly for the first time.

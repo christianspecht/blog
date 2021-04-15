@@ -5,7 +5,7 @@ date: 2016/06/14 19:43:00
 tags:
 - ms-office
 - vba
-codeproject: 1
+externalfeeds: 1
 ---
 
 If you ever used a `MsgBox` in a Microsoft Access application, you probably noticed that it always says "Microsoft Access" in the title bar by default:
