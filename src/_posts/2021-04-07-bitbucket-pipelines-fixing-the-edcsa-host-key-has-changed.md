@@ -6,7 +6,7 @@ tags:
 - ci
 - ssh
 - wtf
-codeproject: 1
+externalfeeds: 1
 ---
 
 I recently pushed to a Bitbucket repository and expected Bitbucket Pipelines [to deploy the site via SSH/rsync to my webserver]({% post_url 2020-02-26-setting-up-ci-for-this-site-with-bitbucket-pipelines-and-ssh %}).
