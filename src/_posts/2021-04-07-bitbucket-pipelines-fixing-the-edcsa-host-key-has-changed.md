@@ -46,7 +46,7 @@ This sounded scary at first, but made sense after some thinking.
 This project isn't deployed to *The Cloud™*, but to some old-fashioned webspace on shared hosting.  
 And it isn't changed often, so the last push (with successful pipeline run!) was about a year ago.  
 
-I vaguely remember that in the meantime, I revceived a maintenance info mail by my provider, announcing that they will move my account *(and probably others on the same server)* to a newer, faster server.  
+I vaguely remember that in the meantime, I received a maintenance info mail by my provider, announcing that they will move my account *(and probably others on the same server)* to a newer, faster server.  
 That would explain why the key **and** the IP address changed at the same time.
 
 ---
