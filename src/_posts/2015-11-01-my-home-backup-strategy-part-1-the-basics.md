@@ -81,7 +81,7 @@ Even though I'm trying to save as much data as possible directly on the NAS, the
 In the beginning, I had batch files with a lot of `robocopy %source% %destination% *.* /mir /xxx /yyy /zzz` calls. But when the number of folders per machine increased, I started to look for a tool where I just could paste the new folder into a config file, without having to copy the whole RoboCopy call and getting all the parameters right.
 
 I didn't find anything like that, so I wrote my own: [RoboShell Backup](http://christianspecht.de/roboshell-backup).  
-It's a [PowerShell](http://en.wikipedia.org/wiki/Windows_PowerShell) script which basically loads [a list of folders from a config file](https://bitbucket.org/christianspecht/roboshell-backup/src/2d5dedf191593b1b84f33c045c45070ae6a36048/src/Config.xml?at=default&fileviewer=file-view-default#Config.xml-28) and copies each of them to a backup folder on a certain drive letter, which can be specified in the config file a well.
+It's a [PowerShell](http://en.wikipedia.org/wiki/Windows_PowerShell) script which basically loads [a list of folders from a config file](https://github.com/christianspecht/roboshell-backup/blob/ea03a2dbd8501406facb8ee08b7a67945c1924f0/src/Config.xml#L28) and copies each of them to a backup folder on a certain drive letter, which can be specified in the config file a well.
 
 For example, here's the important part of the config file from the machine where I'm writing this:
 
@@ -145,9 +145,9 @@ I won't go into detail here how to set it up, you can read the documentation on 
 Here's the short version of what it does. You need to:
 
 0. Connect the USB drive to any of the machines which has RoboShell Backup installed
-0. Run [`NasToUsb.bat`](https://bitbucket.org/christianspecht/roboshell-backup/src/2d5dedf191593b1b84f33c045c45070ae6a36048/src/NasToUsb.bat?at=default&fileviewer=file-view-default) on that machine
+0. Run [`NasToUsb.bat`](https://github.com/christianspecht/roboshell-backup/blob/ea03a2dbd8501406facb8ee08b7a67945c1924f0/src/NasToUsb.bat) on that machine
 
-RoboShell Backup will know the drive letters of the NAS and the USB drives from its [config file](https://bitbucket.org/christianspecht/roboshell-backup/src/2d5dedf191593b1b84f33c045c45070ae6a36048/src/Config.xml?at=default&fileviewer=file-view-default), and start mirroring the whole NAS to that drive via RoboCopy.
+RoboShell Backup will know the drive letters of the NAS and the USB drives from its [config file](https://github.com/christianspecht/roboshell-backup/blob/ea03a2dbd8501406facb8ee08b7a67945c1924f0/src/Config.xml), and start mirroring the whole NAS to that drive via RoboCopy.
 
 It's also possible to [encrypt the drive via TrueCrypt]({% post_url 2012-04-30-roboshell-backup-1-1-now-with-truecrypt-integration %}), which is optional.  
 If you're using this (like I do), RoboShell Backup will mount the TrueCrypt volume on the USB drive to a new drive letter *(the default is `X:`)* before starting the mirroring process, and when RoboCopy is finished, the drive will automatically be unmounted again.

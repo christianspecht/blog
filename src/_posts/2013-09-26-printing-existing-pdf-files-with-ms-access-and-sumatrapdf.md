@@ -32,7 +32,7 @@ So all we have to do is call SumatraPDF and supply the path to the PDF file, plu
 *`Path_Combine`, `Path_GetCurrentDirectory`, `File_Exists`, `String_Format` and `Process_Start` are all from my open source "toolbox" [VBA Helpers](/vba-helpers/).  
 Of course, you can do it as well using only vanilla VBA, but that would make the example code quite a bit longer and definitely less readable.*
 
-*If you don't want to use the functions from VBA Helpers, you can read [the source code](https://bitbucket.org/christianspecht/vba-helpers/src/tip/vba-helpers.bas?at=default) to see how they are implemented, and then implement them in your own code yourself.*
+*If you don't want to use the functions from VBA Helpers, you can read [the source code](https://github.com/christianspecht/vba-helpers/blob/master/vba-helpers.bas) to see how they are implemented, and then implement them in your own code yourself.*
 
 Anyway, here's the example code:
 

@@ -18,7 +18,7 @@ But the project pages are the only ones that I actually **want** to be dynamic..
 There are probably other ways to do this, like loading the content on the client with JavaScript.  
 But I'm not a JavaScript guru, my server runs PHP and I already know how to do it in PHP...so I'll stay with PHP for now.
 
-The code is nearly the same that I used for the shortcode in WordPress *(load Markdown file from URL and use [PHP Markdown](http://michelf.ca/projects/php-markdown/) to convert to HTML)*, only this time I put it into a new PHP [file](https://bitbucket.org/christianspecht/blog/src/e745c8d2880e71a6573cf696f30faa8c147ac062/src/php/md-include.php?at=default):
+The code is nearly the same that I used for the shortcode in WordPress *(load Markdown file from URL and use [PHP Markdown](http://michelf.ca/projects/php-markdown/) to convert to HTML)*, only this time I put it into a new PHP [file](https://github.com/christianspecht/blog/blob/ef6fdee75646ebd7bf78c191a3d87031a19c8156/src/php/md-include.php):
 
     <?php
 
@@ -54,4 +54,4 @@ The rest of the template looks exactly like a normal Mako template (`<%inherit f
 When compiling, Blogofile creates the page as usual, only that it has the above PHP code as the content, which will be executed by the web server on each request.
 
 Again, you can see it in action on all the project pages.  
-(example: [raw Markdown file](https://bitbucket.org/christianspecht/bitbucket-backup/raw/tip/readme-full.md) &rarr; [final project page](http://christianspecht.de/bitbucket-backup/))
+(example: [raw Markdown file](https://github.com/christianspecht/bitbucket-backup/blob/master/readme-full.md) &rarr; [final project page](http://christianspecht.de/bitbucket-backup/))

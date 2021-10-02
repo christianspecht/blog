@@ -46,7 +46,7 @@ Source: [TrueCrypt FAQ](http://www.truecrypt.org/faq)
  
 Now back to TrueCrypt integration in RoboShell Backup 1.1:
 
-If you take a look at the [config file](https://bitbucket.org/christianspecht/roboshell-backup/src/tip/src/Config.xml), you'll notice a few new settings for "TrueCrypt mode" at the bottom:
+If you take a look at the [config file](https://github.com/christianspecht/roboshell-backup/blob/master/src/Config.xml), you'll notice a few new settings for "TrueCrypt mode" at the bottom:
 
 	<!--
 	Values:

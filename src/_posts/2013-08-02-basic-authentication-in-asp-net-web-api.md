@@ -64,7 +64,7 @@ So I took a second look at [the examples from the official Web API site](http://
 
 **Note that you can't just copy & paste the `type` attribute from the tutorial.** The first parameter needs to be the name of the class *(including namespace)* and the second parameter needs to be the name of the assembly.
 
-So for [this HTTP Module](https://bitbucket.org/christianspecht/tasko/src/87defb080d0e8e503304ac91104e2d85ebb3a94f/src/Tasko.Server/BasicAuthHttpModule.cs?at=default), it's:
+So for [this HTTP Module](https://github.com/christianspecht/tasko/blob/befe514f57d0097afd8e60fcbd3d3c63364d6fbb/src/Tasko.Server/BasicAuthHttpModule.cs), it's:
 
     <system.webServer>
         <modules>

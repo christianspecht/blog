@@ -8,11 +8,11 @@ tags:
 - php
 ---
 
-For quite some time now, the content of the project pages on my site *([this one](/bitbucket-backup/), for example)* was coming directly from the respective Markdown readme file on Bitbucket *([this one](https://bitbucket.org/christianspecht/bitbucket-backup/raw/tip/readme-full.md), for example)*.
+For quite some time now, the content of the project pages on my site *([this one](/bitbucket-backup/), for example)* was coming directly from the respective Markdown readme file on Bitbucket *([this one](https://github.com/christianspecht/bitbucket-backup/blob/master/readme-full.md), for example)*.
 
 I already wrote multiple times about how my approach how to get this to work - [here]({% post_url 2012-03-09-how-to-display-markdown-files-from-other-sites-in-wordpress %}), [here]({% post_url 2013-02-17-how-to-display-markdown-files-from-other-sites-this-time-in-blogofile %}) and [a bit here]({% post_url 2013-12-31-hello-jekyll %}).
 
-Until now, [the code where all the magic happened](https://bitbucket.org/christianspecht/blog/src/abd9f5fe9718/src/php/md-include.php) looked like this:
+Until now, [the code where all the magic happened](https://github.com/christianspecht/blog/blob/003539ea60ef8918274cd4a2de3fbc50940116ee/src/php/md-include.php) looked like this:
 
     <?php
     include_once "markdown.php";
@@ -145,7 +145,7 @@ The code gets the image URLs from the `<img>` tags and passes each one *(togethe
 
 This function downloads the image to my server, and returns the "new" URL of the image, which the calling code then replaces in the `<img>` tag.
 
-To stick with the example from above: the logo from the top of [Bitbucket Backup's readme file](https://bitbucket.org/christianspecht/bitbucket-backup/raw/tip/readme-full.md) will be located [here](/php/cache/bitbucket-backup-logo128x128.png) after being copied to my server.  
+To stick with the example from above: the logo from the top of [Bitbucket Backup's readme file](https://github.com/christianspecht/bitbucket-backup/blob/master/readme-full.md) will be located [here](/php/cache/bitbucket-backup-logo128x128.png) after being copied to my server.  
 *(if you click on the link now and the image is not there, it's probably because I updated my site shortly before, and updating always empties the `cache` folder)*
 
 There's one special case that wouldn't work with the `DownloadImage` function listed above:  
@@ -160,8 +160,7 @@ If someone doesn't want that *(like me)*, [there seem to be only two options](ht
 
 ## Conclusion
 
-The current *(as of the time of writing this post)* version of the code [is here on Bitbucket](https://bitbucket.org/christianspecht/blog/src/913cc3c67ac8a05204294da5fa2151eb00271005/src/php/md-include.php?at=default).
-
+The current *(as of the time of writing this post)* version of the code [is here](https://github.com/christianspecht/blog/blob/f0cae8f3656d2d1ff9b7b42d8c3ec9fc78ce7965/src/php/md-include.php
 After pushing it to the live site, I opened the site with Chrome's developer tools again.
 
 The first load actually took some more time than before:

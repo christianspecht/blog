@@ -12,7 +12,7 @@ Apparently one of the challenges that many new Jekyll users are facing is how to
 
 I had that problem as well when I [built this blog with Jekyll]({% post_url 2013-12-31-hello-jekyll %}), and after I [posted my solution on Stack Overflow](http://stackoverflow.com/a/21002505/6884), I received 17 upvotes *(as of now)* in about 10 months - this is by far my most upvoted answer in the `jekyll` tag.
 
-However, Jekyll is not able to generate new pages on the fly without plugins...so the solution I'm using here in this blog consists of [a single tag page](/tags/) [which lists the posts for **all** tags](https://bitbucket.org/christianspecht/blog/src/0b3d2dbfd9488d63c6ed0c3b899f6625c12ba6a4/src/tags/index.html?at=default).
+However, Jekyll is not able to generate new pages on the fly without plugins...so the solution I'm using here in this blog consists of [a single tag page](/tags/) [which lists the posts for **all** tags](https://github.com/christianspecht/blog/blob/39138d396bdcec5abc8248dfee9c431277d0148c/src/tags/index.html).
 
 But some people absolutely want separate pages, one per tag.  
 This is also possible without plugins, even though it's less comfortable because there's one disadvantage:  

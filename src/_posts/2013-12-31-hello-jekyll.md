@@ -17,15 +17,15 @@ Some things are easier to do in Blogofile, some are easier to do in Jekyll:
 
 - Both have their little quirks: in Blogofile I had [issues with German umlauts](https://github.com/EnigmaCurry/blogofile/issues/141), in Jekyll I had trouble with wrong quote characters in old blog posts that were originally converted from WordPress  
 *(Jekyll doesn't like it when you use `’` and `“` instead of `'` and `"`)*
-- Generating the ["Projects" page](/projects/) is [much easier in Jekyll](https://bitbucket.org/christianspecht/blog/commits/4ee11cd25315257a88f9eb57bdccbb84086775bb) *(thanks to [YAML data files](http://jekyllrb.com/docs/datafiles/))*
-- Blogofile automatically generates stuff like [feeds](/feed/index.xml), [tag pages](/tags/) and [archive pages](/archive/), which I needed to [copy-paste](https://github.com/coyled/coyled.com) or even [build](https://bitbucket.org/christianspecht/blog/src/8ad956713d41/src/tags/index.html) [myself](https://bitbucket.org/christianspecht/blog/src/8ad956713d41/src/archive/index.html) for Jekyll
+- Generating the ["Projects" page](/projects/) is [much easier in Jekyll](https://github.com/christianspecht/blog/commit/9e65b9ac912b4492a530051a4bafd90c725546a8) *(thanks to [YAML data files](http://jekyllrb.com/docs/datafiles/))*
+- Blogofile automatically generates stuff like [feeds](/feed/index.xml), [tag pages](/tags/) and [archive pages](/archive/), which I needed to [copy-paste](https://github.com/coyled/coyled.com) or even [build](https://github.com/christianspecht/blog/blob/ba6eedf09571f9d4bc1e0531b12a50d87e6d6bc9/src/tags/index.html) [myself](https://github.com/christianspecht/blog/blob/ba6eedf09571f9d4bc1e0531b12a50d87e6d6bc9/src/archive/index.html) for Jekyll
 - A few small things like combining a page-specific title with the site-wide title are
-[incredibly complicated](https://groups.google.com/forum/?fromgroups=#!topic/blogofile-discuss/4sKwQxtWywc) in Blogofile, but [dead easy](https://bitbucket.org/christianspecht/blog/commits/ff37c497c310cc3539cd7486a945336d652866db) in Jekyll
-- Blogofile has built-in helpers for creating lists of [posts by month](https://bitbucket.org/christianspecht/blog/commits/dea85ac7c3142b15756f4241fd52aa61a8c9106f#chg-src/_layouts/default.html) and [tags with number of posts](https://bitbucket.org/christianspecht/blog/commits/311d095d3b232d41f86969b7f0070466a58fa8da#chg-src/_layouts/default.html) in the sidebar, but Jekyll doesn't  
+[incredibly complicated](https://groups.google.com/forum/?fromgroups=#!topic/blogofile-discuss/4sKwQxtWywc) in Blogofile, but [dead easy](https://github.com/christianspecht/blog/commit/3eaa6af4e3b5b7cfb7d07ef5459b1a4bd8acc418) in Jekyll
+- Blogofile has built-in helpers for creating lists of [posts by month](https://github.com/christianspecht/blog/commit/5a404d4d77d64653afd661d1cae521c15e4a2331#diff-447bcccac4c91994d26e8d28ab4d15308378a59534c453a4f722066fda822058) and [tags with number of posts](https://github.com/christianspecht/blog/commit/6675d3c27319c8347e62fd015d7bda56b7f2b74e#diff-447bcccac4c91994d26e8d28ab4d15308378a59534c453a4f722066fda822058) in the sidebar, but Jekyll doesn't  
 *(to see the difference, look at the diffs in the two links)*
 
 Oh, and of course I needed to re-build [my previous solution to display Markdown files from my Bitbucket projects](/2013/02/17/how-to-display-markdown-files-from-other-sites-this-time-in-blogofile/) *(again)*.  
-[Here's the Jekyll code](https://bitbucket.org/christianspecht/blog/commits/fc681c28835657accc3efd0d94fb4f1cbbd0c710) to generate the PHP pages.
+[Here's the Jekyll code](https://github.com/christianspecht/blog/commit/a185a0b1e3c787c2e0411b58269df4cc8bc4ac61) to generate the PHP pages.
 
 Concerning hosting:  
 The default Jekyll setup these days seems to be using [GitHub Pages](http://pages.github.com/), but my site is still hosted on my own webspace *(I'm paying for it anyway, and I prefer to use Mercurial, not Git)*.

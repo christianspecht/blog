@@ -77,7 +77,7 @@ Note: I'm a Windows guy and this was my first attempt writing shell scripts, so 
 
 Here are the final YAML file and the final shell scripts, with comments what each step does:
 
-[`bitbucket-pipelines.yml`](https://bitbucket.org/christianspecht/blog/src/default/bitbucket-pipelines.yml):
+[`bitbucket-pipelines.yml`](https://github.com/christianspecht/blog/blob/51f41fbdcf5d5a5f12e10e539fce66745c644fae/bitbucket-pipelines.yml):
 
     options:
       max-time: 4
@@ -124,7 +124,7 @@ I don't remember where I copied the line from, but it originally had `StrictHost
 
 ---
 
-[`ci-build.sh`](https://bitbucket.org/christianspecht/blog/src/default/ci-build.sh):
+[`ci-build.sh`](https://github.com/christianspecht/blog/blob/master/ci-build.sh):
 
     #!/bin/bash
     # build the site with Jekyll
@@ -147,7 +147,7 @@ I don't remember where I copied the line from, but it originally had `StrictHost
 
 ---
     
-[`ci-deploy.sh`](https://bitbucket.org/christianspecht/blog/src/default/ci-deploy.sh):
+[`ci-deploy.sh`](https://github.com/christianspecht/blog/blob/master/ci-deploy.sh):
 
     #!/bin/bash
     # delete and re-create the temp dir

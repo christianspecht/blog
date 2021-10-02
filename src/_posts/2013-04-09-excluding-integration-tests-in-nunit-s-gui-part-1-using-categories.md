@@ -6,7 +6,7 @@ tags: [.net, nunit, unit-testing]
 ---
 
 After writing unit tests for my personal projects for a while, now is the first time that I'm writing integration tests.  
-So far, none of the projects I [wrote](http://christianspecht.de/recordset-net/) [tests](http://christianspecht.de/missilesharp/) [for](http://christianspecht.de/vba-helpers/) did involve any external components *(or at least none that [couldn't be mocked](https://bitbucket.org/christianspecht/missilesharp/src/tip/src/MissileSharp.Tests/MockHidDevice.cs))*.
+So far, none of the projects I [wrote](http://christianspecht.de/recordset-net/) [tests](http://christianspecht.de/missilesharp/) [for](http://christianspecht.de/vba-helpers/) did involve any external components *(or at least none that [couldn't be mocked](https://github.com/christianspecht/missilesharp/blob/master/src/MissileSharp.Tests/MockHidDevice.cs))*.
 
 But my [current project](http://christianspecht.de/tasko) needed a database, and I decided to use [RavenDB](http://ravendb.net/) to get familiar with NoSQL.  
 According [to](http://stackoverflow.com/a/7538082/6884) [Ayende](http://stackoverflow.com/a/8375226/6884), the recommended way to test RavenDB apps is directly using the database in in-memory mode. So here I am now, writing integration tests.

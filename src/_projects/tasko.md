@@ -14,6 +14,6 @@ A ToDo app for my Android phone. I could have used an existing one, but decided 
 
 **What I learned:**
 
-- Creating a web service with [ASP.NET Web API](http://www.asp.net/web-api) *(and [Basic Authentication]({% post_url 2013-08-02-basic-authentication-in-asp-net-web-api %}), but I later [switched to token-based authentication](https://bitbucket.org/christianspecht/tasko/commits/a6002d771c33ce23c62f16aa116262bcdb351c55))* and hosting it on [AppHarbor](https://appharbor.com/)
+- Creating a web service with [ASP.NET Web API](http://www.asp.net/web-api) *(and [Basic Authentication]({% post_url 2013-08-02-basic-authentication-in-asp-net-web-api %}), but I later [switched to token-based authentication](https://github.com/christianspecht/tasko/commit/dceadd8dbf7feed631d2da7d06ea6051d93f869e))* and hosting it on [AppHarbor](https://appharbor.com/)
 - Using a [NoSQL database](http://en.wikipedia.org/wiki/NoSQL), in this case [RavenDB](http://ravendb.net/)
 - Writing a native [Android](http://www.android.com/) app

@@ -111,7 +111,7 @@ This is what I used for the sitemap of this blog.
 All the URLs that exist here belong to one of these three categories:
 
 - The blog posts, [which I can loop with Jekyll](http://jekyllrb.com/docs/posts/#displaying-an-index-of-posts)
-- The project pages in the sidebar, which I can loop as well, because the list in the sidebar is coming from [this data file](https://bitbucket.org/christianspecht/blog/src/a08df7a116eec07654e84ea78d5a68b68dbcc564/src/_data/sidebarprojects.yml?at=default)
+- The project pages in the sidebar, which I can loop as well, because the list in the sidebar is coming from [this data file](https://github.com/christianspecht/blog/blob/352e2817b9cf3cdc1b3923d7317af2b7b004fd52/src/_data/sidebarprojects.yml)
 - A very small number of "other" pages (three at the time I'm writing this: the [archive](/archive/), the [project list](/projects/) and the [tags page](/tags/))
 
 So creating [this sitemap file](/sitemap.xml) for my blog was as simple as that:

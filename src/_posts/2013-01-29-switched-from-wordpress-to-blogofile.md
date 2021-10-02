@@ -6,14 +6,14 @@ tags: [wordpress, blogofile]
 ---
 
 Like many other developers did before me, I just switched this site from WordPress to a static site generator ([Blogofile](http://www.blogofile.com/) in my case).  
-The complete source code [is now on Bitbucket](https://bitbucket.org/christianspecht/blog).
+The complete source code [is now on Bitbucket](https://github.com/christianspecht/blog).
 
 There wasn't anything particularly *wrong* with WordPress, I did the switch mainly for the same reasons everyone else did it as well:
 
 I'm a developer, I prefer writing Markdown files and using "proper" source control (Mercurial in my case), instead of a WYSIWYG web interface with all the data only on a server somewhere on the web.
 
 Plus, WordPress as a whole always felt some kind of "overkill" to me.  
-Sure, it does everything I want, but you need plugins for everything beyond the bare minimum. For example, I had to install a plugin just to enable Google Analytics. It worked without trouble, but still...just [inserting a few lines into a HTML file](https://bitbucket.org/christianspecht/blog/commits/32cfb72c9cb2df01341e7614172cfa73ea6928c0) feels somehow more natural to me, even though I'm not exactly a "web guy".  
+Sure, it does everything I want, but you need plugins for everything beyond the bare minimum. For example, I had to install a plugin just to enable Google Analytics. It worked without trouble, but still...just [inserting a few lines into a HTML file](https://github.com/christianspecht/blog/commit/8b63e5b4c07371bc04b4701458b92f7d5ed36577) feels somehow more natural to me, even though I'm not exactly a "web guy".  
 And then you need another plugin for changing the meta tags, and another one for syntax highlighting, and...you get the idea.
 
 The actual switching to Blogofile was pretty straightforward. The [documentation](http://docs.blogofile.com/) is good and I found nearly everything I needed there.
@@ -23,7 +23,7 @@ A few notes:
 **Converting the old blog posts from WordPress:**  
 Blogofile even offers a [converter script](http://docs.blogofile.com/en/latest/migrating_blogs.html#posts), but I had only a few posts, so I didn't bother playing around with the script and just converted the posts by hand.  
 <del>I found [a bug](https://github.com/EnigmaCurry/blogofile/issues/141) while converting, which made me unable to set the date of any blog post to March (no matter which year).  
-So I had to ["re-schedule" one post from last year's March to February instead](https://bitbucket.org/christianspecht/blog/commits/7d679e36cdf960596c477435f758a184fdda3e8f), and fake the original WordPress URL by [setting the permalink field of that post](https://bitbucket.org/christianspecht/blog/commits/c5246607b5f6c5b46be8f70aa4480dfee8c12d37).</del>  
+So I had to ["re-schedule" one post from last year's March to February instead](https://github.com/christianspecht/blog/commit/62e74a3e46b593f7366c45f50551291112359edd), and fake the original WordPress URL by [setting the permalink field of that post](https://github.com/christianspecht/blog/commit/a0fd83e1595bde4efe06c4079d2c3f0d7e37e2c3).</del>  
 *EDIT (Feb 04 2013):  
 I just discovered that setting the post date to March **does** work when you set the locale to English in the `pre_build` hook. Thanks to Peter Zsoldos for [pointing me to the `pre_build` solution](https://groups.google.com/forum/#!msg/blogofile-discuss/1qTU4nkBUuU/yj33kxCnd4YJ).  
 Apparently the bug was caused by the German word for March ("März") containing an [umlaut](http://en.wikipedia.org/wiki/Germanic_umlaut). By setting the locale to English right at the beginning, no evil umlauts were used and the problem disappeared (at least for me - it would still occur for people trying to blog with Blogofile in German).*
