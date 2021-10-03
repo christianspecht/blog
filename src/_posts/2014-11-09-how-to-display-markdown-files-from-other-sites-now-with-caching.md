@@ -160,7 +160,7 @@ If someone doesn't want that *(like me)*, [there seem to be only two options](ht
 
 ## Conclusion
 
-The current *(as of the time of writing this post)* version of the code [is here](https://github.com/christianspecht/blog/blob/f0cae8f3656d2d1ff9b7b42d8c3ec9fc78ce7965/src/php/md-include.php
+The current *(as of the time of writing this post)* version of the code [is here](https://github.com/christianspecht/blog/blob/f0cae8f3656d2d1ff9b7b42d8c3ec9fc78ce7965/src/php/md-include.php).
 After pushing it to the live site, I opened the site with Chrome's developer tools again.
 
 The first load actually took some more time than before:
