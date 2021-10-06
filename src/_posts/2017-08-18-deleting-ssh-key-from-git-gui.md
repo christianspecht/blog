@@ -9,6 +9,12 @@ tags:
 externalfeeds: 1
 ---
 
+> ### Update (Oct 06 2021):
+>
+> For Windows users: see [Deleting an SSH key from Git Gui: the easy Windows solution]({% post_url 2021-10-06-deleting-ssh-key-from-git-gui-the-easy-windows-solution %}) for a much easier way, which I didn't know at the time when I wrote this post here.
+
+
+
 For my [current hobby project](http://scm-backup.org), I'm using Git and GitHub regularly for the first time.
 
 I don't like using source control via the command line *(for Mercurial, I'm using [TortoiseHG](https://tortoisehg.bitbucket.io/))*, so I'm still experimenting with several GUI clients in order to find the one I like best.
