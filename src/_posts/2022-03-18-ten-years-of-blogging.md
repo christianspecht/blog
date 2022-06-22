@@ -9,7 +9,7 @@ externalfeeds: 0
 
 I missed the exact date by a few days, but [ten years ago I wrote my first post here]({% post_url 2012-03-09-how-to-display-markdown-files-from-other-sites-in-wordpress %}).
 
-It doesn't feel like I wrote *that* much in that time, but it's actually almost 50 posts (this one is number 47).
+It doesn't feel like I wrote *that* much in that time, but it's actually almost 50 posts (this one is number 46).
 
 Realizing that I've been running this site for a decade made me think about the time before that...how I ended up from *"I'm a helpdesk guy starting to learn software development" (2002)* to *"I'm now writing a blog about software development" (2012)*:
 
