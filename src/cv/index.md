@@ -24,3 +24,10 @@ My Developer story also had a nice introductory text, which is unfortunately mis
 > Plus, I'm also the DBA and general database go-to guy for our ERP system database as well as all other databases, including those belonging to 3rd party tools.
 > 
 > The systems I develop and maintain are essential for daily operations and enable over 300 people to sell, produce and ship awnings and conservatories worth many millions of € per year.
+
+---
+
+Related profiles:
+
+- [<i class="fa fa-lg fa-linkedin"></i> LinkedIn](https://www.linkedin.com/in/christian-specht/)
+- [<i class="fa fa-lg fa-xing"></i> Xing](https://www.xing.com/profile/Christian_Specht29/)
