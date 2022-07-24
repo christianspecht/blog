@@ -175,5 +175,5 @@ This will be rendered to the following HTML *(just the part with the galleries)*
 
 ## Example code
 
-A complete example project is [here on Bitbucket](https://github.com/christianspecht/code-examples/tree/master/jekyll-gallery-example), and [the finished](http://jekyll-gallery-example.christianspecht.de/gallery-text1/) [gallery pages](http://jekyll-gallery-example.christianspecht.de/gallery-text2/) are online as well, as a part of the example site from the [first blog post]({% post_url 2014-03-08-generating-an-image-gallery-with-jekyll-and-lightbox2 %}).
+A complete example project is [here on GitHub](https://github.com/christianspecht/code-examples/tree/master/jekyll-gallery-example), and [the finished](http://jekyll-gallery-example.christianspecht.de/gallery-text1/) [gallery pages](http://jekyll-gallery-example.christianspecht.de/gallery-text2/) are online as well, as a part of the example site from the [first blog post]({% post_url 2014-03-08-generating-an-image-gallery-with-jekyll-and-lightbox2 %}).
 

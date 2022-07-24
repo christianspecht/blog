@@ -40,7 +40,7 @@ At first glance, it makes sense to just build a complete dynamic site in a serve
    I'm far more experienced with Jekyll than with PHP, especially when it comes to layouts/templates, and setting lots (and I mean *lots*) of configuration values depending on environment (dev/staging/prod).  
    This is probably equally easy in PHP if you know how to do it...but *I* already know how to do it in Jekyll.
 
-It's mainly the second reason why I decided to go with the combined Jekyll/PHP approach. Even though it was "only" a hobby project which I built in my spare time, I still had a deadline because the date for the flea market was fixed, and people should be able to register X months before.
+It's mainly the second reason why I decided to go with the combined Jekyll/PHP approach. Even though it was "only" a hobby project which I built in my spare time, I still had a deadline because the date for the garage sale was fixed, and people should be able to register X months before.
 
 Plus, my spare time is still my spare time, so I didn't want to spend time learning templating frameworks in PHP, when I already know how to do everything I need in Jekyll/Liquid.
 
