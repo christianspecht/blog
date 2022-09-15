@@ -4,6 +4,7 @@ title: "Creating an image gallery with Hugo and Lightbox2"
 date: 2020/08/10 23:00:00
 tags:
 - hugo
+- lightbox2
 - web
 externalfeeds: 1
 ---

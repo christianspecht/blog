@@ -4,6 +4,7 @@ title: "Hugo/Lightbox image gallery: Loading image captions from EXIF data"
 date: 2022/06/29 23:00:00
 tags:
 - hugo
+- lightbox2
 - web
 externalfeeds: 1
 ---
