@@ -20,17 +20,16 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
     <meta charset="utf-8">
     {% if page.redirect %}<meta http-equiv="refresh" content="0; URL={{ page.redirect }}">
     {% endif %}<title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.name }}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="{{ site.description }}">
     <meta name="author" content="{{ site.authorname }}">
     {% if page.noindex %}<meta name="robots" content="noindex">{% endif %}
     <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="{{ site.rss_url }}" />
     <link rel="alternate" type="application/atom+xml" title="Atom 1.0" href="{{ site.atom_url }}" />
     <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
-    <!-- Le styles -->
-    <link href="/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-    <link href="/css/bootstrap-responsive.min.css" rel="stylesheet" crossorigin="anonymous">
-    <link href="/css/cs.css" rel="stylesheet">
+
+    <link href="/libs/bootswatch-cosmo/5.1.3/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <!-- TODO <link href="/css/cs.css" rel="stylesheet"> -->
     <link href="/css/font-awesome.min.css" rel="stylesheet" crossorigin="anonymous">
 
     <!-- Fav and touch icons -->
@@ -180,11 +179,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
     </div><!--/.container-->
 
-    <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="/js/jquery.min.js" crossorigin="anonymous"></script>
-    <script src="/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <script src="/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     {% if site.environment == "prod" %}
     <script type="text/javascript">
 
