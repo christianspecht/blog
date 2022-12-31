@@ -77,25 +77,19 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
         <!--<div class="row visible-phone spacer50"><hr></div>-->
 
         <div class="col-md-3">
-          <div class="well sidebar-nav">
-            <ul class="nav nav-list">
-              <li class="nav-header">About me</li>
-              <li class="media">
-                <img class="pull-left media-object img-rounded" src="https://avatar.christianspecht.de/cs57.jpeg" />
-                <div class="media-body">
-                  <small>
-                    <a href="/cv/">CV</a><br>
-                    <a href="/imprint/">Contact</a>
-                  </small>
-                </div>
-              </li>
-              <li>
-                <small>
-                  Developer for about {{ site.time | date: "%Y" | minus: 2003 }} years, living in Kerpen, Germany (near Cologne). Working as an in-house developer <i>(C#/T-SQL/VBA)</i> and DBA at <a href="http://www.weinor.de">weinor</a>, a mid-sized manufacturing company in Cologne.
-                </small>
-              </li>
-            </ul>
-          </div><!--/.well -->
+          <div class="card bg-light mb-3" style="max-width: 20rem;">
+            <div class="card-header">About me</div>
+            <div class="card-body small">
+              <p class="card-text">
+                <img src="https://avatar.christianspecht.de/cs57.jpeg" class="rounded float-start me-2">
+                <a href="/cv/">CV</a><br>
+                <a href="/imprint/">Contact</a>
+              </p>
+              <p class="card-text">
+              Developer for about {{ site.time | date: "%Y" | minus: 2003 }} years, living in Kerpen, Germany (near Cologne). Working as an in-house developer <i>(C#/T-SQL/VBA)</i> and DBA at <a href="http://www.weinor.de">weinor</a>, a mid-sized manufacturing company in Cologne.
+              </p>
+            </div>
+          </div>
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
               <li class="nav-header">Projects</li>
