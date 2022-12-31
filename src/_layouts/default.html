@@ -69,14 +69,14 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
     <div class="container">
       <div class="row">
-        <div class="span9">
+        <div class="col-md-9">
           {% if page.redirect %}<h3>Redirecting to <a href="{{ page.redirect }}">{{ page.redirect }}</a> ...</h3>{% endif %}
           {{ content }}
-        </div><!--/span-->
+        </div>
 
-        <div class="row visible-phone spacer50"><hr></div>
+        <!--<div class="row visible-phone spacer50"><hr></div>-->
 
-        <div class="span3">
+        <div class="col-md-3">
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
               <li class="nav-header">About me</li>
@@ -164,7 +164,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
       <footer>
         <div class="row">
-            <div class="span8">
+            <div class="col-md">
                 <p>
                     Copyright 2012-{{ site.time | date: "%Y" }}
                     {{ site.authorname}}
@@ -172,7 +172,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
                     <a href="/imprint/">Imprint / Impressum</a> | <a href="/privacy/">Privacy Policy / Datenschutzerklärung</a>
                 </p>
             </div>
-            <div class="span4">
+            <div class="col-md">
                 <p>
                     Powered by <a href="http://jekyllrb.com/">Jekyll</a>. Built with <a href="http://getbootstrap.com/">Bootstrap</a> &amp; <a href="http://bootswatch.com/cosmo/">Cosmo</a> theme.<br/>
                     Deployed from commit <a href="https://github.com/christianspecht/blog/commit/{{site.commitid}}">{{site.commitid | slice: 0, 7 }}</a> via build <a href="https://github.com/christianspecht/blog/actions/runs/{{site.buildnumber}}">{{site.buildnumber}}</a>.
