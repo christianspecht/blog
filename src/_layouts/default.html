@@ -78,8 +78,8 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
         <div class="col-md-3">
           <div class="card bg-light mb-3" style="max-width: 20rem;">
-            <div class="card-header">About me</div>
             <div class="card-body small">
+              <h5 class="card-title">About me</h5>
               <p class="card-text">
                 <img src="https://avatar.christianspecht.de/cs57.jpeg" class="rounded float-start me-2">
                 <a href="/cv/">CV</a><br>
@@ -92,8 +92,8 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
           </div>
 
           <div class="card bg-light mb-3" style="max-width: 20rem;">
-            <div class="card-header">Projects</div>
             <div class="card-body">
+              <h5 class="card-title">Projects</h5>
               <ul class="nav flex-column">
               {% assign projects = site.projects | where: 'sidebar', 1 | sort: 'name' %}
               {% for project in projects %}
@@ -104,8 +104,8 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
           </div>
 
           <div class="card bg-light mb-3" style="max-width: 20rem;">
-            <div class="card-header">Links</div>
             <div class="card-body">
+              <h5 class="card-title">Links</h5>
               <p class="card-text">
                 <a href="https://stackoverflow.com/users/6884/" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="profile for Christian Specht at Stack Overflow, Q&A for professional and enthusiast programmers"><img src="https://stackoverflow.com/users/flair/6884.png" width="208" height="58" alt="profile for Christian Specht at Stack Overflow, Q&A for professional and enthusiast programmers" title="profile for Christian Specht at Stack Overflow, Q&A for professional and enthusiast programmers"/></a><br>
                 <a href="https://www.openhub.net/accounts/131837?ref=Detailed" target="_blank" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Open Hub profile for Christian Specht"><img alt="Open Hub profile for Christian Specht" border="0" height="35" src="https://www.openhub.net/accounts/131837/widgets/account_detailed.gif" width="230" /></a><br>
@@ -119,8 +119,8 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
           </div>
           
           <div class="card bg-light mb-3" style="max-width: 20rem;">
-            <div class="card-header">Recent Posts</div>
             <div class="card-body">
+              <h5 class="card-title">Recent Posts</h5>
               <ul class="nav flex-column">
               {% for post in site.posts limit: 5 %}
                 <li class="nav-item"><a class="nav-link" href="{{ post.url }}">{{ post.title }}</a></li>
@@ -130,8 +130,8 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
           </div>
           
           <div class="card bg-light mb-3" style="max-width: 20rem;">
-            <div class="card-header">Archives</div>
             <div class="card-body">
+              <h5 class="card-title">Archives</h5>
               <ul class="nav flex-column">
 {% assign counter = 0 %}
 {% for post in site.posts %}
@@ -146,8 +146,8 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
           </div>
           
           <div class="card bg-light mb-3" style="max-width: 20rem;">
-            <div class="card-header">Tags</div>
             <div class="card-body">
+              <h5 class="card-title">Tags</h5>
               <ul class="nav flex-column">
 {% capture tags %}
   {% for tag in site.tags %}
