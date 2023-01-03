@@ -93,7 +93,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
           <div class="card bg-light mb-3" style="max-width: 20rem;">
             <div class="card-header">Projects</div>
-            <div class="card-body small">
+            <div class="card-body">
               <p class="card-text">
                 <ul class="nav flex-column">
                 {% assign projects = site.projects | where: 'sidebar', 1 | sort: 'name' %}
@@ -107,7 +107,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
           <div class="card bg-light mb-3" style="max-width: 20rem;">
             <div class="card-header">Links</div>
-            <div class="card-body small">
+            <div class="card-body">
               <p class="card-text">
                 <a href="https://stackoverflow.com/users/6884/" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="profile for Christian Specht at Stack Overflow, Q&A for professional and enthusiast programmers"><img src="https://stackoverflow.com/users/flair/6884.png" width="208" height="58" alt="profile for Christian Specht at Stack Overflow, Q&A for professional and enthusiast programmers" title="profile for Christian Specht at Stack Overflow, Q&A for professional and enthusiast programmers"/></a><br>
                 <a href="https://www.openhub.net/accounts/131837?ref=Detailed" target="_blank" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Open Hub profile for Christian Specht"><img alt="Open Hub profile for Christian Specht" border="0" height="35" src="https://www.openhub.net/accounts/131837/widgets/account_detailed.gif" width="230" /></a><br>
@@ -120,30 +120,42 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
             </div>
           </div>
           
-          <div class="well sidebar-nav">
-            <ul class="nav nav-list">
-              <li class="nav-header">Recent Posts</li>
-              {% for post in site.posts limit: 5 %}
-              <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-              {% endfor %}
-            </ul>
-          </div><!--/.well -->
-          <div class="well sidebar-nav">
-            <ul class="nav nav-list">
-              <li class="nav-header">Archives</li>
+          <div class="card bg-light mb-3" style="max-width: 20rem;">
+            <div class="card-header">Recent Posts</div>
+            <div class="card-body">
+              <p class="card-text">
+                <ul class="nav flex-column">
+                {% for post in site.posts limit: 5 %}
+                  <li class="nav-item"><a class="nav-link" href="{{ post.url }}">{{ post.title }}</a></li>
+                {% endfor %}
+                </ul>
+              </p>
+            </div>
+          </div>
+          
+          <div class="card bg-light mb-3" style="max-width: 20rem;">
+            <div class="card-header">Archives</div>
+            <div class="card-body">
+              <p class="card-text">
+                <ul class="nav flex-column">
 {% assign counter = 0 %}
 {% for post in site.posts %}
 {% assign thisyear = post.date | date: "%Y" %}{% assign prevyear = post.previous.date | date: "%Y" %}{% assign counter = counter | plus: 1 %}
 {% if thisyear != prevyear %}
-                    <li><a href="/archive/#{{ post.date | date:"%Y" }}">{{ thisyear }} ({{ counter }})</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/archive/#{{ post.date | date:"%Y" }}">{{ thisyear }} ({{ counter }})</a></li>
 {% assign counter = 0 %}
 {% endif %}
 {% endfor %}
-            </ul>
-          </div><!--/.well -->
-          <div class="well sidebar-nav">
-            <ul class="nav nav-list">
-              <li class="nav-header">Tags</li>
+                </ul>
+              </p>
+            </div>
+          </div>
+          
+          <div class="card bg-light mb-3" style="max-width: 20rem;">
+            <div class="card-header">Tags</div>
+            <div class="card-body">
+              <p class="card-text">
+                <ul class="nav flex-column">
 {% capture tags %}
   {% for tag in site.tags %}
     {{ tag[0] }}#{{ tag[1].size}}
@@ -152,12 +164,13 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 {% assign sortedtags = tags | split:' ' | sort %}
 {% for tag in sortedtags %}
     {% assign tagitems = tag | split: '#' %}
-                    <li><a href="/tags/#{{ tagitems[0] }}">{{ tagitems[0] }} ({{ tagitems[1] }})</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/tags/#{{ tagitems[0] }}">{{ tagitems[0] }} ({{ tagitems[1] }})</a></li>
 {% endfor %}
-            </ul>
-          </div><!--/.well -->
-        </div><!--/span-->
-      </div><!--/row-->
+                </ul>
+              </p>
+            </div>
+          </div>
+        </div>
 
       <hr>
 
