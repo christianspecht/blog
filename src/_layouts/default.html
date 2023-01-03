@@ -94,14 +94,12 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
           <div class="card bg-light mb-3" style="max-width: 20rem;">
             <div class="card-header">Projects</div>
             <div class="card-body">
-              <p class="card-text">
-                <ul class="nav flex-column">
-                {% assign projects = site.projects | where: 'sidebar', 1 | sort: 'name' %}
-                {% for project in projects %}
-                  <li class="nav-item"><a class="nav-link" href="{{ project.site }}" data-bs-toggle="tooltip" data-bs-title="{{ project.desc }}" data-bs-placement="left">{{ project.name }}</a></li>
-                {% endfor %}
-                </ul>
-              </p>
+              <ul class="nav flex-column">
+              {% assign projects = site.projects | where: 'sidebar', 1 | sort: 'name' %}
+              {% for project in projects %}
+                <li class="nav-item"><a class="nav-link" href="{{ project.site }}" data-bs-toggle="tooltip" data-bs-title="{{ project.desc }}" data-bs-placement="left">{{ project.name }}</a></li>
+              {% endfor %}
+              </ul>
             </div>
           </div>
 
@@ -123,39 +121,34 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
           <div class="card bg-light mb-3" style="max-width: 20rem;">
             <div class="card-header">Recent Posts</div>
             <div class="card-body">
-              <p class="card-text">
-                <ul class="nav flex-column">
-                {% for post in site.posts limit: 5 %}
-                  <li class="nav-item"><a class="nav-link" href="{{ post.url }}">{{ post.title }}</a></li>
-                {% endfor %}
-                </ul>
-              </p>
+              <ul class="nav flex-column">
+              {% for post in site.posts limit: 5 %}
+                <li class="nav-item"><a class="nav-link" href="{{ post.url }}">{{ post.title }}</a></li>
+              {% endfor %}
+              </ul>
             </div>
           </div>
           
           <div class="card bg-light mb-3" style="max-width: 20rem;">
             <div class="card-header">Archives</div>
             <div class="card-body">
-              <p class="card-text">
-                <ul class="nav flex-column">
+              <ul class="nav flex-column">
 {% assign counter = 0 %}
 {% for post in site.posts %}
 {% assign thisyear = post.date | date: "%Y" %}{% assign prevyear = post.previous.date | date: "%Y" %}{% assign counter = counter | plus: 1 %}
 {% if thisyear != prevyear %}
-                    <li class="nav-item"><a class="nav-link" href="/archive/#{{ post.date | date:"%Y" }}">{{ thisyear }} ({{ counter }})</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/archive/#{{ post.date | date:"%Y" }}">{{ thisyear }} ({{ counter }})</a></li>
 {% assign counter = 0 %}
 {% endif %}
 {% endfor %}
-                </ul>
-              </p>
+              </ul>
             </div>
           </div>
           
           <div class="card bg-light mb-3" style="max-width: 20rem;">
             <div class="card-header">Tags</div>
             <div class="card-body">
-              <p class="card-text">
-                <ul class="nav flex-column">
+              <ul class="nav flex-column">
 {% capture tags %}
   {% for tag in site.tags %}
     {{ tag[0] }}#{{ tag[1].size}}
@@ -164,10 +157,9 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 {% assign sortedtags = tags | split:' ' | sort %}
 {% for tag in sortedtags %}
     {% assign tagitems = tag | split: '#' %}
-                    <li class="nav-item"><a class="nav-link" href="/tags/#{{ tagitems[0] }}">{{ tagitems[0] }} ({{ tagitems[1] }})</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/tags/#{{ tagitems[0] }}">{{ tagitems[0] }} ({{ tagitems[1] }})</a></li>
 {% endfor %}
-                </ul>
-              </p>
+              </ul>
             </div>
           </div>
         </div>
