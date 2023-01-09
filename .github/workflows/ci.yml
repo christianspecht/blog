@@ -2,8 +2,13 @@ name: Jekyll site CI
 
 on:
   push:
-    branches:    
-      - master   
+    branches:
+      - master
+      - preview
+  pull_request:
+    branches:
+      - master
+      - preview
 
 jobs:
   build_job:
@@ -12,11 +17,12 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - uses: nelonoel/branch-name@v1.0.1
     - name: Build site
       run: |
         docker run \
         -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-        jekyll/builder:3.2.1 /bin/bash -c "chmod +x ci-build.sh && ./ci-build.sh ${{ github.sha }} ${{ github.run_id }}"
+        jekyll/builder:3.2.1 /bin/bash -c "chmod +x ci-build.sh && ./ci-build.sh ${{ github.sha }} ${{ github.run_id }}  ${{ env.BRANCH_NAME }}"
     - name: Upload artifact
       uses: actions/upload-artifact@v1
       with:
@@ -37,7 +43,8 @@ jobs:
         echo "${{ secrets.KEY }}" > ~/.ssh/id_rsa
         chmod 600 ~/.ssh/id_rsa
         ssh-keyscan ${{ secrets.HOST }} >> ~/.ssh/known_hosts
+    - uses: nelonoel/branch-name@v1.0.1
     - name: Run deploy script
       run: |
-        rsync -rSlh --stats build/ ${{ secrets.USERNAME }}@${{ secrets.HOST }}:${{ secrets.WEBPATH }}/tar
-        ssh -o StrictHostKeyChecking=yes ${{ secrets.USERNAME }}@${{ secrets.HOST }} 'bash -s' -- < build/ci-deploy.sh ${{ secrets.WEBPATH }}
+        rsync -rSlh --stats build/ ${{ secrets.USERNAME }}@${{ secrets.HOST }}:${{ secrets.WEBPATH }}-${{ env.BRANCH_NAME }}/tar
+        ssh -o StrictHostKeyChecking=yes ${{ secrets.USERNAME }}@${{ secrets.HOST }} 'bash -s' -- < build/ci-deploy.sh ${{ secrets.WEBPATH }}-${{ env.BRANCH_NAME }}

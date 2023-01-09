@@ -23,7 +23,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="{{ site.description }}">
     <meta name="author" content="{{ site.authorname }}">
-    {% if page.noindex %}<meta name="robots" content="noindex">{% endif %}
+    {% if page.noindex or site.noindex %}<meta name="robots" content="noindex,nofollow">{% endif %}
     <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="{{ site.rss_url }}" />
     <link rel="alternate" type="application/atom+xml" title="Atom 1.0" href="{{ site.atom_url }}" />
     <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
