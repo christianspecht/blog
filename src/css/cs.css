@@ -7,6 +7,23 @@ a:hover {
   text-decoration: underline;
 }
 
+/* jumbotron background */
+.cs-jumbo {
+  background-color: #eeeeee !important;
+}
+
+/* sidebar background */
+.cs-sidebar {
+  background-color: #eeeeee !important;
+}
+
+/* sidebar headlines */
+.cs-sidebar .card-title {
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
 /* sidebar nav links */
 a.nav-link {
   color: var(--bs-body-color);
@@ -17,6 +34,14 @@ a.nav-link:hover {
   color: #ffffff;
   background-color: rgba(var(--bs-primary-rgb),var(--bs-bg-opacity)) !important;
   text-decoration: none;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+li {
+  line-height: 20px;
 }
 
 .spacer25 {
