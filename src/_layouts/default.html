@@ -23,7 +23,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="{{ site.description }}">
     <meta name="author" content="{{ site.authorname }}">
-    {% if page.noindex %}<meta name="robots" content="noindex">{% endif %}
+    {% if page.noindex or site.noindex %}<meta name="robots" content="noindex,nofollow">{% endif %}
     <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="{{ site.rss_url }}" />
     <link rel="alternate" type="application/atom+xml" title="Atom 1.0" href="{{ site.atom_url }}" />
     <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
@@ -34,10 +34,10 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
     <link href="/css/font-awesome.min.css" rel="stylesheet" crossorigin="anonymous">
 
     <!-- Fav and touch icons -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/avatar144.jpeg">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/avatar114.jpeg">
-      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/avatar72.jpeg">
-                    <link rel="apple-touch-icon-precomposed" href="/img/avatar57.jpeg">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://avatar.christianspecht.de/cs144.jpeg">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://avatar.christianspecht.de/cs114.jpeg">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://avatar.christianspecht.de/cs72.jpeg">
+                    <link rel="apple-touch-icon-precomposed" href="https://avatar.christianspecht.de/cs57.jpeg">
                                    <link rel="shortcut icon" href="/favicon.ico">
     {% if site.environment == "prod" %}<script>
       var _paq = window._paq = window._paq || [];
@@ -90,7 +90,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
             <ul class="nav nav-list">
               <li class="nav-header">About me</li>
               <li class="media">
-                <img class="pull-left media-object img-rounded" src="/img/avatar57.jpeg" />
+                <img class="pull-left media-object img-rounded" src="https://avatar.christianspecht.de/cs57.jpeg" />
                 <div class="media-body">
                   <small>
                     <a href="/cv/">CV</a><br>

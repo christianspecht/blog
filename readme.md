@@ -6,8 +6,10 @@ It's mostly a "regular" Jekyll site, but it contains [some PHP parts](https://gi
 
 ## How to deploy
 
-Each push to `master` auto-deploys via [GitHub Actions](https://github.com/christianspecht/blog/actions) ![Jekyll site CI](https://github.com/christianspecht/blog/workflows/Jekyll%20site%20CI/badge.svg)  
-([more on this](https://christianspecht.de/2020/05/03/building-and-deploying-a-jekyll-site-via-github-actions/))
+Via [GitHub Actions](https://github.com/christianspecht/blog/actions) ([more on this](https://christianspecht.de/2020/05/03/building-and-deploying-a-jekyll-site-via-github-actions/))
+
+- Pushing to `master` auto-deploys to https://christianspecht.de ![Jekyll site CI](https://github.com/christianspecht/blog/actions/workflows/ci.yml/badge.svg?branch=master)
+- Pushing to `preview` auto-deploys to `https://preview.christianspecht.de` ![Jekyll site CI](https://github.com/christianspecht/blog/actions/workflows/ci.yml/badge.svg?branch=preview)
 
 ---
 
