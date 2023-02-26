@@ -13,7 +13,7 @@ Imagine a sitemap like this:
 - Home
 - First menu
     - First menu *(subitem)*
-    	- First menu *(sub-subitem)*
+        - First menu *(sub-subitem)*
 - Second menu
     - Second menu *(subitem)*
 
@@ -35,7 +35,7 @@ When you click on one of the links that have subitems, the next level of subitem
 - Home
 - First menu
     - **First menu *(subitem)***
-    	- First menu *(sub-subitem)*
+        - First menu *(sub-subitem)*
 - Second menu
 
 ...and so on.
