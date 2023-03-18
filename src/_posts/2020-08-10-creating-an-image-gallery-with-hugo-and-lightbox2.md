@@ -199,3 +199,12 @@ But once I got past that stage, working with Hugo is very nice because it comes 
 - automatic [index pages](https://gohugo.io/content-management/organization/#index-pages-_indexmd)
 - and, of course, auto-generating thumbnails!
 
+> #### Update (Mar 18 2023):
+>
+> Note that in 2022/2023, I wrote additional posts with "add-ons" for the image gallery:
+> 
+> - [Hugo/Lightbox image gallery: Loading image captions from EXIF data]({% post_url 2022-06-29-hugo-lightbox-image-gallery-loading-image-captions-from-exif-data %})
+> - [Hugo/Lightbox image gallery: Overlay images with logo]({% post_url 2022-09-15-hugo-lightbox-image-gallery-overlay-images-with-logo %})
+> - [Hugo/Lightbox image gallery: Renaming processed images]({% post_url 2023-03-18-hugo-lightbox-image-gallery-renaming-processed-images %})
+>
+> The final shortcode, including all the features mentioned above, is at the end of the last post or [here](https://github.com/christianspecht/code-examples/blob/55f6bfbbc5f5dd2e09639161f295e7c8ae17390d/hugo-gallery-example/layouts/shortcodes/gallery.html).
