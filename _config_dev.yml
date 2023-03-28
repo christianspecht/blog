@@ -1,2 +1,3 @@
 # config file for dev mode
 environment: dev
+url: http://localhost:4000
