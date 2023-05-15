@@ -16,8 +16,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - uses: nelonoel/branch-name@v1.0.1
+    - uses: actions/checkout@v3
+    - uses: Wohlstand/branch-name@v1.0.1-wohl
     - name: Build site
       run: |
         docker run \
@@ -43,7 +43,7 @@ jobs:
         echo "${{ secrets.KEY }}" > ~/.ssh/id_rsa
         chmod 600 ~/.ssh/id_rsa
         ssh-keyscan ${{ secrets.HOST }} >> ~/.ssh/known_hosts
-    - uses: nelonoel/branch-name@v1.0.1
+    - uses: Wohlstand/branch-name@v1.0.1-wohl
     - name: Run deploy script
       run: |
         rsync -rSlh --stats build/ ${{ secrets.USERNAME }}@${{ secrets.HOST }}:${{ secrets.WEBPATH }}-${{ env.BRANCH_NAME }}/tar
