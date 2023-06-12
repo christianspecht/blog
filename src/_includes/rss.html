@@ -17,7 +17,8 @@
       <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
       <author>{{ site.authorname }}</author>
       <guid>{{ site.url }}{{ post.id }}</guid>
-      <description>{{ post.content | replace: site.feed_linkurl_find, site.feed_linkurl_replace | replace: site.feed_imgurl_find, site.feed_imgurl_replace | xml_escape }}</description>
+      {% if include.categories %}{% for tag in post.tags %}<category>{{ tag }}</category>
+      {% endfor %}{% endif %}<description>{{ post.content | replace: site.feed_linkurl_find, site.feed_linkurl_replace | replace: site.feed_imgurl_find, site.feed_imgurl_replace | xml_escape }}</description>
     </item>
     {% endfor %}
 
