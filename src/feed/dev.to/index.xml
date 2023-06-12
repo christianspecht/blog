@@ -1,0 +1,5 @@
+---
+layout: null
+---
+
+{% assign tmpposts = site.posts | where: 'externalfeeds', 1  %}{% include rss.html feedurl='/feed/dev.to/index.xml' posts=tmpposts limit=100 %}
