@@ -46,7 +46,7 @@ First of all, how to edit an image's EXIF data? There are probably many tools th
 1. Right-click on an image in the Explorer ⇒ Properties
 2. Go to the `Details` tab and write the caption into the `Title` field:
 
-    ![Git Gui screen](/img/hugo-gallery-exif.png)
+    ![Edit EXIF in Windows Explorer](/img/hugo-gallery-exif.png)
 
 To show this caption in the Hugo image gallery, the line in the shortcode must look like this:
 
