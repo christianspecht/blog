@@ -41,6 +41,13 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
       <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://avatar.christianspecht.de/cs72.jpeg">
                     <link rel="apple-touch-icon-precomposed" href="https://avatar.christianspecht.de/cs57.jpeg">
                                    <link rel="shortcut icon" href="/favicon.ico">
+
+    <meta property="og:site_name" content="{{ site.name }}" />
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+    <meta property="og:type" content="{% if page.url == "/" %}website{% else %}article{% endif %}" />
+    <meta property="og:title" content="{% if page.url == "/" %}{{ site.name }}{% else %}{{ page.title }}{% endif %}" />
+    <meta property="og:description" content="{{ page.content | strip_html | truncatewords:35 }}" />
+    <meta property="og:description2" content="{{ page.excerpt | strip_html }}" />
     {% if site.environment == "prod" %}<script>
       var _paq = window._paq = window._paq || [];
       _paq.push(['trackPageView']);
