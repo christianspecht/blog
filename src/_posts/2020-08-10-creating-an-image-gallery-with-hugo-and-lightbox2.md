@@ -7,6 +7,7 @@ tags:
 - lightbox2
 - web
 externalfeeds: 1
+series: "Hugo/Lightbox image gallery"
 ---
 
 In the last few years, I built multiple static sites with Jekyll. Altogether, I'm happy with Jekyll, but there are a few things that could be better, with the build duration being on top of the list.

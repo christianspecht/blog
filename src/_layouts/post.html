@@ -17,6 +17,15 @@ layout: default
         <span class="blog_post_categories">{% for tag in page.tags %}{% include tags.html %}{% endfor %}</span>
       </small></p>
     </header>
+    {% if page.series %}
+    <div class="well">
+      <h4>This post is part of a series: {{ page.series }}</h4>
+      <ol>
+        <li><a href="#">first title</a></li>
+        <li><a href="#">second title</a></li>
+      </ol>
+    </div>
+    {% endif %}
     <div class="post_prose">
       {{ content }}
     </div>

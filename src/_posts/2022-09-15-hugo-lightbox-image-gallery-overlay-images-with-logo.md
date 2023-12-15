@@ -7,6 +7,7 @@ tags:
 - lightbox2
 - web
 externalfeeds: 1
+series: "Hugo/Lightbox image gallery"
 ---
 
 Another nice addition to the [Hugo/Lightbox2 image gallery]({% post_url 2020-08-10-creating-an-image-gallery-with-hugo-and-lightbox2 %}): one of Hugo's available image filters [is able to overlay the gallery images with a logo](https://gohugo.io/functions/images/#overlay).

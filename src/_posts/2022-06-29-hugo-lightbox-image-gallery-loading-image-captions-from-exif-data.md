@@ -7,6 +7,7 @@ tags:
 - lightbox2
 - web
 externalfeeds: 1
+series: "Hugo/Lightbox image gallery"
 ---
 
 When I figured out [how to create an image gallery with Hugo and Lightbox2]({% post_url 2020-08-10-creating-an-image-gallery-with-hugo-and-lightbox2 %}), there's one thing I left out: image captions.
