@@ -21,8 +21,10 @@ layout: default
     <div class="well">
       <h4>This post is part of a series: {{ page.series }}</h4>
       <ol>
-        <li><a href="#">first title</a></li>
-        <li><a href="#">second title</a></li>
+        {% assign posts = site.posts | where: "series", page.series | sort: "date" %}
+        {% for post in posts %}
+        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% endfor %}
       </ol>
     </div>
     {% endif %}
