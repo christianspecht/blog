@@ -7,6 +7,7 @@ tags:
 - lightbox2
 - web
 externalfeeds: 1
+series: "Jekyll/Lightbox image gallery"
 ---
 
 In one of my recent posts, I showed [how to build an image gallery with Jekyll and Lightbox2]({% post_url 2014-03-08-generating-an-image-gallery-with-jekyll-and-lightbox2 %}).

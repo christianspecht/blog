@@ -8,6 +8,7 @@ tags:
 - jekyll
 - ssh
 externalfeeds: 1
+series: "CI for static site generators"
 ---
 
 After auto-deploying Jekyll sites via [Bitbucket Pipelines]({% post_url 2020-02-26-setting-up-ci-for-this-site-with-bitbucket-pipelines-and-ssh %}) and [GitHub Actions]({% post_url 2020-05-03-building-and-deploying-a-jekyll-site-via-github-actions %}), I wanted to try the same thing via [GitLab CI](https://docs.gitlab.com/ee/ci/) as well.

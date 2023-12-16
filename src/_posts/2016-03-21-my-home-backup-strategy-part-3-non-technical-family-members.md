@@ -6,6 +6,7 @@ tags:
 - backup
 - command-line
 externalfeeds: 1
+series: "My home backup strategy"
 ---
 
 I'm the only person in my extended family who works in IT, so I'm obviously "good with computers"...which means I'm implicitly responsible for other people's computers as well.  

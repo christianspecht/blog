@@ -7,6 +7,7 @@ tags:
 - jekyll
 - ssh
 externalfeeds: 1
+series: "CI for static site generators"
 ---
 
 After years of executing a "build and upload per FTP" batch on my machine, I now have a [GitHub Pages](https://pages.github.com/)-like experience when updating this site.  

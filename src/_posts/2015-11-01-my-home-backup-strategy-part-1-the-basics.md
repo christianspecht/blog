@@ -7,6 +7,7 @@ tags:
 - command-line
 - roboshell-backup
 externalfeeds: 1
+series: "My home backup strategy"
 ---
 
 Years ago, before NAS drives and cloud services were common, I had one single desktop computer and all my data was on its C: drive.

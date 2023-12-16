@@ -3,6 +3,7 @@ layout: post
 title: Tinkerforge Weather Station, part 1 - Intro and construction
 date: 2013/06/17 23:03:00
 tags: [hardware]
+series: "Tinkerforge Weather Station"
 ---
 
 This is my first "real" try to write software for an electronic device.  
