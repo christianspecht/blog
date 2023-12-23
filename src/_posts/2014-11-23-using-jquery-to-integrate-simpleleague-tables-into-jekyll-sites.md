@@ -271,7 +271,7 @@ Just change `/_includes/simpleleague.html` to this:
     
 	{% endraw %}
 
-... and set `simpleleague_frame` appropiately in the config file:
+... and set `simpleleague_frame` appropriately in the config file:
 
 #### `/_config.yml` :
 
