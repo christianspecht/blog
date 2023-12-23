@@ -3,6 +3,7 @@ layout: post
 title: Excluding integration tests in NUnit's GUI, part 1 - Using categories
 date: 2013/04/09 21:39:00
 tags: [.net, nunit, unit-testing]
+series: "Excluding integration tests in NUnit's GUI"
 ---
 
 After writing unit tests for my personal projects for a while, now is the first time that I'm writing integration tests.  

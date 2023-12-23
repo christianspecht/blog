@@ -3,6 +3,7 @@ layout: post
 title: How to display Markdown files from other sites...this time in Blogofile
 date: 2013/02/17 22:51:00
 tags: [markdown, blogofile, php]
+series: "Displaying Markdown files from other sites"
 ---
 
 This is a follow-up to [How to display Markdown files from other sites in WordPress](http://christianspecht.de/2012/03/09/how-to-display-markdown-files-from-other-sites-in-wordpress/).

@@ -6,6 +6,7 @@ tags:
 - jekyll
 - markdown
 - php
+series: "Displaying Markdown files from other sites"
 ---
 
 For quite some time now, the content of the project pages on my site *([this one](/bitbucket-backup/), for example)* was coming directly from the respective Markdown readme file on Bitbucket *([this one](https://github.com/christianspecht/bitbucket-backup/blob/master/readme-full.md), for example)*.

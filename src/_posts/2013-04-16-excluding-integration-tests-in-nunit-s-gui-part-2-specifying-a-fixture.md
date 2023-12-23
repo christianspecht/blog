@@ -3,6 +3,7 @@ layout: post
 title: Excluding integration tests in NUnit's GUI, part 2 - Specifying a fixture
 date: 2013/04/16 23:14:48
 tags: [.net, nunit, unit-testing]
+series: "Excluding integration tests in NUnit's GUI"
 ---
 
 In [the first part of this post](http://christianspecht.de/2013/04/09/excluding-integration-tests-in-nunit-s-gui-part-1-using-categories/), I used NUnit's `[Category]` attribute to separate my integration tests from my unit tests, but I wasn't 100% satisfied with the result.
