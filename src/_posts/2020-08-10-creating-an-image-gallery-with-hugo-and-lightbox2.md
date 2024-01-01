@@ -88,7 +88,7 @@ Shortcodes allow us to create things we need multiple times (like the code to sh
 ...and we can "include" it into other pages like this:
 
 {% raw %}
-    {{< gallery >}} 
+    {{</* gallery */>}} 
 {% endraw %}
 
 [Here's the commit with the changes](https://github.com/christianspecht/code-examples/commit/a8945355940c45c3feb2039b5a8d525c8eda0e02) - this will eventually become my "show image gallery for the current page" include.
