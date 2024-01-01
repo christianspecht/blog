@@ -3,4 +3,4 @@ languageCode = 'en-us'
 title = 'Christian Specht'
 
 contentDir = "src"
-publishDir = "_site"
+publishDir = "../_site"
