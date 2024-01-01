@@ -4,3 +4,10 @@ title = 'Christian Specht'
 
 contentDir = "src"
 publishDir = "../_site"
+
+theme = "custom-bootstrap" 
+
+[params]
+commitid = "abcdefghi"
+buildnumber = "123456"
+

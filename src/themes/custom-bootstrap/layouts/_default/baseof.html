@@ -18,15 +18,16 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    {% if page.redirect %}<meta http-equiv="refresh" content="0; URL={{ page.redirect }}">
-    {% endif %}<title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.name }}</title>
+    {{ $title := print .Title " - " .Site.Title }}
+    {{- if .IsHome -}}{{- $title = .Site.Title -}}{{- end -}}
+    <title>{{ $title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="{{ site.description }}">
-    <meta name="author" content="{{ site.authorname }}">
-    {% if page.noindex or site.noindex %}<meta name="robots" content="noindex,nofollow">{% endif %}
-    <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="{{ site.rss_url }}" />
-    <link rel="alternate" type="application/atom+xml" title="Atom 1.0" href="{{ site.atom_url }}" />
-    <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
+    <meta name="description" content="Personal site of Christian Specht, software developer from Kerpen, Germany.">
+    <meta name="author" content="{{ .Site.Title }}">
+    {{ if or (.Params.noindex) (.Site.Params.noindex) }}<meta name="robots" content="noindex,nofollow">{{ end }}
+    <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="{% site.rss_url %}" />
+    <link rel="alternate" type="application/atom+xml" title="Atom 1.0" href="{% site.atom_url %}" />
+    <link rel="canonical" href="{{ .Permalink }}" />
     <!-- Le styles -->
     <link href="/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <link href="/css/bootstrap-responsive.min.css" rel="stylesheet" crossorigin="anonymous">
@@ -41,7 +42,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
       <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://avatar.christianspecht.de/cs72.jpeg">
                     <link rel="apple-touch-icon-precomposed" href="https://avatar.christianspecht.de/cs57.jpeg">
                                    <link rel="shortcut icon" href="/favicon.ico">
-    {% if site.environment == "prod" %}<script>
+    {{ if .Site.Params.isProd }}<script>
       var _paq = window._paq = window._paq || [];
       _paq.push(['trackPageView']);
       _paq.push(['enableLinkTracking']);
@@ -52,7 +53,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
         var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
         g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
       })();
-    </script>{% endif %}
+    </script>{{ end }}
   </head>
 
   <body>
@@ -65,7 +66,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="/">{{ site.name }}</a>
+          <a class="brand" href="/">{{ .Site.Title }}</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li><a href="/"><i class="fa-solid fa-home"></i> Home</a></li>
@@ -81,8 +82,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
     <div class="container">
       <div class="row">
         <div class="span9">
-          {% if page.redirect %}<h3>Redirecting to <a href="{{ page.redirect }}">{{ page.redirect }}</a> ...</h3>{% endif %}
-          {{ content }}
+          {{- block "main" . }}{{- end }}
         </div><!--/span-->
 
         <div class="row visible-phone spacer50"><hr></div>
@@ -102,7 +102,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
               </li>
               <li>
                 <small>
-                  Developer for about {{ site.time | date: "%Y" | minus: 2003 }} years, living in Kerpen, Germany (near Cologne). Working as an in-house developer <i>(C#/T-SQL/VBA)</i> and DBA at <a href="http://www.weinor.de">weinor</a>, a mid-sized manufacturing company in Cologne.
+                  Developer for about {{ sub now.Year 2003 }} years, living in Kerpen, Germany (near Cologne). Working as an in-house developer <i>(C#/T-SQL/VBA)</i> and DBA at <a href="http://www.weinor.de">weinor</a>, a mid-sized manufacturing company in Cologne.
                 </small>
               </li>
             </ul>
@@ -112,7 +112,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
               <li class="nav-header">Projects</li>
               {% assign projects = site.projects | where: 'sidebar', 1 | sort: 'name' %}
               {% for project in projects %}
-              <li><a href="{{ project.site }}" rel="tooltip" title="{{ project.desc }}">{{ project.name }}</a></li>
+              <li><a href="{% project.site %}" rel="tooltip" title="{% project.desc %}">{% project.name %}</a></li>
               {% endfor %}
             </ul>
           </div><!--/.well -->
@@ -136,7 +136,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
             <ul class="nav nav-list">
               <li class="nav-header">Recent Posts</li>
               {% for post in site.posts limit: 5 %}
-              <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+              <li><a href="{% post.url %}">{% post.title %}</a></li>
               {% endfor %}
             </ul>
           </div><!--/.well -->
@@ -147,7 +147,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 {% for post in site.posts %}
 {% assign thisyear = post.date | date: "%Y" %}{% assign prevyear = post.previous.date | date: "%Y" %}{% assign counter = counter | plus: 1 %}
 {% if thisyear != prevyear %}
-                    <li><a href="/archive/#{{ post.date | date:"%Y" }}">{{ thisyear }} ({{ counter }})</a></li>
+                    <li><a href="/archive/#year">year (counter)</a></li>
 {% assign counter = 0 %}
 {% endif %}
 {% endfor %}
@@ -158,13 +158,13 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
               <li class="nav-header">Tags</li>
 {% capture tags %}
   {% for tag in site.tags %}
-    {{ tag[0] }}#{{ tag[1].size}}
+    {% tag[0] %}#{% tag[1].size%}
   {% endfor %}
 {% endcapture %}
 {% assign sortedtags = tags | split:' ' | sort %}
 {% for tag in sortedtags %}
     {% assign tagitems = tag | split: '#' %}
-                    <li><a href="/tags/#{{ tagitems[0] }}">{{ tagitems[0] }} ({{ tagitems[1] }})</a></li>
+                    <li><a href="/tags/#{% tagitems[0] %}">{% tagitems[0] %} ({% tagitems[1] %})</a></li>
 {% endfor %}
             </ul>
           </div><!--/.well -->
@@ -177,16 +177,15 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
         <div class="row">
             <div class="span8">
                 <p>
-                    Copyright 2012-{{ site.time | date: "%Y" }}
-                    {{ site.authorname}}
+                    Copyright 2012-{{ now.Format "2006" }} {{ .Site.Title }}
                     <br/>
                     <a href="/imprint/">Imprint / Impressum</a> | <a href="/privacy/">Privacy Policy / Datenschutzerklärung</a>
                 </p>
             </div>
             <div class="span4">
                 <p>
-                    Powered by <a href="http://jekyllrb.com/">Jekyll</a>. Built with <a href="http://getbootstrap.com/">Bootstrap</a> &amp; <a href="http://bootswatch.com/cosmo/">Cosmo</a> theme.<br/>
-                    Deployed from commit <a href="https://github.com/christianspecht/blog/commit/{{site.commitid}}">{{site.commitid | slice: 0, 7 }}</a> via build <a href="https://github.com/christianspecht/blog/actions/runs/{{site.buildnumber}}">{{site.buildnumber}}</a>.
+                    Powered by <a href="https://gohugo.io/">Hugo</a>. Built with <a href="http://getbootstrap.com/">Bootstrap</a> &amp; <a href="http://bootswatch.com/cosmo/">Cosmo</a> theme.<br/>
+                    Deployed from commit <a href="https://github.com/christianspecht/blog/commit/{{ .Site.Params.commitid }}">{{ substr .Site.Params.commitid 0 7 }}</a> via build <a href="https://github.com/christianspecht/blog/actions/runs/{{ .Site.Params.buildnumber }}">{{ .Site.Params.buildnumber }}</a>.
                 </p>
             </div>
         </div>
