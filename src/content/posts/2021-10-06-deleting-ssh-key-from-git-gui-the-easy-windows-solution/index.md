@@ -1,7 +1,7 @@
 ---
-layout: post
 title: "Deleting an SSH key from Git Gui: the easy Windows solution"
-date: 2021/10/06 08:00:00
+slug: "deleting-ssh-key-from-git-gui-the-easy-windows-solution"
+date: 2021-10-06T08:00:00
 tags:
 - source-control
 - ssh

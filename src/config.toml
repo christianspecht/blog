@@ -11,4 +11,4 @@ commitid = "abcdefghi"
 buildnumber = "123456"
 
 [permalinks]
-posts = '/:year/:month/:day/:title/'
+posts = '/:year/:month/:day/:slug/'
