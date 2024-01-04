@@ -135,9 +135,9 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
               <li class="nav-header">Recent Posts</li>
-              {% for post in site.posts limit: 5 %}
-              <li><a href="{% post.url %}">{% post.title %}</a></li>
-              {% endfor %}
+              {{ range first 5 (.Site.RegularPages) }}
+              <li><a href="{{ .RelPermalink | absURL }}">{{ .Title }}</a></li>
+              {{ end }}
             </ul>
           </div><!--/.well -->
           <div class="well sidebar-nav">
