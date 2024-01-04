@@ -10,3 +10,5 @@ theme = "custom-bootstrap"
 commitid = "abcdefghi"
 buildnumber = "123456"
 
+[permalinks]
+posts = '/:year/:month/:day/:title/'

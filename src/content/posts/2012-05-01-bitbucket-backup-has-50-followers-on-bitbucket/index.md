@@ -1,7 +1,6 @@
 ---
-layout: post
 title: Bitbucket Backup has 50 followers on Bitbucket!
-date: 2012/05/01 22:01:00
+date: 2012-05-01T22:01:00+02:00
 tags: [backup, bitbucket-backup, source-control]
 ---
 
