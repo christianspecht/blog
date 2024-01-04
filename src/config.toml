@@ -2,7 +2,6 @@ baseURL = 'https://christianspecht.de'
 languageCode = 'en-us'
 title = 'Christian Specht'
 
-contentDir = "src"
 publishDir = "../_site"
 
 theme = "custom-bootstrap" 
