@@ -156,16 +156,8 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
               <li class="nav-header">Tags</li>
-{% capture tags %}
-  {% for tag in site.tags %}
-    {% tag[0] %}#{% tag[1].size%}
-  {% endfor %}
-{% endcapture %}
-{% assign sortedtags = tags | split:' ' | sort %}
-{% for tag in sortedtags %}
-    {% assign tagitems = tag | split: '#' %}
-                    <li><a href="/tags/#{% tagitems[0] %}">{% tagitems[0] %} ({% tagitems[1] %})</a></li>
-{% endfor %}
+                {{ range .Site.Taxonomies.tags }}<li><a href="{{ .Page.Permalink }}">{{ .Page.Title }} ({{ .Count }})</a></li>
+                {{ end }}
             </ul>
           </div><!--/.well -->
         </div><!--/span-->
