@@ -28,5 +28,5 @@ My Developer story also had a nice introductory text, which is unfortunately mis
 
 Related profiles:
 
-- [<i class="fa-brands fa-lg fa-linkedin"></i> LinkedIn](https://www.linkedin.com/in/christian-specht/)
-- [<i class="fa-brands fa-lg fa-xing"></i> Xing](https://www.xing.com/profile/Christian_Specht29/)
+- [{{< font-awesome style="brands" logo="linkedin" size="lg">}} LinkedIn](https://www.linkedin.com/in/christian-specht/)
+- [{{< font-awesome style="brands" logo="xing" size="lg">}} Xing](https://www.xing.com/profile/Christian_Specht29/)
