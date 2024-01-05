@@ -1,9 +1,8 @@
 ---
-layout: default 
 title: CV
 ---
 
-# {{ page.title }}
+# CV
 
 &nbsp;
 
