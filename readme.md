@@ -4,6 +4,16 @@ It's mostly a "regular" Jekyll site, but it contains [some PHP parts](https://gi
 
 ---
 
+
+## Important rules
+
+- Internal links *(in Markdown files)* to other pages MUST use the [`ref` shortcode](https://gohugo.io/content-management/shortcodes/#ref-and-relref)
+  - Example:  
+    Instead of this: `[Imprint](/imprint/)`  
+    ...use this: `[Imprint]({{< ref "/imprint/index.html" >}})`
+
+---
+
 ## How to deploy
 
 Via [GitHub Actions](https://github.com/christianspecht/blog/actions) ([more on this](https://christianspecht.de/2020/05/03/building-and-deploying-a-jekyll-site-via-github-actions/))
