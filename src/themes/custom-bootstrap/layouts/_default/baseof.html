@@ -29,19 +29,19 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
     <link rel="alternate" type="application/atom+xml" title="Atom 1.0" href="{% site.atom_url %}" />
     <link rel="canonical" href="{{ .Permalink }}" />
     <!-- Le styles -->
-    <link href="/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-    <link href="/css/bootstrap-responsive.min.css" rel="stylesheet" crossorigin="anonymous">
-    <link href="/css/cs.css" rel="stylesheet">
-    <link href="/libs/font-awesome/6.4.0/css/fontawesome.min.css" rel="stylesheet" crossorigin="anonymous">
-    <link href="/libs/font-awesome/6.4.0/css/brands.min.css" rel="stylesheet" crossorigin="anonymous">
-    <link href="/libs/font-awesome/6.4.0/css/solid.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link href="{{ "/css/bootstrap.min.css" | absURL }}" rel="stylesheet" crossorigin="anonymous">
+    <link href="{{ "/css/bootstrap-responsive.min.css" | absURL }}" rel="stylesheet" crossorigin="anonymous">
+    <link href="{{ "/css/cs.css" | absURL }}" rel="stylesheet">
+    <link href="{{ "/libs/font-awesome/6.4.0/css/fontawesome.min.css" | absURL }}" rel="stylesheet" crossorigin="anonymous">
+    <link href="{{ "/libs/font-awesome/6.4.0/css/brands.min.css" | absURL }}" rel="stylesheet" crossorigin="anonymous">
+    <link href="{{ "/libs/font-awesome/6.4.0/css/solid.min.css" | absURL }}" rel="stylesheet" crossorigin="anonymous">
 
     <!-- Fav and touch icons -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://avatar.christianspecht.de/cs144.jpeg">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://avatar.christianspecht.de/cs114.jpeg">
       <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://avatar.christianspecht.de/cs72.jpeg">
                     <link rel="apple-touch-icon-precomposed" href="https://avatar.christianspecht.de/cs57.jpeg">
-                                   <link rel="shortcut icon" href="/favicon.ico">
+                                   <link rel="shortcut icon" href="{{ "/favicon.ico" | absURL }}">
     {{ if .Site.Params.isProd }}<script>
       var _paq = window._paq = window._paq || [];
       _paq.push(['trackPageView']);
@@ -66,13 +66,13 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="/">{{ .Site.Title }}</a>
+          <a class="brand" href="{{ "/" | absURL }}">{{ .Site.Title }}</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li><a href="/"><i class="fa-solid fa-home"></i> Home</a></li>
-              <li><a href="/projects/"><i class="fa-solid fa-wrench"></i> Projects</a></li>
-              <li><a href="/archive/"><i class="fa-solid fa-calendar"></i> Archive</a></li>
-              <li><a href="/feed/"><i class="fa-solid fa-rss"></i> Feed</a></li>
+              <li><a href="{{ "/" | absURL }}"><i class="fa-solid fa-home"></i> Home</a></li>
+              <li><a href="{{ "/projects/" | absURL }}"><i class="fa-solid fa-wrench"></i> Projects</a></li>
+              <li><a href="{{ "/archive/" | absURL }}"><i class="fa-solid fa-calendar"></i> Archive</a></li>
+              <li><a href="{{ "/feed/" | absURL }}"><i class="fa-solid fa-rss"></i> Feed</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -95,8 +95,8 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
                 <img class="pull-left media-object img-rounded" src="https://avatar.christianspecht.de/cs57.jpeg" />
                 <div class="media-body">
                   <small>
-                    <a href="/cv/">CV</a><br>
-                    <a href="/imprint/">Contact</a>
+                    <a href="{{ "/cv/" | absURL }}">CV</a><br>
+                    <a href="{{ "/imprint/" | absURL }}">Contact</a>
                   </small>
                 </div>
               </li>
@@ -188,7 +188,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="/js/jquery.min.js" crossorigin="anonymous"></script>
-    <script src="/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <script src="{{ "/js/jquery.min.js" | absURL }}" crossorigin="anonymous"></script>
+    <script src="{{ "/js/bootstrap.min.js" | absURL }}" crossorigin="anonymous"></script>
   </body>
 </html>
