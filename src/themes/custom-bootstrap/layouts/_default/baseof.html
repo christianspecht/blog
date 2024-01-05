@@ -135,7 +135,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
               <li class="nav-header">Recent Posts</li>
-              {{ range first 5 (.Site.RegularPages) }}
+              {{ range first 5 (where .Site.RegularPages "Type" "posts") }}
               <li><a href="{{ .RelPermalink | absURL }}">{{ .Title }}</a></li>
               {{ end }}
             </ul>
