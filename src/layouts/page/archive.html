@@ -1,0 +1,16 @@
+{{ define "main" }}
+{{ .Content }}
+
+<h1>{{ .Page.Title }}</h1>
+<p>&nbsp;</p>
+{{ range (where .Site.RegularPages "Type" "posts").GroupByDate "2006" }}
+<h3 id={{ .Key }}>{{ .Key }}</h3>
+<ul>
+    {{ range .Pages.ByDate.Reverse }}
+      <li>{{ .Date.Format "January 2, 2006" }}: <a href="{{ .Permalink }}">{{ .Title }}</a></li>{{ end }}
+</ul>{{ end }}
+
+<p>&nbsp;</p>
+<p><i>Total number of posts: {{ len (where .Site.RegularPages "Type" "posts") }}</i></p>
+
+{{ end }}
