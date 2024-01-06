@@ -1,7 +1,7 @@
 ---
-layout: post
 title: Getting NUnit 2.6.0 to work in a .NET 4.0 solution
-date: 2012/06/24 23:12:16
+slug: getting-nunit-2-6-0-to-work-in-a-net-4-0-solution
+date: 2012-06-24T23:12:16
 tags: [.net, nunit, unit-testing]
 ---
 
