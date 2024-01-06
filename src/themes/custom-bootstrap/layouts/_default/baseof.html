@@ -143,14 +143,8 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
               <li class="nav-header">Archives</li>
-{% assign counter = 0 %}
-{% for post in site.posts %}
-{% assign thisyear = post.date | date: "%Y" %}{% assign prevyear = post.previous.date | date: "%Y" %}{% assign counter = counter | plus: 1 %}
-{% if thisyear != prevyear %}
-                    <li><a href="/archive/#year">year (counter)</a></li>
-{% assign counter = 0 %}
-{% endif %}
-{% endfor %}
+                {{ range (where .Site.RegularPages "Type" "posts").GroupByDate "2006" }}
+                <li><a href="{{ "/archive/" | absURL }}#{{ .Key }}">{{ .Key }} ({{ len .Pages }})</a></li>{{ end }}
             </ul>
           </div><!--/.well -->
           <div class="well sidebar-nav">
