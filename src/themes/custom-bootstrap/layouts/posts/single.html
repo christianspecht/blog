@@ -1,9 +1,9 @@
----
-layout: default
----
+{{ define "main" }}
 
 <div>
-  <small>{% if page.previous %}<a href="{{ page.previous.url }}">&larr;&nbsp;{{ page.previous.title }}</a>{% endif %} {% if page.next and page.previous %}| {% endif %}{% if page.next %}<a href="{{ page.next.url }}">{{ page.next.title }}&nbsp;&rarr;</a>{% endif %}</small>
+  <small>{{with .PrevInSection}}<a href="{{.Permalink}}">&larr;&nbsp;{{.Title}}</a>{{end}}
+{{if and (.PrevInSection) (.NextInSection)}} | {{end}}
+{{with .NextInSection}}<a href="{{.Permalink}}">{{.Title}}&nbsp;&rarr;</a>{{end}}</small>
 </div>
 
 <hr>
@@ -11,25 +11,25 @@ layout: default
 <article>
   <div class="blog_post">
     <header>
-      <div id="{{ page.id }}"></div>
-      <h2 class="blog_post_title"><a href="{{ page.url }}" rel="bookmark" title="Permanent Link to {{ page.title }}">{{ page.title }}</a></h2>
-      <p><small><span class="blog_post_date">{{ page.date | date: "%b %d %Y, %H:%M:%S" }}</span> | tags: 
+      <div id="{% page.id %}"></div>
+      <h2 class="blog_post_title"><a href="{{ .Permalink }}" rel="bookmark" title="Permanent Link to {{ .Title }}">{{ .Title }}</a></h2>
+      <p><small><span class="blog_post_date">{{ .Date.Format "Jan 02 2006, 15:04" }}</span> | tags: 
         <span class="blog_post_categories">{% for tag in page.tags %}{% include tags.html %}{% endfor %}</span>
       </small></p>
     </header>
     {% if page.series %}
     <div class="well">
-      <h4>This post is part of a series: {{ page.series }}</h4>
+      <h4>This post is part of a series: {% page.series %}</h4>
       <ol>
         {% assign posts = site.posts | where: "series", page.series | sort: "date" %}
         {% for post in posts %}
-        <li>{% if post.url == page.url %}{{ post.title }} <i>(this post)</i>{% else %}<a href="{{ post.url }}">{{ post.title }}</a>{% endif %}</li>
+        <li>{% if post.url == page.url %}{% post.title %} <i>(this post)</i>{% else %}<a href="{% post.url %}">{% post.title %}</a>{% endif %}</li>
         {% endfor %}
       </ol>
     </div>
     {% endif %}
     <div class="post_prose">
-      {{ content }}
+      {{ .Content }}
     </div>
   </div>
 </article>
@@ -37,5 +37,9 @@ layout: default
 <hr>
 
 <div>
-  <small>{% if page.previous %}<a href="{{ page.previous.url }}">&larr;&nbsp;{{ page.previous.title }}</a>{% endif %} {% if page.next and page.previous %}| {% endif %}{% if page.next %}<a href="{{ page.next.url }}">{{ page.next.title }}&nbsp;&rarr;</a>{% endif %}</small>
+  <small>{{with .PrevInSection}}<a href="{{.Permalink}}">&larr;&nbsp;{{.Title}}</a>{{end}}
+{{if and (.PrevInSection) (.NextInSection)}} | {{end}}
+{{with .NextInSection}}<a href="{{.Permalink}}">{{.Title}}&nbsp;&rarr;</a>{{end}}</small>
 </div>
+
+{{end}}
