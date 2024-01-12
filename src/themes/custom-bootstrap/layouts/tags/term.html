@@ -1,0 +1,7 @@
+{{ define "main" }}
+<h3>All pages tagged <code>{{ .Title }}</code></h3>
+<ul>
+{{ range .Pages.ByPublishDate.Reverse }}
+  <li>{{ .Date.Format "January 2, 2006" }}: <a href="{{ .Permalink }}">{{ .Title }}</a></li>{{ end }}
+</ul>
+{{ end }}
