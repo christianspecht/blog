@@ -150,7 +150,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
               <li class="nav-header">Tags</li>
-                {{ range .Site.Taxonomies.tags }}<li><a href="{{ .Page.Permalink }}">{{ .Page.Title }} ({{ .Count }})</a></li>
+                {{ range .Site.Taxonomies.tags }}<li><a href="{{ "/tags" | absURL }}#{{ .Page.Title }}">{{ .Page.Title }} ({{ .Count }})</a></li>
                 {{ end }}
             </ul>
           </div><!--/.well -->
