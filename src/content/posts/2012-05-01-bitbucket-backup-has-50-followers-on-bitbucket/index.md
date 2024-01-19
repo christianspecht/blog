@@ -4,7 +4,7 @@ date: 2012-05-01T22:01:00+02:00
 tags: [backup, bitbucket-backup, source-control]
 ---
 
-As of today, [Bitbucket Backup](http://christianspecht.de/bitbucket-backup/) has hit the 50 follower mark on Bitbucket:
+As of today, [Bitbucket Backup]({{< ref "/bitbucket-backup.html" >}}) has hit the 50 follower mark on Bitbucket:
 
 ![50 followers](/img/bbb-50-followers.png "50 followers")
 

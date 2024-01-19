@@ -1,7 +1,6 @@
 ---
-layout: post
 title: How to display Markdown files from other sites in WordPress
-date: 2012/03/09 20:53:40
+date: 2012-03-09T20:53:40
 tags: [markdown, php, wordpress]
 series: "Displaying Markdown files from other sites"
 ---
@@ -52,7 +51,7 @@ Now, I can display my Bitbucket readme files, or other Markdown files from anoth
 	[readme-md]https://bitbucket.org/christianspecht/bitbucket-backup/raw/tip/readme-full.md[/readme-md]  
 
 That's it!  
-You can see it in action in any of the "projects" links on this site, for example [here](/bitbucket-backup/) (with exactly the readme file from the above example).
+You can see it in action in any of the "projects" links on this site, for example [here]({{< ref "/bitbucket-backup.html" >}}) (with exactly the readme file from the above example).
 
 **Disclaimer:**  
 I'm completely new to WordPress, and the last time I used PHP must have been around 2004.  

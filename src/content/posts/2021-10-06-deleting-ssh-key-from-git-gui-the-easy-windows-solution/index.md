@@ -9,7 +9,7 @@ externalfeeds: 1
 ---
 
 
-About four years ago, I wrote a blog post about [deleting a SSH key from Git GUI]({{< ref "\posts\2017-08-18-deleting-ssh-key-from-git-gui\index.md" >}}).
+About four years ago, I wrote a blog post about [deleting a SSH key from Git GUI]({{< ref "/posts/2017-08-18-deleting-ssh-key-from-git-gui/index.md" >}}).
 
 
 At the time of writing this, I was a new Git user and just played around with SSH for the first time.  
