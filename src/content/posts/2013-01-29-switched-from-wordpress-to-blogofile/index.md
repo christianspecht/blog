@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Switched from WordPress to Blogofile
-date: 2013/01/29 22:13:00
+date: 2013-01-29T22:13:00
 tags: [wordpress, blogofile]
 ---
 

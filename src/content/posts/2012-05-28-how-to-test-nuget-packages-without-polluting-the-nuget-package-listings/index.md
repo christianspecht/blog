@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to test NuGet packages without polluting the NuGet package listings
-date: 2012/05/28 18:10:42
+date: 2012-05-28T18:10:42
 tags: [.net, nuget, visual-studio]
 ---
 
