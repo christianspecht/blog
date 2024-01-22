@@ -29,15 +29,11 @@ aliases:
           <h3 id="posts">Recent Posts:</h3>
 
           <div class="row">
-{% for post in site.posts limit: 3 %}
-{% include indexpostitem.html %}
-{% endfor %}
+          {{< lastposts skip=0 >}}
           </div><!--/row-->
           <div class="row hidden-phone spacer50"></div>
           <div class="row">
-{% for post in site.posts limit: 3 offset: 3 %}
-{% include indexpostitem.html %}
-{% endfor %}
+          {{< lastposts skip=3 >}}
           </div><!--/row-->
 
           <div class="row hidden-phone spacer50"></div>

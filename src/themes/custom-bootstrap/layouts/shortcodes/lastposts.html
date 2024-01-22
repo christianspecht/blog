@@ -1,0 +1,11 @@
+{{- $skip := .Get "skip" -}}
+{{ range first 3 (after $skip (where .Site.RegularPages "Type" "posts")) }}
+            <div class="span3">
+              <h4><a href="{{ .RelPermalink | absURL }}">{{ .Title }}</a></h4>
+              <p>{{ .Summary }}</p>
+              <p><small>{{ .Date.Format "Jan 02 2006" }} |         {{- with .Params.tags -}}
+          {{- range $i, $e := . -}}{{- if $i -}},&nbsp;{{- end -}}<a href="{{ "tags" | absURL }}#{{ $e | urlize }}">{{ $e }}</a>{{ end }}
+        {{- end -}}</small></p>
+            </div><!--/span-->
+            <div class="row visible-phone spacer25"></div>
+{{ end }}
