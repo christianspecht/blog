@@ -1,13 +1,12 @@
 ---
-layout: post
 title: Tinkerforge Weather Station, part 1 - Intro and construction
-date: 2013/06/17 23:03:00
+date: 2013-06-17T23:03:00
 tags: [hardware]
 series: "Tinkerforge Weather Station"
 ---
 
 This is my first "real" try to write software for an electronic device.  
-Actually, I already [controlled an USB Missile Launcher](/missilesharp/). But I didn't really interact much with the hardware then, I just bought a shrink-wrapped device and figured out how to send the right commands to the USB port. So I don't know if this really counts as "electronics".
+Actually, I already [controlled an USB Missile Launcher]({{< ref "/missilesharp.html" >}}). But I didn't really interact much with the hardware then, I just bought a shrink-wrapped device and figured out how to send the right commands to the USB port. So I don't know if this really counts as "electronics".
 
 I was already longer interested to do something "real" with electronics/hardware, but I wasn't sure how to get started.  
 For example, I looked at the [Arduino](http://www.arduino.cc/) first *(I even pre-ordered the ["Arduino in Action" book](http://www.manning.com/mevans/) from Manning)*. The whole platform looks interesting, but as I have absolutely **no** electronics/hardware experience at all, fuddling with LEDs, resistors etc. sounds hard/complicated to me.
@@ -151,7 +150,7 @@ That's enough to get it to work:
 ## Conclusion
 
 That was the first part. As I said before, I'm planning to control the Weather Station with a [Raspberry PI](http://www.raspberrypi.org/).  
-It's already ordered, and in [the second part](/2013/08/15/tinkerforge-weather-station-part-2-connecting-to-a-raspberry-pi/), I will connect it to the Weather Station.
+It's already ordered, and in [the second part]({{< ref "/posts/2013-08-15-tinkerforge-weather-station-part-2-connecting-to-a-raspberry-pi/index.md" >}}), I will connect it to the Weather Station.
 
 
 	

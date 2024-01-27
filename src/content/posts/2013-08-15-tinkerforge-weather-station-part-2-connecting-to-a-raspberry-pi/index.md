@@ -1,13 +1,12 @@
 ---
-layout: post
 title: Tinkerforge Weather Station, part 2 - Connecting to a Raspberry PI
-date: 2013/08/15 22:16:00
+date: 2013-08-15T22:16:00
 tags: [hardware, raspberry-pi]
 series: "Tinkerforge Weather Station"
 ---
 
 This is the second part of me playing around with the [Weather Station Starter Kit](http://www.tinkerforge.com/en/doc/Kits/WeatherStation/WeatherStation.html) from [Tinkerforge](http://www.tinkerforge.com).  
-In [the first part](/2013/06/17/tinkerforge-weather-station-part-1-intro-and-construction/), I assembled the Weather Station (including Wi-Fi) and wrote a basic application in C# for it.
+In [the first part]({{< ref "/posts/2013-06-17-tinkerforge-weather-station-part-1-intro-and-construction/index.md" >}}), I assembled the Weather Station (including Wi-Fi) and wrote a basic application in C# for it.
 
 In the meantime, my ordered [Raspberry PI](http://www.raspberrypi.org/) has arrived. I'm planning to control the Weather Station with a Raspberry because I don't want to leave one of my "real" computers running *(and wasting electricity)* all the time. The Tinkerforge guys have [a tutorial how to put the Raspberry PI into the Weather Station](http://www.tinkerforge.com/en/doc/Kits/WeatherStation/Construction_RaspberryPi.html), but I won't do that - instead, I will separate it from the Weather Station and leave it inside the house, for two reasons:
 
