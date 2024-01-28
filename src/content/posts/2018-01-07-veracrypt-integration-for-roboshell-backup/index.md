@@ -1,14 +1,13 @@
 ---
-layout: post
 title: "VeraCrypt integration for RoboShell Backup"
-date: 2018/01/07 16:25:00
+date: 2018-01-07T16:25:00
 tags:
 - backup
 - roboshell-backup
 externalfeeds: 0
 ---
 
-Before TrueCrypt development ceased in 2014, I [added support for TrueCrypt encryption]({% post_url 2012-04-30-roboshell-backup-1-1-now-with-truecrypt-integration %}) to [RoboShell Backup](/roboshell-backup/).  
+Before TrueCrypt development ceased in 2014, I [added support for TrueCrypt encryption]({{< ref "/posts/2012-04-30-roboshell-backup-1-1-now-with-truecrypt-integration/index.md" >}}) to [RoboShell Backup](/roboshell-backup/).  
 In the meantime, multiple TrueCrypt forks have been developed based on the last "good" version.
 
 Until now, I was still using that last TrueCrypt version for my personal backup USB drives.  
