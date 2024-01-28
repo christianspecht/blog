@@ -1,9 +1,8 @@
 ---
-layout: default 
 title: Feed
 ---
 
-# {{ page.title }}
+# Feed
 
 &nbsp;
 
