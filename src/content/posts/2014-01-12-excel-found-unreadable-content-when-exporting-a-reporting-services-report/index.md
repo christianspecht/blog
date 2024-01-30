@@ -1,7 +1,6 @@
 ---
-layout: post
 title: Excel found unreadable content (when exporting a Reporting Services report)
-date: 2014/01/14 00:16:00
+date: 2014-01-14T00:16:00
 tags: [sql-server, ms-office, wtf]
 ---
 

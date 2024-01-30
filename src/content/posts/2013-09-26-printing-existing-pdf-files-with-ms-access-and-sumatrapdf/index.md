@@ -1,7 +1,6 @@
 ---
-layout: post
 title: Printing existing PDF files with MS Access and SumatraPDF
-date: 2013/09/26 18:03:00
+date: 2013-09-26T18:03:00
 tags: [ms-office, vba]
 ---
 
@@ -29,7 +28,7 @@ According to the [manual](http://blog.kowalczyk.info/software/sumatrapdf/manual.
 So all we have to do is call SumatraPDF and supply the path to the PDF file, plus (optional) a printer name.
 
 ***Note that the example code below uses several functions that are *NOT* part of the default VBA library:***  
-*`Path_Combine`, `Path_GetCurrentDirectory`, `File_Exists`, `String_Format` and `Process_Start` are all from my open source "toolbox" [VBA Helpers](/vba-helpers/).  
+*`Path_Combine`, `Path_GetCurrentDirectory`, `File_Exists`, `String_Format` and `Process_Start` are all from my open source "toolbox" [VBA Helpers]({{< ref "/vba-helpers.html" >}}).  
 Of course, you can do it as well using only vanilla VBA, but that would make the example code quite a bit longer and definitely less readable.*
 
 *If you don't want to use the functions from VBA Helpers, you can read [the source code](https://github.com/christianspecht/vba-helpers/blob/master/vba-helpers.bas) to see how they are implemented, and then implement them in your own code yourself.*

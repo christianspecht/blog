@@ -1,7 +1,6 @@
 ---
-layout: post
 title: Publishing a web project with MSBuild (with multiple configurations)
-date: 2013/12/16 23:14:00
+date: 2013-12-16T23:14:00
 tags: [.net, msbuild, visual-studio]
 ---
 

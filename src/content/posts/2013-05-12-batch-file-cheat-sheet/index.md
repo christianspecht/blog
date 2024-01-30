@@ -1,7 +1,6 @@
 ---
-layout: post
 title: Batch File Cheat Sheet
-date: 2013/05/12 23:45:00
+date: 2013-05-12T23:45:00
 tags: [command-line]
 ---
 

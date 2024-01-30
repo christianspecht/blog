@@ -1,11 +1,11 @@
 ---
-layout: post
 title: Basic Authentication in ASP.NET Web API
-date: 2013/08/02 01:51:00
+slug: basic-authentication-in-asp-net-web-api
+date: 2013-08-02T01:51:00
 tags: [.net, web-api, authentication]
 ---
 
-For my current project [Tasko](/tasko/), I'm writing a service backend in [ASP.NET Web API](http://www.asp.net/web-api) at the moment.
+For my current project [Tasko]({{< ref "/tasko.html" >}}), I'm writing a service backend in [ASP.NET Web API](http://www.asp.net/web-api) at the moment.
 
 I already had a usable basic version for some time, the last thing that was missing was authentication.  
 This web services stuff is all new to me *(that's one of the reasons why I'm creating a task management app myself, instead of using one of the many that already exist)*, so I didn't know much about authentication as well. I had a vague idea that something like [Basic Authentication](http://en.wikipedia.org/wiki/Basic_access_authentication) existed, but that was all.
