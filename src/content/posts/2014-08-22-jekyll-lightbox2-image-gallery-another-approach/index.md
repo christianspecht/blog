@@ -1,7 +1,7 @@
 ---
-layout: post
 title: Jekyll / Lightbox2 image gallery, another approach
-date: 2014/08/22 22:43:00
+slug: jekyll-lightbox2-image-gallery-another-approach
+date: 2014-08-22T22:43:00
 tags:
 - jekyll
 - lightbox2
@@ -10,7 +10,7 @@ externalfeeds: 1
 series: "Jekyll/Lightbox image gallery"
 ---
 
-In one of my recent posts, I showed [how to build an image gallery with Jekyll and Lightbox2]({% post_url 2014-03-08-generating-an-image-gallery-with-jekyll-and-lightbox2 %}).
+In one of my recent posts, I showed [how to build an image gallery with Jekyll and Lightbox2]({{< ref "/posts/2014-03-08-generating-an-image-gallery-with-jekyll-and-lightbox2/index.md" >}}).
 
 The gallery featured there consists of [one index page](http://jekyll-gallery-example.christianspecht.de/galleries/) and [multiple](http://jekyll-gallery-example.christianspecht.de/galleries/gallery1/) [subpages](http://jekyll-gallery-example.christianspecht.de/galleries/anothergallery/), and all the content was dynamically generated out of [a YAML data file](https://github.com/christianspecht/code-examples/blob/585b93bb34e0fa4c5c7d95f0152f891ebcfb0c12/jekyll-gallery-example/_data/galleries.yml).
 
@@ -60,21 +60,18 @@ This time, I need **only** jQuery and Lightbox2...in other words, just these thr
 
 It doesn't make sense at all to create a special layout file for just these three lines, so I put them into an [include file](https://github.com/christianspecht/code-examples/blob/master/jekyll-gallery-example/_includes/galheader.html) instead, which I can load with:
 
-{% raw %}
 	{% include galheader.html %}
-{% endraw %}
+
 ---
 
 ## Displaying the gallery
 
 As already mentioned in the introduction, I needed two different "modes" how to display images:
 
-0. Display a single image
-0. Display the complete gallery
+1. Display a single image
+2. Display the complete gallery
 
 I'm using [another include file](https://github.com/christianspecht/code-examples/blob/master/jekyll-gallery-example/_includes/gal.html) for this, with the following code:
-
-{% raw %}
 
 	{% for image in page.images %}
 		{% if include.image == null or include.image == image.name %}
@@ -84,35 +81,23 @@ I'm using [another include file](https://github.com/christianspecht/code-example
 		{% endif %}
 	{% endfor %}
 
-{% endraw %}
-
 This just loops through all the images on the page, and uses Lightbox2 to display either a single image *(if the image's name was passed via `include.image`)* or all images.
 
 So there are two different ways how this file can be included:
 
-0. Show all images defined in the front-matter of the current page:
-
-{% raw %}
+1. Show all images defined in the front-matter of the current page:
 
 	    {% include gal.html %}
 
-{% endraw %}
-
-0. Display a single image:
-
-{% raw %}
+2. Display a single image:
 
 	    {% include gal.html image="image-1.jpg" %}
-
-{% endraw %}
 
 ---
 
 ## The end result
 
 Here is a sample page which features both gallery "modes":
-
-{% raw %}
 
 	---
 	layout: default
@@ -144,8 +129,6 @@ Here is a sample page which features both gallery "modes":
 	{% include gal.html %}
 
 	Footer text
-	
-{% endraw %}
 
 This will be rendered to the following HTML *(just the part with the galleries)*:
 
@@ -177,5 +160,5 @@ This will be rendered to the following HTML *(just the part with the galleries)*
 
 ## Example code
 
-A complete example project is [here on GitHub](https://github.com/christianspecht/code-examples/tree/master/jekyll-gallery-example), and [the finished](http://jekyll-gallery-example.christianspecht.de/gallery-text1/) [gallery pages](http://jekyll-gallery-example.christianspecht.de/gallery-text2/) are online as well, as a part of the example site from the [first blog post]({% post_url 2014-03-08-generating-an-image-gallery-with-jekyll-and-lightbox2 %}).
+A complete example project is [here on GitHub](https://github.com/christianspecht/code-examples/tree/master/jekyll-gallery-example), and [the finished](http://jekyll-gallery-example.christianspecht.de/gallery-text1/) [gallery pages](http://jekyll-gallery-example.christianspecht.de/gallery-text2/) are online as well, as a part of the example site from the [first blog post]({{< ref "/posts/2014-03-08-generating-an-image-gallery-with-jekyll-and-lightbox2/index.md" >}}).
 

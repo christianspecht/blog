@@ -1,7 +1,6 @@
 ---
-layout: post
 title: Generating an image gallery with Jekyll and Lightbox2
-date: 2014/03/08 19:04:00
+date: 2014-03-08T19:04:00
 tags: 
 - jekyll
 - lightbox2
@@ -68,11 +67,9 @@ In my first draft I had one data file per gallery, but in the end I went with *o
 
 Since all galleries are inside the same data file, creating the list of galleries on the ["gallery index page"](http://jekyll-gallery-example.christianspecht.de/galleries/) is very simple:
 
-{% raw %}
 	{% for gallery in site.data.galleries %}
 	- [{{ gallery.description }}]({{ gallery.id }})
 	{% endfor %}
-{% endraw %}
 
 This just loops through the list of galleries, displays the `description` value and links to a sub-folder with the name of the `id` value.  
 [The file](https://raw.githubusercontent.com/christianspecht/code-examples/master/jekyll-gallery-example/galleries/index.md) is a Markdown file, so creating the list of links in Markdown is sufficient.
@@ -85,8 +82,8 @@ Next, I created the sub pages with the actual image galleries, the ones that are
 
 According to the [Lightbox docs](http://lokeshdhakar.com/projects/lightbox2/#how-to-use), the following steps are required to display images with Lightbox:
 
-0. Load jQuery and two Lightbox files (JS and CSS)
-0. Show each image on the page with the following HTML:
+1. Load jQuery and two Lightbox files (JS and CSS)
+2. Show each image on the page with the following HTML:
 
         <a href="img/image-1.jpg" data-lightbox="image-1" title="My caption">image #1</a>
 
@@ -106,7 +103,6 @@ It's still necessary to create a HTML or Markdown file for the actual URL of eac
 
 This is how the [layout file](https://github.com/christianspecht/code-examples/blob/master/jekyll-gallery-example/_layouts/gallery.html) looks like:
 
-{% raw %}
 	---
 	layout: default
 	---
@@ -134,7 +130,6 @@ This is how the [layout file](https://github.com/christianspecht/code-examples/b
 	{% endfor %}
 	
 	<p>default footer for all gallery pages</p>
-{% endraw %}
 
 To find the right gallery in the data file, the layout just loops through the data file until it finds a gallery where the `id` property matches the `galleryid` in the front matter of the page.  
 Then, it loops through the images in the gallery and creates the necessary "Lightbox HTML" for each one *(with thumbnails and image descriptions)*.
@@ -200,6 +195,6 @@ Now that all the plumbing is done, adding a new gallery page is very simple:
 
 That's already enough to add [this gallery](http://jekyll-gallery-example.christianspecht.de/galleries/anothergallery/) to [the site](http://jekyll-gallery-example.christianspecht.de/).
 
-*There is also [another blog post]({% post_url 2014-08-22-jekyll-lightbox2-image-gallery-another-approach %}) showing a different approach how to generate image galleries with Jekyll.*
+*There is also [another blog post]({{< ref "/posts/2014-08-22-jekyll-lightbox2-image-gallery-another-approach/index.md" >}}) showing a different approach how to generate image galleries with Jekyll.*
 
 

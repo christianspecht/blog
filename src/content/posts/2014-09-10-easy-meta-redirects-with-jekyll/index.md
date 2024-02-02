@@ -1,7 +1,6 @@
 ---
-layout: post
 title: Easy meta redirects with Jekyll
-date: 2014/09/15 22:51:00
+date: 2014-09-15T22:51:00
 tags:
 - jekyll
 ---
@@ -30,19 +29,14 @@ And I needed to do **a lot** of these redirects, so I wanted to be able to creat
 What I did in the end was adding two lines to the default layout.  
 One *(the actual meta redirect)* inside the `<head>`:
 
-{% raw %}
     {% if page.redirect %}<meta http-equiv="refresh" content="0; url={{ page.redirect }}">{% endif %}
-{% endraw %}
 
-...and one in the body, just above or below Jekyll's `{% raw %}{{content}}{% endraw %}` tag:
-    
-{% raw %}
+...and one in the body, just above or below Jekyll's `{{content}}` tag:
+
     {% if page.redirect %}<h3> Redirecting to <a href="{{ page.redirect }}">{{ page.redirect }}</a> ...</h3>{% endif %}
-{% endraw %}
 
 So a *very* basic layout file with these two lines added will look like this:
 
-{% raw %}
     <!DOCTYPE html>
     <html>
     <head>
@@ -55,7 +49,6 @@ So a *very* basic layout file with these two lines added will look like this:
         {{ content }}
     </body>
     </html>
-{% endraw %}
 
 The line in the head will do the actual meta redirect.
 

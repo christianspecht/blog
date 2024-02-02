@@ -1,7 +1,6 @@
 ---
-layout: post
 title: Building a pseudo-dynamic tree menu with Jekyll
-date: 2014/06/18 00:40:00
+date: 2014-06-18T00:40:00
 tags:
 - jekyll
 externalfeeds: 1
@@ -134,7 +133,6 @@ In other words: an include file can include itself.
 Based on this, I came up with the following solution.    
 First, the [layout file](http://jekyllrb.com/docs/structure/) (`/_layouts/default.html`):
 
-{% raw %}
 
 	<!DOCTYPE html>
 	<html>
@@ -155,19 +153,16 @@ First, the [layout file](http://jekyllrb.com/docs/structure/) (`/_layouts/defaul
 	</body>
 	</html>
 
-{% endraw %}
 
 Nothing special here - it just displays the navigation *(via include file)*, then a horizontal line, then the actual page content.
 
 The only thing worth mentioning is that we're passing the complete sitemap from the data file to the include:
 
-{% raw %}
 
 	{% include nav.html nav=site.data.menu %}
 
-{% endraw %}
 
-According to [the docs](http://jekyllrb.com/docs/templates/#includes), it's available inside the include then, via `{% raw %}{{ include.nav }}{% endraw %}`.
+According to [the docs](http://jekyllrb.com/docs/templates/#includes), it's available inside the include then, via `{{ include.nav }}`.
 
 ---
 
@@ -176,8 +171,6 @@ According to [the docs](http://jekyllrb.com/docs/templates/#includes), it's avai
 This is where all the magic happens:
 
 `/_includes/nav.html`
-
-{% raw %}
 
 	{% assign navurl = page.url | remove: 'index.html' %}
 	<ul>
@@ -197,21 +190,15 @@ This is where all the magic happens:
 	{% endfor %}
 	</ul>
 
-{% endraw %}
-
 There's *a lot* of magic happening here, so we'll go through it step by step.
 
-0. First, we save the URL of the current page in a variable called `navurl`, stripping `index.html` from the end:
-
-	{% raw %}
+1. First, we save the URL of the current page in a variable called `navurl`, stripping `index.html` from the end:
 
 		{% assign navurl = page.url | remove: 'index.html' %}
 
-	{% endraw %}
-
 	So when the current page is `/first-menu/index.html`, `navurl` will be set to `/first-menu/`.
 
-0. Then, we loop through the uppermost level of menu items.  
+2. Then, we loop through the uppermost level of menu items.  
 	In case of the example data file from above, these items are:
 	
 	- Home
@@ -220,11 +207,9 @@ There's *a lot* of magic happening here, so we'll go through it step by step.
 
 	We'll come to the subitems later.
 
-0. The next line displays the link to the menu item.  
+3. The next line displays the link to the menu item.  
 	We're using the `navurl` variable from step 1 here, to determine whether the URL of the currently looped menu item is equal to the URL of the current page.  
 	If yes, we'll display the link in bold because it's the link to the current page: 
-
-	{% raw %}
 
 		<a href="{{ item.url }}">
 			{% if item.url == navurl %}
@@ -234,9 +219,7 @@ There's *a lot* of magic happening here, so we'll go through it step by step.
 			{% endif %}
 		</a>
 
-	{% endraw %}
-
-0. Does the menu item have subitems? If yes, we now need to decide whether to show them.    
+4. Does the menu item have subitems? If yes, we now need to decide whether to show them.    
 	There are two cases when they must be shown:
 
 	- when the menu item is the current page
@@ -245,13 +228,9 @@ There's *a lot* of magic happening here, so we'll go through it step by step.
 	This is quite easy when all the subitems are placed in subfolders of their parents ([see above](#subfolders)).  
 	Because then, finding out if a menu item is either the current page or a parent of the current page becomes a matter of just comparing URLs:
 
-	{% raw %}
-
 	    {% if item.subitems and navurl contains item.url %}
 	        <!-- show subitems here -->
 	    {% endif %}
-
-	{% endraw %}
 
 	For clarification, I'll show the relevant part of the data file again:
 	
@@ -266,18 +245,15 @@ There's *a lot* of magic happening here, so we'll go through it step by step.
 	
 	When we're looping the first level of menu items, one of the items is **"First menu"** with this URL: `/first-menu/`
 
-	**Now `{% raw %}{% if item.subitems and navurl contains item.url %}{% endraw %}` means:  
+	**Now `{% if item.subitems and navurl contains item.url %}` means:  
 	We're displaying subitems for "First menu" whenever the URL of the current page *(`navurl`)* contains the URL of "First menu" *(`item.url`)*.**
 
 	&rarr; When the current page is any of the three in the example above, each one's URL contains `/first-menu/`, so the subitems of **"First menu"** will be shown in all three cases.
 
-0. We're showing the subitems by including `nav.html` again, only this time we're passing the subitems of the current menu item:
-
-	{% raw %}
+5. We're showing the subitems by including `nav.html` again, only this time we're passing the subitems of the current menu item:
 
 		{% include nav.html nav=item.subitems %}
 
-	{% endraw %}
 
 	So it will do everything I just described again, only one level deeper in the menu: it will loop the subitems that we just passed, include itself again if the subitems have subitems themselves, and so on.  
 	That's all!
