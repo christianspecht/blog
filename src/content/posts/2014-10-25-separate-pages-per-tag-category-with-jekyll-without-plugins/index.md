@@ -1,7 +1,7 @@
 ---
-layout: post
 title: Separate pages per tag/category with Jekyll (without plugins)
-date: 2014/10/25 15:58:00
+slug: separate-pages-per-tag-category-with-jekyll-without-plugins
+date: 2014-10-25T15:58:00
 tags:
 - jekyll
 ---
@@ -10,9 +10,9 @@ Apparently one of the challenges that many new Jekyll users are facing is how to
 
 > *Note: I'll use the word "tag" in this post, but everything I'm writing here applies to categories as well - because for the purpose of generating list of posts with a certain tag/category, [tags and categories are the same in Jekyll](http://stackoverflow.com/q/8675841/6884).*
 
-I had that problem as well when I [built this blog with Jekyll]({% post_url 2013-12-31-hello-jekyll %}), and after I [posted my solution on Stack Overflow](http://stackoverflow.com/a/21002505/6884), I received 17 upvotes *(as of now)* in about 10 months - this is by far my most upvoted answer in the `jekyll` tag.
+I had that problem as well when I [built this blog with Jekyll]({{< ref "/posts/2013-12-31-hello-jekyll/index.md" >}}), and after I [posted my solution on Stack Overflow](http://stackoverflow.com/a/21002505/6884), I received 17 upvotes *(as of now)* in about 10 months - this is by far my most upvoted answer in the `jekyll` tag.
 
-However, Jekyll is not able to generate new pages on the fly without plugins...so the solution I'm using here in this blog consists of [a single tag page](/tags/) [which lists the posts for **all** tags](https://github.com/christianspecht/blog/blob/39138d396bdcec5abc8248dfee9c431277d0148c/src/tags/index.html).
+However, Jekyll is not able to generate new pages on the fly without plugins...so the solution I'm using here in this blog consists of [a single tag page]({{< ref "/tags.html" >}}) [which lists the posts for **all** tags](https://github.com/christianspecht/blog/blob/39138d396bdcec5abc8248dfee9c431277d0148c/src/tags/index.html).
 
 But some people absolutely want separate pages, one per tag.  
 This is also possible without plugins, even though it's less comfortable because there's one disadvantage:  
@@ -25,8 +25,6 @@ This is also possible without plugins, even though it's less comfortable because
 In order to minimize the effort needed to create a new tag page, we'll put as much as possible into a [layout file](http://jekyllrb.com/docs/frontmatter/#predefined-global-variables):
 
 `/_layouts/tagpage.html`:
-
-    {% raw %}
 
     ---
     layout: default
@@ -42,8 +40,6 @@ In order to minimize the effort needed to create a new tag page, we'll put as mu
     {% endfor %}
     </ul>
 
-    {% endraw %}
-
 The layout file just pulls the name of the tag from a variable in the [YAML front-matter](http://jekyllrb.com/docs/frontmatter/) of the page, loops all posts with that tag and displays a list of links to them.
 
 ---
@@ -54,14 +50,10 @@ With the layout file shown above, adding a new tag page *(in this example for th
 
 `/tags/jekyll/index.html`:
 
-    {% raw %}
-
     ---
     layout: tagpage
     tag: jekyll
     ---
-
-    {% endraw %}
     
 Just two lines of front-matter, no content necessary.
 

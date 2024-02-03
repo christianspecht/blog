@@ -1,19 +1,18 @@
 ---
-layout: post
 title: Using jQuery to integrate SimpleLeague tables into Jekyll sites
-date: 2014/11/23 18:41:00
+date: 2014-11-23T18:41:00
 tags:
 - jekyll
 - web
 - simpleleague
 ---
 
-When I started building [SimpleLeague](/simpleleague/) last year, I needed it to show results and league tables in an existing website, built with a PHP-based CMS. So I just used [PHP's `include`](http://php.net/manual/en/function.include.php), with [`allow_url_include`](http://www.php.net/manual/en/filesystem.configuration.php#ini.allow-url-include) enabled to load the SimpleLeague tables from a subdomain of the site's URL.
+When I started building [SimpleLeague]({{< ref "/simpleleague.html" >}}) last year, I needed it to show results and league tables in an existing website, built with a PHP-based CMS. So I just used [PHP's `include`](http://php.net/manual/en/function.include.php), with [`allow_url_include`](http://www.php.net/manual/en/filesystem.configuration.php#ini.allow-url-include) enabled to load the SimpleLeague tables from a subdomain of the site's URL.
 
 This summer, I needed to re-think my previous approach, because I ditched the CMS and converted the whole site to Jekyll.  
 I planned to keep the site running on the same server as before *(rented webspace with Apache/PHP)*, so the path of least resistance would have been to generate all pages with SimpleLeague tables as `.php` files and continue using PHP's `include`.
 
-But I didn't like the idea, because creating `.php` files with a static site generator has one huge disadvantage that I already noticed when I built the [project pages]({% post_url 2013-02-17-how-to-display-markdown-files-from-other-sites-this-time-in-blogofile %}): the local testing server `jekyll serve` *(or `blogofile serve` before, when I was using [Blogofile](http://www.blogofile.com/))* isn't able to display them.
+But I didn't like the idea, because creating `.php` files with a static site generator has one huge disadvantage that I already noticed when I built the [project pages]({{< ref "/posts/2013-02-17-how-to-display-markdown-files-from-other-sites-this-time-in-blogofile/index.md" >}}): the local testing server `jekyll serve` *(or `blogofile serve` before, when I was using [Blogofile](http://www.blogofile.com/))* isn't able to display them.
 
 So I wanted a different approach for the SimpleLeague pages: create plain HTML files with Jekyll, and load the dynamic content from a different URL via JavaScript/[jQuery](http://jquery.com/)/whatever.
 
@@ -48,16 +47,12 @@ So the first step is this basic include file which I'll use for all SimpleLeague
 
 #### `/_includes/simpleleague.html` :
 
-	{% raw %}
-
     <div id="sl-{{ include.divname }}"></div>
     <script type="text/javascript">
     $(document).ready(function() {
         $('#sl-{{ include.divname }}').load('{{ site.simpleleague_url }}{{ include.url }}');
     });
     </script>
-    
-	{% endraw %}
 
 *(I'm prefixing the id of the div with `sl-`, to avoid collisions with the ids on the host site.)*
 
@@ -69,11 +64,7 @@ Plus, the `simpleleague_url` must be added to the config file:
 
 Both of this is already enough to load a SimpleLeague table with one line of code:
 
-	{% raw %}
-
 	{% include simpleleague.html divname='players' url='season_players/?season_name=2014' %}
-
-	{% endraw %}
 
 ...which will generate the following HTML:
 
@@ -94,20 +85,13 @@ For each SimpleLeague URL, I created a separate include file that wraps `simplel
 
 #### `/_includes/season_players.html` :
 
-	{% raw %}
-
 	{% assign tmp = 'season_players/?season_name=' | append: include.season %}
 	{% include simpleleague.html divname='season' url=tmp %}
 
-	{% endraw %}
 
 Now I can shorten the include calls to this:
 
-	{% raw %}
-
 	{% include season_players.html season='2014' %}
-
-	{% endraw %}
 
 This approach has only one disadvantage: Building the URL like this (`assign | append`) gets messy if there are multiple parameters.
 
@@ -123,69 +107,45 @@ But I can live with that, because I need to create the include files only once. 
 
 #### `/_includes/alltime_allresults.html` :
 
-	{% raw %}
-
 	{% include simpleleague.html divname='alltime' url='alltime_allresults/' %}
-
-	{% endraw %}
 
 ---
 
 #### `/_includes/round_results.html` :
 
-	{% raw %}
-
 	{% assign tmp = 'round_results/?season_name=' | append: include.season | append: '&round_number=' | append: include.round %}
 	{% include simpleleague.html divname='results' url=tmp %}
-
-	{% endraw %}
 
 ---
 
 #### `/_includes/season_crosstab.html` :
-
-	{% raw %}
 	
 	{% assign tmp = 'season_crosstab/?season_name=' | append: include.season %}
 	{% include simpleleague.html divname='crosstab' url=tmp %}
-
-	{% endraw %}
 
 ---
 
 #### `/_includes/season_players.html` :
 
-	{% raw %}
-
 	{% assign tmp = 'season_players/?season_name=' | append: include.season %}
 	{% include simpleleague.html divname='players' url=tmp %}
-
-	{% endraw %}
 
 ---
 
 #### `/_includes/season_ranking.html` :
-
-	{% raw %}
 	
 	{% assign tmp = 'season_ranking/?season_name=' | append: include.season | append: '&round_number=' | append: include.round %}
 	{% include simpleleague.html divname='ranking' url=tmp %}
 
-	{% endraw %}
-
 ---
 
 #### `/_includes/season_schedule.html` :
-
-	{% raw %}
 
 	{% assign tmp = 'season_schedule/?season_name=' | append: include.season %}
 	{% if include.round %}
 	    {% assign tmp = tmp | append: '&round_number=' | append: include.round %}
 	{% endif %}
 	{% include simpleleague.html divname='schedule' url=tmp %}
-
-	{% endraw %}
 
 ---
 
@@ -197,30 +157,18 @@ For example, SimpleLeague allows you to pass the name of a custom template, whic
 
 If you **always** need the same custom template, you can just change this:
 
-	{% raw %}
-
 	{% assign tmp = 'season_players/?season_name=' | append: include.season %}
-
-	{% endraw %}
 
 ...to this:
 
-	{% raw %}
-
 	{% assign tmp = 'season_players/?custom_template=whatever&season_name=' | append: include.season %}
-
-	{% endraw %}
 
 
 If you need to change the template conditionally instead, you can add the following before passing the url to `simpleleague.html`:
 
-	{% raw %}
-
 	{% if include.template %}
 	    {% assign tmp = tmp | append: '&custom_template=' | append: include.template %}
 	{% endif %}
-
-	{% endraw %}
 
 ---
 
@@ -256,8 +204,6 @@ If you do **not** want to go the `-disable-web-security` way, there's also the p
 
 Just change `/_includes/simpleleague.html` to this:
 
-	{% raw %}
-
     {% if site.simpleleague_frame == 1 %}
     <iframe frameborder="0" height="500" width="500" name="{{ include.divname }}" src="{{ site.simpleleague_url }}{{ include.url }}"></iframe>
     {% else %}
@@ -268,8 +214,6 @@ Just change `/_includes/simpleleague.html` to this:
     });
     </script>
     {% endif %}
-    
-	{% endraw %}
 
 ... and set `simpleleague_frame` appropriately in the config file:
 

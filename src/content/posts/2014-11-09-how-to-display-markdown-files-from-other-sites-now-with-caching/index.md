@@ -1,7 +1,6 @@
 ---
-layout: post
 title: "How to display Markdown files from other sites: now with caching!"
-date: 2014/11/09 23:41:00
+date: 2014-11-09T23:41:00
 tags:
 - jekyll
 - markdown
@@ -9,9 +8,9 @@ tags:
 series: "Displaying Markdown files from other sites"
 ---
 
-For quite some time now, the content of the project pages on my site *([this one](/bitbucket-backup/), for example)* was coming directly from the respective Markdown readme file on Bitbucket *([this one](https://github.com/christianspecht/bitbucket-backup/blob/master/readme-full.md), for example)*.
+For quite some time now, the content of the project pages on my site *([this one]({{< ref "/bitbucket-backup.html" >}}), for example)* was coming directly from the respective Markdown readme file on Bitbucket *([this one](https://github.com/christianspecht/bitbucket-backup/blob/master/readme-full.md), for example)*.
 
-I already wrote multiple times about how my approach how to get this to work - [here]({% post_url 2012-03-09-how-to-display-markdown-files-from-other-sites-in-wordpress %}), [here]({% post_url 2013-02-17-how-to-display-markdown-files-from-other-sites-this-time-in-blogofile %}) and [a bit here]({% post_url 2013-12-31-hello-jekyll %}).
+I already wrote multiple times about how my approach how to get this to work - [here]({{< ref "/posts/2012-03-09-how-to-display-markdown-files-from-other-sites-in-wordpress/index.md" >}}), [here]({{< ref "/posts/2013-02-17-how-to-display-markdown-files-from-other-sites-this-time-in-blogofile/index.md" >}}) and [a bit here]({{< ref "/posts/2013-12-31-hello-jekyll/index.md" >}}).
 
 Until now, [the code where all the magic happened](https://github.com/christianspecht/blog/blob/003539ea60ef8918274cd4a2de3fbc50940116ee/src/php/md-include.php) looked like this:
 
@@ -39,7 +38,7 @@ All these images are directly coming from the Bitbucket repository as well...bec
     ![logo](https://bitbucket.org/christianspecht/bitbucket-backup/raw/tip/img/logo128x128.png)
 
 In other words:  
-If you visited [{{site.url}}/bitbucket-backup/](/bitbucket-backup/), this happened:
+If you visited [{{< ref "/bitbucket-backup.html" >}}]({{< ref "/bitbucket-backup.html" >}}), this happened:
 
 ![Many HTTP requests](/img/markdown-network.svg)
 
@@ -105,10 +104,10 @@ That works well, but fixes only half of the loading time problem, because the im
 
 I knew what I wanted to do:
 
-0. Search for `<img>` tags in the HTML
-0. Get the image URL out there
-0. Download the image from that URL on my server
-0. Replace the original URL in the HTML by the "local" one on my server
+1. Search for `<img>` tags in the HTML
+2. Get the image URL out there
+3. Download the image from that URL on my server
+4. Replace the original URL in the HTML by the "local" one on my server
 
 I just didn't know how to do it in PHP...so after some more googling, I added more code between these two lines from the last listing:
 
