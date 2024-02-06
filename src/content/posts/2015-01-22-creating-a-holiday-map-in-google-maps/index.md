@@ -1,7 +1,6 @@
 ---
-layout: post
 title: "Creating a 'holiday map' in Google Maps"
-date: 2015/01/22 17:43:00
+date: 2015-01-22T17:43:00
 tags:
 - web
 - maps
