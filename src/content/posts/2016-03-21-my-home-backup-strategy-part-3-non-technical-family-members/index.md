@@ -1,7 +1,6 @@
 ---
-layout: post
 title: "My home backup strategy, part 3: Non-technical family members" 
-date: 2016/03/21 19:48:00
+date: 2016-03-21T19:48:00
 tags:
 - backup
 - command-line
@@ -22,7 +21,7 @@ It's just a 20 minute drive away, but neither do I want to drive there just to p
 
 This leaves only one option: automating everything via the Internet.
 
-Because of the work already done in the [previous]({% post_url 2015-11-01-my-home-backup-strategy-part-1-the-basics %}) [posts]({% post_url 2016-01-17-my-home-backup-strategy-part-2-online-services %}), there's just one big task left to do:
+Because of the work already done in the [previous]({{< ref "/posts/2015-11-01-my-home-backup-strategy-part-1-the-basics/index.md" >}}) [posts]({{< ref "/posts/2016-01-17-my-home-backup-strategy-part-2-online-services/index.md" >}}), there's just one big task left to do:
 
 ---
 
@@ -113,7 +112,7 @@ After running this, all their files are in `C:\FtpBackup` on my machine, and of 
  
 ## Images from their phone
 
-As [described before, I'm using **Upload 2 NAS**]({% post_url 2015-11-01-my-home-backup-strategy-part-1-the-basics %}#b-smartphones-and-tablets) to save pictures from my phone to my NAS.  
+As [described before, I'm using **Upload 2 NAS**]({{< ref "/posts/2015-11-01-my-home-backup-strategy-part-1-the-basics/index.md" >}}#b-smartphones-and-tablets) to save pictures from my phone to my NAS.  
 This is done via FTP...so it's not just limited to a NAS in my local network, but works with *any* FTP server anywhere in the world.
 
 So I installed Upload 2 NAS on my parents' phone, and configured it to connect to my webspace, like described in the previous paragraph:  
@@ -127,7 +126,7 @@ Of course the upload speed is slower than from my own phone to my NAS, but that 
 
 My parents are using Thunderbird via IMAP, so all their emails are still in their mail account on the server, which means I don't actually need to backup their local Thunderbird mail database.
 
-As [described in the last post]({% post_url 2016-01-17-my-home-backup-strategy-part-2-online-services %}#email), I'm regularly running Thunderbird on my machine anyway, to make offline backups of my own emails.  
+As [described in the last post]({{< ref "/posts/2016-01-17-my-home-backup-strategy-part-2-online-services/index.md" >}}#email), I'm regularly running Thunderbird on my machine anyway, to make offline backups of my own emails.  
 So I just set up my parents' email account in my Thunderbird as well, which means that their mails are backed up together with mine.
 
 The only thing which is **only** on their machine is their Thunderbird address book.  
@@ -146,7 +145,7 @@ I don't have that many other icons on the desktop, so I regularly notice the exi
 So when I'm working on my computer anyway, I start Thunderbird, minimize it and continue working.  
 After some time, I'll check if it has finished, and then I start the batch file.
 
-The batch file is inside a `backuptools` folder on my machine, which contains subfolders with [all the](http://christianspecht.de/bitbucket-backup/) [tools I](https://github.com/christianspecht/google-calendar-backup) [mentioned in](http://winscp.net/) [this series](http://christianspecht.de/roboshell-backup/) before.  
+The batch file is inside a `backuptools` folder on my machine, which contains subfolders with [all the]({{< ref "/bitbucket-backup.html" >}}) [tools I](https://github.com/christianspecht/google-calendar-backup) [mentioned in](http://winscp.net/) [this series]({{< ref "/roboshell-backup.html" >}}) before.  
 It looks like this:
 
     cd %~dp0\bitbucket-backup\

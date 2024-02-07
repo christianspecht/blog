@@ -1,7 +1,6 @@
 ---
-layout: post
 title: "My home backup strategy, part 1: the basics" 
-date: 2015/11/01 17:50:00
+date: 2015-11-01T17:50:00
 tags:
 - backup
 - command-line
@@ -81,7 +80,7 @@ Even though I'm trying to save as much data as possible directly on the NAS, the
 
 In the beginning, I had batch files with a lot of `robocopy %source% %destination% *.* /mir /xxx /yyy /zzz` calls. But when the number of folders per machine increased, I started to look for a tool where I just could paste the new folder into a config file, without having to copy the whole RoboCopy call and getting all the parameters right.
 
-I didn't find anything like that, so I wrote my own: [RoboShell Backup](http://christianspecht.de/roboshell-backup).  
+I didn't find anything like that, so I wrote my own: [RoboShell Backup]({{< ref "/roboshell-backup.html" >}}).  
 It's a [PowerShell](http://en.wikipedia.org/wiki/Windows_PowerShell) script which basically loads [a list of folders from a config file](https://github.com/christianspecht/roboshell-backup/blob/ea03a2dbd8501406facb8ee08b7a67945c1924f0/src/Config.xml#L28) and copies each of them to a backup folder on a certain drive letter, which can be specified in the config file a well.
 
 For example, here's the important part of the config file from the machine where I'm writing this:
@@ -140,7 +139,7 @@ Of course [it's possible to automate this as well](http://www.hanselman.com/blog
 
 ## 2. Backing up the NAS drive to USB drives
 
-As mentioned above, this is also something that [RoboShell Backup](http://christianspecht.de/roboshell-backup) can do.  
+As mentioned above, this is also something that [RoboShell Backup]({{< ref "/roboshell-backup.html" >}}) can do.  
 I won't go into detail here how to set it up, you can read the documentation on the RoboShell Backup site if you're interested in using it.
 
 Here's the short version of what it does. You need to:
@@ -150,7 +149,7 @@ Here's the short version of what it does. You need to:
 
 RoboShell Backup will know the drive letters of the NAS and the USB drives from its [config file](https://github.com/christianspecht/roboshell-backup/blob/ea03a2dbd8501406facb8ee08b7a67945c1924f0/src/Config.xml), and start mirroring the whole NAS to that drive via RoboCopy.
 
-It's also possible to [encrypt the drive via TrueCrypt]({% post_url 2012-04-30-roboshell-backup-1-1-now-with-truecrypt-integration %}), which is optional.  
+It's also possible to [encrypt the drive via TrueCrypt]({{< ref "/posts/2012-04-30-roboshell-backup-1-1-now-with-truecrypt-integration/index.md" >}}), which is optional.  
 If you're using this (like I do), RoboShell Backup will mount the TrueCrypt volume on the USB drive to a new drive letter *(the default is `X:`)* before starting the mirroring process, and when RoboCopy is finished, the drive will automatically be unmounted again.
 
 ---
@@ -170,4 +169,4 @@ One of them is at home, and the other one is in my desk at work. Every now and t
 
 This is the basic setup that I'm using.
 
-Of course I'm actually backing up more than just the data from the devices we have at home, but I'll come to that in [the next post]({% post_url 2016-01-17-my-home-backup-strategy-part-2-online-services %}), which will be about making offline backups of cloud services.
+Of course I'm actually backing up more than just the data from the devices we have at home, but I'll come to that in [the next post]({{< ref "/posts/2016-01-17-my-home-backup-strategy-part-2-online-services/index.md" >}}), which will be about making offline backups of cloud services.

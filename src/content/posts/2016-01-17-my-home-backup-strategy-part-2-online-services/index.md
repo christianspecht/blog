@@ -1,7 +1,6 @@
 ---
-layout: post
 title: "My home backup strategy, part 2: Online services" 
-date: 2016/01/17 13:24:00
+date: 2016-01-17T13:24:00
 tags:
 - backup
 - bitbucket-backup
@@ -11,7 +10,7 @@ externalfeeds: 1
 series: "My home backup strategy"
 ---
 
-In the [first part of this post]({% post_url 2015-11-01-my-home-backup-strategy-part-1-the-basics %}), I described my basic home backup strategy, i.e. how I'm making backups of the important data on all computers, smartphones and other devices at home.
+In the [first part of this post]({{< ref "/posts/2015-11-01-my-home-backup-strategy-part-1-the-basics/index.md" >}}), I described my basic home backup strategy, i.e. how I'm making backups of the important data on all computers, smartphones and other devices at home.
 
 But of course not all of my important data is actually on physical devices at home - I'm using some cloud services, and those need to be backed up as well.
 
@@ -45,7 +44,7 @@ But then I read the great post ["Is your identity in your own hands?"](http://ha
 So I started to use Thunderbird again, exactly as described in Hadi's post:  
 I still primarily use the Gmail web interface, but every now and then, I just manually open Thunderbird in the background and let it sync my whole Gmail accout via IMAP to my local machine.
   
-The local Thunderbird folder is then [copied to the NAS drive via RoboShell Backup]({% post_url 2015-11-01-my-home-backup-strategy-part-1-the-basics %}), like everything else important on my machine.
+The local Thunderbird folder is then [copied to the NAS drive via RoboShell Backup]({{< ref "/posts/2015-11-01-my-home-backup-strategy-part-1-the-basics/index.md" >}}), like everything else important on my machine.
 
 ---
 
@@ -97,7 +96,7 @@ Bitbucket hosts distributed version control systems only ([Mercurial](https://ww
 In other words, you automatically have a backup as soon as you're cloning a repository and start working on it locally.  
 But if you have a lot of repositories, it gets tedious to regularly clone/pull them all.
 
-I didn't want to do this manually all the time, so I wrote a tool that connects to the [Bitbucket API](https://confluence.atlassian.com/bitbucket/use-the-bitbucket-cloud-rest-apis-222724129.html), gets a list of all my repositories and clones/pulls all of them: [Bitbucket Backup](/bitbucket-backup/).  
+I didn't want to do this manually all the time, so I wrote a tool that connects to the [Bitbucket API](https://confluence.atlassian.com/bitbucket/use-the-bitbucket-cloud-rest-apis-222724129.html), gets a list of all my repositories and clones/pulls all of them: [Bitbucket Backup]({{< ref "/bitbucket-backup.html" >}}).  
 It's a command line tool which needs to be setup once, then it will run unattended and pull all repositories to a central folder on my local machine *(which I'm then backing up to my NAS, of course)*.
 
 This is enough for me right now.  
@@ -107,5 +106,5 @@ But there are a lot of other source code hosters that a lot of people are using 
 
 ## Wrap up
 
-In this post (and the [first one]({% post_url 2015-11-01-my-home-backup-strategy-part-1-the-basics %})) I explained everything I'm doing to make backups of my *own* data.  
+In this post (and the [first one]({{< ref "/posts/2015-11-01-my-home-backup-strategy-part-1-the-basics/index.md" >}})) I explained everything I'm doing to make backups of my *own* data.  
 But this series is not finished yet - there will be a third part about backing up the data of family members.
