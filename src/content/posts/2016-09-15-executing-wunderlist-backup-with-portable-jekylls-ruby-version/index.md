@@ -1,7 +1,6 @@
 ---
-layout: post
 title: "Executing wunderlist-backup with Portable Jekyll's Ruby version" 
-date: 2016/09/15 22:20:00
+date: 2016-09-15T22:20:00
 tags:
 - backup
 - jekyll
@@ -9,7 +8,7 @@ tags:
 externalfeeds: 1
 ---
 
-Just a few months ago,  I posted [the last part of my "backup" series]({% post_url 2016-03-21-my-home-backup-strategy-part-3-non-technical-family-members %}). At the bottom I mentioned that I'm evaluating [Wunderlist](https://www.wunderlist.com) and that I need to take backups of it, should I really use it.
+Just a few months ago,  I posted [the last part of my "backup" series]({{< ref "/posts/2016-03-21-my-home-backup-strategy-part-3-non-technical-family-members/index.md" >}}). At the bottom I mentioned that I'm evaluating [Wunderlist](https://www.wunderlist.com) and that I need to take backups of it, should I really use it.
 
 In the meantime I actually **did** start using it, so here's how I'm backing it up.
 
@@ -94,7 +93,7 @@ This way, we can build a folder name like `2016-09-15-21-56-09` as follows:
 
 ## Usage
 
-As already mentioned at the bottom of [the last post of my "backup" series]({% post_url 2016-03-21-my-home-backup-strategy-part-3-non-technical-family-members %}#wrap-up-for-the-whole-series-or-how-do-i-run-all-this), I'm running a backup script (a batch file) in regular intervals anyway.
+As already mentioned at the bottom of [the last post of my "backup" series]({{< ref "/posts/2016-03-21-my-home-backup-strategy-part-3-non-technical-family-members/index.md" >}}#wrap-up-for-the-whole-series-or-how-do-i-run-all-this), I'm running a backup script (a batch file) in regular intervals anyway.
 
 The batch file shown in this post is just executed as a part of running the "main" backup batch file:
 

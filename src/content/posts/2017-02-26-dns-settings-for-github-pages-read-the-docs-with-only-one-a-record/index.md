@@ -1,7 +1,7 @@
 ---
-layout: post
 title: "DNS settings for GitHub Pages/Read the Docs, with only one A record"
-date: 2017/02/26 18:09:00
+slug: dns-settings-for-github-pages-read-the-docs-with-only-one-a-record
+date: 2017-02-26T18:09:00
 tags:
 - web
 externalfeeds: 1
@@ -51,12 +51,12 @@ But the GitHub help provides **two** IPs, so I tried to create a second `A` reco
 
 At this point *(and after reading the docs of both GitHub Pages and my provider, and some Googling)* I emailed my provider's support and Github support, and now I know:
 
-0. My provider supports only one `A` record.
+1. My provider supports only one `A` record.
 
-0. For a custom domain to successfully resolve to GitHub Pages, it's sufficient to create an `A` record for **one** of GitHub Pages' two IPs.  
+1. For a custom domain to successfully resolve to GitHub Pages, it's sufficient to create an `A` record for **one** of GitHub Pages' two IPs.  
   A second `A` record for the second IP isn't strictly necessary, GitHub provides the second IP just for availability.
 
-0. The [`CNAME` record for the `www` subdomain](https://help.github.com/articles/setting-up-a-www-subdomain/) needs to point to `christianspecht.github.io` *(`christianspecht` is my GitHub username)*, even though [the repo with my site](https://github.com/christianspecht/scm-backup-site) is not a user page repo.  
+1. The [`CNAME` record for the `www` subdomain](https://help.github.com/articles/setting-up-a-www-subdomain/) needs to point to `christianspecht.github.io` *(`christianspecht` is my GitHub username)*, even though [the repo with my site](https://github.com/christianspecht/scm-backup-site) is not a user page repo.  
   I was confused at first because according to [this chart](https://help.github.com/articles/custom-domain-redirects-for-github-pages-sites/) I thought I needed to point to `christianspecht.github.io/scm-backup-site`, but the guy from GitHub support told me:
 
     > Our Pages servers automatically handle routing requests to the correct repository based on your custom domain, so you'll just have to use `christianspecht.github.io`.

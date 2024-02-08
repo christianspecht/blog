@@ -1,13 +1,12 @@
 ---
-layout: post
 title: "Jekyll dynamic tree menu: show the whole menu at once" 
-date: 2016/10/09 17:14:00
+date: 2016-10-09T17:14:00
 tags:
 - jekyll
 externalfeeds: 1
 ---
 
-Over two years ago, I wrote a blog post about [building a dynamic tree menu with Jekyll]({% post_url 2014-06-13-building-a-pseudo-dynamic-tree-menu-with-jekyll %}).
+Over two years ago, I wrote a blog post about [building a dynamic tree menu with Jekyll]({{< ref "/posts/2014-06-13-building-a-pseudo-dynamic-tree-menu-with-jekyll/index.md" >}}).
 
 Now I received an e-mail from Viesturs K, with a question about this post:
 
@@ -25,15 +24,13 @@ However, most of the complexity in the dynamic tree solution is because it's dyn
 When you don't have to deal with deciding which menu items to show based on the current menu item, the code becomes *much* easier:
 
 `_includes/sitemap.html`
-	
-	{% raw %}
+
 		<ul>
 		{% for item in include.map %}
 		<li><a href="{{ item.url }}">{{ item.text }}</a></li>
 		{% if item.subitems %}{% include sitemap.html map=item.subitems %}{% endif %}
 		{% endfor %}
 		</ul>
-	{% endraw %}
 
 *(I called it "sitemap" because showing all menu items at once is kind of a sitemap)*
 
@@ -41,14 +38,12 @@ And the actual page which includes the sitemap:
 
 `sitemap/index.html`
 
-	{% raw %}
 		---
 		layout: default
 		title: Sitemap (all menu items expanded)
 		---
 		
 		{% include sitemap.html map=site.data.menu %}
-	{% endraw %}
 
 
 As a reminder, here's [the data file with the menu items](https://github.com/christianspecht/code-examples/blob/master/jekyll-dynamic-menu/src/_data/menu.yml) again:

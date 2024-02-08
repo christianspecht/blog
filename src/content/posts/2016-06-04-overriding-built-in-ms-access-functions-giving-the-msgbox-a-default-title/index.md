@@ -1,7 +1,6 @@
 ---
-layout: post
 title: "Overriding built-in MS Access functions: giving the MsgBox a default title" 
-date: 2016/06/14 19:43:00
+date: 2016-06-14T19:43:00
 tags:
 - ms-office
 - vba
