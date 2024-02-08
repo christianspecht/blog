@@ -30,12 +30,12 @@ Because of the work already done in the [previous]({{< ref "/posts/2015-11-01-my
 I wanted to get the files from their computer either to my computer or directly to my NAS, in order to backup them together with my own files.  
 At the beginning, I tried using Google Drive to sync from their machine to mine, but it didn't work out for me:
 
-0. I wanted to use Google Drive for my own stuff as well.  
+1. I wanted to use Google Drive for my own stuff as well.  
 At the time when I was experimenting with this, there was no support for  cleanly separating their files from my files.  
 So I had to use a different product for my own files, and I started experimenting with Dropbox and SkyDrive, among others.  
 But this still left me with **two** file synchronization clients installed on my machine, which I didn't like.
 
-0. I had synchronization errors with Google Drive.  
+1. I had synchronization errors with Google Drive.  
 I never noticed this while using Google Drive for my own files, but I was only using it for a few folders with a few small files. My parents have multiple gigabytes of photos in lots of subfolders.
 
 So in the end, I settled for a different solution. I figured that having two-way synchronization was not necessary - one way from their computer to my computer is sufficient.  

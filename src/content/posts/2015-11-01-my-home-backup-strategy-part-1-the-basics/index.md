@@ -144,8 +144,8 @@ I won't go into detail here how to set it up, you can read the documentation on 
 
 Here's the short version of what it does. You need to:
 
-0. Connect the USB drive to any of the machines which has RoboShell Backup installed
-0. Run [`NasToUsb.bat`](https://github.com/christianspecht/roboshell-backup/blob/ea03a2dbd8501406facb8ee08b7a67945c1924f0/src/NasToUsb.bat) on that machine
+1. Connect the USB drive to any of the machines which has RoboShell Backup installed
+1. Run [`NasToUsb.bat`](https://github.com/christianspecht/roboshell-backup/blob/ea03a2dbd8501406facb8ee08b7a67945c1924f0/src/NasToUsb.bat) on that machine
 
 RoboShell Backup will know the drive letters of the NAS and the USB drives from its [config file](https://github.com/christianspecht/roboshell-backup/blob/ea03a2dbd8501406facb8ee08b7a67945c1924f0/src/Config.xml), and start mirroring the whole NAS to that drive via RoboCopy.
 
