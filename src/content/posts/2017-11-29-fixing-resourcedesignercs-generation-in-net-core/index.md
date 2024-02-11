@@ -1,7 +1,7 @@
 ---
-layout: post
 title: "Fixing Resource.Designer.cs generation in .NET Core"
-date: 2017/11/29 18:03:00
+slug: fixing-resourcedesignercs-generation-in-net-core
+date: 2017-11-29T18:03:00
 tags:
 - .net
 - visual-studio

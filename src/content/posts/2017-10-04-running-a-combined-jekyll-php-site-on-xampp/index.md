@@ -1,7 +1,7 @@
 ---
-layout: post
 title: "Running a combined Jekyll/PHP site on XAMPP"
-date: 2017/10/04 18:14:00
+slug: running-a-combined-jekyll-php-site-on-xampp
+date: 2017-10-04T18:14:00
 tags:
 - jekyll
 - php
@@ -19,11 +19,11 @@ Jekyll for the static part because I have a lot of experience with it, and PHP f
 
 The site has only a few dynamic parts which *really* need to be done in a server-side language:
 
-0. A registration form for people who participate as sellers.
+1. A registration form for people who participate as sellers.
 
-0. Updating registrations later to mark them as "paid", either automatically via PayPal webhook, or via web interface for those who pay via bank transfer.
+1. Updating registrations later to mark them as "paid", either automatically via PayPal webhook, or via web interface for those who pay via bank transfer.
 
-0. The addresses of those who have paid are listed in a table, and shown as markers on a Google Map.  
+1. The addresses of those who have paid are listed in a table, and shown as markers on a Google Map.  
    This data is updated once a day via cronjob.
 
 Everything else is just static information and changes only occasionally.
@@ -31,12 +31,12 @@ Everything else is just static information and changes only occasionally.
 
 At first glance, it makes sense to just build a complete dynamic site in a server-side language, but there are reasons against it:
 
-0. Scale  
+1. Scale  
    There's a lot less load on the server when most of the pages, including the landing page, are just static HTML.    
    No need to waste CPU cycles on each request, to regenerate stuff which almost never changes.  
    This is probably more important for sites with far more visitors than mine...but on the other hand, it enables you to run a site with average visitor numbers on *really* cheap webspace.
 
-0. Familiarity with tools  
+1. Familiarity with tools  
    I'm far more experienced with Jekyll than with PHP, especially when it comes to layouts/templates, and setting lots (and I mean *lots*) of configuration values depending on environment (dev/staging/prod).  
    This is probably equally easy in PHP if you know how to do it...but *I* already know how to do it in Jekyll.
 
@@ -53,8 +53,6 @@ I'm building most of the site like a regular Jekyll site - it has [config files]
 The PHP pages are created with Jekyll too, so they can contain front-matter, includes, config variables etc. as well - it's just that they are `.php` files and contain `<?php ... ?>` sections.
 
 Here's an example, `/register/index.php`:
-	
-{% raw %}
 
 	---
 	title: Seller Registration
@@ -75,8 +73,6 @@ Here's an example, `/register/index.php`:
 	?>
 
 	{% endif %}
-
-{% endraw %}
 
 The Jekyll parts are rendered when building the site on my local machine.  
 So the file that goes onto the server already has my site's layout etc. and is mostly static, except for the `<?php ... ?>` part which will be executed at runtime by the server - but if the configuration value `registration_enabled` is set to `0`, the whole `<?php ... ?>` part is omitted from the output.
@@ -99,7 +95,7 @@ The whole project needs to be in XAMPP's `htdocs` folder in order to use XAMPP's
 
 The finished site will go to `C:\xampp\htdocs\sindorf-troedelt\site`, which means that the URL on my local machine will be `localhost/sindorf-troedelt/site`.
 
-Because of this, all links and URLs **must** be created by prepending `{% raw %}{{site.url}}{% endraw %}` and using [multiple](https://stackoverflow.com/a/31296591/6884) [config files](https://stackoverflow.com/a/26635715/6884), e.g.:
+Because of this, all links and URLs **must** be created by prepending `{{site.url}}` and using [multiple](https://stackoverflow.com/a/31296591/6884) [config files](https://stackoverflow.com/a/26635715/6884), e.g.:
 
 `/_config-xampp.yml`
 
@@ -111,11 +107,7 @@ Because of this, all links and URLs **must** be created by prepending `{% raw %}
 
 Example link in a Markdown page:
 
-{% raw %}
-
 	[Link text]({{site.url}}/register/)
-
-{% endraw %}
 
 ---
 
@@ -127,21 +119,15 @@ Some of those variables are only for Jekyll *(like the `site.registration_enable
 
 Using a Jekyll variable in PHP is simple:
 
-{% raw %}
-
 	<?php
 	$site_url = '{{site.url}}';
 	?>
-
-{% endraw %}
 
 ...but I didn't want to have PHP code like this *(with Jekyll/Liquid hidden inside)* sprinkled all over the place.
 
 So I created *one* central PHP include file, where I declared all "config" variables which I needed in PHP:
 
 `/inc/config.inc.php`:
-
-{% raw %}
 
 	---
 	layout: null
@@ -161,19 +147,13 @@ So I created *one* central PHP include file, where I declared all "config" varia
 
 	?>
 
-{% endraw %}
-
 To use those values in another PHP file, you need to include the first file and [declare the variable global](http://php.net/manual/en/language.variables.scope.php):
-
-{% raw %}
 
 	<?php
 	require_once '../inc/config.inc.php'; 
 	global $site_url;
 	echo $site_url;
 	?>
-
-{% endraw %}
 
 
 Plus, it's possible to use more complex config values in PHP as well.
@@ -188,13 +168,9 @@ These values are always the same for dev/staging/prod, but I needed them in Jeky
 
 So I put this into the `inc/config.inc.php` file shown above:
 
-{% raw %}
-
 	$payment_options = array();
 	{% for p in site.payment_options %}$payment_options [] = '{{p}}';
 	{% endfor %}
-
-{% endraw %}
 
 After Jekyll has rendered the PHP file, it will look like this:
 
@@ -210,7 +186,7 @@ In addition to PHP, I'm also using [Server Side Includes](https://en.wikipedia.o
 
 I already mentioned before that my garage sale site has a cronjob which runs once a day, loads the addresses of all registrations which are marked as "paid" and creates:
 
-0. a JavaScript file with GPS coordinates to show markers on [this map](https://sindorf-troedelt.de/karte/) *(which was created similar to [this one]({% post_url 2015-01-22-creating-a-holiday-map-in-google-maps %}))*
+0. a JavaScript file with GPS coordinates to show markers on [this map](https://sindorf-troedelt.de/karte/) *(which was created similar to [this one]({{< ref "/posts/2015-01-22-creating-a-holiday-map-in-google-maps/index.md" >}}))*
 0. a HTML file with a table *(containing all addresses ordered by street)*, which is loaded into [this page](https://sindorf-troedelt.de/adressliste/)
 
 *Note: both pages are only enabled in the months before the garage sale (usually September), so you may not see the map and the list, depending on when you visit the links.*
@@ -225,8 +201,6 @@ Here's an example:
 
 `/addresses/index.shtml`
 
-{% raw %}
-
 	---
 	title: Address List
 	layout: default
@@ -239,9 +213,7 @@ Here's an example:
 	{{site.address_include}}
 	{% endif %}
 
-{% endraw %}
-
-The most difficult part of this was getting the `{% raw %}{{site.address_include}}{% endraw %}` value in the config files right.
+The most difficult part of this was getting the `{{site.address_include}}` value in the config files right.
 
 The path has to be relative from the root, but the root is different depending on the environment:
 
@@ -263,25 +235,19 @@ Both Mustache and Jekyll use double curly brackets as placeholders, **so you sho
 
 I know this, because I made the same mistake. I just wanted to run a small example in order to see that Mustache was working properly, so I copied one of the examples from the Mustache documentation directly into my PHP source code:
 
-{% raw %}
-
 	<?php
 	$m = new Mustache_Engine;
 	echo $m->render('Hello {{planet}}', array('planet' => 'World!')); // "Hello World!"
-
-{% endraw %}
 
 ...and Mustache displayed "Hello ", and didn't render the variable.
 
 What I didn't take into account was the fact that this particular PHP page had YAML front-matter, so it was processed by Jekyll when building the site.
 
-Jekyll replaced `{% raw %}{{planet}}{% endraw %}` by an empty string, because it didn't have a variable named `planet`.  
+Jekyll replaced `{{planet}}` by an empty string, because it didn't have a variable named `planet`.  
 When Mustache finally executed, the template "Hello " didn't contain any variables anymore, so Mustache didn't do anything and "Hello " was displayed.
 
 This whole problem just goes away when you load the templates at runtime from external files.  
 Because of this, and to be able to render templates with the absolute minimum amount of code possible, I created this helper function:
-
-{% raw %}
 	
     class Data {
         // empty helper class for Mustache
@@ -298,8 +264,6 @@ Because of this, and to be able to render templates with the absolute minimum am
         
         return $tpl->render($template, $data);
     }
-
-{% endraw %}
 
 `site.template_path` *(you guessed it)* is a value from the config files again, and again it depends on the environment.
 

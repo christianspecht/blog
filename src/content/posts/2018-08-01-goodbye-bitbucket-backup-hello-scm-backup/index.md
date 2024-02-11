@@ -1,7 +1,6 @@
 ---
-layout: post
 title: "Goodbye Bitbucket Backup, hello SCM Backup"
-date: 2018/08/01 19:55:00
+date: 2018-08-01 19:55:00
 tags:
 - backup
 - bitbucket-backup
@@ -10,7 +9,7 @@ externalfeeds: 0
 ---
 
 Almost 7 years after the first public release, I'm retiring my most successful open source project so far:  
-[Bitbucket Backup](https://christianspecht.de/bitbucket-backup/) will be superseded by [SCM Backup](https://scm-backup.org/).
+[Bitbucket Backup]({{< ref "/bitbucket-backup.html" >}}) will be superseded by [SCM Backup](https://scm-backup.org/).
 
 There will be no further development on Bitbucket Backup, and users are encouraged to switch to SCM Backup instead (*which can do everything that Bitbucket Backup could, and much more)*.
 
@@ -39,7 +38,7 @@ Plus, everything in the code is closely tied to Bitbucket, and wasn't designed f
 
 ## Unattended execution is difficult
 
-I created Bitbucket Backup to support **my** personal backup workflow, [which I explained here before]({% post_url 2016-01-17-my-home-backup-strategy-part-2-online-services %}#source-code) - I'm running backups by starting a batch file while sitting in front of my machine. So I didn't consider the possibility that other people might run Bitbucket Backup unattended.
+I created Bitbucket Backup to support **my** personal backup workflow, [which I explained here before]({{< ref "/posts/2016-01-17-my-home-backup-strategy-part-2-online-services/index.md" >}}#source-code) - I'm running backups by starting a batch file while sitting in front of my machine. So I didn't consider the possibility that other people might run Bitbucket Backup unattended.
 
 Some people [had problems with that](https://github.com/christianspecht/bitbucket-backup/issues/20), some with [setting their password](https://github.com/christianspecht/bitbucket-backup/issues/18) *(Bitbucket Backup asks for it at runtime and [saves in encrypted in the AppData folder](https://github.com/christianspecht/bitbucket-backup/blob/master/src/BitbucketBackup/Config.cs))*, and others needed a way to tell whether their backup was successful or not, so [someone made a pull request and added sending info mails](https://github.com/christianspecht/bitbucket-backup/commit/494a998eb98911c6d7d58047418fc84a893c00cb).
 
