@@ -1,6 +1,6 @@
 ---
 order: 6
-name: VBA Helpers
+title: VBA Helpers
 site: /vba-helpers/
 logo: /php/cache/img/vba-helpers-logo128x128.png
 desc: A collection of useful VBA functions

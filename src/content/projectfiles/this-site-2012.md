@@ -1,6 +1,6 @@
 ---
 order: 4
-name: This site (2012)
+title: This site (2012)
 site: /
 logo: /img/site2012.png
 sidebar: 0

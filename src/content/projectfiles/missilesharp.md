@@ -1,6 +1,6 @@
 ---
 order: 5
-name: MissileSharp
+title: MissileSharp
 site: /missilesharp/
 logo: /php/cache/img/missilesharp-logo128x128.png
 desc: .NET library to control an USB Missile Launcher

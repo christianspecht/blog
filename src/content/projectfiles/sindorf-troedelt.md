@@ -1,6 +1,6 @@
 ---
 order: 12
-name: "Sindorf trödelt"
+title: "Sindorf trödelt"
 site: https://sindorf-troedelt.de/
 logo: /img/sindorf-troedelt.png
 desc: Website about a garage sale in my home town

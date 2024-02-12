@@ -1,6 +1,6 @@
 ---
 order: 2
-name: Bitbucket Backup
+title: Bitbucket Backup
 site: /bitbucket-backup/
 logo: /php/cache/img/bitbucket-backup-logo128x128.png
 desc: A backup tool which clones all your Bitbucket repositories to your local machine

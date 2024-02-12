@@ -1,6 +1,6 @@
 ---
 order: 13
-name: "SCM Backup"
+title: "SCM Backup"
 site: https://scm-backup.org/
 logo: https://scm-backup.org/img/logo128x128.png
 desc: "Makes offline backups of your cloud hosted source code repositories"

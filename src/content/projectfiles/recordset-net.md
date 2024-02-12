@@ -1,6 +1,6 @@
 ---
 order: 3
-name: Recordset.Net
+title: Recordset.Net
 site: /recordset-net/
 logo: /php/cache/img/recordset.net-logo128x128.png
 desc: Converts .NET POCOs to ADODB.Recordsets

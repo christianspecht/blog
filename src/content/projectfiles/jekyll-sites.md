@@ -1,6 +1,6 @@
 ---
 order: 9
-name: Two complex Jekyll sites
+title: Two complex Jekyll sites
 site: #
 logo: /img/jekyll-logo.png
 sidebar: 0

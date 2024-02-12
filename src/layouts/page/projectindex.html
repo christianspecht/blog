@@ -1,0 +1,25 @@
+{{ define "main" }}
+{{ .Content }}
+
+<div class="row spacer25"></div>
+
+<div class="container">
+{{ $projects := .Site.GetPage "/projectfiles" }}
+{{ range sort ($projects.Resources) "Params.order" "desc" }}
+    <div class="row">
+    
+        <div class="span4">
+        <h2><a href="{{ .Params.Site }}"><img src="{{ .Params.Logo }}" width="35" height="35" class="img-polaroid" /> {{ .Title }}</a></h2>
+        {{ .Content }}
+        </div><!--/span-->
+        <div class="row visible-phone spacer25"></div>
+
+    </div><!--/row-->
+    <div class="row spacer25"></div>
+{{ end }}
+
+</div><!--/container-->
+
+<div class="row visible-phone spacer25"></div>
+
+{{ end }}

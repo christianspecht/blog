@@ -1,6 +1,6 @@
 ---
 order: 1
-name: RoboShell Backup
+title: RoboShell Backup
 site: /roboshell-backup/
 logo: /php/cache/img/roboshell-backup-logo128x128.png
 desc: A simple personal backup tool, using RoboCopy and written in Windows Powershell

@@ -1,6 +1,6 @@
 ---
 order: 10
-name: Tasko
+title: Tasko
 site: /tasko/
 logo: /php/cache/img/tasko-logo128x128.png
 desc: Simple to-do list app for your own server (with Android client)

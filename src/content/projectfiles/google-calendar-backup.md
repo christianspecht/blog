@@ -1,6 +1,6 @@
 ---
 order: 11
-name: Google Calendar Backup
+title: Google Calendar Backup
 site: https://github.com/christianspecht/google-calendar-backup
 logo: /img/gcb.png
 desc: "Command-line tool to make local backups of your Google Calendar (or any other calendar)."

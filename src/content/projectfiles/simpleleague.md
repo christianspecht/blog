@@ -1,6 +1,6 @@
 ---
 order: 8
-name: SimpleLeague
+title: SimpleLeague
 site: /simpleleague/
 logo: /php/cache/img/simpleleague-logo128x128.png
 desc: Minimalistic tool to display tabular league data (results, rankings etc.) in existing websites.
