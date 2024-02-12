@@ -26,7 +26,7 @@ As a reminder, my current image gallery shortcode *(including [image captions fr
 		{{ end }}
 	{{ end }}
 
-Both the thumbnail (`$resized`) and the main image (`$withlogo`) are created with [Hugo's image processing](#) features, which means that their final filenames are assigned at build time by Hugo, and they are *ugly*.
+Both the thumbnail (`$resized`) and the main image (`$withlogo`) are created with [Hugo's image processing](https://gohugo.io/content-management/image-processing/) features, which means that their final filenames are assigned at build time by Hugo, and they are *ugly*.
 
 For example one of the [images from my demo project](https://github.com/christianspecht/code-examples/tree/master/hugo-gallery-example/content/galleries/gallery1/img): the original filename is `notebook.jpg`, but the the shortcode shown above produces this HTML:
 
