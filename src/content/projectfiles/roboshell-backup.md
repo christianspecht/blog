@@ -16,4 +16,4 @@ Convert existing batch files for [Robocopy](http://en.wikipedia.org/wiki/Robocop
 
 - [Windows PowerShell](http://en.wikipedia.org/wiki/Windows_PowerShell) basics
 - [Building a setup with WiX](http://wixtoolset.org/)
-- Using [TrueCrypt](http://en.wikipedia.org/wiki/TrueCrypt) and [VeraCrypt](https://en.wikipedia.org/wiki/VeraCrypt), and [integrating them]({% post_url 2012-04-30-roboshell-backup-1-1-now-with-truecrypt-integration %}) [into RoboShell Backup]({% post_url 2018-01-07-veracrypt-integration-for-roboshell-backup %})
+- Using [TrueCrypt](http://en.wikipedia.org/wiki/TrueCrypt) and [VeraCrypt](https://en.wikipedia.org/wiki/VeraCrypt), and [integrating them]({{< ref "/posts/2012-04-30-roboshell-backup-1-1-now-with-truecrypt-integration/index.md" >}}) [into RoboShell Backup]({{< ref "/posts/2018-01-07-veracrypt-integration-for-roboshell-backup/index.md" >}})

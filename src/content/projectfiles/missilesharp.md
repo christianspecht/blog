@@ -15,7 +15,7 @@ Send commands to an [USB Missile Launcher](http://www.dreamcheeky.com/thunder-mi
 **What I learned:**
 
 - Communicating with an USB device with [Hid Library](https://github.com/mikeobrien/HidLibrary)
-- Building a WPF app *(the [MissileSharp Launcher](/missilesharp/#launcher))* with MVVM and [MahApps.Metro](http://mahapps.com/MahApps.Metro/)
+- Building a WPF app *(the [MissileSharp Launcher]({{< ref "/missilesharp.html" >}}#launcher))* with MVVM and [MahApps.Metro](http://mahapps.com/MahApps.Metro/)
 - More Dependency Injection, this time with [Autofac](http://autofac.org)
 - More unit testing, this time with [NUnit](http://nunit.org/) and [Moq](https://github.com/moq/moq4)
 - Building a [ClickOnce](http://msdn.microsoft.com/en-us/library/t71a733d.aspx) installer

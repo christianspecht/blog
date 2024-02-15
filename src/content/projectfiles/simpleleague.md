@@ -17,4 +17,4 @@ Insert database-driven HTML tables with results and rankings into an existing si
 - Modern/object-oriented [PHP](http://php.net/) *(the last time I used PHP was nearly 10 years ago)*
 - Loading data from a [MySQL](http://www.mysql.com/) database with [PDO](http://php.net/manual/en/book.pdo.php)
 - Using the [PHP implementation](https://github.com/bobthecow/mustache.php) of [Mustache](http://mustache.github.io/) for templates
-- Loading [SimpleLeague tables into a Jekyll site]({% post_url 2014-11-23-using-jquery-to-integrate-simpleleague-tables-into-jekyll-sites %}) with [jQuery](http://jquery.com/)
+- Loading [SimpleLeague tables into a Jekyll site]({{< ref "/posts/2014-11-23-using-jquery-to-integrate-simpleleague-tables-into-jekyll-sites/index.md" >}}) with [jQuery](http://jquery.com/)
