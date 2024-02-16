@@ -9,7 +9,7 @@
     <div class="row">
     
         <div class="span4">
-        <h2><a href="{{ .Params.Site }}"><img src="{{ .Params.Logo }}" width="35" height="35" class="img-polaroid" /> {{ .Title }}</a></h2>
+        <h2><a href="{{ .Params.Site | absURL }}"><img src="{{ .Params.Logo | absURL }}" width="35" height="35" class="img-polaroid" /> {{ .Title }}</a></h2>
         {{ .Content }}
         </div><!--/span-->
         <div class="row visible-phone spacer25"></div>
