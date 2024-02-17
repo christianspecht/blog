@@ -11,6 +11,8 @@ tree /home/runner/work/blog
 rm -r public
 hugo --config ./src/config.toml,./src/config-$3.toml,./src/config-github.toml
 
+tree /home/runner/work/blog
+
 if [ $? -ne 0 ]
 then
   exit 1
