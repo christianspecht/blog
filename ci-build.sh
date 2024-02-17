@@ -5,6 +5,8 @@ echo "[params]
 commitid = '$1'
 buildnumber = '$2'" > ./src/config-github.toml
 
+tree /home/runner/work/blog
+
 # build site
 rm -r public
 hugo --config ./src/config.toml,./src/config-$3.toml,./src/config-github.toml
