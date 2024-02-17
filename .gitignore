@@ -1,4 +1,4 @@
 syntax: glob
-_site
+public
 /src/.jekyll-metadata
 /src/.hugo_build.lock

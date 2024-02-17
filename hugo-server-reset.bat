@@ -1,2 +1,2 @@
-rd /s /q _site
+rd /s /q public
 hugo-server.bat
