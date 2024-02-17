@@ -95,10 +95,10 @@
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
               <li class="nav-header">Projects</li>
-              {% assign projects = site.projects | where: 'sidebar', 1 | sort: 'name' %}
-              {% for project in projects %}
-              <li><a href="{% project.site %}" rel="tooltip" title="{% project.desc %}">{% project.name %}</a></li>
-              {% endfor %}
+              {{- $projects := .Site.GetPage "/projectfiles" -}}
+              {{- range sort (where $projects.Resources "Params.sidebar" 1) "Params.title" }}
+              <li><a href="{{ .Params.Site | absURL }}" rel="tooltip" title="{{ .Params.desc }}">{{ .Title }}</a></li>
+              {{- end -}}
             </ul>
           </div><!--/.well -->
           <div class="well sidebar-nav">
