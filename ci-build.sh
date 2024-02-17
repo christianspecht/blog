@@ -6,7 +6,7 @@ commitid = '$1'
 buildnumber = '$2'" > ./src/config-github.toml
 
 # build site
-rm -r _public
+rm -r public
 hugo --config ./src/config.toml,./src/config-$3.toml,./src/config-github.toml
 
 if [ $? -ne 0 ]
