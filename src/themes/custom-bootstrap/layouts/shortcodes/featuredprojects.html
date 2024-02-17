@@ -1,0 +1,8 @@
+{{- $projects := .Site.GetPage "/projectfiles" -}}
+{{ range first 3 (sort (where $projects.Resources "Params.featured" 1) "Params.order" "desc") }}
+            <div class="span3">
+              <h4><a href="{{ .Params.Site | absURL }}"><img src="{{ .Params.Logo | absURL }}" width="64" height="64" /> {{ .Title }}</a></h4>
+              <p>{{ .Params.desc }}</p>
+            </div><!--/span-->
+            <div class="row visible-phone spacer25"></div>
+{{ end }}
