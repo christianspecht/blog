@@ -1,0 +1,12 @@
+name = "custom-bootstrap"
+license = "MIT"
+licenselink = "Link to theme's license"
+description = "Theme description"
+homepage = "https://christianspecht.de"
+tags = ["blog", "company"]
+features = ["some", "awesome", "features"]
+min_version = "0.59.1"
+
+[author]
+    name = "Christian Specht"
+    homepage = "https://christianspecht.de"
