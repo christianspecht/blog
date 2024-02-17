@@ -1,0 +1,4 @@
+baseURL = "https://preview.christianspecht.de"
+
+[params]
+noindex = true
