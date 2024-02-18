@@ -1,4 +1,3 @@
 syntax: glob
 public
-/src/.jekyll-metadata
 /src/.hugo_build.lock
