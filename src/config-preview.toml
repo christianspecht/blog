@@ -1,5 +1,4 @@
 baseURL = "https://preview.christianspecht.de"
-themesDir = "src/themes"
 
 [params]
 noindex = true

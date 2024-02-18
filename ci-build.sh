@@ -9,7 +9,9 @@ tree /home/runner/work/blog
 
 # build site
 rm -r public
-hugo --config ./src/config.toml,./src/config-$3.toml,./src/config-github.toml
+cd src
+hugo --config config.toml,config-$3.toml,config-github.toml
+cd ..
 
 tree /home/runner/work/blog
 
