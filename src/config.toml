@@ -7,6 +7,8 @@ publishDir = "../public"
 theme = "custom-bootstrap" 
 
 [params]
+author = "Christian Specht"
+description = "Personal site of Christian Specht, software developer from Kerpen, Germany."
 commitid = "abcdefghi"
 buildnumber = "123456"
 
