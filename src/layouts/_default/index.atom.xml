@@ -1,0 +1,27 @@
+{{- printf "<?xml version=\"1.0\"?>" | safeHTML }}
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title>{{ .Site.Title }}</title>
+  <link href="{{ .Permalink }}"/>
+  <link type="application/atom+xml" rel="self" href="{{ "/feed/atom/index.xml" | absURL }}"/>
+  <updated>{{ .Date.Format "2006-01-02T15:04:05-07:00" | safeHTML }}</updated>
+  <id>{{ .Permalink }}</id>
+  <author>
+    <name>{{ .Site.Params.author }}</name>
+  </author>
+  
+  {{ range first 15 (where .Site.RegularPages "Type" "posts") }}
+  <entry>
+    <id>{{ .Permalink }}</id>
+    <link type="text/html" rel="alternate" href="{{ .Permalink }}"/>
+    <title>{{ .Title }}</title>
+    <published>{{ .Date.Format "2006-01-02T15:04:05-07:00" | safeHTML }}</published>
+    <updated>{{ .Date.Format "2006-01-02T15:04:05-07:00" | safeHTML }}</updated>
+    <author>
+      <name>{{ .Site.Params.author }}</name>
+      <uri>{{ "/" | absURL }}</uri>
+    </author>
+    <content type="html">{{ .Content | html }}</content>
+  </entry>
+  {{ end }}
+</feed>

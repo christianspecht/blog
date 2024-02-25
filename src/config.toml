@@ -20,10 +20,14 @@ posts = '/:year/:month/:day/:slug/'
 
 
 [outputs]
-  home = ["HTML", "RSS"]
+  home = ["HTML", "RSS", "ATOM"]
 
 [outputFormats]
   [outputFormats.RSS]
     mediatype = "application/rss"
     baseName = "index"
     path = "feed"
+  [outputFormats.ATOM]
+    mediatype = "application/rss"
+    baseName = "index"
+    path = "feed/atom"
