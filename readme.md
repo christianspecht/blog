@@ -7,7 +7,7 @@ It's mostly a "regular" Hugo site, but it contains [some PHP parts](https://gith
 
 ## Important rules
 
-- Internal links *(in Markdown files)* to other pages MUST use the [`ref` shortcode](https://gohugo.io/content-management/shortcodes/#ref-and-relref)
+- Internal links *(in Markdown files)* to other pages MUST use the [`ref` shortcode](https://gohugo.io/content-management/shortcodes/#ref)
   - Example:  
     Instead of this: `[Imprint](/imprint/)`  
     ...use this: `[Imprint]({{< ref "/imprint/index.html" >}})`
