@@ -20,7 +20,7 @@ posts = '/:year/:month/:day/:slug/'
 
 
 [outputs]
-  home = ["HTML", "RSS", "ATOM", "RSSCODE"]
+  home = ["HTML", "RSS", "ATOM", "RSSCODE", "RSSDEV"]
 
 [outputFormats]
   [outputFormats.RSS]
@@ -35,3 +35,7 @@ posts = '/:year/:month/:day/:slug/'
     mediatype = "application/rss"
     baseName = "index"
     path = "feed/codeproject"
+  [outputFormats.RSSDEV]
+    mediatype = "application/rss"
+    baseName = "index"
+    path = "feed/dev.to"
