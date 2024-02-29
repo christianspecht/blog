@@ -1,13 +1,5 @@
 ---
 title: Feed
+layout: feed
 ---
-
-# Feed
-
-&nbsp;
-
-Subscribe:
-
-- [RSS]({{ site.rss_url }})
-- [Atom]({{ site.atom_url }})
 

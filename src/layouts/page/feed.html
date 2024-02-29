@@ -1,0 +1,11 @@
+{{ define "main" }}
+{{ .Content }}
+
+<h1>{{ .Page.Title }}</h1>
+<p>&nbsp;</p>
+<p>Subscribe:</p>
+<ul>
+  <li><a href="{{ "/feed/index.xml" | absURL }}">RSS</a></li>
+  <li><a href="{{ "/feed/atom/index.xml" | absURL }}">Atom</a></li>
+</ul>
+{{ end }}
