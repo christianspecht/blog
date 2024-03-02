@@ -4,16 +4,30 @@
 <div class="row spacer25"></div>
 
 <div class="container">
-{{ $projects := .Site.GetPage "/projectfiles" }}
+{{- $loopcount := 0 -}}
+{{- $loopindex := 0 -}}
+{{- $projects := .Site.GetPage "/projectfiles" -}}
 {{ range sort ($projects.Resources) "Params.order" "desc" }}
-    <div class="row">
+
+  {{- $loopcount = add $loopcount 1 -}}
+  {{- $loopindex = mod $loopcount 2 -}}
+
+    {{ if eq $loopindex 1 }}<div class="row">{{ end }}
     
         <div class="span4">
         <h2><a href="{{ .Params.Site | absURL }}"><img src="{{ .Params.Logo | absURL }}" width="35" height="35" class="img-polaroid" /> {{ .Title }}</a></h2>
         {{ .Content }}
         </div><!--/span-->
-        <div class="row visible-phone spacer25"></div>
+        
+    {{ if eq $loopindex 1 }}
+    <div class="row visible-phone spacer25"></div>
+    {{ else }}
+    </div><!--/row-->
+    <div class="row spacer25"></div>
+    {{ end }}
+{{ end }}
 
+{{ if eq $loopindex 1 }}
     </div><!--/row-->
     <div class="row spacer25"></div>
 {{ end }}
