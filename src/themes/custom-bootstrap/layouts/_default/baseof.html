@@ -10,8 +10,8 @@
     <meta name="description" content="{{ .Site.Params.description }}">
     <meta name="author" content="{{ .Site.Params.author }}">
     {{ if or (.Params.noindex) (.Site.Params.noindex) }}<meta name="robots" content="noindex,nofollow">{{ end }}
-    <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="{% site.rss_url %}" />
-    <link rel="alternate" type="application/atom+xml" title="Atom 1.0" href="{% site.atom_url %}" />
+    <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="{{ "/feed/index.xml" | absURL }}" />
+    <link rel="alternate" type="application/atom+xml" title="Atom 1.0" href="{{ "/feed/atom/index.xml" | absURL }}" />
     <link rel="canonical" href="{{ .Permalink }}" />
     <!-- Le styles -->
     <link href="{{ "/css/bootstrap.min.css" | absURL }}" rel="stylesheet" crossorigin="anonymous">
