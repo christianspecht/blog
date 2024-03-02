@@ -12,7 +12,7 @@
   
   {{ range first 15 (where .Site.RegularPages "Type" "posts") }}
   <entry>
-    <id>{{ .Permalink }}</id>
+    <id>{{ .Permalink | strings.TrimSuffix "/" }}</id>
     <link type="text/html" rel="alternate" href="{{ .Permalink }}"/>
     <title>{{ .Title }}</title>
     <published>{{ .Date.Format "2006-01-02T15:04:05-07:00" | safeHTML }}</published>
