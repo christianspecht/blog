@@ -1,5 +1,6 @@
 ---
 title: CV
+noindex: 1
 ---
 
 # CV
