@@ -4,7 +4,7 @@
   <title>{{ .Site.Title }}</title>
   <link href="{{ .Permalink }}"/>
   <link type="application/atom+xml" rel="self" href="{{ "/feed/atom/index.xml" | absURL }}"/>
-  <updated>{{ .Date.Format "2006-01-02T15:04:05-07:00" | safeHTML }}</updated>
+  <updated>{{ time.Now.Format "2006-01-02T15:04:05-07:00" | safeHTML }}</updated>
   <id>{{ .Permalink }}</id>
   <author>
     <name>{{ .Site.Params.author }}</name>
