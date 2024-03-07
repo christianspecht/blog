@@ -1,0 +1,49 @@
+{{ define "main" }}
+
+<div>
+  <small>{{with .PrevInSection}}<a href="{{.Permalink}}">&larr;&nbsp;{{.Title}}</a>{{end}}
+{{if and (.PrevInSection) (.NextInSection)}} | {{end}}
+{{with .NextInSection}}<a href="{{.Permalink}}">{{.Title}}&nbsp;&rarr;</a>{{end}}</small>
+</div>
+
+<hr>
+
+<article>
+  <div class="blog_post">
+    <header>
+      <div id="{% page.id %}"></div>
+      <h2 class="blog_post_title"><a href="{{ .Permalink }}" rel="bookmark" title="Permanent Link to {{ .Title }}">{{ .Title }}</a></h2>
+      <p><small><span class="blog_post_date">{{ .Date.Format "Jan 02 2006, 15:04" }}</span> | tags: 
+        <span class="blog_post_categories">
+        {{- with .Params.tags -}}
+          {{- range $i, $e := . -}}{{- if $i -}},&nbsp;{{- end -}}<a href="{{ "tags" | absURL }}#{{ $e | urlize }}">{{ $e }}</a>{{ end }}
+        {{- end -}}
+        </span>
+      </small></p>
+    </header>
+    {{ if .Params.series }}
+      {{- $currentPage := . -}}
+    <div class="well">
+      <h4>This post is part of a series: {{ .Params.series }}</h4>
+      <ol>
+        {{ range (where .Site.RegularPages.ByDate "Params.series" .Params.series) }}
+        <li>{{ if (eq . $currentPage) }}{{ .Title }} <i>(this post)</i>{{ else }}<a href="{{ .Permalink }}">{{ .Title }}</a>{{ end }}</li>
+        {{- end }}
+      </ol>
+    </div>
+    {{ end }}
+    <div class="post_prose">
+      {{ .Content }}
+    </div>
+  </div>
+</article>
+
+<hr>
+
+<div>
+  <small>{{with .PrevInSection}}<a href="{{.Permalink}}">&larr;&nbsp;{{.Title}}</a>{{end}}
+{{if and (.PrevInSection) (.NextInSection)}} | {{end}}
+{{with .NextInSection}}<a href="{{.Permalink}}">{{.Title}}&nbsp;&rarr;</a>{{end}}</small>
+</div>
+
+{{end}}

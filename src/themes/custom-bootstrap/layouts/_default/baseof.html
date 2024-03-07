@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+{{ .Site.Params.headercommentblock | safeHTML }}
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    {{ $title := print .Title " - " .Site.Title }}
+    {{- if .IsHome -}}{{- $title = .Site.Title -}}{{- end -}}
+    <title>{{ $title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ .Site.Params.description }}">
+    <meta name="author" content="{{ .Site.Params.author }}">
+    {{ if or (.Params.noindex) (.Site.Params.noindex) }}<meta name="robots" content="noindex,nofollow">{{ end }}
+    <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="{{ "/feed/index.xml" | absURL }}" />
+    <link rel="alternate" type="application/atom+xml" title="Atom 1.0" href="{{ "/feed/atom/index.xml" | absURL }}" />
+    <link rel="canonical" href="{{ .Permalink }}" />
+    <!-- Le styles -->
+    <link href="{{ "/css/bootstrap.min.css" | absURL }}" rel="stylesheet" crossorigin="anonymous">
+    <link href="{{ "/css/bootstrap-responsive.min.css" | absURL }}" rel="stylesheet" crossorigin="anonymous">
+    <link href="{{ "/css/cs.css" | absURL }}" rel="stylesheet">
+    <link href="{{ "/libs/font-awesome/6.4.0/css/fontawesome.min.css" | absURL }}" rel="stylesheet" crossorigin="anonymous">
+    <link href="{{ "/libs/font-awesome/6.4.0/css/brands.min.css" | absURL }}" rel="stylesheet" crossorigin="anonymous">
+    <link href="{{ "/libs/font-awesome/6.4.0/css/solid.min.css" | absURL }}" rel="stylesheet" crossorigin="anonymous">
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://avatar.christianspecht.de/cs144.jpeg">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://avatar.christianspecht.de/cs114.jpeg">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://avatar.christianspecht.de/cs72.jpeg">
+                    <link rel="apple-touch-icon-precomposed" href="https://avatar.christianspecht.de/cs57.jpeg">
+                                   <link rel="shortcut icon" href="{{ "/favicon.ico" | absURL }}">
+    {{ if .Site.Params.isProd }}<script>
+      var _paq = window._paq = window._paq || [];
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function() {
+        var u="https://matomo.christianspecht.de/";
+        _paq.push(['setTrackerUrl', u+'matomo.php']);
+        _paq.push(['setSiteId', 'Gmy9wjv4rLz3N8P']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+      })();
+    </script>{{ end }}
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="{{ "/" | absURL }}">{{ .Site.Title }}</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li><a href="{{ "/" | absURL }}"><i class="fa-solid fa-home"></i> Home</a></li>
+              <li><a href="{{ "/projects/" | absURL }}"><i class="fa-solid fa-wrench"></i> Projects</a></li>
+              <li><a href="{{ "/archive/" | absURL }}"><i class="fa-solid fa-calendar"></i> Archive</a></li>
+              <li><a href="{{ "/feed/" | absURL }}"><i class="fa-solid fa-rss"></i> Feed</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="span9">
+          {{- block "main" . }}{{- end }}
+        </div><!--/span-->
+
+        <div class="row visible-phone spacer50"><hr></div>
+
+        <div class="span3">
+          <div class="well sidebar-nav">
+            <ul class="nav nav-list">
+              <li class="nav-header">About me</li>
+              <li class="media">
+                <img class="pull-left media-object img-rounded" src="https://avatar.christianspecht.de/cs57.jpeg" />
+                <div class="media-body">
+                  <small>
+                    <a href="{{ "/cv/" | absURL }}">CV</a><br>
+                    <a href="{{ "/imprint/" | absURL }}">Contact</a>
+                  </small>
+                </div>
+              </li>
+              <li>
+                <small>
+                  Developer for about {{ sub now.Year 2003 }} years, living in Kerpen, Germany (near Cologne). Working as an in-house developer <i>(C#/T-SQL/VBA)</i> and DBA at <a href="http://www.weinor.de">weinor</a>, a mid-sized manufacturing company in Cologne.
+                </small>
+              </li>
+            </ul>
+          </div><!--/.well -->
+          <div class="well sidebar-nav">
+            <ul class="nav nav-list">
+              <li class="nav-header">Projects</li>
+              {{- $projects := .Site.GetPage "/projectfiles" -}}
+              {{- range sort (where $projects.Resources "Params.sidebar" 1) "Params.title" }}
+              <li><a href="{{ .Params.Site | absURL }}" rel="tooltip" title="{{ .Params.desc }}">{{ .Title }}</a></li>
+              {{- end -}}
+            </ul>
+          </div><!--/.well -->
+          <div class="well sidebar-nav">
+            <ul class="nav nav-list">
+              <li class="nav-header">Links</li>
+              <li><a href="https://stackoverflow.com/users/6884/" rel="tooltip" title="profile for Christian Specht at Stack Overflow, Q&A for professional and enthusiast programmers"><img src="https://stackoverflow.com/users/flair/6884.png" width="208" height="58" alt="profile for Christian Specht at Stack Overflow, Q&A for professional and enthusiast programmers" title="profile for Christian Specht at Stack Overflow, Q&A for professional and enthusiast programmers"/></a></li>
+              <li><a href="https://www.openhub.net/accounts/131837?ref=Detailed" target="_blank" rel="tooltip" title="Open Hub profile for Christian Specht"><img alt="Open Hub profile for Christian Specht" border="0" height="35" src="https://www.openhub.net/accounts/131837/widgets/account_detailed.gif" width="230" /></a></li>
+              <li>
+                <span>
+                    <a href="https://github.com/christianspecht" rel="tooltip" title="my GitHub profile"><i class="fa-brands fa-3x fa-github"></i></a>
+                    <a href="https://gitlab.com/christianspecht" rel="tooltip" title="my GitLab profile"><i class="fa-brands fa-3x fa-gitlab"></i></a>
+                    <a href="https://bitbucket.org/christianspecht" rel="tooltip" title="my Bitbucket profile"><i class="fa-brands fa-3x fa-bitbucket"></i></a>
+                    <a href="https://www.linkedin.com/in/christian-specht/" rel="tooltip" title="my LinkedIn profile"><i class="fa-brands fa-3x fa-linkedin"></i></a>
+                    <a href="https://www.xing.com/profile/Christian_Specht29/" rel="tooltip" title="my Xing profile"><i class="fa-brands fa-3x fa-xing"></i></a>
+                </span>
+               </li>
+            </ul>
+          </div><!--/.well -->
+          <div class="well sidebar-nav">
+            <ul class="nav nav-list">
+              <li class="nav-header">Recent Posts</li>
+              {{ range first 5 (where .Site.RegularPages "Type" "posts") }}
+              <li><a href="{{ .RelPermalink | absURL }}">{{ .Title }}</a></li>
+              {{ end }}
+            </ul>
+          </div><!--/.well -->
+          <div class="well sidebar-nav">
+            <ul class="nav nav-list">
+              <li class="nav-header">Archives</li>
+                {{ range (where .Site.RegularPages "Type" "posts").GroupByDate "2006" }}
+                <li><a href="{{ "/archive/" | absURL }}#{{ .Key }}">{{ .Key }} ({{ len .Pages }})</a></li>{{ end }}
+            </ul>
+          </div><!--/.well -->
+          <div class="well sidebar-nav">
+            <ul class="nav nav-list">
+              <li class="nav-header">Tags</li>
+                {{ range .Site.Taxonomies.tags }}<li><a href="{{ "/tags" | absURL }}#{{ .Page.Title }}">{{ .Page.Title }} ({{ .Count }})</a></li>
+                {{ end }}
+            </ul>
+          </div><!--/.well -->
+        </div><!--/span-->
+      </div><!--/row-->
+
+      <hr>
+
+      <footer>
+        <div class="row">
+            <div class="span8">
+                <p>
+                    Copyright 2012-{{ now.Format "2006" }} {{ .Site.Title }}
+                    <br/>
+                    <a href="{{ "/imprint/" | absURL }}">Imprint / Impressum</a> | <a href="{{ "/privacy/" | absURL }}">Privacy Policy / Datenschutzerklärung</a>
+                </p>
+            </div>
+            <div class="span4">
+                <p>
+                    Powered by <a href="https://gohugo.io/">Hugo</a>. Built with <a href="http://getbootstrap.com/">Bootstrap</a> &amp; <a href="http://bootswatch.com/cosmo/">Cosmo</a> theme.<br/>
+                    Deployed from commit <a href="https://github.com/christianspecht/blog/commit/{{ .Site.Params.commitid }}">{{ substr .Site.Params.commitid 0 7 }}</a> via build <a href="https://github.com/christianspecht/blog/actions/runs/{{ .Site.Params.buildnumber }}">{{ .Site.Params.buildnumber }}</a>.
+                </p>
+            </div>
+        </div>
+      </footer>
+
+    </div><!--/.container-->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="{{ "/js/jquery.min.js" | absURL }}" crossorigin="anonymous"></script>
+    <script src="{{ "/js/bootstrap.min.js" | absURL }}" crossorigin="anonymous"></script>
+  </body>
+</html>

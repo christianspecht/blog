@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /php/
+Allow: /php/cache/img/
+Sitemap: {{ "/sitemap.xml" | absURL }}
+Host: {{ "/" | absURL }}

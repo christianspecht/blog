@@ -1,4 +1,4 @@
-name: Jekyll site CI
+name: Hugo site CI
 
 on:
   push:
@@ -16,13 +16,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
-    - uses: Wohlstand/branch-name@v1.0.1-wohl
+    - uses: actions/checkout@v4
+      with:
+        submodules: true  # Fetch Hugo themes (true OR recursive)
+        fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+    - name: Setup Hugo
+      uses: peaceiris/actions-hugo@v2
+      with:
+        hugo-version: '0.119.0'
+    - uses: Wohlstand/branch-name@v1.0.2-wohl
     - name: Build site
-      run: |
-        docker run \
-        -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-        jekyll/builder:3.2.1 /bin/bash -c "chmod +x ci-build.sh && ./ci-build.sh ${{ github.sha }} ${{ github.run_id }}  ${{ env.BRANCH_NAME }}"
+      run: chmod +x ci-build.sh && ./ci-build.sh ${{ github.sha }} ${{ github.run_id }} ${{ env.BRANCH_NAME }}
     - name: Upload artifact
       uses: actions/upload-artifact@v1
       with:
@@ -43,7 +47,7 @@ jobs:
         echo "${{ secrets.KEY }}" > ~/.ssh/id_rsa
         chmod 600 ~/.ssh/id_rsa
         ssh-keyscan ${{ secrets.HOST }} >> ~/.ssh/known_hosts
-    - uses: Wohlstand/branch-name@v1.0.1-wohl
+    - uses: Wohlstand/branch-name@v1.0.2-wohl
     - name: Run deploy script
       run: |
         rsync -rSlh --stats build/ ${{ secrets.USERNAME }}@${{ secrets.HOST }}:${{ secrets.WEBPATH }}-${{ env.BRANCH_NAME }}/tar

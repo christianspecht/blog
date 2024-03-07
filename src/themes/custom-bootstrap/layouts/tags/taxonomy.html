@@ -1,0 +1,11 @@
+{{ define "main" }}
+<h1>Tags</h1>
+<p>&nbsp;</p>
+{{ range .Pages.ByTitle }}
+  <h3 id="{{ .Title }}">{{ .Title }}</h3>
+  <ul>
+    {{ range .Pages.ByDate.Reverse }}
+      <li>{{ .Date.Format "January 2, 2006" }}: <a href="{{ .Permalink }}">{{ .Title }}</a></li>{{ end }}
+  </ul>
+{{ end }}
+{{ end }}
