@@ -27,6 +27,15 @@
       <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://avatar.christianspecht.de/cs72.jpeg">
                     <link rel="apple-touch-icon-precomposed" href="https://avatar.christianspecht.de/cs57.jpeg">
                                    <link rel="shortcut icon" href="{{ "/favicon.ico" | absURL }}">
+    {{- $ogtype := "article" -}}
+    {{- if .IsHome -}}
+      {{- $ogtype = "website" -}}
+    {{- end }}
+    <meta property="og:site_name" content="{{ .Site.Title }}" />
+    <meta property="og:url" content="{{ .Permalink }}" />
+    <meta property="og:type" content="{{ $ogtype }}" />
+    <meta property="og:title" content="{{ .Title }}" />
+    <meta property="og:description" content="{{ .Summary | plainify }}" />
     {{ if .Site.Params.isRelease }}<script>
       var _paq = window._paq = window._paq || [];
       _paq.push(['trackPageView']);
