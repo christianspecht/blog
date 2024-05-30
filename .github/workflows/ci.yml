@@ -40,6 +40,7 @@ jobs:
     - uses: actions/download-artifact@v4
       with:
         name: build
+        path: /home/runner/work/blog/blog/build
     - name: "Prepare SSH key and known hosts"
       # https://github.com/symfony/cli/issues/227#issuecomment-601680974
       run: |
