@@ -1,7 +1,10 @@
 ---
 title: RoboShell Backup 1.1 - now with TrueCrypt integration
+slug: roboshell-backup-1-1-now-with-truecrypt-integration
 date: 2012-04-30T22:44:40
 tags: [backup, roboshell-backup, truecrypt]
+aliases:
+- /2012/04/30/roboshell-backup-1.1-now-with-truecrypt-integration/
 ---
 
 > ### Update (Mar 04 2015):
