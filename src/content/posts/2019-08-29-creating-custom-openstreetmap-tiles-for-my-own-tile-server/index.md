@@ -100,7 +100,7 @@ Here are the steps to do it with Maperitive (I used v2.4.3.0):
     A few notes about the `generate-tiles` command:
     
     - `minzoom` and `maxzoom` should match the zoom level from the `move-pos` command
-    - generating tiles for one single zoom level is enough in this case - we just need **this view** of the map for printing, no more zooming necessary. [The more zoom levels, the more tiles are generated!](http://maperitive.net/docs/Commands/GenerateTiles.html#Performance%20And%20Storage%20Considerations).  
+    - generating tiles for one single zoom level is enough in this case - we just need **this view** of the map for printing, no more zooming necessary. [The more zoom levels, the more tiles are generated!](http://maperitive.net/docs/Commands/GenerateTiles.html#Performance%20And%20Storage%20Considerations)  
     
     For me, the FTP upload isn't really necessary because generating the tiles is a one-time thing. Uploading the tiles manually would be acceptable as well...but still, it's nice that Maperitive can do it.
 
