@@ -8,6 +8,8 @@ tags:
 - source-control
 externalfeeds: 1
 series: "My home backup strategy"
+aliases:
+- /2016/01/17/my-home-backup-strategy-strategy-part-part-part-part-part-2-online-services/
 ---
 
 In the [first part of this post]({{< ref "/posts/2015-11-01-my-home-backup-strategy-part-1-the-basics/index.md" >}}), I described my basic home backup strategy, i.e. how I'm making backups of the important data on all computers, smartphones and other devices at home.
