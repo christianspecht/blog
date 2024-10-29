@@ -23,7 +23,7 @@ posts = '/:year/:month/:day/:slug/'
 
 
 [outputs]
-  home = ["HTML", "RSS", "ATOM", "RSSCODE", "RSSDEV"]
+  home = ["HTML", "RSS", "ATOM", "RSSCODE", "RSSDEV", "RSSDIFF"]
 
 [outputFormats]
   [outputFormats.RSS]
@@ -42,3 +42,7 @@ posts = '/:year/:month/:day/:slug/'
     mediatype = "application/rss"
     baseName = "index"
     path = "feed/dev.to"
+  [outputFormats.RSSDIFF]
+    mediatype = "application/rss"
+    baseName = "index"
+    path = "feed/diff"
