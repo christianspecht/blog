@@ -23,7 +23,7 @@ posts = '/:year/:month/:day/:slug/'
 
 
 [outputs]
-  home = ["HTML", "RSS", "ATOM", "RSSCODE", "RSSDEV", "RSSDIFF"]
+  home = ["HTML", "RSS", "ATOM", "RSSCODE", "RSSDEV", "RSSDIFF", "RSSHACK"]
 
 [outputFormats]
   [outputFormats.RSS]
@@ -46,3 +46,7 @@ posts = '/:year/:month/:day/:slug/'
     mediatype = "application/rss"
     baseName = "index"
     path = "feed/diff"
+  [outputFormats.RSSHACK]
+    mediatype = "application/rss"
+    baseName = "index"
+    path = "feed/hackernoon"
