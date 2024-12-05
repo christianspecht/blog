@@ -8,3 +8,6 @@ insert_final_newline = true
 
 [ci-*.sh]
 end_of_line = lf
+
+[.htaccess]
+end_of_line = lf
