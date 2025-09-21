@@ -1,6 +1,6 @@
 This is the source code of [christianspecht.de](https://christianspecht.de), built with [Hugo](https://gohugo.io/).
 
-It's mostly a "regular" Hugo site, but it contains [some PHP parts](https://github.com/christianspecht/blog/tree/master/src/php) ([more details](https://christianspecht.de/2014/11/09/how-to-display-markdown-files-from-other-sites-now-with-caching/)), which is the reason why I'm hosting it on my own webspace instead of Github Pages.
+It's mostly a "regular" Hugo site, but it contains [some PHP parts](https://github.com/christianspecht/blog/tree/master/src/static/php) ([more details](https://christianspecht.de/2014/11/09/how-to-display-markdown-files-from-other-sites-now-with-caching/)), which is the reason why I'm hosting it on my own webspace instead of Github Pages.
 
 ---
 
