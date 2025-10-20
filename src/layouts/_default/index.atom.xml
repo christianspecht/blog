@@ -13,7 +13,7 @@
   {{ range first 15 (where .Site.RegularPages "Type" "posts") }}
   <entry>
     <id>{{ .Permalink | strings.TrimSuffix "/" }}</id>
-    <link type="text/html" rel="alternate" href="{{ .Permalink }}"/>
+    <link type="text/html" rel="alternate" href="{{ .Permalink }}?mtm_campaign=feed&mtm_medium=atom&mtm_source={{ partial "get-slug.html" . }}"/>
     <title>{{ .Title }}</title>
     <published>{{ .Date.Format "2006-01-02T15:04:05-07:00" | safeHTML }}</published>
     <updated>{{ .Date.Format "2006-01-02T15:04:05-07:00" | safeHTML }}</updated>
