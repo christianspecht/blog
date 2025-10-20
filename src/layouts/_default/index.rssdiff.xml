@@ -14,7 +14,7 @@
       <link>{{ .Permalink }}?mtm_campaign=diff-blog&mtm_source={{ partial "get-slug.html" . }}</link>
       <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
       <author>{{ .Site.Params.author }}</author>
-      <guid>{{ .Permalink | strings.TrimSuffix "/" }}</guid>{{ range .Params.tags }}
+      <guid>{{ .Permalink }}</guid>{{ range .Params.tags }}
       <category>{{ if eq . "web" }}web-development{{ else }}{{ if eq . ".net" }}csharp{{ else }}{{ . }}{{ end }}{{ end }}</category>
       {{- end }}
       <description>{{ .Summary | html }}</description>
