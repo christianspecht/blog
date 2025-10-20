@@ -17,7 +17,7 @@
       <guid>{{ .Permalink | strings.TrimSuffix "/" }}</guid>{{ range .Params.tags }}
       <category>{{ if eq . "web" }}web-development{{ else }}{{ if eq . ".net" }}csharp{{ else }}{{ . }}{{ end }}{{ end }}</category>
       {{- end }}
-      <description>{{ .Content | html }}</description>
+      <description>{{ .Summary | html }}</description>
     </item>
     {{ end }}
   </channel>
