@@ -2,6 +2,7 @@
 title: Batch File Cheat Sheet
 date: 2013-05-12T23:45:00
 tags: [command-line]
+externalfeeds: 1
 ---
 
 Recently, I had some tasks at work that required me to write a lot of batch files.  

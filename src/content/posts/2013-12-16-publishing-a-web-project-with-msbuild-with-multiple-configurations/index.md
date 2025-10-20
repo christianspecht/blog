@@ -2,6 +2,7 @@
 title: Publishing a web project with MSBuild (with multiple configurations)
 date: 2013-12-16T23:14:00
 tags: [.net, msbuild, visual-studio]
+externalfeeds: 1
 ---
 
 Publishing a web project in Visual Studio is easy and well documented, but it gets complicated when you want to get the same result with MSBuild.
