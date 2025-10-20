@@ -1,0 +1,3 @@
+{{- /* Get the actual, final slug (the last URL part) from a URL */ -}}
+{{- $urlparts := split .Permalink "/" -}}
+{{- index $urlparts (sub (len $urlparts) 2) -}}
